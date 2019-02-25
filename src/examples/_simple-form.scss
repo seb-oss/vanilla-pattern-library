@@ -1,0 +1,67 @@
+//@import "../components/inputs/input_base";
+//@import "../components/inputs/checkbox";
+//@import "../components/buttons/button-primary";
+//@import "../components/buttons/button-alternative";
+
+// Note: This code is not intended for production use.
+.vanilla-example-simple-form {
+  width:100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: auto;
+  grid-template-areas:
+      "header header"
+      "main sidebar";
+  grid-column-gap: 1rem;
+  padding: 1rem;
+
+  h1 {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  aside {
+    grid-area: sidebar;
+  }
+
+  aside dl {
+    margin: 0;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .actions {
+    margin-top: 2rem;
+  }
+    .actions button {
+        width: 100%;
+        max-width: 200px;
+    }
+
+  .align-right {
+    text-align: right;
+  }
+
+  .flex {
+    display: flex;
+  }
+    .flex > * {
+        padding-right: 1rem;
+    }
+    .cell {
+        flex-grow: 1;
+    }
+    .cell-150 {
+        flex-basis: 150px;
+    }
+    .cell-300 {
+        flex-basis: 300px;
+    }
+
+}

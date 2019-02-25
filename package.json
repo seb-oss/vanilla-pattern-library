@@ -1,0 +1,68 @@
+{
+	"name": "@sebgroup/vanilla",
+	"description": "SEB's vanilla components",
+	"version": "0.0.0-semantically-released",
+	"license": "UNLICENSED",
+	"private": false,
+	"scripts": {
+		"dev": "node node_modules/davanmonet/dvm-build/dev-server.js",
+		"build-dvm": "node node_modules/davanmonet/dvm-build/build-dvm.js",
+		"build-pl": "node node_modules/davanmonet/dvm-build/build-patternlibrary.js",
+		"build": "npm run build-dvm && npm run build-pl",
+		"sassdoc": "node node_modules/sassdoc/bin/sassdoc src",
+		"commit": "git-cz",
+		"travis-deploy-once": "travis-deploy-once --pro",
+		"semantic-release": "semantic-release && npm run build",
+		"add-fa-config": "npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN",
+		"set-version": "replace 0.0.0-semantically-released $TRAVIS_BUILD_NUMBER dist/web/version.json"
+	},
+	"config": {
+		"configFile": "./config/projectoptions.yml",
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	},
+	"release": {
+		"branches": [
+			"master",
+			{
+				"name": "dev",
+				"prerelease": "pre",
+				"channel": "next"
+			}
+		]
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"commit-msg": "commitlint --edit"
+		}
+	},
+	"dependencies": {
+		"@sebgroup/fonts": "^1.0.0",
+		"include-media": "^1.4.9"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^7.5.2",
+		"@commitlint/config-conventional": "^7.5.0",
+		"@fortawesome/fontawesome-pro": "^5.7.2",
+		"cz-conventional-changelog": "^2.1.0",
+		"davanmonet": "1.4.2-beta.2",
+		"husky": "^1.3.1",
+		"replace": "^1.0.1",
+		"sassdoc": "^2.5.0",
+		"semantic-release": "^16.0.0-beta.18",
+		"travis-deploy-once": "^5.0.11"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sebgroup/vanilla-pattern-library.git"
+	},
+	"publishConfig": {
+		"access": "public"
+	}
+}

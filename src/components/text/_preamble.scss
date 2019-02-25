@@ -1,0 +1,7 @@
+@import 'text-mixins';
+
+@include _vanilla-exports('vanilla-preamble') {
+  .sdv-preamble {
+    @include vanilla-preamble();
+  }
+}

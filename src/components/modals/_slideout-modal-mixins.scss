@@ -1,0 +1,78 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+@import '../../variables';
+@import "../../utilities";
+@import '../buttons/button-mixins';
+@import 'node_modules/include-media/dist/include-media';
+@import '../../mixins';
+
+///
+/// @access public
+@mixin vanilla-modal-slideout() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  transition: visibility 0s 0.6s;
+  box-sizing: border-box;
+
+  $__module: &;
+
+  &--right {
+    #{$__module}__container {
+      right: 0;
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  &--left {
+    #{$__module}__container {
+      left: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+  &.-active {
+    visibility: visible;
+    transition: visibility 0s 0s;
+    #{$__module}__container {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__container {
+    position: fixed;
+    width: 33%;
+    height: 100%;
+    overflow-y: auto;
+    background: #fff;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+
+    @include media('<=tablet') {
+      width: 100%;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 1px solid $vanilla-color-grey8;
+  }
+  &__heading {
+    margin: 0;
+  }
+  &__close {
+    cursor: pointer;
+    outline: 0;
+    background: 0;
+    border: 0;
+    font-size: 1.2rem;
+    color: $vanilla-color-blue;
+  }
+  &__content {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,387 @@
+////
+/// This file contains mixins for input components
+/// @group Inputs
+/// @author Digital CX
+////
+
+@import "../../variables";
+@import "../../utilities";
+@import "../../mixins";
+@import "../../colors";
+@import "../../functions";
+
+/// Input field base style. Most other input types build upon this style
+///
+/// @access public
+@mixin vanilla-field-base() {
+  // Config
+  $_height: vanilla-px-to-em(40px);
+  $_border-color-normal: $vanilla-color-grey7;
+  //
+
+  border: (1 / 16) * 1em solid $_border-color-normal;
+  border-radius: $vanilla-component-border-radius;
+  outline: none;
+  box-sizing: border-box;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  min-height: $_height;
+  line-height: 1.5;
+  font-size: vanilla-px-to-em(16px);
+  font-family: $vanilla-font-seb-sans-serif;
+
+  &:hover {
+    border-color: $vanilla-color-component-hover;
+  }
+  &:focus {
+    border-color: $vanilla-color-component-selected;
+  }
+  &:active {
+    border-color: $_border-color-normal;
+  }
+  &[disabled] {
+    background-color: $vanilla-color-component-disabled-light;
+    border-color: $_border-color-normal;
+    &::placeholder {
+      color: $vanilla-color-component-disabled-dark;
+    }
+  }
+}
+
+/// Style for basic text field
+///
+/// @access public
+@mixin vanilla-text-field() {
+  @include vanilla-field-base();
+
+  background-color: $vanilla-color-white;
+  padding: 0 1em;
+}
+
+/// Style for textarea
+///
+/// @access public
+@mixin vanilla-text-field-textarea() {
+  background-color: $vanilla-color-white;
+  padding: 0.5em 1em;
+}
+
+/// Style that can be added to erroneous text fields
+///
+/// @access public
+@mixin vanilla-text-field--error() {
+  $_border-bottom: vanilla-px-to-em(4) solid $vanilla-color-red;
+
+  border-bottom: $_border-bottom;
+  &:focus,
+  &:active,
+  &:hover {
+    border-bottom: $_border-bottom;
+  }
+}
+
+/// Meant to be shown below an input filed
+///
+/// @access public
+@mixin vanilla-text-field-notice() {
+  display: block;
+  font-size: vanilla-px-to-em(14);
+  margin-top: vanilla-px-to-em(1);
+}
+
+/// Style that can be added to erroneous text field notice
+///
+/// @access public
+@mixin vanilla-text-field-notice--error() {
+  color: $vanilla-color-red;
+}
+
+/// Style for labels
+///
+/// @access public
+@mixin vanilla-field-label() {
+  display: block;
+
+  margin-top: $vanilla-base-size;
+  margin-bottom: vanilla-px-to-em(1px);
+
+  font-size: vanilla-px-to-em(16px);
+  font-weight: 500;
+
+  &[disabled] {
+    color: $vanilla-color-component-disabled-dark;
+  }
+}
+
+/// Style for basic text field labels
+///
+/// @access public
+@mixin vanilla-text-field-label() {
+  @include vanilla-field-label();
+}
+
+/// Shared styles for radio buttons, checkboxes and toggle switches
+///
+/// @access public
+/// @param $_type radio, checkbox or switch
+@mixin vanilla-toggle-base($_type) {
+  display: inline-block;
+  border-color: transparent;
+  height: auto;
+
+  input {
+    appearance: none;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  label {
+    display: inline-block;
+    @if ($_type == "switch") {
+      padding: 0.5em 0.75em 0.5em 4em;
+    } @else {
+      padding: 0.5em 0.75em 0.5em 2.5em;
+    }
+    border-radius: $vanilla-component-border-radius;
+    position: relative;
+    min-height: 2em;
+
+    &:hover::before {
+      border-color: $vanilla-color-component-selected;
+    }
+  }
+
+  label::before {
+    display: block;
+    content: "";
+    margin: 0 0.5em vanilla-px-to-em(-2px) 0;
+    position: absolute;
+    visibility: visible;
+    outline: none;
+    font-size: 1em;
+    border: vanilla-px-to-em(1px) solid $vanilla-color-component-disabled-darker;
+    transition: 250ms;
+    @if ($_type == "radio") {
+      background-color: $vanilla-color-white;
+      width: 1em;
+      height: 1em;
+      border-radius: 1em;
+      top: 0.5em + 0.25em;
+      left: 0.75em;
+    }
+    @if ($_type == "switch") {
+      width: vanilla-px-to-em(40px);
+      height: vanilla-px-to-em(20px);
+      border-radius: vanilla-px-to-em(20px);
+      top: vanilla-px-to-em(10px);
+      left: 0.75em;
+    }
+    @if ($_type == "checkbox") {
+      background-color: $vanilla-color-white;
+      width: 1em;
+      height: 1em;
+      top: 0.5em + 0.25em;
+      left: 0.75em;
+    }
+  }
+
+  input:focus + label {
+    box-shadow: 0 0 0 vanilla-px-to-em(1px) $vanilla-color-component-selected;
+  }
+  input:focus + label:before {
+    border-color: $vanilla-color-component-selected;
+    box-shadow: 0 0 0 vanilla-px-to-em(3px) rgba($vanilla-color-component-selected, 0.2);
+  }
+
+  input[disabled] {
+    background-color: transparent;
+    &:checked + label::after {
+      //border-color: $vanilla-color-component-disabled-dark;
+      @if ($_type == "radio") {
+        background-color: $vanilla-color-component-disabled-dark !important;
+      }
+    }
+    &:checked + label::before {
+      @if ($_type == "checkbox" or $_type == "switch") {
+        background-color: $vanilla-color-component-disabled-dark !important;
+        border-color: $vanilla-color-component-disabled-dark;
+      }
+    }
+    & + label::before {
+      border-color: $vanilla-color-component-disabled-dark;
+    }
+    & + label {
+      color: $vanilla-color-component-disabled-dark;
+    }
+  }
+}
+
+/// Style for checkbox wrap. This is meant to be applied to elements that
+/// contain an input of type checkbox.
+///
+/// @access public
+/// @param $_type How should it be rendered? checkbox or switch
+@mixin vanilla-field-toggle-wrap($_type: "checkbox") {
+  @include vanilla-field-base();
+  @include vanilla-toggle-base($_type);
+
+  input:checked + label::before {
+    background-color: $vanilla-color-component-selected;
+    border-color: $vanilla-color-component-selected;
+  }
+
+  @if ($_type == "switch") {
+    input:not(:checked) + label::before {
+      background-color: $vanilla-color-component-disabled-dark;
+      border-color: $vanilla-color-component-disabled-dark;
+    }
+
+    input + label::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: vanilla-px-to-em(11px);
+      left: vanilla-px-to-em(13px);
+      background-color: $vanilla-color-white;
+      width: vanilla-px-to-em(18px);
+      height: vanilla-px-to-em(18px);
+      border-radius: 50%;
+      transition: 250ms;
+      border: vanilla-px-to-em(3px) solid $vanilla-color-white;
+    }
+    input:checked + label::after {
+      left: vanilla-px-to-em(33px);
+    }
+
+    &:hover input:not(:disabled) + label::after {
+      background-color: $vanilla-color-component-hover;
+    }
+    input:not(:disabled):focus + label::after {
+      background-color: $vanilla-color-component-selected;
+    }
+  } @else {
+    input:checked + label::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0.5em + 0.25em + vanilla-px-to-em(1px);
+      left: 1em + vanilla-px-to-em(1px);
+      box-sizing: border-box;
+      background-color: transparent;
+      width: (1 / 2.7) * 1em;
+      border: 0 solid $vanilla-color-white;
+      border-width: 0 vanilla-px-to-em(2px) vanilla-px-to-em(2px) 0;
+      height: (1 / 1.5) * 1em;
+      transform: rotate(40deg);
+      transform-origin: 50% 50%;
+    }
+  }
+}
+
+/// Radio button styles
+///
+/// @access public
+@mixin vanilla-field-radio-wrap() {
+  @include vanilla-field-base();
+  @include vanilla-toggle-base("radio");
+
+  input:checked + label::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    background-color: $vanilla-color-component-selected;
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+  }
+}
+
+/// Dropdown button
+///
+/// @access public
+@mixin vanilla-field-dropdown-button() {
+  @include vanilla-field-base();
+
+  line-height: vanilla-px-to-em(40px);
+  padding: 0 0 0 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: $vanilla-color-white;
+
+  &:after {
+    @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(40px));
+
+    float: right;
+    background-color: inherit;
+  }
+}
+
+/// Dropdown options
+///
+/// @access public
+@mixin vanilla-field-dropdown-options() {
+  @include vanilla-field-base();
+
+  display: none;
+  margin-top: vanilla-px-to-em(4px);
+  box-shadow: 0 0 1rem 0 rgba($vanilla-color-black, 0.2);
+  white-space: nowrap;
+  position: absolute;
+  z-index: 1;
+  background-color: $vanilla-color-white;
+
+  label,
+  &__label {
+    display: block;
+    padding: 0 1rem;
+    cursor: pointer;
+    line-height: vanilla-px-to-em(40px);
+
+    &:hover {
+      background-color: $vanilla-color-component-normal;
+      color: $vanilla-color-white;
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  line-height: vanilla-px-to-em(40px);
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input:checked + label,
+  input:checked + &__label,
+  &__label--selected {
+    background-color: $vanilla-color-component-selected;
+    color: #fff;
+  }
+
+  input:focus + label,
+  input:focus + &__label,
+  &__label--focus {
+    box-shadow: 0px 0px 0px 3px rgba($vanilla-color-component-selected, 0.3);
+  }
+
+  &--expanded,
+  &.-expanded {
+    display: block;
+  }
+}

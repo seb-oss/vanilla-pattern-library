@@ -1,0 +1,30 @@
+dist: trusty
+sudo: false
+language: node_js
+node_js: node
+
+install:
+- npm run add-fa-config
+- npm ci
+
+cache:
+  directories:
+  - $HOME/.npm
+
+script:
+- npm run build
+
+after_success:
+- npm run travis-deploy-once "npm run semantic-release"
+
+before_deploy:
+- npm run set-version
+
+deploy:
+  - provider: pages
+    skip-cleanup: true
+    github-token: $GITHUB_TOKEN
+    keep-history: true
+    local-dir: dist/web
+    on:
+      branch: dev

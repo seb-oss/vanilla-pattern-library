@@ -1,0 +1,104 @@
+////
+/// Mixins for creating tabs
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../utilities";
+
+/// Mixes in progress bar styles
+///
+/// @access public
+@mixin vanilla-tabs() {
+
+  &__tablist {
+    display: flex;
+    border-bottom: 1px solid $vanilla-color-component-border;
+    position: relative;
+  }
+
+  &__tab {
+    font-size: 1em;
+    font-family: inherit;
+    margin-bottom: -1px;
+    appearance: none;
+    background-color: transparent;
+    display: block;
+    border: 1px solid transparent;
+    padding: vanilla-px-to-em(14) 1em;
+    cursor: pointer;
+    color: $vanilla-color-link;
+
+    @include media-context($vanilla-breakpoints) {
+      @include media('>=tablet') {
+        min-width: 96px;
+      }
+    }
+
+    &:hover {
+      background-color: $vanilla-color-component-hover;
+      color: $vanilla-color-white;
+    }
+
+    &:focus {
+      background-color: $vanilla-color-component-selected;
+      color: $vanilla-color-white;
+      border-bottom: 1px solid $vanilla-color-component-border;
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: $vanilla-color-component-disabled-light;
+      color: $vanilla-color-component-disabled-dark;
+      border-width: 0;
+      border-bottom: 1px solid $vanilla-color-component-border;
+    }
+  }
+
+  &__tab.-active:not(:focus),
+  &__tab[aria-selected=true] {
+    background-color: $vanilla-color-white;
+    border-color: $vanilla-color-component-border;
+    border-bottom-color: $vanilla-color-white;
+    color: $vanilla-color-grey2;
+    cursor: default;
+  }
+
+  &__panel {
+    margin-top: 1em;
+    display: none;
+    &.-active {
+      display: block;
+    }
+  }
+
+  &__foldout-button {
+    &:after {
+      @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(40px));
+      height: auto;
+      color: inherit;
+    }
+
+    @include media-context($vanilla-breakpoints) {
+        @include media('<tablet') {
+            font-size: 1px;
+            width: 48px;
+            overflow: hidden;
+            color: transparent !important;
+            &:after {
+              font-size: 1rem;
+              color: $vanilla-color-link;
+            }
+            &:hover:after {
+              color: $vanilla-color-white;
+            }
+        }
+    }
+  }
+
+  &__foldout {
+    position: absolute;
+    right: 0;
+    top: vanilla-px-to-em(48px);
+  }
+}

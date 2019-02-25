@@ -1,0 +1,22 @@
+
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+
+@import "../../utilities";
+
+///
+/// @access public
+@mixin vanilla-modal-backdrop($background-color: rgba(0, 0, 0, 0.6)) {
+  transition: all 0.3s ease-in-out;
+  transition-property: background-color, visibility;
+  visibility: hidden;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  .-active & {
+    background-color: $background-color;
+    visibility: visible;
+  }
+}

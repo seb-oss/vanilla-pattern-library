@@ -1,0 +1,53 @@
+////
+/// Mixins for creating progress bars
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../utilities";
+
+/// Name of progress bar animation @keyframes
+$vanilla-progressbar-keyframes: "sdv-progressbar-loading" !default;
+
+/// Mixes in progress bar styles
+///
+/// @access public
+@mixin vanilla-progress-bar() {
+  height: vanilla-px-to-rem(5);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: $vanilla-color-grey8;
+  &:before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: vanilla-px-to-rem(5);
+    background-color: $vanilla-color-green;
+    animation: #{$vanilla-progressbar-keyframes} 2s linear infinite;
+  }
+
+  @keyframes #{$vanilla-progressbar-keyframes} {
+    from {
+      left: -30%;
+      width: 30%;
+    }
+    50% {
+      width: 30%;
+    }
+    70% {
+      width: 70%;
+    }
+    80% {
+      left: 50%;
+    }
+    95% {
+      left: 120%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+}

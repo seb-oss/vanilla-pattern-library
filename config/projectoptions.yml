@@ -1,0 +1,172 @@
+---
+
+#-------------------------------------------------------------------------------
+# Use this to alter the look of DaVanMonet
+#-------------------------------------------------------------------------------
+project_info:
+  name: Vanilla Pattern Library
+  logo: "src/images/SEBlogo.svg"
+  theme_style: "src/theme.css"
+  pagedata_schemaversion: "2.0"
+
+
+#-------------------------------------------------------------------------------
+# Path settings
+#-------------------------------------------------------------------------------
+directories:
+
+  public_path: '/vanilla-pattern-library/'
+  public_path_markdown: 'https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/dev/'
+  use_hash: true
+
+  # Path to the pattern library source files
+  src: "src"
+
+  # This can be used as the web root when servring as a website
+  dist_web: "dist/web"
+
+  # This can be used to build a NPM  or NuGet package
+  dist_package: "dist/package"
+
+  # JS output dir. Relative to dist_web
+  js_subDir: "static/js"
+
+  # CSS Output dir. Relative to dist_web
+  css_subDir: "static/css"
+
+  # Index files will be created here
+  indexes: "dist/indexes"
+
+  # Where to look for config files
+  configs: "config"
+
+  # DvM will output css-files to this directory when in dev-mode, if this feature
+  # is enabled in compile settings. (see below)
+  # Production mode css files will also be copied here during build
+  cssCopies: 'not-used'
+
+# If user config is present, the settings in it will override the ones in this file
+# userconfig: "configs/local-conf.json"
+
+
+#-------------------------------------------------------------------------------
+# Indexing settings
+#-------------------------------------------------------------------------------
+indexing:
+  contentIndexOutput: contentindex.json
+  targetIndexOutput: targetindex.json
+  keysToOutput:
+  - title
+  - guid
+  - variantid
+  - componentid
+  - private
+  #- requirejs
+
+
+#-------------------------------------------------------------------------------
+# Compiler settings
+#-------------------------------------------------------------------------------
+compilation:
+  compilers:
+    less:
+      compileIndividualFiles: false
+    scss:
+      compileIndividualFiles: false
+      lint: false
+      includePaths: []
+
+  # Targets. Each target will be built to a separate output file.
+  # All entried specified in the file array for the target will be included.
+  # Files can be of any format that Webpack can understand. By default there
+  # are loaders for LESS, SASS and JS configured in DvM
+  targets:
+    sdv-all.css:
+    - "**/vanilla-all.scss"
+    preview-frame-only.css:
+    - "**/preview-frame-only.scss"
+
+  # Create source maps for JS and CSS
+  sourceMaps: true
+
+  # If set to true, CSS files will be emitted to the cssCopies directory during development
+  emitCssCopies: false
+
+  # If set to true, assets specified in the assets array (see below), will be copied during build
+  copyAssetsToFolder: true
+
+  # Settings for css-minification
+  minifycss:
+    report: min
+    level: 2
+
+  # Settings for PostCSS
+  postcss:
+    map: true
+    processors:
+    - name: autoprefixer
+      options:
+        browsers:
+        - last 2 versions
+
+
+#-------------------------------------------------------------------------------
+# Asset settings
+#-------------------------------------------------------------------------------
+assets:
+- isdirectory: true
+  src: "node_modules/@sebgroup/fonts/fonts"
+  dev_access: "/assets/fonts"
+  dest:
+  - "dist/web/assets/fonts"
+# - isdirectory: true
+#   src: "./sassdoc"
+#   dev_access: "/sassdoc"
+#   dest:
+#   - "dist/web/sassdoc"
+- isdirectory: true
+  src: "./node_modules/@fortawesome/fontawesome-pro"
+  dev_access: "/assets/fontawesome"
+  dest:
+  - "dist/web/assets/fontawesome"
+
+
+#-------------------------------------------------------------------------------
+# Environment settings
+#-------------------------------------------------------------------------------
+env:
+  devSitePort: 9001
+  launchVrowser: false
+  enableOnSitePreview: true
+  cssBreakpoints:
+  - id: mobile
+    title: Mobile
+    width: 375
+    fromWidth: 0
+    toWidth: 375
+  - id: tablet
+    title: Tablet
+    width: 768
+    fromWidth: 376
+    toWidth: 999
+  - id: lg-tablet
+    title: Large Tablet
+    width: 1024
+    fromWidth: 1000
+    toWidth: 1199
+  - id: desktop
+    title: Desktop
+    width: 100%
+    fromWidth: 1200
+    toWidth: 9007199254740990
+
+build:
+  package:
+    files:
+    - src: "./package.json"
+
+structure:
+- title: Components
+  path: components
+- title: Examples
+  path: examples

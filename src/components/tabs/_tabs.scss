@@ -1,0 +1,7 @@
+@import "tab-mixins";
+
+@include _vanilla-exports('vanilla-tabs') {
+  .sdv-tabs {
+    @include vanilla-tabs();
+  }
+}

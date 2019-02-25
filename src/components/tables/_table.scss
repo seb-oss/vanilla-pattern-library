@@ -1,0 +1,7 @@
+@import "table-mixins";
+
+@include _vanilla-exports("vanilla-table") {
+  .sdv-table {
+    @include vanilla-table();
+  }
+}

@@ -1,0 +1,8 @@
+@import 'accordion-mixins';
+
+@include _vanilla-exports('vanilla-accordion') {
+    .sdv-accordion
+    {
+        @include vanilla-accordion();
+    }
+}

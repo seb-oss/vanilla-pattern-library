@@ -1,0 +1,48 @@
+////
+/// This file sets some default styless for common elements
+/// @group Defaults
+/// @author Digital CX
+////
+
+@import "~include-media/dist/include-media";
+
+@import "typography";
+@import "variables";
+@import "utilities";
+
+@include _vanilla-exports("vanilla-defaults") {
+  body {
+    @include vanilla-typography-body();
+  }
+  p {
+    @include vanilla-typography-paragraph();
+  }
+  a {
+    @include vanilla-typography-links();
+  }
+  small,
+  .sdv-small {
+    @include vanilla-typography-small-text();
+  }
+  //   ul,
+  //   ol {
+  //     @include vanilla-typography-list();
+  //   }
+
+  // Headings
+  $_heading_map: (
+    ".vanilla-h-display": "display",
+    "h1, .vanilla-h1": "h1",
+    "h2, .vanilla-h2": "h2",
+    "h3, .vanilla-h3": "h3",
+    "h4, .vanilla-h4": "h4",
+    "h5, .vanilla-h5": "h5",
+    "h6, .vanilla-h6": "h6"
+  );
+
+  @each $selector, $level in $_heading_map {
+    #{$selector} {
+      @include vanilla-typography-heading($level);
+    }
+  }
+}

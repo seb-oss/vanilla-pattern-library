@@ -1,0 +1,32 @@
+////
+/// These styles are only included in the Pattern Library (and Design Library) component preview frame, and thus not part of the Vanilla framework itself.
+/// @group PatternLibrary
+/// @author Digital CX
+////
+
+$vanilla-font-basepath: '/assets/fonts/';
+
+@import "variables";
+@import "defaults";
+
+@import url("#{$vanilla-font-awesome-inc-path}/css/light.min.css");
+@import url("#{$vanilla-font-awesome-inc-path}/css/fontawesome.css");
+
+// Examples
+@import "examples/colors";
+@import "examples/simple-form";
+
+.sdv-dialog-backdrop {
+    position: relative;
+    height: 400px;
+}
+
+.pl-purple-bg {
+  background-color: $vanilla-color-purple;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.showcase__render {
+  min-height: 200px;
+}
