@@ -23076,7 +23076,7 @@ module.exports = function (O, D) {
 /***/ "7YgM":
 /***/ (function(module, exports) {
 
-module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"0.0.0-semantically-released","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release && npm run build","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","set-version":"replace 0.0.0-semantically-released $TRAVIS_BUILD_NUMBER dist/web/version.json","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.2-beta.2","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
+module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"0.0.0-semantically-released","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release && npm run build","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","set-version":"replace 0.0.0-semantically-released $TRAVIS_BUILD_NUMBER dist/web/version.json","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.2","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
 
 /***/ }),
 
@@ -39375,21 +39375,27 @@ var PageLoader = function () {
 
 							case 2:
 								md_base = this._projectConfig.directories.public_path_markdown || this._projectConfig.directories.public_path || "";
-								requestbase = "//" + (window.location.host + md_base + "/").replace('//', '/');
+								requestbase = "";
+
+								if (md_base.indexOf('http') > -1) {
+									requestbase = md_base;
+								} else {
+									requestbase = "//" + (window.location.host + md_base + "/").replace('//', '/');
+								}
 								fullpath = requestbase + this._projectConfig.directories.src + "/" + filepath + '.md';
-								_context4.next = 7;
+								_context4.next = 8;
 								return fetch(fullpath);
 
-							case 7:
+							case 8:
 								filereq = _context4.sent;
-								_context4.next = 10;
+								_context4.next = 11;
 								return filereq.text();
 
-							case 10:
+							case 11:
 								filecontent = _context4.sent;
 								return _context4.abrupt("return", filecontent);
 
-							case 12:
+							case 13:
 							case "end":
 								return _context4.stop();
 						}
@@ -98840,4 +98846,4 @@ module.exports = function (it, TYPE) {
 /***/ })
 
 },[0]);
-//# sourceMappingURL=app.8c5dbc1e37c3b43b564d.js.map
+//# sourceMappingURL=app.8c7a458ec186203f8dec.js.map
