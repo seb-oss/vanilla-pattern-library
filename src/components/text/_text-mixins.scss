@@ -1,0 +1,14 @@
+////
+/// Mixins for text styles
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../utilities";
+
+/// Mixes in preamble styles
+///
+/// @access public
+@mixin vanilla-preamble {
+  font-size: 1.2em;
+}

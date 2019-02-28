@@ -1,0 +1,27 @@
+.davanmonet-header {
+    background: #000 !important;
+    border-bottom: 0px solid #000;
+    padding: 0;
+    box-shadow: none;
+}
+
+.davanmonet-header-logo {
+    width: 87px;
+}
+
+a.davanmonet-header-logolink {
+    align-items: center;
+}
+
+.davanmonet-header-github-link {
+    display: none;
+}
+
+.davanmonet-body {
+    overflow: auto;
+}
+
+.davanmonet-maincontentcontainer {
+    overflow: auto;
+    height: calc(100% - 87px);
+}

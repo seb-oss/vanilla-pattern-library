@@ -1,0 +1,128 @@
+////
+/// Mixins for creating tables
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../utilities";
+@import "../../mixins";
+
+/// Mixes in table styles
+///
+/// @access public
+@mixin vanilla-table() {
+  width: 100%;
+  font-family: $vanilla-font-seb-sans-serif;
+  border-spacing: 0;
+
+  th, td {
+    text-align: left;
+    border-bottom: 1px solid $vanilla-color-grey8;
+  }
+
+  thead {
+    color: $vanilla-color-grey6;
+    font-size: vanilla-px-to-em(12);
+    tr {
+      min-height: vanilla-px-to-em(32);
+    }
+    th, td {
+      border-bottom: 1px solid $vanilla-color-grey6;
+      font-weight: bold;
+    }
+  }
+
+  tbody {
+    font-size: vanilla-px-to-em(16);
+    tr {
+      height: vanilla-px-to-em(40);
+      border-bottom: 1px solid $vanilla-color-grey5;
+    }
+    tr:hover td,
+    tr:hover th {
+      background-color: $vanilla-color-grey9;
+    }
+  }
+
+  tfoot {
+    font-weight: 500;
+    font-size: vanilla-px-to-em(16);
+    tr {
+      height: vanilla-px-to-em(40);
+    }
+    td {
+      border-top: 1px solid $vanilla-color-grey6;
+      border-bottom-width: 0;
+    }
+  }
+
+
+  tr &__numeric-col {
+    text-align: right;
+  }
+
+  tr &__negative-col {
+    color: $vanilla-color-darkred2;
+  }
+
+  tr &__primary-col {
+    color: $vanilla-color-black;
+  }
+
+  &__sortable-col {
+    cursor: pointer;
+    margin-left: vanilla-px-to-em(8);
+    &:after {
+      @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
+      opacity: 0;
+      transition: 0.3s;
+    }
+    &:hover:after {
+      opacity: 1;
+    }
+    &--asc:after {
+      @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
+      opacity: 1;
+    }
+    &--desc:after {
+      @include vanilla-icon($_glyph: "\F077", $_color: inherit, $_space: 1rem);
+      opacity: 1;
+    }
+  }
+
+  .sdv-field-checkbox-wrap label {
+    box-shadow: none !important;
+  }
+
+  $_fixed-col-width: 150px;
+  &--fixed-l-col {
+    overflow: auto;
+    display: block;
+    position: relative;
+    max-width: 100%;
+
+    td, th {
+      width: auto !important;
+      min-width: $_fixed-col-width;
+    }
+
+    td:first-child,
+    th:first-child {
+      position: sticky;
+      left: 0;
+      background-color: $vanilla-color-white;
+      border-right: 1px solid $vanilla-color-grey8;
+    }
+
+    thead th {
+      top: 0;
+      z-index: 1;
+      position: sticky;
+      background-color: $vanilla-color-white;
+      &:first-child {
+        z-index: 2;
+      }
+    }
+  }
+
+}

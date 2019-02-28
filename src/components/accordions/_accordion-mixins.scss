@@ -1,0 +1,83 @@
+////
+/// Mixins for accordions
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../utilities";
+@import "../../variables";
+@import "../../functions";
+@import "node_modules/include-media/dist/include-media";
+
+/// Mixes in accordion styles
+///
+/// @access public
+@mixin vanilla-accordion() {
+  $_indicator-width: vanilla-px-to-em(3px);
+  margin: 0;
+
+  &__header {
+    font-weight: 500;
+    font-size: vanilla-px-to-em(24px);
+    border-left: $_indicator-width solid $vanilla-color-white;
+    margin-left: -#{$_indicator-width};
+    padding-right: 0.75em;
+    display: flex;
+
+    // Icon
+    &:before {
+      @include vanilla-icon("\F078", -90);
+      flex-shrink: 0;
+      line-height: 2em;
+    }
+
+    // Expandable section
+    & + * {
+      height: 0;
+      overflow: hidden;
+      border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
+      margin: 0 0 -#{vanilla-px-to-em(1px)} 0;
+      padding: 0 1em 0 3em;
+    }
+
+    // Headline
+    & > * {
+      display: inline;
+      flex-grow: 1;
+      margin:  0 0 0 -3em;
+      padding: 0.3em 0 0.3em 3em;
+      position: relative;
+      z-index: 999;
+      cursor: pointer;
+
+      // Sub-headline
+      & > * {
+        display: block;
+        font-size: 0.65em;
+        font-weight: normal;
+        font-style: normal;
+      }
+    }
+
+    &--expanded,
+    input:checked + & {
+      border-color: $vanilla-color-green;
+
+      // Change icon rotation
+      &:before {
+        @include vanilla-icon-rotate(0);
+      }
+
+      & + * {
+        height: auto;
+      }
+    }
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+    left: -999rem;
+  }
+}

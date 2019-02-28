@@ -1,0 +1,54 @@
+////
+/// These are mixins used in the Vanilla Pattern Library
+/// @group Utilities
+/// @author Digital CX
+////
+
+/// Adds an icon to the element
+///
+/// @access public
+/// @param {String} $_glyph - Icon glyph to use [Font Awesome 5]
+/// @param $_rotation rotation in degrees
+/// @param $_color Color of the icon. Defaults to $vanilla-color-component-normal
+/// @param $_coord-position Should be a map with any combination of the keys 'top', 'right', 'bottom' or 'left'. If this is used, the element will become a block with absolute positioning
+/// @param $_space Square area used by icon
+@mixin vanilla-icon(
+  $_glyph,
+  $_rotation: false,
+  $_color: $vanilla-color-component-normal,
+  $_coord-position: false,
+  $_space: 3rem
+) {
+  $_icon-space: $_space;
+  font-family: "Font Awesome 5 Pro";
+  content: $_glyph;
+  color: $_color;
+  height: $_icon-space;
+  width: $_icon-space;
+  text-align: center;
+
+  @if ($_rotation != false) {
+    @include vanilla-icon-rotate($_rotation);
+  }
+
+  @if ($_coord-position != false) {
+    display: block;
+    position: absolute;
+    @each $pos, $coord in $_coord-position {
+      #{$pos}: $coord;
+    }
+  } @else {
+    display: inline-block;
+  }
+}
+
+/// Set the rotation for an icon.
+/// Icon needs to be added to the same selector with the vanilla-icon mixin.
+///
+/// @access public
+/// @param $rotation rotation in degrees
+/// @require vanilla-icon
+@mixin vanilla-icon-rotate($rotation) {
+  transform: rotate(#{$rotation + "deg"});
+  transition: transform 250ms;
+}

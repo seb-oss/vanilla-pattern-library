@@ -1,0 +1,24 @@
+////
+/// These are mixins used in the Vanilla Pattern Library
+/// @group Utilities
+/// @author Digital CX
+////
+
+// Required by exports mixin
+$vanilla-imported-modules: () !default;
+
+/// Module export mixin
+/// This mixin helps making sure a module is imported once and only once.
+///
+/// @access public
+/// @param {String} $_name - Name of exported module
+/// @param {Bool} $_warn [true] - Warn when module has been already imported
+/// @require $imported-modules
+@mixin _vanilla-exports($_name, $_warn: false) {
+  @if (index($vanilla-imported-modules, $_name) == null) {
+    $vanilla-imported-modules: append($vanilla-imported-modules, $_name) !global;
+    @content;
+  } @else if $_warn == true {
+    @warn "Module `#{$name}` has already been imported.";
+  }
+}

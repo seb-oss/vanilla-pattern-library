@@ -1,0 +1,195 @@
+////
+/// Mixins for creating buttons
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../variables";
+@import "../../functions";
+@import "../../utilities";
+@import "../../icons";
+
+/// The left and right padding in buttons
+$vanilla-button-padding: vanilla-px-to-em(16) !default;
+
+// Config
+$_height: vanilla-px-to-em(40 - 2);
+$_border-radius: $vanilla-component-border-radius;
+
+$_button_color-bg-normal: $vanilla-color-component-normal;
+$_button_color-bg-hover: $vanilla-color-component-hover;
+$_button_color-bg-pressed: $vanilla-color-component-pressed;
+$_button_color-bg-focus: $vanilla-color-component-selected;
+$_button_disabled-color-dark: $vanilla-color-component-disabled-dark;
+$_button_disabled-color-light: $vanilla-color-component-disabled-light;
+//
+
+/// Mixes in button styles
+///
+/// @access public
+@mixin vanilla-button {
+  display: inline-block;
+
+  padding: 0 $vanilla-button-padding;
+  box-sizing: border-box;
+
+  line-height: $_height;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 1em;
+  color: $vanilla-color-white;
+  white-space: nowrap;
+
+  appearance: none;
+  border-radius: $_border-radius;
+  border: vanilla-px-to-em(1px) solid $_button_color-bg-normal;
+  outline: none;
+  background-color: $_button_color-bg-normal;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $_button_color-bg-hover;
+    border-color: $_button_color-bg-hover;
+    text-decoration: none;
+  }
+  &:focus {
+    background-color: $_button_color-bg-focus;
+    border-color: $_button_color-bg-focus;
+    text-decoration: none;
+  }
+  &:active {
+    background-color: $_button_color-bg-pressed;
+    border-color: $_button_color-bg-pressed;
+    text-decoration: none;
+  }
+  &:visited,
+  &:link {
+    color: $vanilla-color-white;
+  }
+
+  &[disabled] {
+    background-color: $_button_disabled-color-dark;
+    border-color: $_button_disabled-color-dark;
+    cursor: default;
+  }
+
+  // If button has icon
+  .sdv-icon-left {
+    margin-left: vanilla-px-to-em(-4);
+  }
+  .sdv-icon-right {
+    margin-right: vanilla-px-to-em(-4);
+  }
+
+}
+
+/// Add secondary button styles
+///
+/// @access public
+@mixin vanilla-button-secondary {
+  background-color: transparent;
+  border-color: $vanilla-color-darkblue1;
+  &,
+  &:visited,
+  &:link {
+    color: $_button_color-bg-normal;
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    color: $vanilla-color-white;
+  }
+  &[disabled] {
+    background-color: $_button_disabled-color-light;
+    border-color: $_button_disabled-color-dark;
+    color: $_button_disabled-color-dark;
+  }
+}
+
+
+/// Alternative button styles
+///
+/// @access public
+@mixin vanilla-button-alternative {
+  background-color: transparent;
+  border-color: transparent;
+  &,
+  &:visited,
+  &:link {
+    color: $_button_color-bg-normal;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $vanilla-color-white;
+  }
+  &[disabled] {
+    background-color: $_button_disabled-color-light;
+    border-color: $_button_disabled-color-dark;
+    color: $_button_disabled-color-dark;
+  }
+}
+
+
+/// Link button styles
+///
+/// @access public
+@mixin vanilla-button-link {
+  background-color: transparent;
+  border-color: transparent;
+  &,
+  &:visited,
+  &:link {
+    color: $_button_color-bg-normal;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: transparent;
+    border-color: transparent;
+    color: $vanilla-color-darkblue1;
+    text-decoration: underline;
+  }
+  &[disabled] {
+    background-color:  transparent;
+    border-color:  transparent;
+    color: $_button_disabled-color-dark;
+  }
+}
+
+
+/// Ghost button styles
+///
+/// @access public
+@mixin vanilla-button-ghost {
+  border-color: $vanilla-color-white;
+  color: $vanilla-color-white;
+  background-color: transparent;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $vanilla-color-text;
+    background-color: $vanilla-color-white;
+    border-color: $vanilla-color-white;
+  }
+  &[disabled] {
+    background-color: $_button_disabled-color-light;
+    border-color: $_button_disabled-color-dark;
+    color: $_button_disabled-color-dark;
+  }
+}
+
+
+/// Mixes in button icon
+///
+/// @access public
+/// @param $_glyph - Which icon to use
+@mixin vanilla-button-icon($_glyph) {
+  &:before {
+    @include vanilla-icon($_glyph);
+  }
+}

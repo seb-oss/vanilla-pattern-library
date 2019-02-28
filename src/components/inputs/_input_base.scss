@@ -1,0 +1,28 @@
+@import "input-mixins";
+@import "../../utilities";
+
+@include _vanilla-exports("vanilla-fld") {
+  .sdv-field {
+    @include vanilla-text-field();
+  }
+
+  .sdv-field--error {
+    @include vanilla-text-field--error();
+  }
+
+  .sdv-field-label {
+    @include vanilla-text-field-label();
+  }
+
+  .sdv-field-notice {
+    @include vanilla-text-field-notice();
+  }
+
+  .sdv-field-notice--error {
+    @include vanilla-text-field-notice--error();
+  }
+
+  textarea.sdv-field {
+    @include vanilla-text-field-textarea();
+  }
+}

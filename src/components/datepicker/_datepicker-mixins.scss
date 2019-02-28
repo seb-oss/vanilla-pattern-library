@@ -1,0 +1,49 @@
+////
+/// Mixins for creating datepickers
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../variables";
+@import "../../functions";
+@import "../../utilities";
+@import "../../icons";
+
+@mixin vanilla-datepicker__container {
+  border-radius: $vanilla-component-border-radius;
+  border: 1px solid $vanilla-color-darkblue1;
+  overflow: hidden;
+}
+
+@mixin vanilla-datepicker__controls {
+  display: flex;
+  padding: vanilla-px-to-em(8);
+}
+
+@mixin vanilla-datepicker__calendar {
+  border-top: 1px solid $vanilla-color-component-disabled-light;
+  border-bottom: 1px solid $vanilla-color-component-disabled-light;
+}
+
+@mixin vanilla-datepicker__calendar-row {
+  display: flex;
+
+  &:first-child {
+    font-size: 0.7em;
+    line-height: vanilla-px-to-em(40);
+  }
+
+  button, span {
+    padding: 0;
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+    width: 20%;
+    color: $vanilla-color-text;
+
+    &:disabled {
+      border-radius: 0;
+      border: 0px solid transparent;
+    }
+  }
+}

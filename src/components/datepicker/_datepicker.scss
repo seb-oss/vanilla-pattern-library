@@ -1,0 +1,25 @@
+////
+/// Classes for the datepicker component
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import './datepicker-mixins';
+
+@include _vanilla-exports("vanilla-datepicker") {
+  .sdv-datepicker {
+    @include vanilla-datepicker__container();
+
+    &__controls {
+      @include vanilla-datepicker__controls();
+    }
+
+    &__calendar {
+      @include vanilla-datepicker__calendar();
+    }
+
+    &__calendar-row {
+      @include vanilla-datepicker__calendar-row();
+    }
+  }
+}

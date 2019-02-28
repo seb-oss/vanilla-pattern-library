@@ -1,0 +1,66 @@
+@import "../colors";
+
+.vanilla-color {
+  $_gap: 1rem;
+
+  display: inline-block;
+  margin: $_gap;
+  padding: $_gap;
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: $vanilla-font-fallback;
+  font-weight: bold;
+  color: $vanilla-color-white;
+
+  &.green {
+    background-color: $vanilla-color-green;
+  }
+  &.darkgreen1 {
+    background-color: $vanilla-color-darkgreen1;
+  }
+  &.darkgreen2 {
+    background-color: $vanilla-color-darkgreen2;
+  }
+
+  &.yellow {
+    background-color: $vanilla-color-yellow;
+  }
+  &.darkyellow1 {
+    background-color: $vanilla-color-darkyellow1;
+  }
+  &.darkyellow2 {
+    background-color: $vanilla-color-darkyellow2;
+  }
+
+  &.purple {
+    background-color: $vanilla-color-purple;
+  }
+  &.darkpurple1 {
+    background-color: $vanilla-color-darkpurple1;
+  }
+  &.darkpurple2 {
+    background-color: $vanilla-color-darkpurple2;
+  }
+
+  &.red {
+    background-color: $vanilla-color-red;
+  }
+  &.darkred1 {
+    background-color: $vanilla-color-darkred1;
+  }
+  &.darkred2 {
+    background-color: $vanilla-color-darkred2;
+  }
+
+  &.blue {
+    background-color: $vanilla-color-blue;
+  }
+  &.darkblue1 {
+    background-color: $vanilla-color-darkblue1;
+  }
+  &.darkblue2 {
+    background-color: $vanilla-color-darkblue2;
+  }
+}

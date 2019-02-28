@@ -1,0 +1,19 @@
+////
+/// These are mixins used in the Vanilla Pattern Library
+/// @group Utilities
+/// @author Digital CX
+////
+
+@import "utilities";
+
+/// Default space around icons
+$vanilla_icon_margin: vanilla-px-to-em(12) !default;
+
+@include _vanilla-exports("sdv-icons") {
+  .sdv-icon-left {
+    margin-right: $vanilla_icon_margin;
+  }
+  .sdv-icon-right {
+    margin-left: $vanilla_icon_margin;
+  }
+}

@@ -1,0 +1,8 @@
+@import 'button-primary';
+
+@include _vanilla-exports('vanilla-button-ghost') {
+  .sdv-button-ghost
+  {
+      @include vanilla-button-ghost();
+  }
+}
