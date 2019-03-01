@@ -2,19 +2,19 @@
 title: Dropdown
 componentid: component-dropdown
 variantid: dropdown
-guid: 31495b40-9492-40e4-86e3-as89d89asd
+guid: component-dropdown-dropdown
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/dropdown";
+@import "~@sebgroup/vanilla/src/components/inputs/dropdown";
 ```
 
 This is just a style example, functional implementation will have to be handled by the developer.
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/input-mixins";
+@import "~@sebgroup/vanilla/src/components/inputs/input-mixins";
 
 .my-field-dropdown__label {
     @include vanilla-field-dropdown-button();

@@ -2,18 +2,18 @@
 title: Two buttons
 componentid: component-dialogue
 variantid: two-buttons
-guid: 31495b40-9492-40e4-86e3-1e06bfc40183
+guid: component-dialogue-two-buttons
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/dialogs/dialog";
+@import "~@sebgroup/vanilla/src/components/dialogs/dialog";
 ```
 When using this dialog, please take a few minutes to read up on accessibility recomendations for dialogs. Here's an article on that topic: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/dialogs/dialog-mixins";
+@import "~@sebgroup/vanilla/src/components/dialogs/dialog-mixins";
 
 .my-dialog-backdrop {
     @include vanilla-dialog-backdrop();

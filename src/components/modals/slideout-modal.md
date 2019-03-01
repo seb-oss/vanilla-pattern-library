@@ -2,7 +2,7 @@
 title: Slideout Modal
 componentid: component-slideout-modal
 variantid: normal
-guid: component-slideout-modal-0
+guid: component-slideout-modal-normal
 ---
 
 # Usage
@@ -10,7 +10,7 @@ guid: component-slideout-modal-0
 Import classes:
 
 ```scss
-@import '~@sebdesignlibrary/vanilla/src/components/modals/slideout-modal';
+@import '~@sebgroup/vanilla/src/components/modals/slideout-modal';
 ```
 
 Use them in your template:
@@ -36,8 +36,8 @@ Please note - the backdrop element has to be a child of the modal, like above (s
 You can also use the mixins:
 
 ```scss
-@import '~@sebdesignlibrary/vanilla/src/components/modals/slideout-modal-mixins';
-@import '~@sebdesignlibrary/vanilla/src/components/modals/modal-mixins';
+@import '~@sebgroup/vanilla/src/components/modals/slideout-modal-mixins';
+@import '~@sebgroup/vanilla/src/components/modals/modal-mixins';
 
 .my-modal-class {
   @include vanilla-modal-slideout();

@@ -7,12 +7,12 @@ guid: component-input-textarea
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/input_base";
+@import "~@sebgroup/vanilla/src/components/inputs/input_base";
 ```
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/input-mixins";
+@import "~@sebgroup/vanilla/src/components/inputs/input-mixins";
 
 .my-field-class {
     @include vanilla-field-base();

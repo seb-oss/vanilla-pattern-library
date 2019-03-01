@@ -2,12 +2,12 @@
 title: Accordion
 componentid: component-accordion
 variantid: static
-guid: component-accordion-0
+guid: component-accordion-static
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/accordions/accordion";
+@import "~@sebgroup/vanilla/src/components/accordions/accordion";
 ```
 
 We build accordions using the description list element. Each heading is in a **dt** element, and the content is in the following **dd** element.

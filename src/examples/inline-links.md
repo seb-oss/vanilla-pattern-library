@@ -2,14 +2,14 @@
 title: Inline links
 componentid: component-inlinelinks
 variantid: primary
-guid: 31495b40-9492-40e4-86e3-1e06kjhsdhsd
+guid: component-inlinelinks-primary
 ---
 # Usage
 Sets default styles for common elements, such as headlines, links and body font family.
 
 Usage:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/defaults";
+@import "~@sebgroup/vanilla/src/defaults";
 ```
 
 :::componentpreview

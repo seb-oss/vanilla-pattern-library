@@ -2,13 +2,13 @@
 title: Progress bar
 componentid: component-progressbar
 variantid: default
-guid: component-progressbar-0
+guid: component-progressbar-default
 private: false
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/progress-bars/progress-bar";
+@import "~@sebgroup/vanilla/src/components/progress-bars/progress-bar";
 ```
 
 :::componentpreview
