@@ -27,4 +27,8 @@ deploy:
     keep-history: true
     local-dir: dist/web
     on:
-      branch: dev
+      branch: master
+
+branches:
+  except:
+  - /^v\d+\.\d+\.\d+$/
