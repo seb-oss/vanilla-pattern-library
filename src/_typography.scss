@@ -23,7 +23,7 @@ $seb-font-path: $vanilla-font-basepath;
   //@extend %vanilla-font-family;
   font-family: $vanilla-font-seb-sans-serif;
   color: $vanilla-color-text;
-  line-height: 1.4;
+  line-height: 1.5;
   @include media-context($vanilla-breakpoints) {
     @include media(">mobile") {
       font-size: map-get(map-get($vanilla-font-settings-body, "mobile"), "size");
