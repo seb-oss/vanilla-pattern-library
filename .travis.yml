@@ -18,7 +18,7 @@ after_success:
 - npm run travis-deploy-once "npm run semantic-release"
 
 before_deploy:
-- npm run set-version
+- npm run build-demo-site
 
 deploy:
   - provider: pages
