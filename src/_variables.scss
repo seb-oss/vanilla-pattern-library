@@ -36,8 +36,8 @@ $vanilla-breakpoints: (
 // / Headline display heading font sizes
 $vanilla-font-settings-h-display: (
   desktop: (size: vanilla-px-to-rem(96), weight: 600),
-  tablet: (size: vanilla-px-to-rem(96), weight: 600),
-  mobile: (size: vanilla-px-to-rem(96), weight: 600)
+  tablet: (size: vanilla-px-to-rem(64), weight: 600),
+  mobile: (size: vanilla-px-to-rem(48), weight: 600)
 ) !default;
 // / Headline H1 font sizes
 $vanilla-font-settings-h1: (
