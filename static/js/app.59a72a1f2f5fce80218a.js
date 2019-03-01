@@ -10053,6 +10053,17 @@ module.exports = wrapperClone;
 
 /***/ }),
 
+/***/ "6T52":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"davanmonet-app"},[_c('header',{staticClass:"davanmonet-header"},[_c('a',{staticClass:"davanmonet-header-logolink",attrs:{"href":"/"}},[_c('img',{staticClass:"davanmonet-header-logo",attrs:{"src":(_vm.publicPath + _vm.projectConfig.project_info.logo).replace('//', '/'),"alt":""}}),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info)?_c('span',{staticClass:"davanmonet-header-logolinktext",domProps:{"innerHTML":_vm._s(_vm.projectConfig.project_info.name)}},[_vm._v("DaVanMonet")]):_vm._e()]),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info && _vm.projectConfig.project_info.repourl)?_c('a',{staticClass:"davanmonet-header-repository-link",attrs:{"href":_vm.projectConfig.project_info.repourl,"title":"Go to the Repository"}},[_c('svg',{staticStyle:{"width":"24px","height":"24px"},attrs:{"viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"}})])]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"davanmonet-pagecontainer"},[(_vm.configLoaded == true)?_c('navigation',{staticClass:"davanmonet-navcontainer",attrs:{"navigation":_vm.navigation,"version-data":_vm.versionData,"source-directory":_vm.projectConfig.directories.src,"current-page-path":_vm.currentPagePath}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == true && _vm.maincontent)?_c('main-content',{staticClass:"davanmonet-maincontentcontainer",attrs:{"content":_vm.maincontent,"css-breakpoints":_vm.projectConfig.env.cssBreakpoints}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == false)?_c('div',[_vm._v("\n\t\t\t\tLoading...\n\t\t\t")]):_vm._e()],1)])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+
+/***/ }),
+
 /***/ "6WHE":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -23076,7 +23087,7 @@ module.exports = function (O, D) {
 /***/ "7YgM":
 /***/ (function(module, exports) {
 
-module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"0.0.0-semantically-released","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release && npm run build","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","set-version":"replace 0.0.0-semantically-released $TRAVIS_BUILD_NUMBER dist/web/version.json","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.2","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
+module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"0.0.0-semantically-released","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release && npm run build","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","set-version":"replace 0.0.0-semantically-released $TRAVIS_BUILD_NUMBER dist/web/version.json","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.3-beta.2","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
 
 /***/ }),
 
@@ -38340,10 +38351,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__ = __webpack_require__("DgEM");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__);
 /* harmony namespace reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_da9c2a98_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__ = __webpack_require__("X9xM");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1d800c04_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__ = __webpack_require__("6T52");
 function injectStyle (ssrContext) {
-  __webpack_require__("fKgo")
-  __webpack_require__("i4nX")
+  __webpack_require__("wyNb")
+  __webpack_require__("V7pn")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -38361,7 +38372,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_da9c2a98_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1d800c04_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -66470,6 +66481,13 @@ module.exports = false;
 
 /***/ }),
 
+/***/ "V7pn":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "VORN":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -67761,17 +67779,6 @@ $export($export.S, 'Reflect', {
   }
 });
 
-
-/***/ }),
-
-/***/ "X9xM":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"davanmonet-app"},[_c('header',{staticClass:"davanmonet-header"},[_c('a',{staticClass:"davanmonet-header-logolink",attrs:{"href":"/"}},[_c('img',{staticClass:"davanmonet-header-logo",attrs:{"src":_vm.publicPath + '/static/logo.svg',"alt":""}}),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info)?_c('span',{staticClass:"davanmonet-header-logolinktext",domProps:{"innerHTML":_vm._s(_vm.projectConfig.project_info.name)}},[_vm._v("DaVanMonet")]):_vm._e()]),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info && _vm.projectConfig.project_info.repourl)?_c('a',{staticClass:"davanmonet-header-repository-link",attrs:{"href":_vm.projectConfig.project_info.repourl,"title":"Go to the Repository"}},[_c('svg',{staticStyle:{"width":"24px","height":"24px"},attrs:{"viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"}})])]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"davanmonet-pagecontainer"},[(_vm.configLoaded == true)?_c('navigation',{staticClass:"davanmonet-navcontainer",attrs:{"navigation":_vm.navigation,"version-data":_vm.versionData,"source-directory":_vm.projectConfig.directories.src,"current-page-path":_vm.currentPagePath}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == true && _vm.maincontent)?_c('main-content',{staticClass:"davanmonet-maincontentcontainer",attrs:{"content":_vm.maincontent,"css-breakpoints":_vm.projectConfig.env.cssBreakpoints}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == false)?_c('div',[_vm._v("\n\t\t\t\tLoading...\n\t\t\t")]):_vm._e()],1)])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
@@ -75313,13 +75320,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ "fKgo":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "fMqj":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -77997,13 +77997,6 @@ function assignValue(object, key, value) {
 
 module.exports = assignValue;
 
-
-/***/ }),
-
-/***/ "i4nX":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -94430,6 +94423,13 @@ $export($export.S, 'Math', {
 
 /***/ }),
 
+/***/ "wyNb":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "wzKY":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -98846,4 +98846,4 @@ module.exports = function (it, TYPE) {
 /***/ })
 
 },[0]);
-//# sourceMappingURL=app.8c7a458ec186203f8dec.js.map
+//# sourceMappingURL=app.59a72a1f2f5fce80218a.js.map
