@@ -23087,7 +23087,7 @@ module.exports = function (O, D) {
 /***/ "7YgM":
 /***/ (function(module, exports) {
 
-module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"1.0.0-pre.4","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","build-demo-site":"export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 1.0.0-pre.3 $PKG_VERSION package.json && npm run build","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.3-beta.3","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
+module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"1.0.0-pre.3","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","build-demo-site":"export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 1.0.0-pre.3 $PKG_VERSION package.json && npm run build","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.3","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
 
 /***/ }),
 
@@ -86105,7 +86105,7 @@ module.exports = {
 		{
 			"isdirectory": true,
 			"src": "node_modules/@sebgroup/fonts/fonts",
-			"dev_access": "/assets/fonts",
+			"dev_access": "/vanilla-pattern-library/assets/fonts",
 			"dest": [
 				"dist/web/assets/fonts"
 			]
@@ -86113,10 +86113,15 @@ module.exports = {
 		{
 			"isdirectory": true,
 			"src": "./node_modules/@fortawesome/fontawesome-pro",
-			"dev_access": "/assets/fontawesome",
+			"dev_access": "/vanilla-pattern-library/assets/fontawesome",
 			"dest": [
 				"dist/web/assets/fontawesome"
 			]
+		},
+		{
+			"isdirectory": true,
+			"src": "./src",
+			"dev_access": "/src"
 		}
 	],
 	"env": {
@@ -98846,4 +98851,4 @@ module.exports = function (it, TYPE) {
 /***/ })
 
 },[0]);
-//# sourceMappingURL=app.2534f636537a8f5dbe28.js.map
+//# sourceMappingURL=app.3c99cfe9de18c2097fca.js.map
