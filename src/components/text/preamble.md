@@ -2,17 +2,17 @@
 title: Preamble
 componentid: component-preamble
 variantid: primary
-guid: component-button-primary
+guid: component-preamble-primary
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/text/preamble";
+@import "~@sebgroup/vanilla/src/components/text/preamble";
 ```
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/text/text-mixins";
+@import "~@sebgroup/vanilla/src/components/text/text-mixins";
 
 .my-preamble-class {
     @include vanilla-preamble();

@@ -2,12 +2,12 @@
 title: Colors
 componentid: vanilla-colors
 variantid: primary
-guid: 31495b40-9492-40e4-86e3-1e06bfc40171
+guid: vanilla-colors-primary
 ---
 # Usage
 Usage:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/colors";
+@import "~@sebgroup/vanilla/src/colors";
 ```
 
 :::componentpreview

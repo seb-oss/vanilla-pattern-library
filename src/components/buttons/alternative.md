@@ -8,15 +8,15 @@ guid: component-button-alternative
 Import classes:
 ```scss
 // Will import all button classes
-@import "~@sebdesignlibrary/vanilla/src/components/buttons/button";
+@import "~@sebgroup/vanilla/src/components/buttons/button";
 
 // Will import alternative button only
-@import "~@sebdesignlibrary/vanilla/src/components/buttons/button-alternative";
+@import "~@sebgroup/vanilla/src/components/buttons/button-alternative";
 ```
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/buttons/button-mixins";
+@import "~@sebgroup/vanilla/src/components/buttons/button-mixins";
 
 .my-button-class {
     @include vanilla-button();

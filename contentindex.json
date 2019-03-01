@@ -17,7 +17,7 @@
 							"longpath": "src/components/accordions/accordion-interactive.md",
 							"type": "file",
 							"title": "Interactive Accordion",
-							"guid": "31495b40-9492-40e4-86e3-1e06bfc40194",
+							"guid": "component-accordion-css-interactive",
 							"variantid": "css-interactive",
 							"componentid": "component-accordion",
 							"private": false
@@ -41,7 +41,7 @@
 							"longpath": "src/components/accordions/accordion.md",
 							"type": "file",
 							"title": "Accordion",
-							"guid": "component-accordion-0",
+							"guid": "component-accordion-static",
 							"variantid": "static",
 							"componentid": "component-accordion",
 							"private": false
@@ -133,7 +133,7 @@
 							"longpath": "src/components/datepicker/primary.md",
 							"type": "file",
 							"title": "Datepicker",
-							"guid": "component-datepicker-0",
+							"guid": "component-datepicker-normal",
 							"variantid": "normal",
 							"componentid": "component-datepicker",
 							"private": false
@@ -155,7 +155,7 @@
 							"longpath": "src/components/dialogs/single-button.md",
 							"type": "file",
 							"title": "Single button",
-							"guid": "31495b40-9492-40e4-86e3-1e06bfc40182",
+							"guid": "component-dialogue-single-button",
 							"variantid": "single-button",
 							"componentid": "component-dialogue",
 							"private": false
@@ -167,7 +167,7 @@
 							"longpath": "src/components/dialogs/two-buttons.md",
 							"type": "file",
 							"title": "Two buttons",
-							"guid": "31495b40-9492-40e4-86e3-1e06bfc40183",
+							"guid": "component-dialogue-two-buttons",
 							"variantid": "two-buttons",
 							"componentid": "component-dialogue",
 							"private": false
@@ -189,7 +189,7 @@
 							"longpath": "src/components/inputs/checkbox.md",
 							"type": "file",
 							"title": "Checkbox input",
-							"guid": "31495b40-8787-40e4-86e3-23df544g6",
+							"guid": "component-checkbox-radio",
 							"variantid": "radio",
 							"componentid": "component-checkbox",
 							"private": false
@@ -201,7 +201,7 @@
 							"longpath": "src/components/inputs/default.md",
 							"type": "file",
 							"title": "Default input field",
-							"guid": "31495b40-9492-40e4-86e3-465f344fd",
+							"guid": "component-input-default",
 							"variantid": "default",
 							"componentid": "component-input",
 							"private": false
@@ -213,7 +213,7 @@
 							"longpath": "src/components/inputs/dropdown.md",
 							"type": "file",
 							"title": "Dropdown",
-							"guid": "31495b40-9492-40e4-86e3-as89d89asd",
+							"guid": "component-dropdown-dropdown",
 							"variantid": "dropdown",
 							"componentid": "component-dropdown",
 							"private": false
@@ -225,7 +225,7 @@
 							"longpath": "src/components/inputs/radio.md",
 							"type": "file",
 							"title": "Radio input",
-							"guid": "31495b40-9492-40e4-86e3-9x8c7vv7x8",
+							"guid": "component-radiobutton-radio",
 							"variantid": "radio",
 							"componentid": "component-radiobutton",
 							"private": false
@@ -249,7 +249,7 @@
 							"longpath": "src/components/inputs/toggleswitch.md",
 							"type": "file",
 							"title": "Toggle switch input",
-							"guid": "31495b40-8787-40e4-86e3-23df544g6",
+							"guid": "component-toggleswitch-toggle",
 							"variantid": "toggle",
 							"componentid": "component-toggleswitch",
 							"private": false
@@ -271,7 +271,7 @@
 							"longpath": "src/components/modals/slideout-modal.md",
 							"type": "file",
 							"title": "Slideout Modal",
-							"guid": "component-slideout-modal-0",
+							"guid": "component-slideout-modal-normal",
 							"variantid": "normal",
 							"componentid": "component-slideout-modal",
 							"private": false
@@ -293,7 +293,7 @@
 							"longpath": "src/components/progress-bars/progress-bar.md",
 							"type": "file",
 							"title": "Progress bar",
-							"guid": "component-progressbar-0",
+							"guid": "component-progressbar-default",
 							"variantid": "default",
 							"componentid": "component-progressbar",
 							"private": false
@@ -315,7 +315,7 @@
 							"longpath": "src/components/tables/table.md",
 							"type": "file",
 							"title": "Table",
-							"guid": "component-table-0",
+							"guid": "component-table-default",
 							"variantid": "default",
 							"componentid": "component-table",
 							"private": false
@@ -359,7 +359,7 @@
 							"longpath": "src/components/text/preamble.md",
 							"type": "file",
 							"title": "Preamble",
-							"guid": "component-button-primary",
+							"guid": "component-preamble-primary",
 							"variantid": "primary",
 							"componentid": "component-preamble",
 							"private": false
@@ -386,7 +386,7 @@
 					"longpath": "src/examples/colors.md",
 					"type": "file",
 					"title": "Colors",
-					"guid": "31495b40-9492-40e4-86e3-1e06bfc40171",
+					"guid": "vanilla-colors-primary",
 					"variantid": "primary",
 					"componentid": "vanilla-colors",
 					"private": false
@@ -398,7 +398,7 @@
 					"longpath": "src/examples/defaults.md",
 					"type": "file",
 					"title": "Defaults",
-					"guid": "31495b40-9492-40e4-86e3-1e06bfc40162",
+					"guid": "vanilla-defaults-primary",
 					"variantid": "primary",
 					"componentid": "vanilla-defaults",
 					"private": false
@@ -410,7 +410,7 @@
 					"longpath": "src/examples/inline-links.md",
 					"type": "file",
 					"title": "Inline links",
-					"guid": "31495b40-9492-40e4-86e3-1e06kjhsdhsd",
+					"guid": "component-inlinelinks-primary",
 					"variantid": "primary",
 					"componentid": "component-inlinelinks",
 					"private": false

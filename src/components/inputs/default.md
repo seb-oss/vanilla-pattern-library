@@ -2,17 +2,17 @@
 title: Default input field
 componentid: component-input
 variantid: default
-guid: 31495b40-9492-40e4-86e3-465f344fd
+guid: component-input-default
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/input_base";
+@import "~@sebgroup/vanilla/src/components/inputs/input_base";
 ```
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/input-mixins";
+@import "~@sebgroup/vanilla/src/components/inputs/input-mixins";
 
 .my-field-class {
     @include vanilla-field-base();

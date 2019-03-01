@@ -2,12 +2,12 @@
 title: Datepicker
 componentid: component-datepicker
 variantid: normal
-guid: component-datepicker-0
+guid: component-datepicker-normal
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/datepicker/datepicker";
+@import "~@sebgroup/vanilla/src/components/datepicker/datepicker";
 ```
 
 :::componentpreview
