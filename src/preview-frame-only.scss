@@ -5,8 +5,8 @@
 ////
 
 @import "variables";
-@import "defaults";
 
+$vanilla-font-awesome-inc-path: "/vanilla-pattern-library/assets/fontawesome";
 @import url("#{$vanilla-font-awesome-inc-path}/css/light.min.css");
 @import url("#{$vanilla-font-awesome-inc-path}/css/fontawesome.css");
 
