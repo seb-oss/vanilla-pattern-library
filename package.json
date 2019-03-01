@@ -12,9 +12,10 @@
 		"sassdoc": "node node_modules/sassdoc/bin/sassdoc src",
 		"commit": "git-cz",
 		"travis-deploy-once": "travis-deploy-once --pro",
-		"semantic-release": "semantic-release && npm run build",
+		"semantic-release": "semantic-release",
 		"add-fa-config": "npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN",
-		"set-version": "replace 0.0.0-semantically-released $TRAVIS_BUILD_NUMBER dist/web/version.json"
+		"build-demo-site": "export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 0.0.0-semantically-released $PKG_VERSION package.json && npm run build",
+		"package-lock-sanitizer": "package-lock-sanitizer"
 	},
 	"config": {
 		"configFile": "./config/projectoptions.yml",
@@ -39,7 +40,8 @@
 	},
 	"husky": {
 		"hooks": {
-			"commit-msg": "commitlint --edit"
+			"commit-msg": "commitlint --edit",
+			"pre-commit": "npm run package-lock-sanitizer && git add package-lock.json"
 		}
 	},
 	"dependencies": {
@@ -51,8 +53,9 @@
 		"@commitlint/config-conventional": "^7.5.0",
 		"@fortawesome/fontawesome-pro": "^5.7.2",
 		"cz-conventional-changelog": "^2.1.0",
-		"davanmonet": "1.4.2-beta.2",
+		"davanmonet": "1.4.4",
 		"husky": "^1.3.1",
+		"package-lock-sanitizer": "^1.0.0",
 		"replace": "^1.0.1",
 		"sassdoc": "^2.5.0",
 		"semantic-release": "^16.0.0-beta.18",

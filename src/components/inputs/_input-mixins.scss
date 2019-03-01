@@ -15,7 +15,7 @@
 /// @access public
 @mixin vanilla-field-base() {
   // Config
-  $_height: vanilla-px-to-em(40px);
+  $_height: vanilla-px-to-em(44px);
   $_border-color-normal: $vanilla-color-grey7;
   //
 
@@ -74,7 +74,7 @@
 ///
 /// @access public
 @mixin vanilla-text-field--error() {
-  $_border-bottom: vanilla-px-to-em(4) solid $vanilla-color-red;
+  $_border-bottom: vanilla-px-to-em(2) solid $vanilla-color-red;
 
   border-bottom: $_border-bottom;
   &:focus,
@@ -89,8 +89,9 @@
 /// @access public
 @mixin vanilla-text-field-notice() {
   display: block;
+  line-height: 1;
   font-size: vanilla-px-to-em(14);
-  margin-top: vanilla-px-to-em(1);
+  margin-top: vanilla-px-to-em(8);
 }
 
 /// Style that can be added to erroneous text field notice
@@ -105,9 +106,9 @@
 /// @access public
 @mixin vanilla-field-label() {
   display: block;
-
+  line-height: 1;
   margin-top: $vanilla-base-size;
-  margin-bottom: vanilla-px-to-em(1px);
+  margin-bottom: vanilla-px-to-em(8);
 
   font-size: vanilla-px-to-em(16px);
   font-weight: 500;
@@ -313,7 +314,7 @@
 @mixin vanilla-field-dropdown-button() {
   @include vanilla-field-base();
 
-  line-height: vanilla-px-to-em(40px);
+  line-height: vanilla-px-to-em(44 - 2);
   padding: 0 0 0 1rem;
   cursor: pointer;
   position: relative;
@@ -321,7 +322,7 @@
   background-color: $vanilla-color-white;
 
   &:after {
-    @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(40px));
+    @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(44 - 2));
 
     float: right;
     background-color: inherit;
@@ -347,7 +348,7 @@
     display: block;
     padding: 0 1rem;
     cursor: pointer;
-    line-height: vanilla-px-to-em(40px);
+    line-height: vanilla-px-to-em(44px);
 
     &:hover {
       background-color: $vanilla-color-component-normal;
@@ -360,7 +361,7 @@
     opacity: 0;
   }
 
-  line-height: vanilla-px-to-em(40px);
+  line-height: vanilla-px-to-em(44px);
 
   input {
     position: absolute;

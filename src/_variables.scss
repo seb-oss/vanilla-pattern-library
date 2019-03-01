@@ -18,7 +18,6 @@ $vanilla-rem-base: 16px;
 // Path settings
 /// Font Awesome includepath
 $vanilla-font-awesome-inc-path: "/assets/fontawesome" !default;
-$vanilla-font-awesome-inc-path: "~@seb-style/fontawesome" !default;
 
 $vanilla-font-basepath: '/assets/fonts/' !default;
 $vanilla-font-fallback: Arial, sans-serif !default;
@@ -36,8 +35,8 @@ $vanilla-breakpoints: (
 // / Headline display heading font sizes
 $vanilla-font-settings-h-display: (
   desktop: (size: vanilla-px-to-rem(96), weight: 600),
-  tablet: (size: vanilla-px-to-rem(96), weight: 600),
-  mobile: (size: vanilla-px-to-rem(96), weight: 600)
+  tablet: (size: vanilla-px-to-rem(64), weight: 600),
+  mobile: (size: vanilla-px-to-rem(48), weight: 600)
 ) !default;
 // / Headline H1 font sizes
 $vanilla-font-settings-h1: (
@@ -47,15 +46,15 @@ $vanilla-font-settings-h1: (
 ) !default;
 // / Headline H2 font sizes
 $vanilla-font-settings-h2: (
-  desktop: (size: vanilla-px-to-rem(32), weight: 500),
-  tablet: (size: vanilla-px-to-rem(24), weight: 500),
-  mobile: (size: vanilla-px-to-rem(24), weight: 500)
+  desktop: (size: vanilla-px-to-rem(32), weight: 600),
+  tablet: (size: vanilla-px-to-rem(24), weight: 600),
+  mobile: (size: vanilla-px-to-rem(24), weight: 600)
 ) !default;
 // / Headline H3 font sizes
 $vanilla-font-settings-h3: (
-  desktop: (size: vanilla-px-to-rem(24), weight: 500),
-  tablet: (size: vanilla-px-to-rem(20), weight: 500),
-  mobile: (size: vanilla-px-to-rem(20), weight: 500)
+  desktop: (size: vanilla-px-to-rem(24), weight: 600),
+  tablet: (size: vanilla-px-to-rem(20), weight: 600),
+  mobile: (size: vanilla-px-to-rem(20), weight: 600)
 ) !default;
 // / Headline H4 font sizes
 $vanilla-font-settings-h4: (
@@ -71,9 +70,9 @@ $vanilla-font-settings-h5: (
 ) !default;
 // / Headline H6 font sizes
 $vanilla-font-settings-h6: (
-  desktop: (size: vanilla-px-to-rem(12), weight: 500),
-  tablet: (size: vanilla-px-to-rem(12), weight: 500),
-  mobile: (size: vanilla-px-to-rem(12), weight: 500)
+  desktop: (size: vanilla-px-to-rem(16), weight: 500),
+  tablet: (size: vanilla-px-to-rem(16), weight: 500),
+  mobile: (size: vanilla-px-to-rem(16), weight: 500)
 ) !default;
 // / Body Regular (Base) font size
 $vanilla-font-settings-body: (
