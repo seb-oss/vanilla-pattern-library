@@ -2,17 +2,17 @@
 title: Radio input
 componentid: component-radiobutton
 variantid: radio
-guid: 31495b40-9492-40e4-86e3-9x8c7vv7x8
+guid: component-radiobutton-radio
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/radio";
+@import "~@sebgroup/vanilla/src/components/inputs/radio";
 ```
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/inputs/input-mixins";
+@import "~@sebgroup/vanilla/src/components/inputs/input-mixins";
 
 .my-radio-wrap-class {
     @include vanilla-field-radio-wrap();

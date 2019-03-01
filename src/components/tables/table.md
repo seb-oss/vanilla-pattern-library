@@ -2,13 +2,13 @@
 title: Table
 componentid: component-table
 variantid: default
-guid: component-table-0
+guid: component-table-default
 private: false
 ---
 # Usage
 Import classes:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/tables/table";
+@import "~@sebgroup/vanilla/src/components/tables/table";
 ```
 
 :::componentpreview

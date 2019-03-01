@@ -8,15 +8,15 @@ guid: component-button-secondary
 Import classes:
 ```scss
 // Will import all button classes
-@import "~@sebdesignlibrary/vanilla/src/components/buttons/button";
+@import "~@sebgroup/vanilla/src/components/buttons/button";
 
 // Will import secondary button only
-@import "~@sebdesignlibrary/vanilla/src/components/buttons/button-secondary";
+@import "~@sebgroup/vanilla/src/components/buttons/button-secondary";
 ```
 
 In addition to the classes shown in the example below, this component can be used via the following mixins:
 ```scss
-@import "~@sebdesignlibrary/vanilla/src/components/buttons/button-mixins";
+@import "~@sebgroup/vanilla/src/components/buttons/button-mixins";
 
 .my-button-class {
     @include vanilla-button();
