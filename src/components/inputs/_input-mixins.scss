@@ -15,7 +15,7 @@
 /// @access public
 @mixin vanilla-field-base() {
   // Config
-  $_height: vanilla-px-to-em(40px);
+  $_height: vanilla-px-to-em(44px);
   $_border-color-normal: $vanilla-color-grey7;
   //
 
@@ -313,7 +313,7 @@
 @mixin vanilla-field-dropdown-button() {
   @include vanilla-field-base();
 
-  line-height: vanilla-px-to-em(40px);
+  line-height: vanilla-px-to-em(44 - 2);
   padding: 0 0 0 1rem;
   cursor: pointer;
   position: relative;
@@ -321,7 +321,7 @@
   background-color: $vanilla-color-white;
 
   &:after {
-    @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(40px));
+    @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(44 - 2));
 
     float: right;
     background-color: inherit;
@@ -347,7 +347,7 @@
     display: block;
     padding: 0 1rem;
     cursor: pointer;
-    line-height: vanilla-px-to-em(40px);
+    line-height: vanilla-px-to-em(44px);
 
     &:hover {
       background-color: $vanilla-color-component-normal;
@@ -360,7 +360,7 @@
     opacity: 0;
   }
 
-  line-height: vanilla-px-to-em(40px);
+  line-height: vanilla-px-to-em(44px);
 
   input {
     position: absolute;
