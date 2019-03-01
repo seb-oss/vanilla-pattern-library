@@ -116,7 +116,7 @@ compilation:
 assets:
 - isdirectory: true
   src: "node_modules/@sebgroup/fonts/fonts"
-  dev_access: "/assets/fonts"
+  dev_access: "/vanilla-pattern-library/assets/fonts"
   dest:
   - "dist/web/assets/fonts"
 # - isdirectory: true
@@ -126,9 +126,13 @@ assets:
 #   - "dist/web/sassdoc"
 - isdirectory: true
   src: "./node_modules/@fortawesome/fontawesome-pro"
-  dev_access: "/assets/fontawesome"
+  dev_access: "/vanilla-pattern-library/assets/fontawesome"
   dest:
   - "dist/web/assets/fontawesome"
+
+- isdirectory: true
+  src: "./src"
+  dev_access: "/src"
 
 
 #-------------------------------------------------------------------------------
