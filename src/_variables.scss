@@ -17,10 +17,10 @@ $vanilla-rem-base: 16px;
 
 // Path settings
 /// Font Awesome includepath
-$vanilla-font-awesome-inc-path: "/assets/fontawesome" !default;
+$vanilla-font-awesome-inc-path: "/vanilla-pattern-library/assets/fontawesome" !default;
 $vanilla-font-awesome-inc-path: "~@seb-style/fontawesome" !default;
 
-$vanilla-font-basepath: '/assets/fonts/' !default;
+$vanilla-font-basepath: '/vanilla-pattern-library/assets/fonts/' !default;
 $vanilla-font-fallback: Arial, sans-serif !default;
 $vanilla-font-seb-sans-serif: "SEBSansSerif", $vanilla-font-fallback;
 
