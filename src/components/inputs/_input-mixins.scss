@@ -74,7 +74,7 @@
 ///
 /// @access public
 @mixin vanilla-text-field--error() {
-  $_border-bottom: vanilla-px-to-em(4) solid $vanilla-color-red;
+  $_border-bottom: vanilla-px-to-em(2) solid $vanilla-color-red;
 
   border-bottom: $_border-bottom;
   &:focus,
@@ -89,8 +89,9 @@
 /// @access public
 @mixin vanilla-text-field-notice() {
   display: block;
+  line-height: 1;
   font-size: vanilla-px-to-em(14);
-  margin-top: vanilla-px-to-em(1);
+  margin-top: vanilla-px-to-em(8);
 }
 
 /// Style that can be added to erroneous text field notice
@@ -105,9 +106,9 @@
 /// @access public
 @mixin vanilla-field-label() {
   display: block;
-
+  line-height: 1;
   margin-top: $vanilla-base-size;
-  margin-bottom: vanilla-px-to-em(1px);
+  margin-bottom: vanilla-px-to-em(8);
 
   font-size: vanilla-px-to-em(16px);
   font-weight: 500;
