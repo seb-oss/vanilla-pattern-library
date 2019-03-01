@@ -16,7 +16,7 @@ project_info:
 directories:
 
   public_path: '/vanilla-pattern-library/'
-  public_path_markdown: 'https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/dev/'
+  public_path_markdown: 'https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/gh-pages/'
   use_hash: true
 
   # Path to the pattern library source files
