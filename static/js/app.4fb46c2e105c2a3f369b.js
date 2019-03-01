@@ -10053,17 +10053,6 @@ module.exports = wrapperClone;
 
 /***/ }),
 
-/***/ "6T52":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"davanmonet-app"},[_c('header',{staticClass:"davanmonet-header"},[_c('a',{staticClass:"davanmonet-header-logolink",attrs:{"href":"/"}},[_c('img',{staticClass:"davanmonet-header-logo",attrs:{"src":(_vm.publicPath + _vm.projectConfig.project_info.logo).replace('//', '/'),"alt":""}}),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info)?_c('span',{staticClass:"davanmonet-header-logolinktext",domProps:{"innerHTML":_vm._s(_vm.projectConfig.project_info.name)}},[_vm._v("DaVanMonet")]):_vm._e()]),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info && _vm.projectConfig.project_info.repourl)?_c('a',{staticClass:"davanmonet-header-repository-link",attrs:{"href":_vm.projectConfig.project_info.repourl,"title":"Go to the Repository"}},[_c('svg',{staticStyle:{"width":"24px","height":"24px"},attrs:{"viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"}})])]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"davanmonet-pagecontainer"},[(_vm.configLoaded == true)?_c('navigation',{staticClass:"davanmonet-navcontainer",attrs:{"navigation":_vm.navigation,"version-data":_vm.versionData,"source-directory":_vm.projectConfig.directories.src,"current-page-path":_vm.currentPagePath}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == true && _vm.maincontent)?_c('main-content',{staticClass:"davanmonet-maincontentcontainer",attrs:{"content":_vm.maincontent,"css-breakpoints":_vm.projectConfig.env.cssBreakpoints}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == false)?_c('div',[_vm._v("\n\t\t\t\tLoading...\n\t\t\t")]):_vm._e()],1)])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-
-/***/ }),
-
 /***/ "6WHE":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10569,7 +10558,7 @@ module.exports = lodash;
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
- * Vue.js v2.6.7
+ * Vue.js v2.6.8
  * (c) 2014-2019 Evan You
  * Released under the MIT License.
  */
@@ -11045,7 +11034,7 @@ var config = ({
  * using https://www.w3.org/TR/html53/semantics-scripting.html#potentialcustomelementname
  * skipping \u10000-\uEFFFF due to it freezing up PhantomJS
  */
-var unicodeLetters = 'a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD';
+var unicodeRegExp = /a-zA-Z\u00B7\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u037D\u037F-\u1FFF\u200C-\u200D\u203F-\u2040\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD/;
 
 /**
  * Check if a string starts with $ or _
@@ -11070,7 +11059,7 @@ function def (obj, key, val, enumerable) {
 /**
  * Parse simple path.
  */
-var bailRE = new RegExp(("[^" + unicodeLetters + ".$_\\d]"));
+var bailRE = new RegExp(("[^" + (unicodeRegExp.source) + ".$_\\d]"));
 function parsePath (path) {
   if (bailRE.test(path)) {
     return
@@ -11974,7 +11963,7 @@ function checkComponents (options) {
 }
 
 function validateComponentName (name) {
-  if (!new RegExp(("^[a-zA-Z][\\-\\.0-9_" + unicodeLetters + "]*$")).test(name)) {
+  if (!new RegExp(("^[a-zA-Z][\\-\\.0-9_" + (unicodeRegExp.source) + "]*$")).test(name)) {
     warn(
       'Invalid component name: "' + name + '". Component names ' +
       'should conform to valid custom element name in html5 specification.'
@@ -14185,17 +14174,21 @@ function resolveAsyncComponent (
     return factory.resolved
   }
 
+  var owner = currentRenderingInstance;
+  if (isDef(factory.owners) && factory.owners.indexOf(owner) === -1) {
+    // already pending
+    factory.owners.push(owner);
+  }
+
   if (isTrue(factory.loading) && isDef(factory.loadingComp)) {
     return factory.loadingComp
   }
 
-  var owner = currentRenderingInstance;
-  if (isDef(factory.owners)) {
-    // already pending
-    factory.owners.push(owner);
-  } else {
+  if (!isDef(factory.owners)) {
     var owners = factory.owners = [owner];
-    var sync = true;
+    var sync = true
+
+    ;(owner).$on('hook:destroyed', function () { return remove(owners, owner); });
 
     var forceRender = function (renderCompleted) {
       for (var i = 0, l = owners.length; i < l; i++) {
@@ -15983,7 +15976,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.6.7';
+Vue.version = '2.6.8';
 
 /*  */
 
@@ -19783,7 +19776,7 @@ var isNonPhrasingTag = makeMap(
 // Regular Expressions for parsing tags and attributes
 var attribute = /^\s*([^\s"'<>\/=]+)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/;
 var dynamicArgAttribute = /^\s*((?:v-[\w-]+:|@|:|#)\[[^=]+\][^\s"'<>\/=]*)(?:\s*(=)\s*(?:"([^"]*)"+|'([^']*)'+|([^\s"'=<>`]+)))?/;
-var ncname = "[a-zA-Z_][\\-\\.0-9_a-zA-Z" + unicodeLetters + "]*";
+var ncname = "[a-zA-Z_][\\-\\.0-9_a-zA-Z" + (unicodeRegExp.source) + "]*";
 var qnameCapture = "((?:" + ncname + "\\:)?" + ncname + ")";
 var startTagOpen = new RegExp(("^<" + qnameCapture));
 var startTagClose = /^\s*(\/?)>/;
@@ -20044,7 +20037,7 @@ function parseHTML (html, options) {
         ) {
           options.warn(
             ("tag <" + (stack[i].tag) + "> has no matching end tag."),
-            { start: stack[i].start }
+            { start: stack[i].start, end: stack[i].end }
           );
         }
         if (options.end) {
@@ -20081,7 +20074,7 @@ var dynamicArgRE = /^\[.*\]$/;
 
 var argRE = /:(.*)$/;
 var bindRE = /^:|^\.|^v-bind:/;
-var modifierRE = /\.[^.]+/g;
+var modifierRE = /\.[^.\]]+(?=[^\]]*$)/g;
 
 var slotRE = /^v-slot(:|$)|^#/;
 
@@ -20258,7 +20251,7 @@ function parse (
     shouldDecodeNewlinesForHref: options.shouldDecodeNewlinesForHref,
     shouldKeepComment: options.comments,
     outputSourceRange: options.outputSourceRange,
-    start: function start (tag, attrs, unary, start$1) {
+    start: function start (tag, attrs, unary, start$1, end) {
       // check namespace.
       // inherit parent ns if there is one
       var ns = (currentParent && currentParent.ns) || platformGetTagNamespace(tag);
@@ -20277,6 +20270,7 @@ function parse (
       if (false) {
         if (options.outputSourceRange) {
           element.start = start$1;
+          element.end = end;
           element.rawAttrsMap = element.attrsList.reduce(function (cumulated, attr) {
             cumulated[attr.name] = attr;
             return cumulated
@@ -21758,7 +21752,7 @@ function genScopedSlots (
   // components with only scoped slots to skip forced updates from parent.
   // but in some cases we have to bail-out of this optimization
   // for example if the slot contains dynamic names, has v-if or v-for on them...
-  var needsForceUpdate = Object.keys(slots).some(function (key) {
+  var needsForceUpdate = el.for || Object.keys(slots).some(function (key) {
     var slot = slots[key];
     return (
       slot.slotTargetDynamic ||
@@ -23087,7 +23081,7 @@ module.exports = function (O, D) {
 /***/ "7YgM":
 /***/ (function(module, exports) {
 
-module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"1.0.0-pre.5","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","build-demo-site":"export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 1.0.0-pre.3 $PKG_VERSION package.json && npm run build","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.3","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
+module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"1.0.0-pre.3","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","build-demo-site":"export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 1.0.0-pre.3 $PKG_VERSION package.json && npm run build","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.4","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
 
 /***/ }),
 
@@ -37485,6 +37479,9 @@ exports.default = {
 	computed: {
 		publicPath: function publicPath() {
 			if (this.projectConfig && this.projectConfig.directories && this.projectConfig.directories.public_path) return this.projectConfig.directories.public_path;else return '/';
+		},
+		logoPath: function logoPath() {
+			if (this.publicPath && this.projectConfig && this.projectConfig.project_info && this.projectConfig.project_info.logo) return (this.publicPath + this.projectConfig.project_info.logo).replace('//', '/');else return (this.publicPath + '/static/logo.svg').replace('//', '/');
 		}
 	},
 
@@ -38351,10 +38348,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__ = __webpack_require__("DgEM");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__);
 /* harmony namespace reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1d800c04_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__ = __webpack_require__("6T52");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1dc3576a_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__ = __webpack_require__("eFva");
 function injectStyle (ssrContext) {
-  __webpack_require__("wyNb")
-  __webpack_require__("V7pn")
+  __webpack_require__("uBcF")
+  __webpack_require__("rgQu")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -38372,7 +38369,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1d800c04_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1dc3576a_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -66481,13 +66478,6 @@ module.exports = false;
 
 /***/ }),
 
-/***/ "V7pn":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "VORN":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -74619,6 +74609,17 @@ function isMasked(func) {
 
 module.exports = isMasked;
 
+
+/***/ }),
+
+/***/ "eFva":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"davanmonet-app"},[_c('header',{staticClass:"davanmonet-header"},[_c('a',{staticClass:"davanmonet-header-logolink",attrs:{"href":"/"}},[_c('img',{staticClass:"davanmonet-header-logo",attrs:{"src":_vm.logoPath,"alt":""}}),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info)?_c('span',{staticClass:"davanmonet-header-logolinktext",domProps:{"innerHTML":_vm._s(_vm.projectConfig.project_info.name)}},[_vm._v("DaVanMonet")]):_vm._e()]),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info && _vm.projectConfig.project_info.repourl)?_c('a',{staticClass:"davanmonet-header-repository-link",attrs:{"href":_vm.projectConfig.project_info.repourl,"title":"Go to the Repository"}},[_c('svg',{staticStyle:{"width":"24px","height":"24px"},attrs:{"viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"}})])]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"davanmonet-pagecontainer"},[(_vm.configLoaded == true)?_c('navigation',{staticClass:"davanmonet-navcontainer",attrs:{"navigation":_vm.navigation,"version-data":_vm.versionData,"source-directory":_vm.projectConfig.directories.src,"current-page-path":_vm.currentPagePath}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == true && _vm.maincontent)?_c('main-content',{staticClass:"davanmonet-maincontentcontainer",attrs:{"content":_vm.maincontent,"css-breakpoints":_vm.projectConfig.env.cssBreakpoints}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == false)?_c('div',[_vm._v("\n\t\t\t\tLoading...\n\t\t\t")]):_vm._e()],1)])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
@@ -87029,6 +87030,13 @@ module.exports = clone;
 
 /***/ }),
 
+/***/ "rgQu":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "rivI":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -92063,6 +92071,13 @@ module.exports = function reference(state, startLine, _endLine, silent) {
 
 /***/ }),
 
+/***/ "uBcF":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "uCi2":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -94425,13 +94440,6 @@ $export($export.S, 'Math', {
   }
 });
 
-
-/***/ }),
-
-/***/ "wyNb":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -98851,4 +98859,4 @@ module.exports = function (it, TYPE) {
 /***/ })
 
 },[0]);
-//# sourceMappingURL=app.b9c0019568e7d7032859.js.map
+//# sourceMappingURL=app.4fb46c2e105c2a3f369b.js.map
