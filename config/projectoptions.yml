@@ -85,8 +85,6 @@ compilation:
     - "**/sdv-all.scss"
     preview-frame-only.css:
     - "**/preview-frame-only.scss"
-    designlibrary-only.css:
-    - "**/designlibrary-only.scss"
 
   # Create source maps for JS and CSS
   sourceMaps: true
