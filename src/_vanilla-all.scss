@@ -1,8 +1,13 @@
-$vanilla-font-basepath: '/vanilla-pattern-library/assets/fonts/';
+////
+/// Import this file to get all of Vanilla in one go.
+/// Note: It is usually better to import components one by one where you need them. That help keeping output file size low, and gives you a cleaner dependency tree.
+/// @group Global
+/// @author Digital CX
+////
 
 @import "defaults";
 
-// Components
+// All components
 @import "components/buttons/button";
 @import "components/inputs/input_base";
 @import "components/inputs/dropdown";
@@ -17,6 +22,3 @@ $vanilla-font-basepath: '/vanilla-pattern-library/assets/fonts/';
 @import "components/datepicker/datepicker";
 @import "components/text/preamble";
 @import "components/modals/slideout-modal";
-
-// Examples
-@import "examples/colors";

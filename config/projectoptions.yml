@@ -82,9 +82,11 @@ compilation:
   # are loaders for LESS, SASS and JS configured in DvM
   targets:
     sdv-all.css:
-    - "**/vanilla-all.scss"
+    - "**/sdv-all.scss"
     preview-frame-only.css:
     - "**/preview-frame-only.scss"
+    designlibrary-only.css:
+    - "**/designlibrary-only.scss"
 
   # Create source maps for JS and CSS
   sourceMaps: true

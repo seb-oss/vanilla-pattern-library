@@ -4,12 +4,6 @@
 /// @author Digital CX
 ////
 
-////
-/// These are the default variable values used throughout Vanilla
-/// @group Global variables
-/// @author Digital CX
-////
-
 @import "functions";
 @import "colors";
 
@@ -95,10 +89,6 @@ $vanilla-base-size: 1rem !default;
 
 /// Default component border radius (buttons, input fields, etc)
 $vanilla-component-border-radius: (4 / 16) * 1em !default;
-
-// Path settings
-/// Font Awesome includepath
-$vanilla-font-awesome-inc-path: "/assets/fontawesome" !default;
 
 /// Responsive breakpoints
 $vanilla-breakpoints: (
