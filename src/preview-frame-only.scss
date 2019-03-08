@@ -25,6 +25,14 @@ $vanilla-font-awesome-inc-path: "/vanilla-pattern-library/assets/fontawesome";
   width: 100%;
   text-align: center;
 }
+
+.pl-yellow-bg {
+  background-color: $vanilla-color-yellow;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
 .showcase__render {
   min-height: 200px;
 }

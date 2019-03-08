@@ -160,11 +160,10 @@ $_button_disabled-color-light: $vanilla-color-component-disabled-light;
   }
 }
 
-
 /// Ghost button styles
 ///
 /// @access public
-@mixin vanilla-button-ghost {
+@mixin vanilla-button-ghost-light {
   border-color: $vanilla-color-white;
   color: $vanilla-color-white;
   background-color: transparent;
@@ -177,12 +176,42 @@ $_button_disabled-color-light: $vanilla-color-component-disabled-light;
     border-color: $vanilla-color-white;
   }
   &[disabled] {
-    background-color: $_button_disabled-color-light;
+    background-color: transparent;
     border-color: $_button_disabled-color-dark;
     color: $_button_disabled-color-dark;
   }
 }
 
+
+/// Ghost button styles (dark)
+///
+/// @access public
+@mixin vanilla-button-ghost-dark {
+  border-color: $vanilla-color-grey2;
+  color: $vanilla-color-grey2;
+  background-color: transparent;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $vanilla-color-white;
+    background-color: $vanilla-color-grey2;
+    border-color: $vanilla-color-grey2;
+  }
+  &[disabled] {
+    background-color: transparent;
+    border-color: $_button_disabled-color-dark;
+    color: $_button_disabled-color-dark;
+  }
+}
+
+/// Ghost button styles default (for backwards compatibility)
+///
+/// @access public
+/// @deprecated
+@mixin vanilla-button-ghost {
+  @include vanilla-button-ghost-light();
+}
 
 /// Mixes in button icon
 ///
