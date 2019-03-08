@@ -52,3 +52,11 @@
   transform: rotate(#{$rotation + "deg"});
   transition: transform 250ms;
 }
+
+/// Add focus outline to element
+///
+/// @access public
+@mixin vanilla-focus-outline() {
+  box-shadow: 0px 0px 0px 3px rgba($vanilla-color-component-selected, 0.2);
+  transition: box-shadow 250ms;
+}

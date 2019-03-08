@@ -8,6 +8,7 @@
 @import "../../functions";
 @import "../../utilities";
 @import "../../icons";
+@import "../../mixins";
 
 /// The left and right padding in buttons
 $vanilla-button-padding: vanilla-px-to-em(16) !default;
@@ -57,6 +58,7 @@ $_button_disabled-color-light: $vanilla-color-component-disabled-light;
     background-color: $_button_color-bg-focus;
     border-color: $_button_color-bg-focus;
     text-decoration: none;
+    @include vanilla-focus-outline();
   }
   &:active {
     background-color: $_button_color-bg-pressed;

@@ -39,6 +39,7 @@
   }
   &:focus {
     border-color: $vanilla-color-component-selected;
+    @include vanilla-focus-outline();
   }
   &:active {
     border-color: $_border-color-normal;
@@ -200,7 +201,7 @@
   }
   input:focus + label:before {
     border-color: $vanilla-color-component-selected;
-    box-shadow: 0 0 0 vanilla-px-to-em(3px) rgba($vanilla-color-component-selected, 0.2);
+    @include vanilla-focus-outline();
   }
 
   input[disabled] {
@@ -378,7 +379,7 @@
   input:focus + label,
   input:focus + &__label,
   &__label--focus {
-    box-shadow: 0px 0px 0px 3px rgba($vanilla-color-component-selected, 0.2);
+    @include vanilla-focus-outline();
   }
 
   &--expanded,
@@ -433,7 +434,7 @@
 
   input:focus + label,
   .-focus &__label {
-    box-shadow: 0px 0px 0px 3px rgba($vanilla-color-component-selected, 0.2);
+    @include vanilla-focus-outline();
   }
 
   input:disabled + label,
