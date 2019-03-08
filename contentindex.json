@@ -69,14 +69,26 @@
 							"private": false
 						},
 						{
-							"filename": "ghost.md",
-							"filepath": "components/buttons/ghost.md",
-							"shortpath": "components/buttons/ghost",
-							"longpath": "src/components/buttons/ghost.md",
+							"filename": "ghost-dark.md",
+							"filepath": "components/buttons/ghost-dark.md",
+							"shortpath": "components/buttons/ghost-dark",
+							"longpath": "src/components/buttons/ghost-dark.md",
 							"type": "file",
 							"title": "Ghost button",
-							"guid": "component-button-ghost",
-							"variantid": "ghost",
+							"guid": "component-button-ghost-dark",
+							"variantid": "ghost-dark",
+							"componentid": "component-button",
+							"private": false
+						},
+						{
+							"filename": "ghost-light.md",
+							"filepath": "components/buttons/ghost-light.md",
+							"shortpath": "components/buttons/ghost-light",
+							"longpath": "src/components/buttons/ghost-light.md",
+							"type": "file",
+							"title": "Ghost button",
+							"guid": "component-button-ghost-light",
+							"variantid": "ghost-light",
 							"componentid": "component-button",
 							"private": false
 						},
@@ -117,7 +129,7 @@
 							"private": false
 						}
 					],
-					"filecount": 5,
+					"filecount": 6,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -243,6 +255,18 @@
 							"private": false
 						},
 						{
+							"filename": "toggle-button.md",
+							"filepath": "components/inputs/toggle-button.md",
+							"shortpath": "components/inputs/toggle-button",
+							"longpath": "src/components/inputs/toggle-button.md",
+							"type": "file",
+							"title": "Toggle button input",
+							"guid": "component-togglebutton-default",
+							"variantid": "default",
+							"componentid": "component-togglebutton",
+							"private": false
+						},
+						{
 							"filename": "toggleswitch.md",
 							"filepath": "components/inputs/toggleswitch.md",
 							"shortpath": "components/inputs/toggleswitch",
@@ -255,7 +279,7 @@
 							"private": false
 						}
 					],
-					"filecount": 6,
+					"filecount": 7,
 					"directorycount": 0,
 					"type": "directory"
 				},

@@ -23081,7 +23081,7 @@ module.exports = function (O, D) {
 /***/ "7YgM":
 /***/ (function(module, exports) {
 
-module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"1.0.0","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","build-demo-site":"export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 1.0.0 $PKG_VERSION package.json && npm run build","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.4","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
+module.exports = {"name":"@sebgroup/vanilla","description":"SEB's vanilla components","version":"1.1.0","license":"UNLICENSED","private":false,"scripts":{"dev":"node node_modules/davanmonet/dvm-build/dev-server.js","build-dvm":"node node_modules/davanmonet/dvm-build/build-dvm.js","build-pl":"node node_modules/davanmonet/dvm-build/build-patternlibrary.js","build":"npm run build-dvm && npm run build-pl","sassdoc":"node node_modules/sassdoc/bin/sassdoc src","commit":"git-cz","travis-deploy-once":"travis-deploy-once --pro","semantic-release":"semantic-release","add-fa-config":"npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN","build-demo-site":"export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 1.1.0 $PKG_VERSION package.json && npm run build","package-lock-sanitizer":"package-lock-sanitizer"},"config":{"configFile":"./config/projectoptions.yml","commitizen":{"path":"./node_modules/cz-conventional-changelog"}},"release":{"branches":["master",{"name":"dev","prerelease":"pre","channel":"next"}]},"commitlint":{"extends":["@commitlint/config-conventional"]},"husky":{"hooks":{"commit-msg":"commitlint --edit","pre-commit":"npm run package-lock-sanitizer && git add package-lock.json"}},"dependencies":{"@sebgroup/fonts":"^1.0.0","include-media":"^1.4.9"},"devDependencies":{"@commitlint/cli":"^7.5.2","@commitlint/config-conventional":"^7.5.0","@fortawesome/fontawesome-pro":"^5.7.2","cz-conventional-changelog":"^2.1.0","davanmonet":"1.4.7","husky":"^1.3.1","package-lock-sanitizer":"^1.0.0","replace":"^1.0.1","sassdoc":"^2.5.0","semantic-release":"^16.0.0-beta.18","travis-deploy-once":"^5.0.11"},"repository":{"type":"git","url":"https://github.com/sebgroup/vanilla-pattern-library.git"},"publishConfig":{"access":"public"}}
 
 /***/ }),
 
@@ -38348,10 +38348,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__ = __webpack_require__("DgEM");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__);
 /* harmony namespace reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1dc3576a_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__ = __webpack_require__("eFva");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_a00ad8fa_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__ = __webpack_require__("lj1I");
 function injectStyle (ssrContext) {
-  __webpack_require__("uBcF")
-  __webpack_require__("rgQu")
+  __webpack_require__("dlLT")
+  __webpack_require__("tDMr")
 }
 var normalizeComponent = __webpack_require__("VU/8")
 /* script */
@@ -38369,7 +38369,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_DaVanMonet_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_1dc3576a_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_a00ad8fa_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_buble_transforms_vue_loader_lib_selector_type_template_index_0_DaVanMonet_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -39383,6 +39383,13 @@ var PageLoader = function () {
 
 							case 2:
 								md_base = this._projectConfig.directories.public_path_markdown || this._projectConfig.directories.public_path || "";
+
+								// The value from above don't apply in dev mode
+
+								if (typeof webpackHotUpdate !== "undefined") {
+									md_base = "";
+								}
+
 								requestbase = "";
 
 								if (md_base.indexOf('http') > -1) {
@@ -39391,19 +39398,19 @@ var PageLoader = function () {
 									requestbase = "//" + (window.location.host + md_base + "/").replace('//', '/');
 								}
 								fullpath = requestbase + this._projectConfig.directories.src + "/" + filepath + '.md';
-								_context4.next = 8;
+								_context4.next = 9;
 								return fetch(fullpath);
 
-							case 8:
+							case 9:
 								filereq = _context4.sent;
-								_context4.next = 11;
+								_context4.next = 12;
 								return filereq.text();
 
-							case 11:
+							case 12:
 								filecontent = _context4.sent;
 								return _context4.abrupt("return", filecontent);
 
-							case 13:
+							case 14:
 							case "end":
 								return _context4.stop();
 						}
@@ -74174,6 +74181,13 @@ $export($export.G + $export.B, {
 
 /***/ }),
 
+/***/ "dlLT":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "dm+7":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -74609,17 +74623,6 @@ function isMasked(func) {
 
 module.exports = isMasked;
 
-
-/***/ }),
-
-/***/ "eFva":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"davanmonet-app"},[_c('header',{staticClass:"davanmonet-header"},[_c('a',{staticClass:"davanmonet-header-logolink",attrs:{"href":"/"}},[_c('img',{staticClass:"davanmonet-header-logo",attrs:{"src":_vm.logoPath,"alt":""}}),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info)?_c('span',{staticClass:"davanmonet-header-logolinktext",domProps:{"innerHTML":_vm._s(_vm.projectConfig.project_info.name)}},[_vm._v("DaVanMonet")]):_vm._e()]),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info && _vm.projectConfig.project_info.repourl)?_c('a',{staticClass:"davanmonet-header-repository-link",attrs:{"href":_vm.projectConfig.project_info.repourl,"title":"Go to the Repository"}},[_c('svg',{staticStyle:{"width":"24px","height":"24px"},attrs:{"viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"}})])]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"davanmonet-pagecontainer"},[(_vm.configLoaded == true)?_c('navigation',{staticClass:"davanmonet-navcontainer",attrs:{"navigation":_vm.navigation,"version-data":_vm.versionData,"source-directory":_vm.projectConfig.directories.src,"current-page-path":_vm.currentPagePath}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == true && _vm.maincontent)?_c('main-content',{staticClass:"davanmonet-maincontentcontainer",attrs:{"content":_vm.maincontent,"css-breakpoints":_vm.projectConfig.env.cssBreakpoints}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == false)?_c('div',[_vm._v("\n\t\t\t\tLoading...\n\t\t\t")]):_vm._e()],1)])}
-var staticRenderFns = []
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
@@ -83201,7 +83204,7 @@ module.exports = function (isEntries) {
 /***/ "lWnS":
 /***/ (function(module, exports) {
 
-module.exports = {"structure":[{"title":"Components","shortpath":"components","longpath":"src/components","items":[{"title":"Accordions","shortpath":"accordions","longpath":"src/components/accordions","items":[{"filename":"accordion-interactive.md","filepath":"components/accordions/accordion-interactive.md","shortpath":"components/accordions/accordion-interactive","longpath":"src/components/accordions/accordion-interactive.md","type":"file","title":"Interactive Accordion","guid":"component-accordion-css-interactive","variantid":"css-interactive","componentid":"component-accordion","private":false},{"filename":"accordion-subheadlines.md","filepath":"components/accordions/accordion-subheadlines.md","shortpath":"components/accordions/accordion-subheadlines","longpath":"src/components/accordions/accordion-subheadlines.md","type":"file","title":"Accordion","guid":"component-accordion-subheadlines","variantid":"subheadlines","componentid":"component-accordion","private":false},{"filename":"accordion.md","filepath":"components/accordions/accordion.md","shortpath":"components/accordions/accordion","longpath":"src/components/accordions/accordion.md","type":"file","title":"Accordion","guid":"component-accordion-static","variantid":"static","componentid":"component-accordion","private":false}],"filecount":3,"directorycount":0,"type":"directory"},{"title":"Buttons","shortpath":"buttons","longpath":"src/components/buttons","items":[{"filename":"alternative.md","filepath":"components/buttons/alternative.md","shortpath":"components/buttons/alternative","longpath":"src/components/buttons/alternative.md","type":"file","title":"Alternative button","guid":"component-button-alternative","variantid":"alternative","componentid":"component-button","private":false},{"filename":"ghost.md","filepath":"components/buttons/ghost.md","shortpath":"components/buttons/ghost","longpath":"src/components/buttons/ghost.md","type":"file","title":"Ghost button","guid":"component-button-ghost","variantid":"ghost","componentid":"component-button","private":false},{"filename":"link.md","filepath":"components/buttons/link.md","shortpath":"components/buttons/link","longpath":"src/components/buttons/link.md","type":"file","title":"Link button","guid":"component-button-link","variantid":"link","componentid":"component-button","private":false},{"filename":"primary.md","filepath":"components/buttons/primary.md","shortpath":"components/buttons/primary","longpath":"src/components/buttons/primary.md","type":"file","title":"Primary button","guid":"component-button-primary","variantid":"primary","componentid":"component-button","private":false},{"filename":"secondary.md","filepath":"components/buttons/secondary.md","shortpath":"components/buttons/secondary","longpath":"src/components/buttons/secondary.md","type":"file","title":"Secondary button","guid":"component-button-secondary","variantid":"secondary","componentid":"component-button","private":false}],"filecount":5,"directorycount":0,"type":"directory"},{"title":"Datepicker","shortpath":"datepicker","longpath":"src/components/datepicker","items":[{"filename":"primary.md","filepath":"components/datepicker/primary.md","shortpath":"components/datepicker/primary","longpath":"src/components/datepicker/primary.md","type":"file","title":"Datepicker","guid":"component-datepicker-normal","variantid":"normal","componentid":"component-datepicker","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Dialogs","shortpath":"dialogs","longpath":"src/components/dialogs","items":[{"filename":"single-button.md","filepath":"components/dialogs/single-button.md","shortpath":"components/dialogs/single-button","longpath":"src/components/dialogs/single-button.md","type":"file","title":"Single button","guid":"component-dialogue-single-button","variantid":"single-button","componentid":"component-dialogue","private":false},{"filename":"two-buttons.md","filepath":"components/dialogs/two-buttons.md","shortpath":"components/dialogs/two-buttons","longpath":"src/components/dialogs/two-buttons.md","type":"file","title":"Two buttons","guid":"component-dialogue-two-buttons","variantid":"two-buttons","componentid":"component-dialogue","private":false}],"filecount":2,"directorycount":0,"type":"directory"},{"title":"Inputs","shortpath":"inputs","longpath":"src/components/inputs","items":[{"filename":"checkbox.md","filepath":"components/inputs/checkbox.md","shortpath":"components/inputs/checkbox","longpath":"src/components/inputs/checkbox.md","type":"file","title":"Checkbox input","guid":"component-checkbox-radio","variantid":"radio","componentid":"component-checkbox","private":false},{"filename":"default.md","filepath":"components/inputs/default.md","shortpath":"components/inputs/default","longpath":"src/components/inputs/default.md","type":"file","title":"Default input field","guid":"component-input-default","variantid":"default","componentid":"component-input","private":false},{"filename":"dropdown.md","filepath":"components/inputs/dropdown.md","shortpath":"components/inputs/dropdown","longpath":"src/components/inputs/dropdown.md","type":"file","title":"Dropdown","guid":"component-dropdown-dropdown","variantid":"dropdown","componentid":"component-dropdown","private":false},{"filename":"radio.md","filepath":"components/inputs/radio.md","shortpath":"components/inputs/radio","longpath":"src/components/inputs/radio.md","type":"file","title":"Radio input","guid":"component-radiobutton-radio","variantid":"radio","componentid":"component-radiobutton","private":false},{"filename":"textarea.md","filepath":"components/inputs/textarea.md","shortpath":"components/inputs/textarea","longpath":"src/components/inputs/textarea.md","type":"file","title":"Multi line input field","guid":"component-input-textarea","variantid":"textarea","componentid":"component-input","private":false},{"filename":"toggleswitch.md","filepath":"components/inputs/toggleswitch.md","shortpath":"components/inputs/toggleswitch","longpath":"src/components/inputs/toggleswitch.md","type":"file","title":"Toggle switch input","guid":"component-toggleswitch-toggle","variantid":"toggle","componentid":"component-toggleswitch","private":false}],"filecount":6,"directorycount":0,"type":"directory"},{"title":"Modals","shortpath":"modals","longpath":"src/components/modals","items":[{"filename":"slideout-modal.md","filepath":"components/modals/slideout-modal.md","shortpath":"components/modals/slideout-modal","longpath":"src/components/modals/slideout-modal.md","type":"file","title":"Slideout Modal","guid":"component-slideout-modal-normal","variantid":"normal","componentid":"component-slideout-modal","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Progress-bars","shortpath":"progress-bars","longpath":"src/components/progress-bars","items":[{"filename":"progress-bar.md","filepath":"components/progress-bars/progress-bar.md","shortpath":"components/progress-bars/progress-bar","longpath":"src/components/progress-bars/progress-bar.md","type":"file","title":"Progress bar","guid":"component-progressbar-default","variantid":"default","componentid":"component-progressbar","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Tables","shortpath":"tables","longpath":"src/components/tables","items":[{"filename":"table.md","filepath":"components/tables/table.md","shortpath":"components/tables/table","longpath":"src/components/tables/table.md","type":"file","title":"Table","guid":"component-table-default","variantid":"default","componentid":"component-table","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Tabs","shortpath":"tabs","longpath":"src/components/tabs","items":[{"filename":"tabs.md","filepath":"components/tabs/tabs.md","shortpath":"components/tabs/tabs","longpath":"src/components/tabs/tabs.md","type":"file","title":"Tabs","guid":"component-tab-default","variantid":"default","componentid":"component-tab","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Text","shortpath":"text","longpath":"src/components/text","items":[{"filename":"preamble.md","filepath":"components/text/preamble.md","shortpath":"components/text/preamble","longpath":"src/components/text/preamble.md","type":"file","title":"Preamble","guid":"component-preamble-primary","variantid":"primary","componentid":"component-preamble","private":false}],"filecount":1,"directorycount":0,"type":"directory"}],"filecount":0,"directorycount":10,"type":"directory"},{"title":"Examples","shortpath":"examples","longpath":"src/examples","items":[{"filename":"colors.md","filepath":"examples/colors.md","shortpath":"examples/colors","longpath":"src/examples/colors.md","type":"file","title":"Colors","guid":"vanilla-colors-primary","variantid":"primary","componentid":"vanilla-colors","private":false},{"filename":"defaults.md","filepath":"examples/defaults.md","shortpath":"examples/defaults","longpath":"src/examples/defaults.md","type":"file","title":"Defaults","guid":"vanilla-defaults-primary","variantid":"primary","componentid":"vanilla-defaults","private":false},{"filename":"inline-links.md","filepath":"examples/inline-links.md","shortpath":"examples/inline-links","longpath":"src/examples/inline-links.md","type":"file","title":"Inline links","guid":"component-inlinelinks-primary","variantid":"primary","componentid":"component-inlinelinks","private":false},{"filename":"simple-form.md","filepath":"examples/simple-form.md","shortpath":"examples/simple-form","longpath":"src/examples/simple-form.md","type":"file","title":"Simple form","guid":"component-simple-form-default","variantid":"default","componentid":"component-example-simple-form","private":false}],"filecount":4,"directorycount":0,"type":"directory"}]}
+module.exports = {"structure":[{"title":"Components","shortpath":"components","longpath":"src/components","items":[{"title":"Accordions","shortpath":"accordions","longpath":"src/components/accordions","items":[{"filename":"accordion-interactive.md","filepath":"components/accordions/accordion-interactive.md","shortpath":"components/accordions/accordion-interactive","longpath":"src/components/accordions/accordion-interactive.md","type":"file","title":"Interactive Accordion","guid":"component-accordion-css-interactive","variantid":"css-interactive","componentid":"component-accordion","private":false},{"filename":"accordion-subheadlines.md","filepath":"components/accordions/accordion-subheadlines.md","shortpath":"components/accordions/accordion-subheadlines","longpath":"src/components/accordions/accordion-subheadlines.md","type":"file","title":"Accordion","guid":"component-accordion-subheadlines","variantid":"subheadlines","componentid":"component-accordion","private":false},{"filename":"accordion.md","filepath":"components/accordions/accordion.md","shortpath":"components/accordions/accordion","longpath":"src/components/accordions/accordion.md","type":"file","title":"Accordion","guid":"component-accordion-static","variantid":"static","componentid":"component-accordion","private":false}],"filecount":3,"directorycount":0,"type":"directory"},{"title":"Buttons","shortpath":"buttons","longpath":"src/components/buttons","items":[{"filename":"alternative.md","filepath":"components/buttons/alternative.md","shortpath":"components/buttons/alternative","longpath":"src/components/buttons/alternative.md","type":"file","title":"Alternative button","guid":"component-button-alternative","variantid":"alternative","componentid":"component-button","private":false},{"filename":"ghost-dark.md","filepath":"components/buttons/ghost-dark.md","shortpath":"components/buttons/ghost-dark","longpath":"src/components/buttons/ghost-dark.md","type":"file","title":"Ghost button","guid":"component-button-ghost-dark","variantid":"ghost-dark","componentid":"component-button","private":false},{"filename":"ghost-light.md","filepath":"components/buttons/ghost-light.md","shortpath":"components/buttons/ghost-light","longpath":"src/components/buttons/ghost-light.md","type":"file","title":"Ghost button","guid":"component-button-ghost-light","variantid":"ghost-light","componentid":"component-button","private":false},{"filename":"link.md","filepath":"components/buttons/link.md","shortpath":"components/buttons/link","longpath":"src/components/buttons/link.md","type":"file","title":"Link button","guid":"component-button-link","variantid":"link","componentid":"component-button","private":false},{"filename":"primary.md","filepath":"components/buttons/primary.md","shortpath":"components/buttons/primary","longpath":"src/components/buttons/primary.md","type":"file","title":"Primary button","guid":"component-button-primary","variantid":"primary","componentid":"component-button","private":false},{"filename":"secondary.md","filepath":"components/buttons/secondary.md","shortpath":"components/buttons/secondary","longpath":"src/components/buttons/secondary.md","type":"file","title":"Secondary button","guid":"component-button-secondary","variantid":"secondary","componentid":"component-button","private":false}],"filecount":6,"directorycount":0,"type":"directory"},{"title":"Datepicker","shortpath":"datepicker","longpath":"src/components/datepicker","items":[{"filename":"primary.md","filepath":"components/datepicker/primary.md","shortpath":"components/datepicker/primary","longpath":"src/components/datepicker/primary.md","type":"file","title":"Datepicker","guid":"component-datepicker-normal","variantid":"normal","componentid":"component-datepicker","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Dialogs","shortpath":"dialogs","longpath":"src/components/dialogs","items":[{"filename":"single-button.md","filepath":"components/dialogs/single-button.md","shortpath":"components/dialogs/single-button","longpath":"src/components/dialogs/single-button.md","type":"file","title":"Single button","guid":"component-dialogue-single-button","variantid":"single-button","componentid":"component-dialogue","private":false},{"filename":"two-buttons.md","filepath":"components/dialogs/two-buttons.md","shortpath":"components/dialogs/two-buttons","longpath":"src/components/dialogs/two-buttons.md","type":"file","title":"Two buttons","guid":"component-dialogue-two-buttons","variantid":"two-buttons","componentid":"component-dialogue","private":false}],"filecount":2,"directorycount":0,"type":"directory"},{"title":"Inputs","shortpath":"inputs","longpath":"src/components/inputs","items":[{"filename":"checkbox.md","filepath":"components/inputs/checkbox.md","shortpath":"components/inputs/checkbox","longpath":"src/components/inputs/checkbox.md","type":"file","title":"Checkbox input","guid":"component-checkbox-radio","variantid":"radio","componentid":"component-checkbox","private":false},{"filename":"default.md","filepath":"components/inputs/default.md","shortpath":"components/inputs/default","longpath":"src/components/inputs/default.md","type":"file","title":"Default input field","guid":"component-input-default","variantid":"default","componentid":"component-input","private":false},{"filename":"dropdown.md","filepath":"components/inputs/dropdown.md","shortpath":"components/inputs/dropdown","longpath":"src/components/inputs/dropdown.md","type":"file","title":"Dropdown","guid":"component-dropdown-dropdown","variantid":"dropdown","componentid":"component-dropdown","private":false},{"filename":"radio.md","filepath":"components/inputs/radio.md","shortpath":"components/inputs/radio","longpath":"src/components/inputs/radio.md","type":"file","title":"Radio input","guid":"component-radiobutton-radio","variantid":"radio","componentid":"component-radiobutton","private":false},{"filename":"textarea.md","filepath":"components/inputs/textarea.md","shortpath":"components/inputs/textarea","longpath":"src/components/inputs/textarea.md","type":"file","title":"Multi line input field","guid":"component-input-textarea","variantid":"textarea","componentid":"component-input","private":false},{"filename":"toggle-button.md","filepath":"components/inputs/toggle-button.md","shortpath":"components/inputs/toggle-button","longpath":"src/components/inputs/toggle-button.md","type":"file","title":"Toggle button input","guid":"component-togglebutton-default","variantid":"default","componentid":"component-togglebutton","private":false},{"filename":"toggleswitch.md","filepath":"components/inputs/toggleswitch.md","shortpath":"components/inputs/toggleswitch","longpath":"src/components/inputs/toggleswitch.md","type":"file","title":"Toggle switch input","guid":"component-toggleswitch-toggle","variantid":"toggle","componentid":"component-toggleswitch","private":false}],"filecount":7,"directorycount":0,"type":"directory"},{"title":"Modals","shortpath":"modals","longpath":"src/components/modals","items":[{"filename":"slideout-modal.md","filepath":"components/modals/slideout-modal.md","shortpath":"components/modals/slideout-modal","longpath":"src/components/modals/slideout-modal.md","type":"file","title":"Slideout Modal","guid":"component-slideout-modal-normal","variantid":"normal","componentid":"component-slideout-modal","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Progress-bars","shortpath":"progress-bars","longpath":"src/components/progress-bars","items":[{"filename":"progress-bar.md","filepath":"components/progress-bars/progress-bar.md","shortpath":"components/progress-bars/progress-bar","longpath":"src/components/progress-bars/progress-bar.md","type":"file","title":"Progress bar","guid":"component-progressbar-default","variantid":"default","componentid":"component-progressbar","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Tables","shortpath":"tables","longpath":"src/components/tables","items":[{"filename":"table.md","filepath":"components/tables/table.md","shortpath":"components/tables/table","longpath":"src/components/tables/table.md","type":"file","title":"Table","guid":"component-table-default","variantid":"default","componentid":"component-table","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Tabs","shortpath":"tabs","longpath":"src/components/tabs","items":[{"filename":"tabs.md","filepath":"components/tabs/tabs.md","shortpath":"components/tabs/tabs","longpath":"src/components/tabs/tabs.md","type":"file","title":"Tabs","guid":"component-tab-default","variantid":"default","componentid":"component-tab","private":false}],"filecount":1,"directorycount":0,"type":"directory"},{"title":"Text","shortpath":"text","longpath":"src/components/text","items":[{"filename":"preamble.md","filepath":"components/text/preamble.md","shortpath":"components/text/preamble","longpath":"src/components/text/preamble.md","type":"file","title":"Preamble","guid":"component-preamble-primary","variantid":"primary","componentid":"component-preamble","private":false}],"filecount":1,"directorycount":0,"type":"directory"}],"filecount":0,"directorycount":10,"type":"directory"},{"title":"Examples","shortpath":"examples","longpath":"src/examples","items":[{"filename":"colors.md","filepath":"examples/colors.md","shortpath":"examples/colors","longpath":"src/examples/colors.md","type":"file","title":"Colors","guid":"vanilla-colors-primary","variantid":"primary","componentid":"vanilla-colors","private":false},{"filename":"defaults.md","filepath":"examples/defaults.md","shortpath":"examples/defaults","longpath":"src/examples/defaults.md","type":"file","title":"Defaults","guid":"vanilla-defaults-primary","variantid":"primary","componentid":"vanilla-defaults","private":false},{"filename":"inline-links.md","filepath":"examples/inline-links.md","shortpath":"examples/inline-links","longpath":"src/examples/inline-links.md","type":"file","title":"Inline links","guid":"component-inlinelinks-primary","variantid":"primary","componentid":"component-inlinelinks","private":false},{"filename":"simple-form.md","filepath":"examples/simple-form.md","shortpath":"examples/simple-form","longpath":"src/examples/simple-form.md","type":"file","title":"Simple form","guid":"component-simple-form-default","variantid":"default","componentid":"component-example-simple-form","private":false}],"filecount":4,"directorycount":0,"type":"directory"}]}
 
 /***/ }),
 
@@ -83241,6 +83244,17 @@ module.exports = arrayFilter;
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "lj1I":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"davanmonet-app"},[_c('header',{staticClass:"davanmonet-header"},[_c('a',{staticClass:"davanmonet-header-logolink",attrs:{"href":_vm.publicPath}},[_c('img',{staticClass:"davanmonet-header-logo",attrs:{"src":_vm.logoPath,"alt":""}}),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info)?_c('span',{staticClass:"davanmonet-header-logolinktext",domProps:{"innerHTML":_vm._s(_vm.projectConfig.project_info.name)}},[_vm._v("DaVanMonet")]):_vm._e()]),_vm._v(" "),(_vm.projectConfig && _vm.projectConfig.project_info && _vm.projectConfig.project_info.repourl)?_c('a',{staticClass:"davanmonet-header-repository-link",attrs:{"href":_vm.projectConfig.project_info.repourl,"title":"Go to the Repository"}},[_c('svg',{staticStyle:{"width":"24px","height":"24px"},attrs:{"viewBox":"0 0 24 24"}},[_c('path',{attrs:{"d":"M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"}})])]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"davanmonet-pagecontainer"},[(_vm.configLoaded == true)?_c('navigation',{staticClass:"davanmonet-navcontainer",attrs:{"navigation":_vm.navigation,"version-data":_vm.versionData,"source-directory":_vm.projectConfig.directories.src,"current-page-path":_vm.currentPagePath}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == true && _vm.maincontent)?_c('main-content',{staticClass:"davanmonet-maincontentcontainer",attrs:{"content":_vm.maincontent,"css-breakpoints":_vm.projectConfig.env.cssBreakpoints}}):_vm._e(),_vm._v(" "),(_vm.configLoaded == false)?_c('div',[_vm._v("\n\t\t\t\tLoading...\n\t\t\t")]):_vm._e()],1)])}
+var staticRenderFns = []
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
 
 /***/ }),
 
@@ -86040,7 +86054,7 @@ module.exports = {
 	},
 	"directories": {
 		"public_path": "/vanilla-pattern-library/",
-		"public_path_markdown": "https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/dev/",
+		"public_path_markdown": "https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/gh-pages/",
 		"use_hash": true,
 		"src": "src",
 		"dist_web": "dist/web",
@@ -86075,7 +86089,7 @@ module.exports = {
 		},
 		"targets": {
 			"sdv-all.css": [
-				"**/vanilla-all.scss"
+				"**/sdv-all.scss"
 			],
 			"preview-frame-only.css": [
 				"**/preview-frame-only.scss"
@@ -87027,13 +87041,6 @@ function clone(value) {
 
 module.exports = clone;
 
-
-/***/ }),
-
-/***/ "rgQu":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -88433,6 +88440,13 @@ module.exports = function parseLinkLabel(state, start, disableNested) {
   return labelEnd;
 };
 
+
+/***/ }),
+
+/***/ "tDMr":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -92068,13 +92082,6 @@ module.exports = function reference(state, startLine, _endLine, silent) {
   return true;
 };
 
-
-/***/ }),
-
-/***/ "uBcF":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 
@@ -98859,4 +98866,4 @@ module.exports = function (it, TYPE) {
 /***/ })
 
 },[0]);
-//# sourceMappingURL=app.8a26e7a6c7e6a4db431d.js.map
+//# sourceMappingURL=app.2e02f0be3d4a26db8b1f.js.map

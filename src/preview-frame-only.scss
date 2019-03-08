@@ -6,7 +6,7 @@
 
 @import "variables";
 
-$vanilla-font-awesome-inc-path: "/vanilla-pattern-library/assets/fontawesome";
+$vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-library/assets/fontawesome";
 @import url("#{$vanilla-font-awesome-inc-path}/css/light.min.css");
 @import url("#{$vanilla-font-awesome-inc-path}/css/fontawesome.css");
 
@@ -25,6 +25,14 @@ $vanilla-font-awesome-inc-path: "/vanilla-pattern-library/assets/fontawesome";
   width: 100%;
   text-align: center;
 }
+
+.pl-yellow-bg {
+  background-color: $vanilla-color-yellow;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
 .showcase__render {
   min-height: 200px;
 }
