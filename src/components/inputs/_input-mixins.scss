@@ -39,6 +39,7 @@
   }
   &:focus {
     border-color: $vanilla-color-component-selected;
+    @include vanilla-focus-outline();
   }
   &:active {
     border-color: $_border-color-normal;
@@ -200,7 +201,7 @@
   }
   input:focus + label:before {
     border-color: $vanilla-color-component-selected;
-    box-shadow: 0 0 0 vanilla-px-to-em(3px) rgba($vanilla-color-component-selected, 0.2);
+    @include vanilla-focus-outline();
   }
 
   input[disabled] {
@@ -378,11 +379,69 @@
   input:focus + label,
   input:focus + &__label,
   &__label--focus {
-    box-shadow: 0px 0px 0px 3px rgba($vanilla-color-component-selected, 0.3);
+    @include vanilla-focus-outline();
   }
 
   &--expanded,
   &.-expanded {
     display: block;
   }
+}
+
+/// Toggle button
+///
+/// @access public
+@mixin vanilla-field-toggle-button() {
+  $_padding_x: 1.5em;
+  $_padding_y: .5em;
+
+  label, &__label {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: vanilla-px-to-em(72px);
+    background-color: $vanilla-color-white;
+    border: 1px solid $vanilla-color-grey6;
+    padding: $_padding_y $_padding_x;
+    font-weight: 500;
+    border-radius: $vanilla-component-border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $vanilla-color-text;
+    text-align: center;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input:checked + label,
+  .-selected &__label {
+    border-color: $vanilla-color-component-selected;
+    color: $vanilla-color-component-selected;
+    border-width: 2px;
+    padding: calc(#{$_padding_y} - 1px) calc(#{$_padding_x} - 1px) ;
+  }
+
+  label:hover,
+  &__label:hover,
+  input:checked + label:hover,
+  .-selected &__label:hover {
+    border-color: $vanilla-color-component-hover;
+    color: $vanilla-color-component-hover;
+  }
+
+  input:focus + label,
+  .-focus &__label {
+    @include vanilla-focus-outline();
+  }
+
+  input:disabled + label,
+  .-disabled &__label {
+    background-color: $vanilla-color-grey8;
+    border-color: $vanilla-color-grey8;
+    color: $vanilla-color-grey7;
+  }
+
 }
