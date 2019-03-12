@@ -47,10 +47,10 @@
 ///
 /// @access public
 /// @param value A unitless value
-@function vanilla-parse-int($value) { 
+@function vanilla-parse-int($value) {
     @return $value / ($value * 0 + 1);
   }
-  
+
   /// Converts rem to px
   ///
   /// @access public
@@ -59,21 +59,23 @@
     $value: vanilla-parse-int($rem) * $vanilla-rem-base;
     @return round($value);
   }
-  
+
   /// Converts px to rem
   ///
   /// @access public
   /// @param px A px value
-  @function vanilla-px-to-rem($px) {
-    $value: 1rem * (vanilla-parse-int($px) / vanilla-parse-int($vanilla-rem-base));
+  /// @param base The base size in pixels used in the calculation
+  @function vanilla-px-to-rem($px, $base: $vanilla-rem-base) {
+    $value: 1rem * (vanilla-parse-int($px) / vanilla-parse-int($base));
     @return $value;
   }
-  
+
   /// Converts px to em
   ///
   /// @access public
   /// @param px A px value
-  @function vanilla-px-to-em($px) {
-    $value: 1em * (vanilla-parse-int($px) / vanilla-parse-int($vanilla-rem-base));
+  /// @param base The base size in pixels used in the calculation
+  @function vanilla-px-to-em($px, $base: $vanilla-rem-base) {
+    $value: 1em * (vanilla-parse-int($px) / vanilla-parse-int($base));
     @return $value;
   }
