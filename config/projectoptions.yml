@@ -145,24 +145,30 @@ env:
   cssBreakpoints:
   - id: mobile
     title: Mobile
-    width: 375
+    width: 768
     fromWidth: 0
-    toWidth: 375
+    toWidth: 768
   - id: tablet
     title: Tablet
-    width: 768
-    fromWidth: 376
-    toWidth: 999
-  - id: lg-tablet
-    title: Large Tablet
     width: 1024
-    fromWidth: 1000
-    toWidth: 1199
+    fromWidth: 768
+    toWidth: 1024
   - id: desktop
     title: Desktop
+    width: 1440
+    fromWidth: 1024
+    toWidth: 1440
+  - id: desktop-wide
+    title: Desktop wide
+    width: 1920
+    fromWidth: 1440
+    toWidth: 1920
+  - id: desktop-wide-extended
+    title: Desktop wide extended
     width: 100%
-    fromWidth: 1200
+    fromWidth: 1920
     toWidth: 9007199254740990
+
 
 build:
   package:
