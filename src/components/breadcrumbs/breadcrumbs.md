@@ -60,19 +60,23 @@ In addition to the classes shown in the example below, this component can be use
 <nav class="sdv-breadcrumbs">
   <ol class="sdv-breadcrumbs__list">
     <div class="sdv-breadcrumbs__root">
-      <li class="sdv-breadcrumbs__item"><a href="#">Home</a></li>
+      <li class="sdv-breadcrumbs__item">
+        <a href="#">Home</a>
+        <div class="sdv-breadcrumbs__truncated">
+          <div class="-icon -ellipsis"></div>
+          <div class="-icon -chevron"></div>
+        </div>
+      </li>
     </div>
     <div class="sdv-breadcrumbs__collapse">
+      <li class="sdv-breadcrumbs__item -current">Mach's principle</li>
+      <li class="sdv-breadcrumbs__item -parent"><a href="#">Mach</a></li>
       <li class="sdv-breadcrumbs__item"><a href="#">Absolutism and relationalism</a></li>
       <li class="sdv-breadcrumbs__item"><a href="#">Time</a></li>
       <li class="sdv-breadcrumbs__item"><a href="#">Metaphysics</a></li>
       <li class="sdv-breadcrumbs__item"><a href="#">Philosophy & psychology</a></li>
       <li class="sdv-breadcrumbs__item"><a href="#">Library</a></li>
       <li class="sdv-breadcrumbs__item"><a href="#">Features</a></li>
-    </div>
-    <div class="sdv-breadcrumbs__remain">
-      <li class="sdv-breadcrumbs__item -parent"><a href="#">Mach</a></li>
-      <li class="sdv-breadcrumbs__item -current">Mach's principle</li>
     </div>
   </ol>
 </nav>
