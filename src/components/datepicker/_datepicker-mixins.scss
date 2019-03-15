@@ -17,7 +17,11 @@
 
 @mixin vanilla-datepicker__controls {
   display: flex;
-  padding: vanilla-px-to-em(8);
+  padding: vanilla-px-to-em(4);
+
+  > * {
+    margin: vanilla-px-to-em(4);
+  }
 }
 
 @mixin vanilla-datepicker__calendar {
