@@ -53,6 +53,16 @@
   }
 }
 
+/// Base styles for small versions of input fields
+///
+/// @access public
+@mixin vanilla-field-base--small() {
+  line-height: vanilla-px-to-rem(30);;
+  min-height: vanilla-px-to-rem(32);
+  max-height: vanilla-px-to-rem(32);
+  font-size: vanilla-px-to-rem(14);
+}
+
 /// Style for basic text field
 ///
 /// @access public
@@ -61,6 +71,13 @@
 
   background-color: $vanilla-color-white;
   padding: 0 1em;
+}
+
+/// Style for basic text field -- small modifier
+///
+/// @access public
+@mixin vanilla-text-field--small() {
+  @include vanilla-field-base--small();
 }
 
 /// Style for textarea
@@ -117,6 +134,13 @@
   &[disabled] {
     color: $vanilla-color-component-disabled-dark;
   }
+}
+
+/// Style for labels -- small modifier
+///
+/// @access public
+@mixin vanilla-field-label--small() {
+  font-size: vanilla-px-to-em(14px);
 }
 
 /// Style for basic text field labels
@@ -386,6 +410,13 @@
   &.-expanded {
     display: block;
   }
+}
+
+/// Dropdown button -- small modifier
+///
+/// @access public
+@mixin vanilla-field-dropdown-button--small() {
+  @include vanilla-field-base--small();
 }
 
 /// Toggle button

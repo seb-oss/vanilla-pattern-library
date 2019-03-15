@@ -48,4 +48,12 @@ In addition to the classes shown in the example below, this component can be use
     <input id="input-field" class="sdv-field" aria-label="Field label" placeholder="Input field" disabled>
 <div>
 ```
+
+## Small version
+```html
+<div>
+    <label for="input-field" class="sdv-field-label sdv-field-label--small">Field label</label>
+    <input id="input-field" class="sdv-field sdv-field--small" aria-label="Field label" placeholder="Input field">
+</div>
+```
 :::

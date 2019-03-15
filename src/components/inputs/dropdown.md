@@ -58,4 +58,21 @@ In addition to the classes shown in the example below, this component can be use
     </div>
 </div>
 ```
+
+## Small version
+```html
+<div class="sdv-field-dropdown sdv-field--small">
+    <div class="sdv-field-dropdown__label" tabindex="0">Chosen value</div>
+    <div class="sdv-field-dropdown__options">
+        <input type="radio" id="sdv-dropdown1-1" name="sdv-dropdown-1">
+        <label for="sdv-dropdown1-1">Dropdown value 1</label>
+        <input type="radio" id="sdv-dropdown1-2" name="sdv-dropdown-1">
+        <label for="sdv-dropdown1-2">Dropdown value 2</label>
+        <input type="radio" id="sdv-dropdown1-3" name="sdv-dropdown-1">
+        <label for="sdv-dropdown1-3">Dropdown value 3</label>
+        <input type="radio" id="sdv-dropdown1-4" name="sdv-dropdown-1">
+        <label for="sdv-dropdown1-4">Dropdown value 4</label>
+    </div>
+</div>
+```
 :::
