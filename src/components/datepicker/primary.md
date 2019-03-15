@@ -17,20 +17,20 @@ Import classes:
     <input id="input-field" class="sdv-field" aria-label="Field label" placeholder="Input field">
     <div class="sdv-datepicker">
         <section class="sdv-datepicker__controls">
-            <button class="sdv-button sdv-button-alternative"><i class="fal fa-chevron-left"></i></button>
-            <div class="sdv-field-dropdown">
+            <button class="sdv-button sdv-button-alternative sdv-button--small"><i class="fal fa-chevron-left"></i></button>
+            <div class="sdv-field-dropdown sdv-field--small">
                 <div class="sdv-field-dropdown__label" tabindex="0">April</div>
                 <div class="sdv-field-dropdown__options">
                     <!-- Month values goes here -->
                 </div>
             </div>
-            <div class="sdv-field-dropdown">
+            <div class="sdv-field-dropdown sdv-field--small">
                 <div class="sdv-field-dropdown__label" tabindex="0">2018</div>
                 <div class="sdv-field-dropdown__options">
                     <!-- Year values goes here -->
                 </div>
             </div>
-            <button class="sdv-button sdv-button-alternative"><i class="fal fa-chevron-right"></i></button>
+            <button class="sdv-button sdv-button-alternative sdv-button--small"><i class="fal fa-chevron-right"></i></button>
         </section>
         <section class="sdv-datepicker__calendar">
             <div class="sdv-datepicker__calendar-row">
