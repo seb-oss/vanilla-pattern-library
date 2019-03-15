@@ -1,8 +1,8 @@
 ---
-title: Datepicker
+title: Datepicker (extended)
 componentid: component-datepicker
-variantid: normal
-guid: component-datepicker-normal
+variantid: extended
+guid: component-datepicker-extended
 ---
 # Usage
 Import classes:
@@ -15,7 +15,7 @@ Import classes:
 ```html
 <div>
     <div class="sdv-datepicker">
-        <section class="sdv-datepicker__controls">
+        <div class="sdv-datepicker__controls">
             <button class="sdv-button sdv-button-alternative sdv-button--small"><i class="fal fa-chevron-left"></i></button>
             <div class="sdv-field-dropdown sdv-field--small">
                 <div class="sdv-field-dropdown__label" tabindex="0">April</div>
@@ -30,8 +30,8 @@ Import classes:
                 </div>
             </div>
             <button class="sdv-button sdv-button-alternative sdv-button--small"><i class="fal fa-chevron-right"></i></button>
-        </section>
-        <section class="sdv-datepicker__calendar">
+        </div>
+        <div class="sdv-datepicker__calendar">
             <div class="sdv-datepicker__calendar-row">
                 <span>Mon</span>
                 <span>Tue</span>
@@ -86,7 +86,11 @@ Import classes:
                 <button class="sdv-button sdv-button-alternative" disabled>2</button>
                 <button class="sdv-button sdv-button-alternative" disabled>3</button>
             </div>
-        </section>
+        </div>
+        <div class="sdv-datepicker__controls">
+            <button class="sdv-button sdv-button-alternative sdv-button--small">Today</button>
+            <button class="sdv-button sdv-button-alternative sdv-button--small">Other action</button>
+        </div>
     </div>
 </div>
 ```
