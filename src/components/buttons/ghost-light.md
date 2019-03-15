@@ -32,21 +32,26 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
 ## Base state
 ```html
 <div class="pl-purple-bg">
-    <button class="sdv-button sdv-button-ghost-light">Primary button</button>
+    <button class="sdv-button sdv-button-ghost-light">Ghost button</button>
 </div>
 ```
 
 ## With icon
 ```html
 <div class="pl-purple-bg">
-    <button class="sdv-button sdv-button-ghost-light"><i class="fal fa-lock sdv-icon-left"></i>Primary button</button>
+    <button class="sdv-button sdv-button-ghost-light"><i class="fal fa-lock sdv-icon-left"></i>Ghost button</button>
 </div>
 ```
 
 ## Disabled state
 ```html
 <div class="pl-purple-bg">
-    <button class="sdv-button sdv-button-ghost-light" disabled>Primary button</button>
+    <button class="sdv-button sdv-button-ghost-light" disabled>Ghost button</button>
 </div>
+```
+
+## Small version
+```html
+<button class="sdv-button sdv-button-ghost-light sdv-button--small">Ghost button</button>
 ```
 :::

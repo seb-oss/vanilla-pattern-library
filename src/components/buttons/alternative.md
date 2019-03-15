@@ -42,4 +42,8 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-alternat
 ```html
 <button class="sdv-button sdv-button-alternative" disabled>Alternative button</button>
 ```
+
+## Small version
+```html
+<button class="sdv-button sdv-button-alternative sdv-button--small">Alternative button</button>
 :::
