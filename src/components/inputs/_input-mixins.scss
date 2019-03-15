@@ -57,7 +57,7 @@
 ///
 /// @access public
 @mixin vanilla-field-base--small() {
-  line-height: vanilla-px-to-rem(30);;
+  line-height: vanilla-px-to-rem(32);;
   min-height: vanilla-px-to-rem(32);
   max-height: vanilla-px-to-rem(32);
   font-size: vanilla-px-to-rem(14);
@@ -417,6 +417,9 @@
 /// @access public
 @mixin vanilla-field-dropdown-button--small() {
   @include vanilla-field-base--small();
+  &:after {
+    @include vanilla-field-base--small();
+  }
 }
 
 /// Toggle button
