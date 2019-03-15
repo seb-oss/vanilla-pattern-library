@@ -24,23 +24,23 @@ Import classes:
                 </div>
             </div>
             <div class="sdv-field-dropdown sdv-field--small">
-                <div class="sdv-field-dropdown__label" tabindex="0">2018</div>
+                <div class="sdv-field-dropdown__label" tabindex="0">2019</div>
                 <div class="sdv-field-dropdown__options">
                     <!-- Year values goes here -->
                 </div>
             </div>
             <button class="sdv-button sdv-button-alternative sdv-button--small"><i class="fal fa-chevron-right"></i></button>
         </div>
+        <div class="sdv-datepicker__calendar-row sdv-small">
+            <span>Mon</span>
+            <span>Tue</span>
+            <span>Wed</span>
+            <span>Thu</span>
+            <span>Fri</span>
+            <span>Sat</span>
+            <span>Sun</span>
+        </div>
         <div class="sdv-datepicker__calendar">
-            <div class="sdv-datepicker__calendar-row">
-                <span>Mon</span>
-                <span>Tue</span>
-                <span>Wed</span>
-                <span>Thu</span>
-                <span>Fri</span>
-                <span>Sat</span>
-                <span>Sun</span>
-            </div>
             <div class="sdv-datepicker__calendar-row">
                 <button class="sdv-button sdv-button-alternative" disabled>30</button>
                 <button class="sdv-button sdv-button-alternative" disabled>31</button>

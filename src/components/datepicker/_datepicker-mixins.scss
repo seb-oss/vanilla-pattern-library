@@ -26,19 +26,21 @@
 }
 
 @mixin vanilla-datepicker__calendar {
-  border-top: 1px solid $vanilla-color-component-disabled-light;
-  border-bottom: 1px solid $vanilla-color-component-disabled-light;
+  border-top: 1px solid $vanilla-color-grey8;
+  border-bottom: 1px solid $vanilla-color-grey8;
+}
+
+@mixin vanilla-datepicker__calendar--scrollable {
+  max-height: vanilla-px-to-rem(265px);
+  overflow: auto;
 }
 
 @mixin vanilla-datepicker__calendar-row {
   display: flex;
+  padding: vanilla-px-to-rem(2);
 
-  &:first-child {
-    font-size: 0.7em;
-    line-height: vanilla-px-to-em(40);
-  }
-
-  button, span {
+  > * {
+    line-height: vanilla-px-to-rem(40);
     padding: 0;
     display: block;
     flex-grow: 1;
@@ -51,4 +53,10 @@
       border: 0px solid transparent;
     }
   }
+}
+
+@mixin vanilla-datepicker__calendar-header-row {
+  background-color: $vanilla-color-grey9;
+  font-size: 0.8rem;
+  padding: vanilla-px-to-rem(8);
 }
