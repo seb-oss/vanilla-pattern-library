@@ -13,6 +13,14 @@
   border-radius: $vanilla-component-border-radius;
   border: 1px solid $vanilla-color-darkblue1;
   overflow: hidden;
+  min-width: vanilla-px-to-em(300);
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+        min-width: 100%;
+        border-width: 0px;
+    }
+  }
 }
 
 @mixin vanilla-datepicker__controls {
@@ -31,16 +39,16 @@
 }
 
 @mixin vanilla-datepicker__calendar--scrollable {
-  max-height: vanilla-px-to-rem(265px);
+  max-height: vanilla-px-to-em(265px);
   overflow: auto;
 }
 
 @mixin vanilla-datepicker__calendar-row {
   display: flex;
-  padding: vanilla-px-to-rem(2);
+  padding: vanilla-px-to-em(2);
 
   > * {
-    line-height: vanilla-px-to-rem(40);
+    line-height: vanilla-px-to-em(40);
     padding: 0;
     display: block;
     flex-grow: 1;
@@ -57,6 +65,6 @@
 
 @mixin vanilla-datepicker__calendar-header-row {
   background-color: $vanilla-color-grey9;
-  font-size: 0.8rem;
-  padding: vanilla-px-to-rem(8);
+  font-size: 0.8em;
+  padding: vanilla-px-to-em(8);
 }
