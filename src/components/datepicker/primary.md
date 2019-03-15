@@ -14,7 +14,6 @@ Import classes:
 ## Base state
 ```html
 <div>
-    <input id="input-field" class="sdv-field" aria-label="Field label" placeholder="Input field">
     <div class="sdv-datepicker">
         <section class="sdv-datepicker__controls">
             <button class="sdv-button sdv-button-alternative sdv-button--small"><i class="fal fa-chevron-left"></i></button>
