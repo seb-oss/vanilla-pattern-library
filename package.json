@@ -27,8 +27,8 @@
 		"branches": [
 			"master",
 			{
-				"name": "dev",
-				"prerelease": "pre",
+				"name": "next",
+				"prerelease": "next",
 				"channel": "next"
 			}
 		]
