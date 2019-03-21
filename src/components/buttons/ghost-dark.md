@@ -49,4 +49,8 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
     <button class="sdv-button sdv-button-ghost-dark" disabled>Primary button</button>
 </div>
 ```
+
+## Small version
+```html
+<button class="sdv-button sdv-button-ghost-dark sdv-button--small">Ghost button</button>
 :::

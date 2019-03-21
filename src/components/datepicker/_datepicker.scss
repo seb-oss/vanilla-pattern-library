@@ -16,10 +16,18 @@
 
     &__calendar {
       @include vanilla-datepicker__calendar();
+
+      &--scrollable {
+        @include vanilla-datepicker__calendar--scrollable();
+      }
     }
 
     &__calendar-row {
       @include vanilla-datepicker__calendar-row();
+    }
+
+    &__calendar-header-row {
+      @include vanilla-datepicker__calendar-header-row();
     }
   }
 }

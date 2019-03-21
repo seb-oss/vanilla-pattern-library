@@ -5,4 +5,9 @@
     {
         @include vanilla-button();
     }
+
+    .sdv-button--small
+    {
+        @include vanilla-button--small();
+    }
 }

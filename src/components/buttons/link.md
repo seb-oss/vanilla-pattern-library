@@ -42,4 +42,9 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-link</i>
 ```html
 <button class="sdv-button sdv-button-link" disabled>Link Button</button>
 ```
+
+## Small version
+```html
+<button class="sdv-button sdv-button-link sdv-button--small">Link button</button>
+```
 :::

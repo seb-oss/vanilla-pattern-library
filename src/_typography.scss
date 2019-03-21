@@ -131,7 +131,7 @@ $seb-font-path: $vanilla-font-basepath;
 /// Link styles
 /// @access public
 @mixin vanilla-typography-links() {
-  font-weight: 500;
+  font-weight: $vanilla-typography-link-font-weight;
   color: $vanilla-color-link;
   text-decoration: none;
 

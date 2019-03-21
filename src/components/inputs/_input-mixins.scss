@@ -53,6 +53,16 @@
   }
 }
 
+/// Base styles for small versions of input fields
+///
+/// @access public
+@mixin vanilla-field-base--small() {
+  line-height: vanilla-px-to-rem(32);;
+  min-height: vanilla-px-to-rem(32);
+  max-height: vanilla-px-to-rem(32);
+  font-size: vanilla-px-to-rem(14);
+}
+
 /// Style for basic text field
 ///
 /// @access public
@@ -61,6 +71,13 @@
 
   background-color: $vanilla-color-white;
   padding: 0 1em;
+}
+
+/// Style for basic text field -- small modifier
+///
+/// @access public
+@mixin vanilla-text-field--small() {
+  @include vanilla-field-base--small();
 }
 
 /// Style for textarea
@@ -117,6 +134,13 @@
   &[disabled] {
     color: $vanilla-color-component-disabled-dark;
   }
+}
+
+/// Style for labels -- small modifier
+///
+/// @access public
+@mixin vanilla-field-label--small() {
+  font-size: vanilla-px-to-em(14px);
 }
 
 /// Style for basic text field labels
@@ -388,14 +412,26 @@
   }
 }
 
+/// Dropdown button -- small modifier
+///
+/// @access public
+@mixin vanilla-field-dropdown-button--small() {
+  @include vanilla-field-base--small();
+  &:after {
+    @include vanilla-field-base--small();
+  }
+}
+
 /// Toggle button
 ///
 /// @access public
 @mixin vanilla-field-toggle-button() {
   $_padding_x: 1.5em;
   $_padding_y: .5em;
+  $_iconSize: 35px;
 
-  label, &__label {
+  label,
+  &__label {
     box-sizing: border-box;
     width: 100%;
     min-height: vanilla-px-to-em(72px);
@@ -409,6 +445,11 @@
     justify-content: center;
     color: $vanilla-color-text;
     text-align: center;
+
+    &.sdv-align-left {
+      text-align: left;
+      justify-content: left;
+    }
   }
 
   input {
@@ -444,4 +485,30 @@
     color: $vanilla-color-grey7;
   }
 
+  label, &__label {
+    &.sdv-icon {
+      position: relative;
+      padding-left: vanilla-px-to-em(24 + $_iconSize + 24);
+      &:before {
+        width: 24 + $_iconSize + 24;
+        text-align: center;
+        position: absolute;
+        line-height: 1;
+        left: 0;
+        font-size: vanilla-px-to-em($_iconSize);
+      }
+    }
+  }
+
+  input:checked + label,
+  .-selected &__label {
+    &.sdv-icon {
+      padding-left: vanilla-px-to-em(24 - 1 + $_iconSize + 24);
+      &:before {
+        width: 24 - 1 + $_iconSize + 24 - 1;
+        left: 0;
+        font-size: vanilla-px-to-em($_iconSize);
+      }
+    }
+  }
 }

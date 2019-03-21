@@ -26,6 +26,13 @@ $vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-libr
   text-align: center;
 }
 
+.pl-blue-bg {
+  background-color: $vanilla-color-blue;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
 .pl-yellow-bg {
   background-color: $vanilla-color-yellow;
   padding: 2rem;
@@ -35,4 +42,30 @@ $vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-libr
 
 .showcase__render {
   min-height: 200px;
+}
+
+
+.seb-font-example {
+  margin-bottom: 3rem;
+
+  &.seb-sans-serif-light {
+    font-family: $vanilla-font-seb-sans-serif;
+    font-weight: 300;
+  }
+  &.seb-sans-serif-regular {
+    font-family: $vanilla-font-seb-sans-serif;
+    font-weight: 400;
+  }
+  &.seb-sans-serif-medium {
+    font-family: $vanilla-font-seb-sans-serif;
+    font-weight: 500;
+  }
+  &.seb-sans-serif-bold {
+    font-family: $vanilla-font-seb-sans-serif;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-weight: inherit;
+  }
 }

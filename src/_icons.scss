@@ -16,4 +16,9 @@ $vanilla_icon_margin: vanilla-px-to-em(12) !default;
   .sdv-icon-right {
     margin-left: $vanilla_icon_margin;
   }
+
+  .sdv-icon:before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+  }
 }

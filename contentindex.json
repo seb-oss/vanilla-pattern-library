@@ -52,6 +52,28 @@
 					"type": "directory"
 				},
 				{
+					"title": "Breadcrumbs",
+					"shortpath": "breadcrumbs",
+					"longpath": "src/components/breadcrumbs",
+					"items": [
+						{
+							"filename": "breadcrumbs.md",
+							"filepath": "components/breadcrumbs/breadcrumbs.md",
+							"shortpath": "components/breadcrumbs/breadcrumbs",
+							"longpath": "src/components/breadcrumbs/breadcrumbs.md",
+							"type": "file",
+							"title": "Breadcrumbs",
+							"guid": "component-breadcrumbs-primary",
+							"variantid": "primary",
+							"componentid": "component-breadcrumbs",
+							"private": false
+						}
+					],
+					"filecount": 1,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Buttons",
 					"shortpath": "buttons",
 					"longpath": "src/components/buttons",
@@ -139,19 +161,43 @@
 					"longpath": "src/components/datepicker",
 					"items": [
 						{
-							"filename": "primary.md",
-							"filepath": "components/datepicker/primary.md",
-							"shortpath": "components/datepicker/primary",
-							"longpath": "src/components/datepicker/primary.md",
+							"filename": "extended.md",
+							"filepath": "components/datepicker/extended.md",
+							"shortpath": "components/datepicker/extended",
+							"longpath": "src/components/datepicker/extended.md",
 							"type": "file",
-							"title": "Datepicker",
+							"title": "Datepicker (extended)",
+							"guid": "component-datepicker-extended",
+							"variantid": "extended",
+							"componentid": "component-datepicker",
+							"private": false
+						},
+						{
+							"filename": "normal.md",
+							"filepath": "components/datepicker/normal.md",
+							"shortpath": "components/datepicker/normal",
+							"longpath": "src/components/datepicker/normal.md",
+							"type": "file",
+							"title": "Datepicker (normal)",
 							"guid": "component-datepicker-normal",
 							"variantid": "normal",
 							"componentid": "component-datepicker",
 							"private": false
+						},
+						{
+							"filename": "scrollable.md",
+							"filepath": "components/datepicker/scrollable.md",
+							"shortpath": "components/datepicker/scrollable",
+							"longpath": "src/components/datepicker/scrollable.md",
+							"type": "file",
+							"title": "Datepicker (scrollable)",
+							"guid": "component-datepicker-scrollable",
+							"variantid": "scrollable",
+							"componentid": "component-datepicker",
+							"private": false
 						}
 					],
-					"filecount": 1,
+					"filecount": 3,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -289,15 +335,15 @@
 					"longpath": "src/components/modals",
 					"items": [
 						{
-							"filename": "slideout-modal.md",
-							"filepath": "components/modals/slideout-modal.md",
-							"shortpath": "components/modals/slideout-modal",
-							"longpath": "src/components/modals/slideout-modal.md",
+							"filename": "slideout.md",
+							"filepath": "components/modals/slideout.md",
+							"shortpath": "components/modals/slideout",
+							"longpath": "src/components/modals/slideout.md",
 							"type": "file",
-							"title": "Slideout Modal",
+							"title": "Slideout",
 							"guid": "component-slideout-modal-normal",
 							"variantid": "normal",
-							"componentid": "component-slideout-modal",
+							"componentid": "component-slideout",
 							"private": false
 						}
 					],
@@ -383,9 +429,9 @@
 							"longpath": "src/components/text/preamble.md",
 							"type": "file",
 							"title": "Preamble",
-							"guid": "component-preamble-primary",
-							"variantid": "primary",
-							"componentid": "component-preamble",
+							"guid": "seb-preamble-default",
+							"variantid": "default",
+							"componentid": "seb-preamble",
 							"private": false
 						}
 					],
@@ -395,7 +441,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 10,
+			"directorycount": 11,
 			"type": "directory"
 		},
 		{
@@ -410,9 +456,9 @@
 					"longpath": "src/examples/colors.md",
 					"type": "file",
 					"title": "Colors",
-					"guid": "vanilla-colors-primary",
+					"guid": "seb-colors-primary",
 					"variantid": "primary",
-					"componentid": "vanilla-colors",
+					"componentid": "seb-colors",
 					"private": false
 				},
 				{
@@ -422,9 +468,9 @@
 					"longpath": "src/examples/defaults.md",
 					"type": "file",
 					"title": "Defaults",
-					"guid": "vanilla-defaults-primary",
+					"guid": "seb-defaults-primary",
 					"variantid": "primary",
-					"componentid": "vanilla-defaults",
+					"componentid": "seb-defaults",
 					"private": false
 				},
 				{
@@ -440,6 +486,18 @@
 					"private": false
 				},
 				{
+					"filename": "logotype.md",
+					"filepath": "examples/logotype.md",
+					"shortpath": "examples/logotype",
+					"longpath": "src/examples/logotype.md",
+					"type": "file",
+					"title": "Logotype",
+					"guid": "seb-logotype-default",
+					"variantid": "default",
+					"componentid": "seb-logotype",
+					"private": false
+				},
+				{
 					"filename": "simple-form.md",
 					"filepath": "examples/simple-form.md",
 					"shortpath": "examples/simple-form",
@@ -450,9 +508,21 @@
 					"variantid": "default",
 					"componentid": "component-example-simple-form",
 					"private": false
+				},
+				{
+					"filename": "typography.md",
+					"filepath": "examples/typography.md",
+					"shortpath": "examples/typography",
+					"longpath": "src/examples/typography.md",
+					"type": "file",
+					"title": "Fonts - SEB Sans Serif",
+					"guid": "seb-fonts-seb-sans-serif",
+					"variantid": "sans-serif",
+					"componentid": "seb-typography",
+					"private": false
 				}
 			],
-			"filecount": 4,
+			"filecount": 6,
 			"directorycount": 0,
 			"type": "directory"
 		}

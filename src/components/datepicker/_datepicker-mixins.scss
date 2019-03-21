@@ -13,27 +13,42 @@
   border-radius: $vanilla-component-border-radius;
   border: 1px solid $vanilla-color-darkblue1;
   overflow: hidden;
+  min-width: vanilla-px-to-em(300);
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+        min-width: 100%;
+        border-width: 0px;
+    }
+  }
 }
 
 @mixin vanilla-datepicker__controls {
   display: flex;
-  padding: vanilla-px-to-em(8);
+  padding: vanilla-px-to-em(4);
+  justify-content: space-between;
+
+  > * {
+    margin: vanilla-px-to-em(4);
+  }
 }
 
 @mixin vanilla-datepicker__calendar {
-  border-top: 1px solid $vanilla-color-component-disabled-light;
-  border-bottom: 1px solid $vanilla-color-component-disabled-light;
+  border-top: 1px solid $vanilla-color-grey8;
+  border-bottom: 1px solid $vanilla-color-grey8;
+}
+
+@mixin vanilla-datepicker__calendar--scrollable {
+  max-height: vanilla-px-to-em(265px);
+  overflow: auto;
 }
 
 @mixin vanilla-datepicker__calendar-row {
   display: flex;
+  padding: vanilla-px-to-em(2);
 
-  &:first-child {
-    font-size: 0.7em;
+  > * {
     line-height: vanilla-px-to-em(40);
-  }
-
-  button, span {
     padding: 0;
     display: block;
     flex-grow: 1;
@@ -46,4 +61,10 @@
       border: 0px solid transparent;
     }
   }
+}
+
+@mixin vanilla-datepicker__calendar-header-row {
+  background-color: $vanilla-color-grey9;
+  font-size: 0.8em;
+  padding: vanilla-px-to-em(8);
 }
