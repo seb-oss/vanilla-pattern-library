@@ -1,8 +1,8 @@
 ---
 title: Preamble
-componentid: component-preamble
-variantid: primary
-guid: component-preamble-primary
+componentid: seb-preamble
+variantid: default
+guid: seb-preamble-default
 ---
 # Usage
 Import classes:

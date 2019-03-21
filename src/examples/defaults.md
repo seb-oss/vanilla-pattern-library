@@ -1,8 +1,8 @@
 ---
 title: Defaults
-componentid: vanilla-defaults
+componentid: seb-defaults
 variantid: primary
-guid: vanilla-defaults-primary
+guid: seb-defaults-primary
 ---
 # Usage
 Sets default styles for common elements, such as headlines, links and body font family.
