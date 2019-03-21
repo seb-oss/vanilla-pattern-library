@@ -11,4 +11,10 @@
   .sdv-field-dropdown__options {
     @include vanilla-field-dropdown-options();
   }
+
+  .sdv-field--small {
+    .sdv-field-dropdown__label {
+      @include vanilla-field-dropdown-button--small();
+    }
+  }
 }

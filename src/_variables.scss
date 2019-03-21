@@ -17,6 +17,8 @@ $vanilla-font-basepath: '/assets/fonts/' !default;
 $vanilla-font-fallback: Arial, sans-serif !default;
 $vanilla-font-seb-sans-serif: "SEBSansSerif", $vanilla-font-fallback;
 
+$vanilla-typography-link-font-weight: 500;
+
 /// Responsive breakpoints
 $vanilla-breakpoints: (
   mobile: 0,

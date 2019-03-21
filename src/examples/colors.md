@@ -1,8 +1,8 @@
 ---
 title: Colors
-componentid: vanilla-colors
+componentid: seb-colors
 variantid: primary
-guid: vanilla-colors-primary
+guid: seb-colors-primary
 ---
 # Usage
 Usage:

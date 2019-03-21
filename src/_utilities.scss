@@ -10,7 +10,7 @@ $vanilla-imported-modules: () !default;
 /// Module export mixin
 /// This mixin helps making sure a module is imported once and only once.
 ///
-/// @access public
+/// @access private
 /// @param {String} $_name - Name of exported module
 /// @param {Bool} $_warn [true] - Warn when module has been already imported
 /// @require $imported-modules
@@ -20,5 +20,14 @@ $vanilla-imported-modules: () !default;
     @content;
   } @else if $_warn == true {
     @warn "Module `#{$name}` has already been imported.";
+  }
+}
+
+@include _vanilla-exports('vanilla-utility-classes') {
+  .sdv-align-left {
+    text-align: left;
+  }
+  .sdv-align-right {
+    text-align: right;
   }
 }

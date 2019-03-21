@@ -1,8 +1,13 @@
+/*!
+ *  SEB fonts
+ */@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Light.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Light.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Light.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Light.woff) format("woff");font-weight:300;font-style:normal}@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Regular.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Regular.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Regular.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Regular.woff) format("woff");font-weight:400;font-style:normal}@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Medium.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Medium.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Medium.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Medium.woff) format("woff");font-weight:500;font-style:normal}@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Bold.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Bold.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Bold.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-Bold.woff) format("woff");font-weight:700;font-style:normal}@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-LightItalic.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-LightItalic.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-LightItalic.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-LightItalic.woff) format("woff");font-weight:300;font-style:italic}@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-RegularItalic.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-RegularItalic.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-RegularItalic.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-RegularItalic.woff) format("woff");font-weight:400;font-style:italic}@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-MediumItalic.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-MediumItalic.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-MediumItalic.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-MediumItalic.woff) format("woff");font-weight:500;font-style:italic}@font-face{font-family:SEBSansSerif;src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-BoldItalic.eot);src:url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-BoldItalic.eot#iefix) format("embedded-opentype"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-BoldItalic.woff2) format("woff2"),url(https://sebgroup.github.io/vanilla-pattern-library/assets/fonts/SEBSansSerif-BoldItalic.woff) format("woff");font-weight:700;font-style:italic}
+
 .davanmonet-header {
-    background: #000 !important;
-    border-bottom: 0px solid #000;
+    background: #333 !important;
+    border-bottom: 0px solid #333;
     padding: 0;
     box-shadow: none;
+    font-family: "SEBSansSerif";
 }
 
 .davanmonet-header-logo {
@@ -19,9 +24,11 @@ a.davanmonet-header-logolink {
 
 .davanmonet-body {
     overflow: auto;
+    font-family: "SEBSansSerif";
 }
 
 .davanmonet-maincontentcontainer {
     overflow: auto;
     height: calc(100% - 87px);
+    font-family: "SEBSansSerif";
 }

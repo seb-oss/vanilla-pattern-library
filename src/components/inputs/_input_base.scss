@@ -6,12 +6,20 @@
     @include vanilla-text-field();
   }
 
+  .sdv-field--small {
+    @include vanilla-text-field--small();
+  }
+
   .sdv-field--error {
     @include vanilla-text-field--error();
   }
 
   .sdv-field-label {
     @include vanilla-text-field-label();
+  }
+
+  .sdv-field-label--small {
+    @include vanilla-field-label--small();
   }
 
   .sdv-field-notice {
