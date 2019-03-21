@@ -23,6 +23,7 @@ $_button_color-bg-pressed: $vanilla-color-component-pressed;
 $_button_color-bg-focus: $vanilla-color-component-selected;
 $_button_disabled-color-dark: $vanilla-color-component-disabled-dark;
 $_button_disabled-color-light: $vanilla-color-component-disabled-light;
+$_ghost-button_disabled-opacity: 0.5;
 //
 
 /// Mixes in button styles
@@ -191,8 +192,8 @@ $_button_disabled-color-light: $vanilla-color-component-disabled-light;
   }
   &[disabled] {
     background-color: transparent;
-    border-color: $_button_disabled-color-dark;
-    color: $_button_disabled-color-dark;
+    border-color: rgba($vanilla-color-white, $_ghost-button_disabled-opacity);
+    color:  rgba($vanilla-color-white, $_ghost-button_disabled-opacity);
   }
 }
 
@@ -214,8 +215,8 @@ $_button_disabled-color-light: $vanilla-color-component-disabled-light;
   }
   &[disabled] {
     background-color: transparent;
-    border-color: $_button_disabled-color-dark;
-    color: $_button_disabled-color-dark;
+    border-color: rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
+    color:  rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
   }
 }
 

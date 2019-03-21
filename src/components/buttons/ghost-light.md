@@ -45,7 +45,7 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
 
 ## Disabled state
 ```html
-<div class="pl-purple-bg">
+<div class="pl-blue-bg">
     <button class="sdv-button sdv-button-ghost-light" disabled>Ghost button</button>
 </div>
 ```
