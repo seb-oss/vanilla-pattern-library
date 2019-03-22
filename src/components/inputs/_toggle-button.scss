@@ -1,7 +1,0 @@
-@import 'input_base';
-
-@include _vanilla-exports('vanilla-fld-toggle-button') {
-    .sdv-field-toggle-button {
-        @include vanilla-field-toggle-button();
-    }
-}
