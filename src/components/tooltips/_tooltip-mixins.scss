@@ -1,0 +1,135 @@
+////
+/// Mixins for creating tabs
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../utilities";
+
+$vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
+
+/// Styles for the tooltip box
+///
+/// @access public
+@mixin vanilla-tooltip-box {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: vanilla-px-to-em(14);
+  background-color: $vanilla-color-text;
+  color: $vanilla-color-white;
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+}
+
+/// Styles for the tooltip speech bubble arrow
+///
+/// @access public
+@mixin vanilla-tooltip-arrow {
+  width: 0;
+  height: 0;
+  border: 0.5rem solid $vanilla-color-text;
+}
+
+/// Styles for default tooltip class
+///
+/// @access public
+@mixin vanilla-tooltip() {
+  @include vanilla-tooltip-box();
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    @include vanilla-tooltip-arrow();
+  }
+}
+
+/// Tooltip top modifier
+///
+/// @access public
+@mixin vanilla-tooltip--top() {
+  &:after {
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: $vanilla-color-text transparent transparent;
+  }
+}
+
+/// Tooltip bottom modifier
+///
+/// @access public
+@mixin vanilla-tooltip--bottom() {
+  &:after {
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent transparent $vanilla-color-text;
+  }
+}
+
+/// Tooltip left modifier
+///
+/// @access public
+@mixin vanilla-tooltip--left() {
+  &:after {
+    left: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: transparent $vanilla-color-text transparent transparent;
+  }
+}
+
+/// Tooltip right modifier
+///
+/// @access public
+@mixin vanilla-tooltip--right() {
+  &:after {
+    right: -1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: transparent transparent transparent $vanilla-color-text;
+  }
+}
+
+/// Styles for the css only variant of the tooltip
+///
+/// @access public
+@mixin vanilla-tooltip-css-only {
+  cursor: help;
+  border-bottom: dashed 1px $vanilla-color-text;
+  display: inline-block;
+  position: relative;
+
+  &:before {
+    @include vanilla-tooltip-box();
+    content: attr(data-sdv-tooltip);
+    position: absolute;
+    transform: translateX(-50%);
+    text-align: center;
+    left: 50%;
+    bottom: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    width: $vanilla-tooltip-css-only--width;
+  }
+
+  &:after {
+    @include vanilla-tooltip-arrow();
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: $vanilla-color-text transparent transparent;
+  }
+
+  &:hover:before,
+  &:focus:before,
+  &:hover:after,
+  &:focus:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
