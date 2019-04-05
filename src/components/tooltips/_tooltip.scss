@@ -4,22 +4,6 @@
 
 .sdv-tooltip {
   @include vanilla-tooltip();
-
-  &--top {
-    @include vanilla-tooltip--top();
-  }
-
-  &--bottom {
-    @include vanilla-tooltip--bottom();
-  }
-
-  &--left {
-    @include vanilla-tooltip--left();
-  }
-
-  &--right {
-    @include vanilla-tooltip--right();
-  }
 }
 
 }

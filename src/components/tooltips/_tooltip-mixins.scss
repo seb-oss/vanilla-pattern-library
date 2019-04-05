@@ -33,13 +33,36 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 /// Styles for default tooltip class
 ///
 /// @access public
-@mixin vanilla-tooltip() {
+@mixin vanilla-tooltip__main() {
   @include vanilla-tooltip-box();
   position: relative;
   &:after {
     content: '';
     position: absolute;
     @include vanilla-tooltip-arrow();
+  }
+}
+
+/// Styles for default tooltip class
+///
+/// @access public
+@mixin vanilla-tooltip() {
+  @include vanilla-tooltip__main();
+
+  &--top {
+    @include vanilla-tooltip--top();
+  }
+
+  &--bottom {
+    @include vanilla-tooltip--bottom();
+  }
+
+  &--left {
+    @include vanilla-tooltip--left();
+  }
+
+  &--right {
+    @include vanilla-tooltip--right();
   }
 }
 
