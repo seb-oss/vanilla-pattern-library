@@ -1,8 +1,8 @@
 ---
 title: Toggle switch input
-componentid: component-toggleswitch
+componentid: component-slidetoggle
 variantid: toggle
-guid: component-toggleswitch-toggle
+guid: component-slidetoggle-toggle
 ---
 # Usage
 Import classes:
