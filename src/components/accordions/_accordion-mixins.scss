@@ -13,85 +13,32 @@
 ///
 /// @access public
 @mixin vanilla-accordion() {
-  $_indicator-width: vanilla-px-to-em(3px);
   margin: 0;
 
   &__header {
-    font-weight: 500;
-    font-size: vanilla-px-to-em(20px);
-    //order-left: $_indicator-width solid $vanilla-color-white;
-    //margin-left: -#{$_indicator-width};
-    //border-top: vanilla-px-to-em(1px) solid $vanilla-color-white;
-    padding-right: 0.75em;
-    display: flex;
-
-    &:first-of-type {
-      border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
-    }
-
-    // Icon
-    &:before {
-      @include vanilla-icon("\F078", $_space: 3rem);
-      //@include vanilla-icon-rotate(0, 500ms, 50% 45%);
-      flex-shrink: 0;
-      line-height: 2em;
-    }
-
-    //Hover
-    &:hover {
-      background-color: $vanilla-color-grey9;   
-    }
+    @include vanilla-accordion__header();
 
     // Expandable section
     & + * {
-      height: 0;
-      overflow: hidden;
-      //border-top: vanilla-px-to-em(1px) solid $vanilla-color-white;
-      border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
-      margin: 0 0 0 0;
-      padding: 0 1em 0 3em;
+      @include vanilla-accordion__content-section();
     }
 
     // Headline
     & > * {
-      display: inline;
-      flex-grow: 1;
-      margin:  0 0 0 -3em;
-      padding: 0.3em 0 0.3em 3em;
-      position: relative;
-      z-index: 999;
-      cursor: pointer;
+      @include vanilla-accordion__headline();
 
       // Sub-headline
       & > * {
-        display: block;
-        font-size: 0.65em;
-        font-weight: normal;
-        font-style: normal;
+        @include vanilla-accordion__sub-headline();
       }
     }
 
     &--expanded,
     input:checked + & {
-      //border-color: $vanilla-color-green;
-      //background-color: $vanilla-color-grey9;
-      //border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8; 
-      //border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;  
-
-
-      // Change icon rotation
-      &:before {
-        //@include vanilla-icon-rotate(180, 500ms, 50% 45%);
-        transform: rotate(180deg);
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        margin-top: vanilla-px-to-em(-5px);
-      }
+      @include vanilla-accordion__header--expanded();
 
       & + * {
-        height: auto;
-        //background-color: $vanilla-color-grey9;
+        @include vanilla-accordion__content-section--expanded();
       }
     }
 
@@ -106,4 +53,87 @@
     z-index: -1;
     left: -999rem;
   }
+}
+
+/// Accordion header
+///
+/// @access public
+@mixin vanilla-accordion__header() {
+  font-weight: 500;
+  font-size: vanilla-px-to-em(20px);
+  padding-right: 0.75em;
+  display: flex;
+
+  &:first-of-type {
+    border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
+  }
+
+  // Icon
+  &:before {
+    @include vanilla-icon("\F078", $_space: 3rem);
+    @include vanilla-icon-rotate(0, $transform-origin: "50% 47%");
+    flex-shrink: 0;
+    line-height: 3rem;
+    transition: .3s;
+    margin-top: vanilla-px-to-em(-2px);
+  }
+  
+  &:hover {
+    background-color: $vanilla-color-grey9;   
+  }
+}
+
+/// Accordion content section
+///
+/// @access public
+@mixin vanilla-accordion__content-section() {
+  height: 0;
+  overflow: hidden;
+  border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
+  margin: 0 0 0 0;
+  padding: 0 1em 0 3em;
+}
+
+/// Accordion headline
+///
+/// @access public
+@mixin vanilla-accordion__headline() {
+  display: inline;
+  flex-grow: 1;
+  margin:  0 0 0 -3em;
+  padding: 0.3em 0 0.3em 3em;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+}
+
+/// Accordion sub headline
+///
+/// @access public
+@mixin vanilla-accordion__sub-headline() {
+  display: block;
+  font-size: 0.65em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/// Accordion header, expanded state
+///
+/// @access public
+@mixin vanilla-accordion__header--expanded() {
+  // Change icon rotation
+  &:before {
+    @include vanilla-icon-rotate(-180, $transform-origin: "50% 47%");
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    transition: .3s;
+  }
+}
+
+/// Accordion content section, expanded state
+///
+/// @access public
+@mixin vanilla-accordion__content-section--expanded() {
+  height: auto;
 }
