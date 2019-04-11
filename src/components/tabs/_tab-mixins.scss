@@ -6,99 +6,147 @@
 
 @import "../../utilities";
 
-/// Mixes in progress bar styles
+/// Tab list
+///
+/// @access public
+@mixin vanilla-tabs__tablist() {
+  display: flex;
+  border-bottom: 1px solid $vanilla-color-component-border;
+  position: relative;
+}
+
+/// Tab item
+///
+/// @access public
+@mixin vanilla-tabs__tab() {
+  font-size: 1em;
+  font-family: inherit;
+  margin-bottom: -1px;
+  appearance: none;
+  background-color: transparent;
+  display: block;
+  border: 1px solid transparent;
+  padding: vanilla-px-to-em(14) 1em;
+  cursor: pointer;
+  color: $vanilla-color-link;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('>=tablet') {
+      min-width: 96px;
+    }
+  }
+
+  &:hover {
+    background-color: $vanilla-color-component-hover;
+    color: $vanilla-color-white;
+  }
+
+  &:focus {
+    background-color: $vanilla-color-component-selected;
+    color: $vanilla-color-white;
+    border-bottom: 1px solid $vanilla-color-component-border;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $vanilla-color-component-disabled-light;
+    color: $vanilla-color-component-disabled-dark;
+    border-width: 0;
+    border-bottom: 1px solid $vanilla-color-component-border;
+  }
+}
+
+/// Tab item, active modifier
+///
+/// @access public
+@mixin vanilla-tabs__tab--active() {
+  background-color: $vanilla-color-white;
+  border-color: $vanilla-color-component-border;
+  border-bottom-color: $vanilla-color-white;
+  color: $vanilla-color-grey2;
+  cursor: default;
+}
+
+/// Tab panel
+///
+/// @access public
+@mixin vanilla-tabs__panel() {
+  margin-top: 1em;
+  display: none;
+}
+
+/// Tab panel, active modifier
+///
+/// @access public
+@mixin vanilla-tabs__panel--active() {
+  display: block;
+}
+
+/// Tabs foldout button
+///
+/// @access public
+@mixin vanilla-tabs__foldout-button() {
+  &:after {
+    @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(40px));
+    height: auto;
+    color: inherit;
+  }
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      font-size: 1px;
+      width: 48px;
+      overflow: hidden;
+      color: transparent !important;
+      &:after {
+        font-size: 1rem;
+        color: $vanilla-color-link;
+      }
+      &:hover:after {
+        color: $vanilla-color-white;
+      }
+    }
+  }
+}
+
+/// Tabs foldout
+///
+/// @access public
+@mixin vanilla-tabs__foldout() {
+  position: absolute;
+  right: 0;
+  top: vanilla-px-to-em(48px);
+}
+
+/// Mixes in standard Vanilla tab structure
 ///
 /// @access public
 @mixin vanilla-tabs() {
-
   &__tablist {
-    display: flex;
-    border-bottom: 1px solid $vanilla-color-component-border;
-    position: relative;
+    @include vanilla-tabs__tablist();
   }
 
   &__tab {
-    font-size: 1em;
-    font-family: inherit;
-    margin-bottom: -1px;
-    appearance: none;
-    background-color: transparent;
-    display: block;
-    border: 1px solid transparent;
-    padding: vanilla-px-to-em(14) 1em;
-    cursor: pointer;
-    color: $vanilla-color-link;
-
-    @include media-context($vanilla-breakpoints) {
-      @include media('>=tablet') {
-        min-width: 96px;
-      }
-    }
-
-    &:hover {
-      background-color: $vanilla-color-component-hover;
-      color: $vanilla-color-white;
-    }
-
-    &:focus {
-      background-color: $vanilla-color-component-selected;
-      color: $vanilla-color-white;
-      border-bottom: 1px solid $vanilla-color-component-border;
-      outline: none;
-    }
-
-    &:disabled {
-      background-color: $vanilla-color-component-disabled-light;
-      color: $vanilla-color-component-disabled-dark;
-      border-width: 0;
-      border-bottom: 1px solid $vanilla-color-component-border;
-    }
+    @include vanilla-tabs__tab();
   }
 
   &__tab.-active:not(:focus),
   &__tab[aria-selected=true] {
-    background-color: $vanilla-color-white;
-    border-color: $vanilla-color-component-border;
-    border-bottom-color: $vanilla-color-white;
-    color: $vanilla-color-grey2;
-    cursor: default;
+    @include vanilla-tabs__tab--active();
   }
 
   &__panel {
-    margin-top: 1em;
-    display: none;
+    @include vanilla-tabs__panel();
     &.-active {
-      display: block;
+      @include vanilla-tabs__panel--active();
     }
   }
 
   &__foldout-button {
-    &:after {
-      @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(40px));
-      height: auto;
-      color: inherit;
-    }
-
-    @include media-context($vanilla-breakpoints) {
-        @include media('<tablet') {
-            font-size: 1px;
-            width: 48px;
-            overflow: hidden;
-            color: transparent !important;
-            &:after {
-              font-size: 1rem;
-              color: $vanilla-color-link;
-            }
-            &:hover:after {
-              color: $vanilla-color-white;
-            }
-        }
-    }
+    @include vanilla-tabs__foldout-button();
   }
 
   &__foldout {
-    position: absolute;
-    right: 0;
-    top: vanilla-px-to-em(48px);
+    @include vanilla-tabs__foldout();
   }
 }
