@@ -18,25 +18,37 @@
 
   &__header {
     font-weight: 500;
-    font-size: vanilla-px-to-em(24px);
-    border-left: $_indicator-width solid $vanilla-color-white;
-    margin-left: -#{$_indicator-width};
+    font-size: vanilla-px-to-em(20px);
+    //order-left: $_indicator-width solid $vanilla-color-white;
+    //margin-left: -#{$_indicator-width};
+    //border-top: vanilla-px-to-em(1px) solid $vanilla-color-white;
     padding-right: 0.75em;
     display: flex;
 
+    &:first-of-type {
+      border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
+    }
+
     // Icon
     &:before {
-      @include vanilla-icon("\F078", -90);
+      @include vanilla-icon("\F078", $_space: 3rem);
+      //@include vanilla-icon-rotate(0, 500ms, 50% 45%);
       flex-shrink: 0;
       line-height: 2em;
+    }
+
+    //Hover
+    &:hover {
+      background-color: $vanilla-color-grey9;   
     }
 
     // Expandable section
     & + * {
       height: 0;
       overflow: hidden;
+      //border-top: vanilla-px-to-em(1px) solid $vanilla-color-white;
       border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
-      margin: 0 0 -#{vanilla-px-to-em(1px)} 0;
+      margin: 0 0 0 0;
       padding: 0 1em 0 3em;
     }
 
@@ -61,16 +73,30 @@
 
     &--expanded,
     input:checked + & {
-      border-color: $vanilla-color-green;
+      //border-color: $vanilla-color-green;
+      //background-color: $vanilla-color-grey9;
+      //border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8; 
+      //border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;  
+
 
       // Change icon rotation
       &:before {
-        @include vanilla-icon-rotate(0);
+        //@include vanilla-icon-rotate(180, 500ms, 50% 45%);
+        transform: rotate(180deg);
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        margin-top: vanilla-px-to-em(-5px);
       }
 
       & + * {
         height: auto;
+        //background-color: $vanilla-color-grey9;
       }
+    }
+
+    input:focus + & {
+      @include vanilla-focus-outline();
     }
   }
 
