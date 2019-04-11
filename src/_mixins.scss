@@ -48,9 +48,12 @@
 /// @access public
 /// @param $rotation rotation in degrees
 /// @require vanilla-icon
-@mixin vanilla-icon-rotate($rotation) {
+@mixin vanilla-icon-rotate($rotation, $speed: 250ms, $transform-origin: null) {
   transform: rotate(#{$rotation + "deg"});
-  transition: transform 250ms;
+  transition: transform $speed;
+  @if $transform-origin {
+    transform-origin: #{$transform-origin};
+  }
 }
 
 /// Add focus outline to element
