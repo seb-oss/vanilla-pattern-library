@@ -20,16 +20,16 @@ Use them in your template:
 <div class="sdv-slideout sdv-slideout--left">...</div>
 ```
 
-To activate the modal, add the `-sdv-modal-active` modifier:
+To activate the modal, add the `-active` modifier:
 
 ```html
-<div class="sdv-slideout sdv-slideout--right -sdv-modal-active">
+<div class="sdv-slideout sdv-slideout--right -active">
   ...
   <div class="sdv-modal-backdrop"></div>
 </div>
 ```
 
-Please note - the backdrop element has to be a child of the modal, like above (since it depends on its parent's -sdv-modal-active class)
+Please note - the backdrop element has to be a child of the modal, like above (since it depends on its parent's -active class)
 
 ---
 
@@ -77,7 +77,7 @@ To override them use the media mixin from the 'include-media' package. For examp
 ## Right
 
 ```html
-<div class="sdv-slideout sdv-slideout--right -sdv-modal-active">
+<div class="sdv-slideout sdv-slideout--right -active">
   <div class="sdv-slideout__container">
     <header class="sdv-slideout__header">
       <h3 class="sdv-slideout__heading">Modal Heading</h3>
@@ -98,7 +98,7 @@ To override them use the media mixin from the 'include-media' package. For examp
 ## Left
 
 ```html
-<div class="sdv-slideout sdv-slideout--left -sdv-modal-active">
+<div class="sdv-slideout sdv-slideout--left -active">
   <div class="sdv-slideout__container">
     <header class="sdv-slideout__header">
       <h3 class="sdv-slideout__heading">Modal Heading</h3>
