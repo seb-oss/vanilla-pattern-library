@@ -66,9 +66,9 @@ $vanilla-font-settings-h5: (
 ) !default;
 // / Headline H6 font sizes
 $vanilla-font-settings-h6: (
-  desktop: (size: vanilla-px-to-rem(16), weight: 500),
-  tablet: (size: vanilla-px-to-rem(16), weight: 500),
-  mobile: (size: vanilla-px-to-rem(16), weight: 500)
+  desktop: (size: vanilla-px-to-rem(14), weight: 400),
+  tablet: (size: vanilla-px-to-rem(14), weight: 400),
+  mobile: (size: vanilla-px-to-rem(14), weight: 400)
 ) !default;
 // / Body Regular (Base) font size
 $vanilla-font-settings-body: (

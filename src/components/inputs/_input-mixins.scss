@@ -422,10 +422,10 @@
   }
 }
 
-/// Toggle button
+/// Toggle selector
 ///
 /// @access public
-@mixin vanilla-field-toggle-button() {
+@mixin vanilla-field-toggle-selector() {
   $_padding_x: 1.5em;
   $_padding_y: .5em;
   $_iconSize: 35px;

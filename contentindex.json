@@ -289,6 +289,18 @@
 							"private": false
 						},
 						{
+							"filename": "slidetoggle.md",
+							"filepath": "components/inputs/slidetoggle.md",
+							"shortpath": "components/inputs/slidetoggle",
+							"longpath": "src/components/inputs/slidetoggle.md",
+							"type": "file",
+							"title": "Toggle switch input",
+							"guid": "component-slidetoggle-toggle",
+							"variantid": "toggle",
+							"componentid": "component-slidetoggle",
+							"private": false
+						},
+						{
 							"filename": "textarea.md",
 							"filepath": "components/inputs/textarea.md",
 							"shortpath": "components/inputs/textarea",
@@ -301,27 +313,15 @@
 							"private": false
 						},
 						{
-							"filename": "toggle-button.md",
-							"filepath": "components/inputs/toggle-button.md",
-							"shortpath": "components/inputs/toggle-button",
-							"longpath": "src/components/inputs/toggle-button.md",
+							"filename": "toggle-selector.md",
+							"filepath": "components/inputs/toggle-selector.md",
+							"shortpath": "components/inputs/toggle-selector",
+							"longpath": "src/components/inputs/toggle-selector.md",
 							"type": "file",
-							"title": "Toggle button input",
-							"guid": "component-togglebutton-default",
+							"title": "Toggle selector input",
+							"guid": "component-toggleselector-default",
 							"variantid": "default",
-							"componentid": "component-togglebutton",
-							"private": false
-						},
-						{
-							"filename": "toggleswitch.md",
-							"filepath": "components/inputs/toggleswitch.md",
-							"shortpath": "components/inputs/toggleswitch",
-							"longpath": "src/components/inputs/toggleswitch.md",
-							"type": "file",
-							"title": "Toggle switch input",
-							"guid": "component-toggleswitch-toggle",
-							"variantid": "toggle",
-							"componentid": "component-toggleswitch",
+							"componentid": "component-toggleselector",
 							"private": false
 						}
 					],
@@ -335,13 +335,13 @@
 					"longpath": "src/components/modals",
 					"items": [
 						{
-							"filename": "slideout.md",
-							"filepath": "components/modals/slideout.md",
-							"shortpath": "components/modals/slideout",
-							"longpath": "src/components/modals/slideout.md",
+							"filename": "modal-slideout.md",
+							"filepath": "components/modals/modal-slideout.md",
+							"shortpath": "components/modals/modal-slideout",
+							"longpath": "src/components/modals/modal-slideout.md",
 							"type": "file",
 							"title": "Slideout",
-							"guid": "component-slideout-modal-normal",
+							"guid": "component-slideout-normal",
 							"variantid": "normal",
 							"componentid": "component-slideout",
 							"private": false
@@ -438,10 +438,44 @@
 					"filecount": 1,
 					"directorycount": 0,
 					"type": "directory"
+				},
+				{
+					"title": "Tooltips",
+					"shortpath": "tooltips",
+					"longpath": "src/components/tooltips",
+					"items": [
+						{
+							"filename": "tooltip-css-only.md",
+							"filepath": "components/tooltips/tooltip-css-only.md",
+							"shortpath": "components/tooltips/tooltip-css-only",
+							"longpath": "src/components/tooltips/tooltip-css-only.md",
+							"type": "file",
+							"title": "Simple CSS-only tooltip",
+							"guid": "component-tooltip-css-tooltip",
+							"variantid": "css-tooltip",
+							"componentid": "component-tooltip",
+							"private": false
+						},
+						{
+							"filename": "tooltip.md",
+							"filepath": "components/tooltips/tooltip.md",
+							"shortpath": "components/tooltips/tooltip",
+							"longpath": "src/components/tooltips/tooltip.md",
+							"type": "file",
+							"title": "Tooltip",
+							"guid": "component-tooltip-default",
+							"variantid": "default",
+							"componentid": "component-tooltip",
+							"private": false
+						}
+					],
+					"filecount": 2,
+					"directorycount": 0,
+					"type": "directory"
 				}
 			],
 			"filecount": 0,
-			"directorycount": 11,
+			"directorycount": 12,
 			"type": "directory"
 		},
 		{
