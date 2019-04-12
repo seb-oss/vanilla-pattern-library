@@ -9,11 +9,15 @@
 @import "../../functions";
 @import "node_modules/include-media/dist/include-media";
 
+$vanilla-accordion-icon-size: 0.9em;
+$vanilla-accordion-left-margin: 2.5rem;
+
 /// Mixes in accordion styles
 ///
 /// @access public
 @mixin vanilla-accordion() {
   margin: 0;
+  border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
 
   &__header {
     @include vanilla-accordion__header();
@@ -44,6 +48,7 @@
 
     input:focus + & {
       @include vanilla-focus-outline();
+      background-color: $vanilla-color-grey9;
     }
   }
 
@@ -60,22 +65,19 @@
 /// @access public
 @mixin vanilla-accordion__header() {
   font-weight: 500;
-  font-size: vanilla-px-to-em(20px);
+  font-size: vanilla-px-to-rem(20px);
   padding-right: 0.75em;
   display: flex;
-
-  &:first-of-type {
-    border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
-  }
+  border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
 
   // Icon
   &:before {
-    @include vanilla-icon("\F078", $_space: 3rem);
-    @include vanilla-icon-rotate(0, $transform-origin: "50% 47%");
+    @include vanilla-icon("\F078", $_space: $vanilla-accordion-left-margin);
+    @include vanilla-icon-rotate(0, $transform-origin: "50% 48%");
     flex-shrink: 0;
-    line-height: 3rem;
+    line-height: $vanilla-accordion-left-margin;
     transition: .3s;
-    margin-top: vanilla-px-to-em(-2px);
+    font-size: $vanilla-accordion-icon-size;
   }
   
   &:hover {
@@ -89,9 +91,9 @@
 @mixin vanilla-accordion__content-section() {
   height: 0;
   overflow: hidden;
-  border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
   margin: 0 0 0 0;
-  padding: 0 1em 0 3em;
+  padding: 0 1em 0 $vanilla-accordion-left-margin;
+  transition: .3s;
 }
 
 /// Accordion headline
@@ -100,8 +102,8 @@
 @mixin vanilla-accordion__headline() {
   display: inline;
   flex-grow: 1;
-  margin:  0 0 0 -3em;
-  padding: 0.3em 0 0.3em 3em;
+  margin: 0 0 0 -#{$vanilla-accordion-left-margin};
+  padding: 0.3em 0 0.3em $vanilla-accordion-left-margin;
   position: relative;
   z-index: 999;
   cursor: pointer;
@@ -123,11 +125,13 @@
 @mixin vanilla-accordion__header--expanded() {
   // Change icon rotation
   &:before {
-    @include vanilla-icon-rotate(-180, $transform-origin: "50% 47%");
+    @include vanilla-icon-rotate(-180, $transform-origin: "50% 48%");
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
     transition: .3s;
+    margin-top: vanilla-px-to-em(1px);
+    margin-bottom: vanilla-px-to-em(-1px);
   }
 }
 
@@ -136,4 +140,5 @@
 /// @access public
 @mixin vanilla-accordion__content-section--expanded() {
   height: auto;
+  transition: .3s;
 }
