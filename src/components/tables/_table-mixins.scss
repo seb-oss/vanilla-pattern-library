@@ -7,10 +7,44 @@
 @import "../../utilities";
 @import "../../mixins";
 
+$vanilla-table-fixed-col-width: 150px !default;
+
 /// Mixes in table styles
 ///
 /// @access public
 @mixin vanilla-table() {
+  @include vanilla-table__main();
+
+  tr &__numeric-col {
+    @include vanilla-table__numeric-col();
+  }
+
+  tr &__negative-col {
+    @include vanilla-table__negative-col();
+  }
+
+  tr &__primary-col {
+    @include vanilla-table__primary-col();
+  }
+
+  &__sortable-col {
+    @include vanilla-table__sortable-col();
+  }
+
+  .sdv-field-checkbox-wrap label {
+    box-shadow: none !important;
+  }
+
+  &--fixed-l-col {
+    @include vanilla-table--fixed-l-col();
+  }
+
+}
+
+/// Table main styles
+///
+/// @access public
+@mixin vanilla-table__main() {
   width: 100%;
   font-family: $vanilla-font-seb-sans-serif;
   border-spacing: 0;
@@ -55,74 +89,82 @@
       border-bottom-width: 0;
     }
   }
+}
 
+/// Numeric column
+///
+/// @access public
+@mixin vanilla-table__numeric-col() {
+  text-align: right;
+}
 
-  tr &__numeric-col {
-    text-align: right;
+/// Negative column
+///
+/// @access public
+@mixin vanilla-table__negative-col() {
+  color: $vanilla-color-darkred2;
+}
+
+/// Primary column
+///
+/// @access public
+@mixin vanilla-table__primary-col() {
+  color: $vanilla-color-black;
+}
+
+/// Sortable column
+///
+/// @access public
+@mixin vanilla-table__sortable-col() {
+  cursor: pointer;
+  margin-left: vanilla-px-to-em(8);
+  &:after {
+    @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
+    opacity: 0;
+    transition: 0.3s;
+  }
+  &:hover:after {
+    opacity: 1;
+  }
+  &--asc:after {
+    @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
+    opacity: 1;
+  }
+  &--desc:after {
+    @include vanilla-icon($_glyph: "\F077", $_color: inherit, $_space: 1rem);
+    opacity: 1;
+  }
+}
+
+/// Fixed left column modifier
+///
+/// @access public
+@mixin vanilla-table--fixed-l-col() {
+  overflow: auto;
+  display: block;
+  position: relative;
+  max-width: 100%;
+
+  td, th {
+    width: auto !important;
+    min-width: $vanilla-table-fixed-col-width;
   }
 
-  tr &__negative-col {
-    color: $vanilla-color-darkred2;
+  td:first-child,
+  th:first-child {
+    position: sticky;
+    left: 0;
+    background-color: $vanilla-color-white;
+    border-right: 1px solid $vanilla-color-grey8;
   }
 
-  tr &__primary-col {
-    color: $vanilla-color-black;
-  }
-
-  &__sortable-col {
-    cursor: pointer;
-    margin-left: vanilla-px-to-em(8);
-    &:after {
-      @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
-      opacity: 0;
-      transition: 0.3s;
-    }
-    &:hover:after {
-      opacity: 1;
-    }
-    &--asc:after {
-      @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
-      opacity: 1;
-    }
-    &--desc:after {
-      @include vanilla-icon($_glyph: "\F077", $_color: inherit, $_space: 1rem);
-      opacity: 1;
+  thead th {
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    background-color: $vanilla-color-white;
+    &:first-child {
+      z-index: 2;
     }
   }
-
-  .sdv-field-checkbox-wrap label {
-    box-shadow: none !important;
-  }
-
-  $_fixed-col-width: 150px;
-  &--fixed-l-col {
-    overflow: auto;
-    display: block;
-    position: relative;
-    max-width: 100%;
-
-    td, th {
-      width: auto !important;
-      min-width: $_fixed-col-width;
-    }
-
-    td:first-child,
-    th:first-child {
-      position: sticky;
-      left: 0;
-      background-color: $vanilla-color-white;
-      border-right: 1px solid $vanilla-color-grey8;
-    }
-
-    thead th {
-      top: 0;
-      z-index: 1;
-      position: sticky;
-      background-color: $vanilla-color-white;
-      &:first-child {
-        z-index: 2;
-      }
-    }
-  }
-
 }
