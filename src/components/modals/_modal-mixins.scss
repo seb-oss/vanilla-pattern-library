@@ -3,11 +3,12 @@
 /// @author SEB Design Library
 ////
 
+@import "node_modules/include-media/dist/include-media";
+
 @import "../../utilities";
 @import "../../variables";
-@import "../buttons/button-mixins";
-@import "node_modules/include-media/dist/include-media";
 @import "../../mixins";
+@import "../buttons/button-mixins";
 
 $vanilla-modal-active-state-class: -active !default;
 
@@ -123,7 +124,7 @@ $vanilla-modal-active-state-class: -active !default;
 
 /// Mixes in Vanilla's default modal slideout structure
 /// @access public
-@mixin vanilla-slideout($use-target-pseudo-class-for-active-state: true) {
+@mixin vanilla-modal-slideout($use-target-pseudo-class-for-active-state: true) {
   $__module: &;
 
   @include vanilla-modal-slideout-base();

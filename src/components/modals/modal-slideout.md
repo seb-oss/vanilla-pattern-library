@@ -10,20 +10,20 @@ guid: component-slideout-normal
 Import classes:
 
 ```scss
-@import "~@sebgroup/vanilla/src/components/modals/slideout";
+@import "~@sebgroup/vanilla/src/components/modals/modal-slideout";
 ```
 
 Use them in your template:
 
 ```html
-<div class="sdv-slideout sdv-slideout--right">...</div>
-<div class="sdv-slideout sdv-slideout--left">...</div>
+<div class="sdv-modal-slideout sdv-modal-slideout--right">...</div>
+<div class="sdv-modal-slideout sdv-modal-slideout--left">...</div>
 ```
 
 To activate the modal, add the `-active` modifier:
 
 ```html
-<div class="sdv-slideout sdv-slideout--right -active">
+<div class="sdv-modal-slideout sdv-slideout--right -active">
   ...
   <div class="sdv-modal-backdrop"></div>
 </div>
@@ -52,7 +52,7 @@ You can also use the mixins:
 The width of `.slideout__container` is set to `33%` by default. To override the width to `50%`:
 
 ```scss
-.sdv-slideout {
+.sdv-modal-slideout {
   &__container {
     width: 50%;
   }
@@ -63,7 +63,7 @@ For screens smaller or equal to `tablet` the width is set to `100%`.
 To override them use the media mixin from the 'include-media' package. For example:
 
 ```scss
-.sdv-slideout {
+.sdv-modal-slideout {
   &__container {
     @include media(">=tablet", "<desktop") {
       width: 50%;
@@ -77,15 +77,15 @@ To override them use the media mixin from the 'include-media' package. For examp
 ## Right
 
 ```html
-<div class="sdv-slideout sdv-slideout--right -active">
-  <div class="sdv-slideout__container">
-    <header class="sdv-slideout__header">
-      <h3 class="sdv-slideout__heading">Modal Heading</h3>
-      <button class="sdv-slideout__close">
+<div class="sdv-modal-slideout sdv-slideout--right -active">
+  <div class="sdv-modal-slideout__container">
+    <header class="sdv-modal-slideout__header">
+      <h3 class="sdv-modal-slideout__heading">Modal Heading</h3>
+      <button class="sdv-modal-slideout__close">
         <i class="fal fa-times"></i>
       </button>
     </header>
-    <div class="sdv-slideout__content">
+    <div class="sdv-modal-slideout__content">
       <h4>Modal Content</h4>
       <p>Lorem ipsum dolor sit amet</p>
     </div>
@@ -98,15 +98,15 @@ To override them use the media mixin from the 'include-media' package. For examp
 ## Left
 
 ```html
-<div class="sdv-slideout sdv-slideout--left -active">
-  <div class="sdv-slideout__container">
-    <header class="sdv-slideout__header">
-      <h3 class="sdv-slideout__heading">Modal Heading</h3>
-      <button class="sdv-slideout__close">
+<div class="sdv-modal-slideout sdv-modal-slideout--left -active">
+  <div class="sdv-modal-slideout__container">
+    <header class="sdv-modal-slideout__header">
+      <h3 class="sdv-modal-slideout__heading">Modal Heading</h3>
+      <button class="sdv-modal-slideout__close">
         <i class="fal fa-times"></i>
       </button>
     </header>
-    <div class="sdv-slideout__content">
+    <div class="sdv-modal-slideout__content">
       <h4>Modal Content</h4>
       <p>Lorem ipsum dolor sit amet</p>
     </div>
@@ -118,15 +118,15 @@ To override them use the media mixin from the 'include-media' package. For examp
 ## Interactive left
 
 ```html
-<div class="sdv-slideout sdv-slideout--right" id="slideout">
-  <div class="sdv-slideout__container">
-    <header class="sdv-slideout__header">
-      <h3 class="sdv-slideout__heading">Modal Heading</h3>
-      <button class="sdv-slideout__close">
+<div class="sdv-modal-slideout sdv-modal-slideout--left" id="slideout">
+  <div class="sdv-modal-slideout__container">
+    <header class="sdv-modal-slideout__header">
+      <h3 class="sdv-modal-slideout__heading">Modal Heading</h3>
+      <button class="sdv-modal-slideout__close">
         <i class="fal fa-times"></i>
       </button>
     </header>
-    <div class="sdv-slideout__content">
+    <div class="sdv-modal-slideout__content">
       <h4>Modal Content</h4>
       <p>Lorem ipsum dolor sit amet</p>
     </div>
