@@ -1,8 +1,8 @@
 ---
 title: Single button
-componentid: component-dialogue
+componentid: component-dialogue-
 variantid: single-button
-guid: component-dialogue-single-button
+guid: component-dialogue-single-button-
 ---
 # Usage
 Import classes:

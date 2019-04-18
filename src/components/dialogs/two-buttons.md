@@ -1,8 +1,8 @@
 ---
 title: Two buttons
-componentid: component-dialogue
+componentid: component-dialogue-
 variantid: two-buttons
-guid: component-dialogue-two-buttons
+guid: component-dialogue-two-buttons-
 ---
 # Usage
 Import classes:
