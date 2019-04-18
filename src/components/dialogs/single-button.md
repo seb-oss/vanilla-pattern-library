@@ -1,9 +1,11 @@
 ---
 title: Single button
-componentid: component-dialogue-
+componentid: component-dialogue
 variantid: single-button
-guid: component-dialogue-single-button-
+guid: component-dialogue-single-button
+private: true
 ---
+This component is _deprecated_. Use modal-dialog instead.
 # Usage
 Import classes:
 ```scss
