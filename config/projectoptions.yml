@@ -1,5 +1,4 @@
 ---
-
 #-------------------------------------------------------------------------------
 # Use this to alter the look of DaVanMonet
 #-------------------------------------------------------------------------------
@@ -9,14 +8,12 @@ project_info:
   theme_style: "src/theme.css"
   pagedata_schemaversion: "2.0"
 
-
 #-------------------------------------------------------------------------------
 # Path settings
 #-------------------------------------------------------------------------------
 directories:
-
-  public_path: '/vanilla-pattern-library/'
-  public_path_markdown: 'https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/gh-pages/'
+  public_path: "/vanilla-pattern-library/"
+  public_path_markdown: "https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/gh-pages/"
   use_hash: true
 
   # Path to the pattern library source files
@@ -43,11 +40,10 @@ directories:
   # DvM will output css-files to this directory when in dev-mode, if this feature
   # is enabled in compile settings. (see below)
   # Production mode css files will also be copied here during build
-  cssCopies: 'not-used'
+  cssCopies: "not-used"
 
 # If user config is present, the settings in it will override the ones in this file
 # userconfig: "configs/local-conf.json"
-
 
 #-------------------------------------------------------------------------------
 # Indexing settings
@@ -56,13 +52,12 @@ indexing:
   contentIndexOutput: contentindex.json
   targetIndexOutput: targetindex.json
   keysToOutput:
-  - title
-  - guid
-  - variantid
-  - componentid
-  - private
+    - title
+    - guid
+    - variantid
+    - componentid
+    - private
   #- requirejs
-
 
 #-------------------------------------------------------------------------------
 # Compiler settings
@@ -82,9 +77,9 @@ compilation:
   # are loaders for LESS, SASS and JS configured in DvM
   targets:
     sdv-all.css:
-    - "**/sdv-all.scss"
+      - "**/sdv-all.scss"
     preview-frame-only.css:
-    - "**/preview-frame-only.scss"
+      - "**/preview-frame-only.scss"
 
   # Create source maps for JS and CSS
   sourceMaps: true
@@ -104,36 +99,34 @@ compilation:
   postcss:
     map: true
     processors:
-    - name: autoprefixer
-      options:
-        browsers:
-        - last 2 versions
-
+      - name: autoprefixer
+        options:
+          browsers:
+            - last 2 versions
 
 #-------------------------------------------------------------------------------
 # Asset settings
 #-------------------------------------------------------------------------------
 assets:
-- isdirectory: true
-  src: "node_modules/@sebgroup/fonts/fonts"
-  dev_access: "/vanilla-pattern-library/assets/fonts"
-  dest:
-  - "dist/web/assets/fonts"
-# - isdirectory: true
-#   src: "./sassdoc"
-#   dev_access: "/sassdoc"
-#   dest:
-#   - "dist/web/sassdoc"
-- isdirectory: true
-  src: "./node_modules/@fortawesome/fontawesome-pro"
-  dev_access: "/vanilla-pattern-library/assets/fontawesome"
-  dest:
-  - "dist/web/assets/fontawesome"
+  - isdirectory: true
+    src: "node_modules/@sebgroup/fonts/fonts"
+    dev_access: "/vanilla-pattern-library/assets/fonts"
+    dest:
+      - "dist/web/assets/fonts"
+  # - isdirectory: true
+  #   src: "./sassdoc"
+  #   dev_access: "/sassdoc"
+  #   dest:
+  #   - "dist/web/sassdoc"
+  - isdirectory: true
+    src: "./node_modules/@fortawesome/fontawesome-pro"
+    dev_access: "/vanilla-pattern-library/assets/fontawesome"
+    dest:
+      - "dist/web/assets/fontawesome"
 
-- isdirectory: true
-  src: "./src"
-  dev_access: "/src"
-
+  - isdirectory: true
+    src: "./src"
+    dev_access: "/src"
 
 #-------------------------------------------------------------------------------
 # Environment settings
@@ -143,40 +136,39 @@ env:
   launchVrowser: false
   enableOnSitePreview: true
   cssBreakpoints:
-  - id: mobile
-    title: Mobile
-    width: 768
-    fromWidth: 0
-    toWidth: 768
-  - id: tablet
-    title: Tablet
-    width: 1024
-    fromWidth: 768
-    toWidth: 1024
-  - id: desktop
-    title: Desktop
-    width: 1440
-    fromWidth: 1024
-    toWidth: 1440
-  - id: desktop-wide
-    title: Desktop wide
-    width: 1920
-    fromWidth: 1440
-    toWidth: 1920
-  - id: desktop-wide-extended
-    title: Desktop wide extended
-    width: 100%
-    fromWidth: 1920
-    toWidth: 9007199254740990
-
+    - id: mobile
+      title: Mobile
+      width: 767
+      fromWidth: 0
+      toWidth: 768
+    - id: tablet
+      title: Tablet
+      width: 1024
+      fromWidth: 768
+      toWidth: 1024
+    - id: desktop
+      title: Desktop
+      width: 1440
+      fromWidth: 1024
+      toWidth: 1440
+    - id: desktop-wide
+      title: Desktop wide
+      width: 1920
+      fromWidth: 1440
+      toWidth: 1920
+    - id: desktop-wide-extended
+      title: Desktop wide extended
+      width: 100%
+      fromWidth: 1920
+      toWidth: 9007199254740990
 
 build:
   package:
     files:
-    - src: "./package.json"
+      - src: "./package.json"
 
 structure:
-- title: Components
-  path: components
-- title: Examples
-  path: examples
+  - title: Components
+    path: components
+  - title: Examples
+    path: examples
