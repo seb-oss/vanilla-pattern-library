@@ -16,7 +16,6 @@
 @import "components/inputs/checkbox";
 @import "components/inputs/switch";
 @import "components/inputs/toggle-selector";
-@import "components/dialogs/dialog";
 @import "components/accordions/accordion";
 @import "components/tables/table";
 @import "components/progress-bars/progress-bar";
@@ -24,4 +23,8 @@
 @import "components/datepicker/datepicker";
 @import "components/text/preamble";
 @import "components/modals/modal-slideout";
+@import "components/modals/modal-dialog";
 @import "components/tooltips/tooltip-all";
+
+/// Deprecated
+@import "components/dialogs/dialog";

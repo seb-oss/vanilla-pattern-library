@@ -10,11 +10,15 @@
 @import "../../mixins";
 @import "../buttons/button-mixins";
 
+/////////////////////////////////////////
+/// Modal common features
+/////////////////////////////////////////
+
 $vanilla-modal-active-state-class: -active !default;
 
 ///
-/// @access public
-@mixin vanilla-modal-slideout-base() {
+/// @access private
+@mixin vanilla-modal-base() {
   position: fixed;
   top: 0;
   left: 0;
@@ -24,11 +28,47 @@ $vanilla-modal-active-state-class: -active !default;
   transition: visibility 0s 0.6s;
   box-sizing: border-box;
 }
+
 ///
 /// @access public
-@mixin vanilla-modal-slideout--active() {
+@mixin vanilla-modal--active() {
   visibility: visible;
   transition: visibility 0s 0s;
+}
+
+///
+/// @access public
+@mixin vanilla-modal-backdrop(
+  $background-color: rgba(0, 0, 0, 0.5),
+  $use-target-pseudo-class-for-active-state: true
+) {
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  transition-property: background-color, visibility;
+  visibility: hidden;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  .#{$vanilla-modal-active-state-class} & {
+    background-color: $background-color;
+    visibility: visible;
+  }
+  @if ($use-target-pseudo-class-for-active-state == true) {
+    :target & {
+      background-color: $background-color;
+      visibility: visible;
+    }
+  }
+}
+
+/////////////////////////////////////////
+/// Slideout specific features
+/////////////////////////////////////////
+
+///
+/// @access public
+@mixin vanilla-modal-slideout-base() {
+  @include vanilla-modal-base();
 }
 
 ///
@@ -46,6 +86,7 @@ $vanilla-modal-active-state-class: -active !default;
     width: 100%;
   }
 }
+
 ///
 /// @access public
 @mixin vanilla-modal-slideout__container--right() {
@@ -68,6 +109,12 @@ $vanilla-modal-active-state-class: -active !default;
 
 ///
 /// @access public
+@mixin vanilla-modal-dialog__container--active() {
+  opacity: 1;
+}
+
+///
+/// @access public
 @mixin vanilla-modal-slideout__header() {
   display: flex;
   justify-content: space-between;
@@ -79,6 +126,15 @@ $vanilla-modal-active-state-class: -active !default;
 /// @access public
 @mixin vanilla-modal-slideout__heading() {
   margin: 0;
+}
+
+///
+/// @access public
+@mixin vanilla-modal-dialog__heading() {
+  padding: 0 1rem 0.7rem;
+  margin: 0.5rem 0;
+  font-size: vanilla-px-to-rem(24px);
+  border-bottom: 1px solid vanilla-color-gray(18);
 }
 
 ///
@@ -100,25 +156,17 @@ $vanilla-modal-active-state-class: -active !default;
 
 ///
 /// @access public
-@mixin vanilla-modal-backdrop(
-  $background-color: rgba(0, 0, 0, 0.6),
-  $use-target-pseudo-class-for-active-state: true
-) {
-  transition: all 0.3s ease-in-out;
-  transition-property: background-color, visibility;
-  visibility: hidden;
-  background-color: transparent;
-  width: 100vw;
-  height: 100vh;
-  .#{$vanilla-modal-active-state-class} & {
-    background-color: $background-color;
-    visibility: visible;
-  }
-  @if ($use-target-pseudo-class-for-active-state == true) {
-    :target & {
-      background-color: $background-color;
-      visibility: visible;
-    }
+@mixin vanilla-modal-dialog__content() {
+  margin: 1rem 1rem 2rem;
+}
+
+///
+/// @access public
+@mixin vanilla-modal-dialog__actions() {
+  margin: 1rem;
+  text-align: right;
+  button + button {
+    margin-left: 1rem;
   }
 }
 
@@ -129,6 +177,9 @@ $vanilla-modal-active-state-class: -active !default;
 
   @include vanilla-modal-slideout-base();
 
+  &__container {
+    @include vanilla-modal-slideout__container();
+  }
   &--right {
     #{$__module}__container {
       @include vanilla-modal-slideout__container--right();
@@ -140,23 +191,20 @@ $vanilla-modal-active-state-class: -active !default;
     }
   }
   &.#{$vanilla-modal-active-state-class} {
-    @include vanilla-modal-slideout--active();
+    @include vanilla-modal--active();
     #{$__module}__container {
       @include vanilla-modal-slideout__container--active();
     }
   }
   @if ($use-target-pseudo-class-for-active-state == true) {
     &:target {
-      @include vanilla-modal-slideout--active();
+      @include vanilla-modal--active();
       #{$__module}__container {
         @include vanilla-modal-slideout__container--active();
       }
     }
   }
 
-  &__container {
-    @include vanilla-modal-slideout__container();
-  }
   &__header {
     @include vanilla-modal-slideout__header();
   }
@@ -168,5 +216,78 @@ $vanilla-modal-active-state-class: -active !default;
   }
   &__content {
     @include vanilla-modal-slideout__content();
+  }
+}
+
+/////////////////////////////////////////
+/// Dialog specific features
+/////////////////////////////////////////
+
+///
+/// @access public
+@mixin vanilla-modal-dialog-base() {
+  @include vanilla-modal-base();
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+///
+/// @access public
+@mixin vanilla-modal-dialog__container() {
+  background-color: $vanilla-color-white;
+  position: relative;
+  z-index: 100;
+  max-width: 100%;
+  width: 100%;
+  flex-grow: 0;
+  border: 1px solid $vanilla-color-white;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media(">=tablet") {
+      align-self: center;
+      min-width: 30rem;
+      width: auto;
+    }
+  }
+}
+
+/// Mixes in dialog styles
+///
+/// @access public
+@mixin vanilla-modal-dialog($use-target-pseudo-class-for-active-state: true) {
+  $__module: &;
+
+  @include vanilla-modal-dialog-base();
+
+  &__container {
+    @include vanilla-modal-dialog__container();
+  }
+
+  &.#{$vanilla-modal-active-state-class} {
+    @include vanilla-modal--active();
+    #{$__module}__container {
+      @include vanilla-modal-dialog__container--active();
+    }
+  }
+  @if ($use-target-pseudo-class-for-active-state == true) {
+    &:target {
+      @include vanilla-modal--active();
+      #{$__module}__container {
+        @include vanilla-modal-dialog__container--active();
+      }
+    }
+  }
+
+  &__heading {
+    @include vanilla-modal-dialog__heading();
+  }
+  &__body {
+    @include vanilla-modal-dialog__content();
+  }
+  &__actions {
+    @include vanilla-modal-dialog__actions();
   }
 }
