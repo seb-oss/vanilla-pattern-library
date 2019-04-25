@@ -80,7 +80,6 @@ guid: component-slideout-normal
 ```
 
 :::
----
 ### Examples
 
 1 - Import classes:
@@ -99,7 +98,7 @@ Use them in your template:
 To activate the modal, add the `-active` modifier:
 
 ```html
-<div class="sdv-modal-slideout sdv-slideout--right -active">
+<div class="sdv-modal-slideout sdv-modal-slideout--right -active">
   ...
   <div class="sdv-modal-backdrop"></div>
 </div>
@@ -184,7 +183,7 @@ Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-
 
 ---
 
-The width of `.slideout__container` is set to `33%` by default. To override the width to `50%`:
+The width of `.sdv-modal-slideout__container` is set to `33%` by default. To override the width to `50%`:
 
 ```scss
 .sdv-modal-slideout {
