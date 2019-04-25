@@ -57,7 +57,7 @@ You can also use the mixins directly:
 ...
 ```
 
-Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-pattern-library/blob/master/src/components/modals/_modal-mixins.scss) for a full example of how to use the mixins.
+Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-pattern-library/blob/master/src/components/modals/_modal-mixins.scss) for a full example of how to use the mixins. (see vanilla-modal-dialog)
 
 ---
 
