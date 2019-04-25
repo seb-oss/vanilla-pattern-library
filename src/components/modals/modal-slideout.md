@@ -180,7 +180,7 @@ If you would like to disable this behaviour, call the mixin with false as parame
 ...
 ```
 
-Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-pattern-library/blob/master/src/components/modals/_modal-slidout-mixins.scss) for a full example of how to use the mixins. (see vanilla-modal-dialog)
+Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-pattern-library/blob/master/src/components/modals/_modal-slidout-mixins.scss) for a full example of how to use the mixins. (see vanilla-modal-slideout)
 
 ---
 
