@@ -23,7 +23,7 @@ Use them in your template:
 To activate the modal, add the `-active` modifier:
 
 ```html
-<div class="sdv-modal-slideout sdv-slideout--right -active">
+<div class="sdv-modal-slideout sdv-modal-slideout--right -active">
   ...
   <div class="sdv-modal-backdrop"></div>
 </div>
@@ -77,7 +77,7 @@ To override them use the media mixin from the 'include-media' package. For examp
 ## Right
 
 ```html
-<div class="sdv-modal-slideout sdv-slideout--right -active">
+<div class="sdv-modal-slideout sdv-modal-slideout--right -active">
   <div class="sdv-modal-slideout__container">
     <header class="sdv-modal-slideout__header">
       <h3 class="sdv-modal-slideout__heading">Modal Heading</h3>
