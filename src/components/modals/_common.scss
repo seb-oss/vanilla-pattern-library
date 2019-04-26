@@ -1,0 +1,62 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+
+@import "node_modules/include-media/dist/include-media";
+
+@import "../../utilities";
+@import "../../variables";
+@import "../../mixins";
+@import "../buttons/button-mixins";
+
+/////////////////////////////////////////
+/// Modal common features
+/////////////////////////////////////////
+
+$vanilla-modal-active-state-class: -active !default;
+
+///
+/// @access private
+@mixin vanilla-modal-base() {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  transition: visibility 0s 0.6s;
+  box-sizing: border-box;
+}
+
+///
+/// @access public
+@mixin vanilla-modal--active() {
+  visibility: visible;
+  transition: visibility 0s 0s;
+}
+
+///
+/// @access public
+@mixin vanilla-modal-backdrop(
+  $background-color: rgba(0, 0, 0, 0.5),
+  $use-target-pseudo-class-for-active-state: true
+) {
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  transition-property: background-color, visibility;
+  visibility: hidden;
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  .#{$vanilla-modal-active-state-class} & {
+    background-color: $background-color;
+    visibility: visible;
+  }
+  @if ($use-target-pseudo-class-for-active-state == true) {
+    :target & {
+      background-color: $background-color;
+      visibility: visible;
+    }
+  }
+}
