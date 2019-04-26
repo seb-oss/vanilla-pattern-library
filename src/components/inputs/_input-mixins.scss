@@ -57,7 +57,7 @@
 ///
 /// @access public
 @mixin vanilla-field-base--small() {
-  line-height: vanilla-px-to-rem(32);;
+  line-height: vanilla-px-to-rem(32);
   min-height: vanilla-px-to-rem(32);
   max-height: vanilla-px-to-rem(32);
   font-size: vanilla-px-to-rem(14);
@@ -427,7 +427,7 @@
 /// @access public
 @mixin vanilla-field-toggle-selector() {
   $_padding_x: 1.5em;
-  $_padding_y: .5em;
+  $_padding_y: 0.5em;
   $_iconSize: 35px;
 
   label,
@@ -462,7 +462,7 @@
     border-color: $vanilla-color-component-selected;
     color: $vanilla-color-component-selected;
     border-width: 2px;
-    padding: calc(#{$_padding_y} - 1px) calc(#{$_padding_x} - 1px) ;
+    padding: calc(#{$_padding_y} - 1px) calc(#{$_padding_x} - 1px);
   }
 
   label:hover,
@@ -485,7 +485,8 @@
     color: $vanilla-color-grey7;
   }
 
-  label, &__label {
+  label,
+  &__label {
     &.sdv-icon {
       position: relative;
       padding-left: vanilla-px-to-em(24 + $_iconSize + 24);
@@ -510,5 +511,69 @@
         font-size: vanilla-px-to-em($_iconSize);
       }
     }
+  }
+}
+
+/// Stepper base
+///
+/// @access public
+@mixin vanilla-stepper-base() {
+  display: flex;
+  align-items: center;
+  border: 1px solid $vanilla-color-grey6;
+  border-radius: $vanilla-component-border-radius;
+  &:hover:not([disabled]) {
+    border-color: $vanilla-color-component-hover;
+  }
+  &:focus-within,
+  &:focus {
+    border-color: $vanilla-color-component-selected;
+  }
+  &[disabled] {
+    border-color: $vanilla-color-component-disabled-dark;
+    background: $vanilla-color-component-disabled-light;
+    color: $vanilla-color-component-disabled-dark;
+  }
+  button {
+    &:disabled {
+      border: none;
+    }
+    margin: 0; // Safari adds a margin around the button
+    &:first-of-type {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    &:last-of-type {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    i {
+      font-size: vanilla-px-to-rem(24px);
+      vertical-align: sub;
+    }
+  }
+}
+
+/// Stepper value
+///
+/// @access public
+@mixin vanilla-stepper-value() {
+  font-size: vanilla-px-to-rem(24px);
+  min-width: vanilla-px-to-rem(64);
+  margin: 0 0.2em;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/// Stepper
+///
+/// @access public
+@mixin vanilla-stepper() {
+  @include vanilla-stepper-base();
+  &__value {
+    @include vanilla-stepper-value();
   }
 }
