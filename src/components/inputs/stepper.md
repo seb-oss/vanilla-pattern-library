@@ -20,17 +20,17 @@ In addition to the classes shown in the example below, this component can be use
 ## Base state
 ```html
 <div class="sdv-stepper">
-    <button class="sdv-button sdv-button-alternative"><i class="fal fa-minus"></i></button>
-    <div class="sdv-stepper__value seb-sans-serif-medium">30</div>
-    <button class="sdv-button sdv-button-alternative"><i class="fal fa-plus"></i></button>
+    <button class="sdv-stepper__button"><i class="fal fa-minus"></i></button>
+    <div class="sdv-stepper__value">30</div>
+    <button class="sdv-stepper__button"><i class="fal fa-plus"></i></button>
 </div>
 ```
 ## Disabled
 ```html
 <div class="sdv-stepper" disabled>
-    <button class="sdv-button sdv-button-alternative" disabled><i class="fal fa-minus"></i></button>
-    <div class="sdv-stepper__value seb-sans-serif-medium">30</div>
-    <button class="sdv-button sdv-button-alternative" disabled><i class="fal fa-plus"></i></button>
+    <button class="sdv-stepper__button" disabled><i class="fal fa-minus"></i></button>
+    <div class="sdv-stepper__value">30</div>
+    <button class="sdv-stepper__button" disabled><i class="fal fa-plus"></i></button>
 </div>
 ```
 :::
