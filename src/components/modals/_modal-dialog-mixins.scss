@@ -11,6 +11,15 @@
 
 ///
 /// @access public
+@mixin vanilla-modal-dialog__heading() {
+  padding: 0 1rem 0.7rem;
+  margin: 0.5rem 0;
+  font-size: vanilla-px-to-rem(24px);
+  border-bottom: 1px solid vanilla-color-gray(18);
+}
+
+///
+/// @access public
 @mixin vanilla-modal-dialog__container() {
   background-color: $vanilla-color-white;
   position: relative;
@@ -28,6 +37,22 @@
       min-width: 30rem;
       width: auto;
     }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-modal-dialog__content() {
+  margin: 1rem 1rem 2rem;
+}
+
+///
+/// @access public
+@mixin vanilla-modal-dialog__actions() {
+  margin: 1rem;
+  text-align: right;
+  button + button {
+    margin-left: 1rem;
   }
 }
 
