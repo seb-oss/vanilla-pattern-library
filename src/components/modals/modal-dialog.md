@@ -35,20 +35,20 @@ When using this dialog, please take a few minutes to read up on accessibility re
 </div>
 ```
 
-## Interactive
+## Interactive (using :target pseudo class)
 ```html
 <div class="sdv-modal-dialog" id="my-dialog">
     <div class="sdv-modal-dialog__container" role="dialog" aria-labelledby="sdv-modal-dialog1-title" aria-describedby="sdv-dialog1-body">
         <h2 class="sdv-modal-dialog__heading" id="sdv-dialog1-title">Your personal details were successfully updated</h2>
         <p class="sdv-modal-dialog__body" id="sdv-dialog1-body">You can change your details at any time in the user account section.</p>
         <div class="sdv-modal-dialog__actions">
-            <a href="#close-dialog" class="sdv-button">Close</a>
+            <a href="#nothing" class="sdv-button">Close</a><!-- The empty href is for demo purposes -->
         </div>
     </div>
      <div class="sdv-modal-backdrop"></div>
 </div>
 
-<a href="#my-dialog" id="close-dialog">Open dialog</a>
+<a href="#my-dialog">Open dialog</a>
 
 :::
 
