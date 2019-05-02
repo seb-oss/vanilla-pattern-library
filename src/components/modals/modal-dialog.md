@@ -35,7 +35,7 @@ When using this dialog, please take a few minutes to read up on accessibility re
 </div>
 ```
 
-## Interactive
+## Interactive (using :target pseudo class)
 ```html
 <div class="sdv-modal-dialog" id="my-dialog">
     <div class="sdv-modal-dialog__container" role="dialog" aria-labelledby="sdv-modal-dialog1-title" aria-describedby="sdv-dialog1-body">

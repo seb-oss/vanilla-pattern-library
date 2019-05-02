@@ -57,7 +57,7 @@ guid: component-slideout-normal
 </div>
 ```
 
-## Interactive left
+## Interactive (using :target pseudo class)
 
 ```html
 <div class="sdv-modal-slideout sdv-modal-slideout--left" id="slideout">
