@@ -65,7 +65,9 @@ guid: component-slideout-normal
     <header class="sdv-modal-slideout__header">
       <h3 class="sdv-modal-slideout__heading">Modal Heading</h3>
       <button class="sdv-modal-slideout__close">
-        <i class="fal fa-times"></i>
+        <a href="#nothing">
+          <i class="fal fa-times"></i>
+        </a>
       </button>
     </header>
     <div class="sdv-modal-slideout__content">
