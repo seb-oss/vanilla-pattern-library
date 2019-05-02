@@ -527,9 +527,9 @@
   &:hover:not([disabled]) {
     border-color: $vanilla-color-component-hover;
   }
-  &:focus-within,
-  &:focus {
+  &:focus-within {
     border-color: $vanilla-color-component-selected;
+    @include vanilla-focus-outline();
   }
   &[disabled] {
     border-color: $vanilla-color-component-disabled-dark;
