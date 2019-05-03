@@ -1,0 +1,17 @@
+////
+/// Mixins for creating sticky bars
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import "../../utilities";
+@import "../../mixins";
+
+@mixin vanilla-sticky-bar() {
+  background-color: $vanilla-color-white;
+  box-shadow: 0px 2px 5px rgba(0,0,0, .25);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
