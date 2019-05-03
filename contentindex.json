@@ -216,7 +216,7 @@
 							"guid": "component-dialogue-single-button",
 							"variantid": "single-button",
 							"componentid": "component-dialogue",
-							"private": false
+							"private": true
 						},
 						{
 							"filename": "two-buttons.md",
@@ -225,10 +225,10 @@
 							"longpath": "src/components/dialogs/two-buttons.md",
 							"type": "file",
 							"title": "Two buttons",
-							"guid": "component-dialogue-two-buttons",
+							"guid": "component-dialogue-two-buttons-deprecated",
 							"variantid": "two-buttons",
-							"componentid": "component-dialogue",
-							"private": false
+							"componentid": "component-dialogue-deprecated",
+							"private": true
 						}
 					],
 					"filecount": 2,
@@ -301,6 +301,18 @@
 							"private": false
 						},
 						{
+							"filename": "stepper.md",
+							"filepath": "components/inputs/stepper.md",
+							"shortpath": "components/inputs/stepper",
+							"longpath": "src/components/inputs/stepper.md",
+							"type": "file",
+							"title": "Stepper input",
+							"guid": "component-stepper-normal",
+							"variantid": "toggle",
+							"componentid": "component-stepper",
+							"private": false
+						},
+						{
 							"filename": "textarea.md",
 							"filepath": "components/inputs/textarea.md",
 							"shortpath": "components/inputs/textarea",
@@ -325,7 +337,7 @@
 							"private": false
 						}
 					],
-					"filecount": 7,
+					"filecount": 8,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -334,6 +346,18 @@
 					"shortpath": "modals",
 					"longpath": "src/components/modals",
 					"items": [
+						{
+							"filename": "modal-dialog.md",
+							"filepath": "components/modals/modal-dialog.md",
+							"shortpath": "components/modals/modal-dialog",
+							"longpath": "src/components/modals/modal-dialog.md",
+							"type": "file",
+							"title": "Dialog",
+							"guid": "component-dialogue-single-button",
+							"variantid": "single-button",
+							"componentid": "component-dialogue",
+							"private": false
+						},
 						{
 							"filename": "modal-slideout.md",
 							"filepath": "components/modals/modal-slideout.md",
@@ -347,7 +371,7 @@
 							"private": false
 						}
 					],
-					"filecount": 1,
+					"filecount": 2,
 					"directorycount": 0,
 					"type": "directory"
 				},

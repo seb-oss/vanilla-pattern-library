@@ -11,56 +11,58 @@
 /// Mixes in dialog styles
 ///
 /// @access public
+/// @deprecated Use modals/modal-dialog instead
 @mixin vanilla-dialog() {
-    background-color: $vanilla-color-white;
-    max-width: 100%;
-    margin: 0 auto;
-    align-self: center;
-    flex-grow: 0;
-    border: 1px solid $vanilla-color-white;
+  background-color: $vanilla-color-white;
+  max-width: 100%;
+  margin: 0 auto;
+  align-self: center;
+  flex-grow: 0;
+  border: 1px solid $vanilla-color-white;
 
-    @include media-context($vanilla-breakpoints) {
-        @include media('>=tablet') {
-            min-width: 30rem;
-        }
+  @include media-context($vanilla-breakpoints) {
+    @include media(">=tablet") {
+      min-width: 30rem;
     }
+  }
 
-    &__heading {
-        padding: 0 1rem 0.7rem;
-        margin: 0.5rem 0;
-        font-size: vanilla-px-to-rem(24px);
-        border-bottom: 1px solid vanilla-color-gray(18);
+  &__heading {
+    padding: 0 1rem 0.7rem;
+    margin: 0.5rem 0;
+    font-size: vanilla-px-to-rem(24px);
+    border-bottom: 1px solid vanilla-color-gray(18);
+  }
+
+  &__body {
+    margin: 1rem 1rem 2rem;
+  }
+
+  &__actions {
+    margin: 1rem;
+    text-align: right;
+
+    button + button {
+      margin-left: 1rem;
     }
-
-    &__body {
-        margin: 1rem 1rem 2rem;
-    }
-
-    &__actions {
-        margin: 1rem;
-        text-align: right;
-
-        button + button {
-            margin-left: 1rem;
-        }
-    }
+  }
 }
 
 /// Mixes in dialog backdrop styles
 ///
 /// @access public
+/// @deprecated use vanilla-modal-backdrop instead
 @mixin vanilla-dialog-backdrop($opacity: 0.5) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, $opacity);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, $opacity);
 
-    @include media-context($vanilla-breakpoints) {
-        @include media('>=tablet') {
-            display: flex;
-            align-items: center;
-        }
+  @include media-context($vanilla-breakpoints) {
+    @include media(">=tablet") {
+      display: flex;
+      align-items: center;
     }
+  }
 }
