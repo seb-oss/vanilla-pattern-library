@@ -1,11 +1,20 @@
-{
-  "extends": "stylelint-config-sass-guidelines",
-  "plugins": [
-    "stylelint-scss"
-  ],
-  "rules": {
-    "order/properties-alphabetical-order": null,
-    "selector-class-pattern": "^[*-]?(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$"
-
-  }
-}
+extends: stylelint-config-sass-guidelines
+plugins:
+  - stylelint-scss
+rules:
+  order/properties-alphabetical-order: null
+  selector-class-pattern: ^[*-]?(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$
+  selector-max-compound-selectors: 4
+  selector-no-qualifying-type:
+    - true
+    - ignore:
+        - class
+        - attribute
+  scss/dollar-variable-pattern:
+    -
+    - ignore: local
+  scss/at-function-pattern:
+    - ^_?vanilla-.+
+  scss/at-mixin-pattern:
+    - ^_?vanilla-.+
+  max-nesting-depth: 2
