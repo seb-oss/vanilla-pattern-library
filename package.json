@@ -16,7 +16,8 @@
     "semantic-release": "semantic-release",
     "add-fa-config": "npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN",
     "build-demo-site": "export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 0.0.0-semantically-released $PKG_VERSION package.json && npm run build",
-    "package-lock-sanitizer": "package-lock-sanitizer"
+    "package-lock-sanitizer": "package-lock-sanitizer",
+    "format:fix": "pretty-quick --staged"
   },
   "config": {
     "configFile": "./config/projectoptions.yml",
@@ -42,7 +43,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint --edit",
-      "pre-commit": "npm run package-lock-sanitizer && git add package-lock.json"
+      "pre-commit": "run-s format:fix lint package-lock-sanitizer && git add package-lock.json"
     }
   },
   "dependencies": {
@@ -59,6 +60,7 @@
     "npm-run-all": "^4.1.5",
     "package-lock-sanitizer": "^1.0.0",
     "prettier": "^1.17.0",
+    "pretty-quick": "^1.10.0",
     "replace": "^1.0.1",
     "sassdoc": "^2.5.0",
     "semantic-release": "^16.0.0-beta.18",
