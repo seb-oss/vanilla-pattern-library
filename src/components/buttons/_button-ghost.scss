@@ -2,13 +2,11 @@
 
 @include _vanilla-exports('vanilla-button-ghost') {
   .sdv-button-ghost,
-  .sdv-button-ghost-light
-  {
-      @include vanilla-button-ghost-light();
+  .sdv-button-ghost-light {
+    @include vanilla-button-ghost-light();
   }
 
-  .sdv-button-ghost-dark
-  {
-      @include vanilla-button-ghost-dark();
+  .sdv-button-ghost-dark {
+    @include vanilla-button-ghost-dark();
   }
 }

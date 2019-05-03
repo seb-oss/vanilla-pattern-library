@@ -4,20 +4,21 @@
 /// @author Digital CX
 ////
 
-@import "variables";
+@import 'variables';
 
-$vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-library/assets/fontawesome";
-@import url("#{$vanilla-font-awesome-inc-path}/css/light.min.css");
-@import url("#{$vanilla-font-awesome-inc-path}/css/fontawesome.css");
+$vanilla-font-awesome-inc-path: 'https://sebgroup.github.io/vanilla-pattern-library/assets/fontawesome';
+@import url('#{$vanilla-font-awesome-inc-path}/css/light.min.css');
+@import url('#{$vanilla-font-awesome-inc-path}/css/fontawesome.css');
 
 // Examples
-@import "examples/colors";
-@import "examples/simple-form";
+@import 'examples/colors';
+@import 'examples/simple-form';
 
 .sdv-dialog-backdrop {
   position: relative;
   height: 400px;
 }
+
 .sdv-modal-backdrop {
   min-height: 400px;
 }
@@ -47,7 +48,7 @@ $vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-libr
   min-height: 200px;
 }
 
-.pl_accordion_example {
+.pl-accordion-example {
   height: 290px;
 }
 
@@ -58,14 +59,17 @@ $vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-libr
     font-family: $vanilla-font-seb-sans-serif;
     font-weight: 300;
   }
+
   &.seb-sans-serif-regular {
     font-family: $vanilla-font-seb-sans-serif;
     font-weight: 400;
   }
+
   &.seb-sans-serif-medium {
     font-family: $vanilla-font-seb-sans-serif;
     font-weight: 500;
   }
+
   &.seb-sans-serif-bold {
     font-family: $vanilla-font-seb-sans-serif;
     font-weight: 700;

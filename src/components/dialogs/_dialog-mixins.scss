@@ -4,9 +4,9 @@
 /// @author Digital CX
 ////
 
-@import "../../variables";
-@import "../../utilities";
-@import "node_modules/include-media/dist/include-media";
+@import '../../variables';
+@import '../../utilities';
+@import 'node_modules/include-media/dist/include-media';
 
 /// Mixes in dialog styles
 ///
@@ -21,7 +21,7 @@
   border: 1px solid $vanilla-color-white;
 
   @include media-context($vanilla-breakpoints) {
-    @include media(">=tablet") {
+    @include media('>=tablet') {
       min-width: 30rem;
     }
   }
@@ -60,7 +60,7 @@
   background-color: rgba(0, 0, 0, $opacity);
 
   @include media-context($vanilla-breakpoints) {
-    @include media(">=tablet") {
+    @include media('>=tablet') {
       display: flex;
       align-items: center;
     }

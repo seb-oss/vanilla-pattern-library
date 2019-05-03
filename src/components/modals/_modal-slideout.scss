@@ -1,9 +1,10 @@
-@import "modal-slideout-mixins";
+@import 'modal-slideout-mixins';
 
-@include _vanilla-exports("modal-slideout") {
+@include _vanilla-exports('modal-slideout') {
   .sdv-modal-slideout {
     @include vanilla-modal-slideout();
   }
+
   .sdv-modal-backdrop {
     @include vanilla-modal-backdrop();
   }

@@ -118,7 +118,7 @@ $vanilla-color-text: $vanilla-color-text;
   $_num-colorshades: 20;
 
   @if $shade > $_num-colorshades or $shade < 0 {
-    @error "$shade has to be between 0 and " + $_num-colorshades;
+    @error '$shade has to be between 0 and ' + $_num-colorshades;
   }
 
   $_colorshades: ();

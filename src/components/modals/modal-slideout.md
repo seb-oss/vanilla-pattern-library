@@ -5,15 +5,18 @@ variantid: normal
 guid: component-slideout-normal
 ---
 
-  # Usage
-  There are three ways to use this component.
-  1. Import the classes and use them as is
-  2. Import the modal-slideout mixin and apply it to your own selector
-  3. Import the modal-slideout-mixins and use them in your own structure
+# Usage
 
-  These will be explained in the examples section, below the component preview.
+There are three ways to use this component.
+
+1. Import the classes and use them as is
+2. Import the modal-slideout mixin and apply it to your own selector
+3. Import the modal-slideout-mixins and use them in your own structure
+
+These will be explained in the examples section, below the component preview.
 
 ### Component Preview
+
 :::componentpreview
 
 ## Right
@@ -35,7 +38,6 @@ guid: component-slideout-normal
   <div class="sdv-modal-backdrop"></div>
 </div>
 ```
-
 
 ## Left
 
@@ -82,12 +84,13 @@ guid: component-slideout-normal
 ```
 
 :::
+
 ### Examples
 
 1 - Import classes:
 
 ```scss
-@import "~@sebgroup/vanilla/src/components/modals/modal-slideout";
+@import '~@sebgroup/vanilla/src/components/modals/modal-slideout';
 ```
 
 Use them in your template:
@@ -113,7 +116,7 @@ Please note - the backdrop element has to be a child of the modal, like above (s
 2 - Use the modal-slideout mixin:
 
 ```scss
-@import "~@sebgroup/vanilla/src/components/modals/slideout-mixins";
+@import '~@sebgroup/vanilla/src/components/modals/slideout-mixins';
 
 .my-modal-class {
   @include vanilla-modal-slideout();
@@ -123,16 +126,14 @@ Please note - the backdrop element has to be a child of the modal, like above (s
 }
 ```
 
-
-
 ```html
 <div class="my-modal-class my-modal-class--right">...</div>
 <div class="my-modal-class my-modal-class--left">...</div>
 ```
 
 To activate the modal, add the `-active` modifier. You can also reassign the modifier with your own name:
-```scss
 
+```scss
 $vanilla-modal-active-state-class: my-active-class;
 ```
 
@@ -142,24 +143,31 @@ $vanilla-modal-active-state-class: my-active-class;
   <div class="my-backdrop-class"></div>
 </div>
 ```
+
 By default the modals will be activated by the [:target pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:target).
 If you would like to disable this behaviour, call the mixin with false as parameter:
+
 ```scss
-@include vanilla-modal-slideout($use-target-pseudo-class-for-active-state: false);
-@include vanilla-modal-backdrop($use-target-pseudo-class-for-active-state: false);
+@include vanilla-modal-slideout(
+  $use-target-pseudo-class-for-active-state: false
+);
+@include vanilla-modal-backdrop(
+  $use-target-pseudo-class-for-active-state: false
+);
 ```
+
 ---
+
 3 - Use the slideout mixins directly in your own structure:
-
-
 
 ```html
 <div class="another-class another-class--my-right-modifier">
   <div class="another-class__my-container">
-  ...
+    ...
   </div>
 </div>
 ```
+
 ```scss
 @import "~@sebgroup/vanilla/src/components/modals/slideout-mixins";
 
@@ -201,7 +209,7 @@ To override them use the media mixin from the 'include-media' package. For examp
 ```scss
 .sdv-modal-slideout {
   &__container {
-    @include media(">=tablet", "<desktop") {
+    @include media('>=tablet', '<desktop') {
       width: 50%;
     }
   }
