@@ -51,20 +51,23 @@ $vanilla-breadcrumbs-chevron-size: 0.8em !default;
   font-weight: $vanilla-typography-link-font-weight;
   color: $vanilla-color-text;
   white-space: nowrap;
-  @include media(">=tablet") {
-    margin-right: $vanilla-breadcrumbs-item-margin;
-    &:not(:last-child):after {
-      margin-left: $vanilla-breadcrumbs-item-margin;
-      @include vanilla-breadcrumbs__forward-chevron();
+
+  @include media-context($vanilla-breakpoints) {
+    @include media(">=tablet") {
+      margin-right: $vanilla-breadcrumbs-item-margin;
+      &:not(:last-child):after {
+        margin-left: $vanilla-breadcrumbs-item-margin;
+        @include vanilla-breadcrumbs__forward-chevron();
+      }
     }
-  }
-  @include media("<tablet") {
-    &:not(:nth-last-child(2)) {
-      display: none;
-    }
-    &:nth-last-child(2):before {
-      margin-right: $vanilla-breadcrumbs-item-margin-mobile;
-      @include vanilla-breadcrumbs__back-chevron();
+    @include media("<tablet") {
+      &:not(:nth-last-child(2)) {
+        display: none;
+      }
+      &:nth-last-child(2):before {
+        margin-right: $vanilla-breadcrumbs-item-margin-mobile;
+        @include vanilla-breadcrumbs__back-chevron();
+      }
     }
   }
 }
