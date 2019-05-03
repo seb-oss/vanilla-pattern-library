@@ -15,8 +15,11 @@ $vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-libr
 @import "examples/simple-form";
 
 .sdv-dialog-backdrop {
-    position: relative;
-    height: 400px;
+  position: relative;
+  height: 400px;
+}
+.sdv-modal-backdrop {
+  min-height: 400px;
 }
 
 .pl-purple-bg {
@@ -44,7 +47,7 @@ $vanilla-font-awesome-inc-path: "https://sebgroup.github.io/vanilla-pattern-libr
   min-height: 200px;
 }
 
-.pl_accordion_example{
+.pl_accordion_example {
   height: 290px;
 }
 

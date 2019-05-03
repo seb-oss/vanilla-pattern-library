@@ -1,13 +1,11 @@
-@import 'dialog-mixins';
+@import "dialog-mixins";
 
-@include _vanilla-exports('vanilla-dialog') {
-    .sdv-dialog
-    {
-        @include vanilla-dialog();
-    }
+@include _vanilla-exports("vanilla-dialog") {
+  .sdv-dialog {
+    @include vanilla-dialog();
+  }
 
-    .sdv-dialog-backdrop
-    {
-        @include vanilla-dialog-backdrop();
-    }
+  .sdv-dialog-backdrop {
+    @include vanilla-dialog-backdrop();
+  }
 }

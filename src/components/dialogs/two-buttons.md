@@ -1,9 +1,11 @@
 ---
 title: Two buttons
-componentid: component-dialogue
+componentid: component-dialogue-deprecated
 variantid: two-buttons
-guid: component-dialogue-two-buttons
+guid: component-dialogue-two-buttons-deprecated
+private: true
 ---
+This component is _deprecated_. Use modal-dialog instead.
 # Usage
 Import classes:
 ```scss
