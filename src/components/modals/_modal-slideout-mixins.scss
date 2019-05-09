@@ -45,12 +45,6 @@
 
 ///
 /// @access public
-@mixin vanilla-modal-dialog__container--active() {
-  opacity: 1;
-}
-
-///
-/// @access public
 @mixin vanilla-modal-slideout__header() {
   display: flex;
   justify-content: space-between;
