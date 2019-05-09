@@ -116,7 +116,7 @@ Please note - the backdrop element has to be a child of the modal, like above (s
 2 - Use the modal-slideout mixin:
 
 ```scss
-@import '~@sebgroup/vanilla/src/components/modals/slideout-mixins';
+@import '~@sebgroup/vanilla/src/components/modals/modal-slideout-mixins';
 
 .my-modal-class {
   @include vanilla-modal-slideout();

@@ -103,7 +103,7 @@ Please note - the backdrop element has to be a child of the modal, like above (s
 2 - Use the modal-dialog mixin:
 
 ```scss
-@import '~@sebgroup/vanilla/src/components/modals/modal-mixins';
+@import '~@sebgroup/vanilla/src/components/modals/modal-dialog-mixins';
 
 .my-dialog-class {
   @include vanilla-modal-dialog();
