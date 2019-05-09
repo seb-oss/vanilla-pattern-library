@@ -1,6 +1,6 @@
-@import "dialog-mixins";
+@import 'dialog-mixins';
 
-@include _vanilla-exports("vanilla-dialog") {
+@include _vanilla-exports('vanilla-dialog') {
   .sdv-dialog {
     @include vanilla-dialog();
   }

@@ -4,7 +4,7 @@
 /// @author Digital CX
 ////
 
-@import "../../utilities";
+@import '../../utilities';
 
 $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 
@@ -12,11 +12,11 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 ///
 /// @access public
 @mixin vanilla-tooltip-box {
-  font-weight: 400;
-  line-height: 1.5;
-  font-size: vanilla-px-to-em(14);
   background-color: $vanilla-color-text;
   color: $vanilla-color-white;
+  font-size: vanilla-px-to-em(14);
+  font-weight: 400;
+  line-height: 1.5;
   padding: 0.5rem;
   pointer-events: none;
 }
@@ -36,10 +36,11 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 @mixin vanilla-tooltip__main() {
   @include vanilla-tooltip-box();
   position: relative;
-  &:after {
+
+  &::after {
+    @include vanilla-tooltip-arrow();
     content: '';
     position: absolute;
-    @include vanilla-tooltip-arrow();
   }
 }
 
@@ -70,7 +71,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 ///
 /// @access public
 @mixin vanilla-tooltip--top() {
-  &:after {
+  &::after {
     bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
@@ -82,7 +83,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 ///
 /// @access public
 @mixin vanilla-tooltip--bottom() {
-  &:after {
+  &::after {
     top: -1rem;
     left: 50%;
     transform: translateX(-50%);
@@ -94,7 +95,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 ///
 /// @access public
 @mixin vanilla-tooltip--left() {
-  &:after {
+  &::after {
     left: -1rem;
     top: 50%;
     transform: translateY(-50%);
@@ -106,7 +107,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 ///
 /// @access public
 @mixin vanilla-tooltip--right() {
-  &:after {
+  &::after {
     right: -1rem;
     top: 50%;
     transform: translateY(-50%);
@@ -123,7 +124,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
   display: inline-block;
   position: relative;
 
-  &:before {
+  &::before {
     @include vanilla-tooltip-box();
     content: attr(data-sdv-tooltip);
     position: absolute;
@@ -136,7 +137,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
     width: $vanilla-tooltip-css-only--width;
   }
 
-  &:after {
+  &::after {
     @include vanilla-tooltip-arrow();
     content: '';
     position: absolute;
@@ -148,10 +149,10 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
     border-color: $vanilla-color-text transparent transparent;
   }
 
-  &:hover:before,
-  &:focus:before,
-  &:hover:after,
-  &:focus:after {
+  &:hover::before,
+  &:focus::before,
+  &:hover::after,
+  &:focus::after {
     opacity: 1;
     visibility: visible;
   }
