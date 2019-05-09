@@ -9,14 +9,14 @@
     "build-dvm": "node node_modules/davanmonet/dvm-build/build-dvm.js",
     "build-pl": "node node_modules/davanmonet/dvm-build/build-patternlibrary.js",
     "build": "npm run build-dvm && npm run build-pl",
-    "lint": "stylelint '**/*.scss'; exit 0",
+    "lint": "stylelint 'src/**/*.scss'",
     "sassdoc": "node node_modules/sassdoc/bin/sassdoc src",
     "commit": "git-cz",
     "travis-deploy-once": "travis-deploy-once --pro",
     "semantic-release": "semantic-release",
     "add-fa-config": "npm config set '@fortawesome:registry' https://npm.fontawesome.com/ && npm config set '//npm.fontawesome.com/:_authToken' $FA_TOKEN",
     "build-demo-site": "export PKG_VERSION=`npm show @sebgroup/vanilla version` && replace 0.0.0-semantically-released $PKG_VERSION package.json && npm run build",
-    "package-lock-sanitizer": "package-lock-sanitizer",
+    "package-lock-sanitizer": "package-lock-sanitizer && git add package-lock.json",
     "format:fix": "pretty-quick --staged"
   },
   "config": {
@@ -43,7 +43,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint --edit",
-      "pre-commit": "run-s format:fix lint package-lock-sanitizer && git add package-lock.json"
+      "pre-commit": "run-s format:fix lint package-lock-sanitizer"
     }
   },
   "dependencies": {
