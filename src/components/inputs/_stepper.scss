@@ -1,6 +1,6 @@
-@import "input-mixins";
+@import 'input-mixins';
 
-@include _vanilla-exports("vanilla-fld-stepper") {
+@include _vanilla-exports('vanilla-fld-stepper') {
   .sdv-stepper {
     @include vanilla-stepper();
   }
