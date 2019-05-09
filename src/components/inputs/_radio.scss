@@ -1,7 +1,7 @@
 @import 'input_base';
 
 @include _vanilla-exports('vanilla-fld-radio-wrap') {
-    .sdv-field-radio-wrap {
-        @include vanilla-field-radio-wrap();
-    }
+  .sdv-field-radio-wrap {
+    @include vanilla-field-radio-wrap();
+  }
 }

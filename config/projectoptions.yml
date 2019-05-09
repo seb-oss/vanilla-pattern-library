@@ -4,43 +4,43 @@
 #-------------------------------------------------------------------------------
 project_info:
   name: Vanilla Pattern Library
-  logo: "src/images/SEBlogo.svg"
-  theme_style: "src/theme.css"
-  pagedata_schemaversion: "2.0"
+  logo: 'src/images/SEBlogo.svg'
+  theme_style: 'src/theme.css'
+  pagedata_schemaversion: '2.0'
 
 #-------------------------------------------------------------------------------
 # Path settings
 #-------------------------------------------------------------------------------
 directories:
-  public_path: "/vanilla-pattern-library/"
-  public_path_markdown: "https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/gh-pages/"
+  public_path: '/vanilla-pattern-library/'
+  public_path_markdown: 'https://raw.githubusercontent.com/sebgroup/vanilla-pattern-library/gh-pages/'
   use_hash: true
 
   # Path to the pattern library source files
-  src: "src"
+  src: 'src'
 
   # This can be used as the web root when servring as a website
-  dist_web: "dist/web"
+  dist_web: 'dist/web'
 
   # This can be used to build a NPM  or NuGet package
-  dist_package: "dist/package"
+  dist_package: 'dist/package'
 
   # JS output dir. Relative to dist_web
-  js_subDir: "static/js"
+  js_subDir: 'static/js'
 
   # CSS Output dir. Relative to dist_web
-  css_subDir: "static/css"
+  css_subDir: 'static/css'
 
   # Index files will be created here
-  indexes: "dist/indexes"
+  indexes: 'dist/indexes'
 
   # Where to look for config files
-  configs: "config"
+  configs: 'config'
 
   # DvM will output css-files to this directory when in dev-mode, if this feature
   # is enabled in compile settings. (see below)
   # Production mode css files will also be copied here during build
-  cssCopies: "not-used"
+  cssCopies: 'not-used'
 
 # If user config is present, the settings in it will override the ones in this file
 # userconfig: "configs/local-conf.json"
@@ -77,9 +77,9 @@ compilation:
   # are loaders for LESS, SASS and JS configured in DvM
   targets:
     sdv-all.css:
-      - "**/sdv-all.scss"
+      - '**/sdv-all.scss'
     preview-frame-only.css:
-      - "**/preview-frame-only.scss"
+      - '**/preview-frame-only.scss'
 
   # Create source maps for JS and CSS
   sourceMaps: true
@@ -109,24 +109,24 @@ compilation:
 #-------------------------------------------------------------------------------
 assets:
   - isdirectory: true
-    src: "node_modules/@sebgroup/fonts/fonts"
-    dev_access: "/vanilla-pattern-library/assets/fonts"
+    src: 'node_modules/@sebgroup/fonts/fonts'
+    dev_access: '/vanilla-pattern-library/assets/fonts'
     dest:
-      - "dist/web/assets/fonts"
+      - 'dist/web/assets/fonts'
   # - isdirectory: true
   #   src: "./sassdoc"
   #   dev_access: "/sassdoc"
   #   dest:
   #   - "dist/web/sassdoc"
   - isdirectory: true
-    src: "./node_modules/@fortawesome/fontawesome-pro"
-    dev_access: "/vanilla-pattern-library/assets/fontawesome"
+    src: './node_modules/@fortawesome/fontawesome-pro'
+    dev_access: '/vanilla-pattern-library/assets/fontawesome'
     dest:
-      - "dist/web/assets/fontawesome"
+      - 'dist/web/assets/fontawesome'
 
   - isdirectory: true
-    src: "./src"
-    dev_access: "/src"
+    src: './src'
+    dev_access: '/src'
 
 #-------------------------------------------------------------------------------
 # Environment settings
@@ -165,7 +165,7 @@ env:
 build:
   package:
     files:
-      - src: "./package.json"
+      - src: './package.json'
 
 structure:
   - title: Components

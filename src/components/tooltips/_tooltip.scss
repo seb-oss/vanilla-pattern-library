@@ -1,9 +1,7 @@
-@import "tooltip-mixins";
+@import 'tooltip-mixins';
 
-@include _vanilla-exports("vanilla-tooltip") {
-
-.sdv-tooltip {
-  @include vanilla-tooltip();
-}
-
+@include _vanilla-exports('vanilla-tooltip') {
+  .sdv-tooltip {
+    @include vanilla-tooltip();
+  }
 }

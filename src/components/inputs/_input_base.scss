@@ -1,7 +1,7 @@
-@import "input-mixins";
-@import "../../utilities";
+@import 'input-mixins';
+@import '../../utilities';
 
-@include _vanilla-exports("vanilla-fld") {
+@include _vanilla-exports('vanilla-fld') {
   .sdv-field {
     @include vanilla-text-field();
   }

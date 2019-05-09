@@ -1,9 +1,10 @@
-@import "modal-dialog-mixins";
+@import 'modal-dialog-mixins';
 
-@include _vanilla-exports("modal-dialog") {
+@include _vanilla-exports('modal-dialog') {
   .sdv-modal-dialog {
     @include vanilla-modal-dialog();
   }
+
   .sdv-modal-backdrop {
     @include vanilla-modal-backdrop();
   }
