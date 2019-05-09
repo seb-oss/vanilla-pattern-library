@@ -1,8 +1,7 @@
 @import 'button-primary';
 
 @include _vanilla-exports('vanilla-button-link') {
-  .sdv-button-link
-  {
-      @include vanilla-button-link();
+  .sdv-button-link {
+    @include vanilla-button-link();
   }
 }

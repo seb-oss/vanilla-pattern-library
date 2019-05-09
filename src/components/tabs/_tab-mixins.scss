@@ -4,7 +4,7 @@
 /// @author Digital CX
 ////
 
-@import "../../utilities";
+@import '../../utilities';
 
 /// Tab list
 ///
@@ -86,26 +86,28 @@
 ///
 /// @access public
 @mixin vanilla-tabs__foldout-button() {
-  &:after {
-    @include vanilla-icon($_glyph: "\F078", $_space: vanilla-px-to-em(40px));
-    height: auto;
-    color: inherit;
-  }
-
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
       font-size: 1px;
       width: 48px;
       overflow: hidden;
       color: transparent !important;
-      &:after {
+
+      &::after {
         font-size: 1rem;
         color: $vanilla-color-link;
       }
-      &:hover:after {
+
+      &:hover::after {
         color: $vanilla-color-white;
       }
     }
+  }
+
+  &::after {
+    @include vanilla-icon($_glyph: '\F078', $_space: vanilla-px-to-em(40px));
+    height: auto;
+    color: inherit;
   }
 }
 
@@ -131,12 +133,13 @@
   }
 
   &__tab.-active:not(:focus),
-  &__tab[aria-selected=true] {
+  &__tab[aria-selected='true'] {
     @include vanilla-tabs__tab--active();
   }
 
   &__panel {
     @include vanilla-tabs__panel();
+
     &.-active {
       @include vanilla-tabs__panel--active();
     }

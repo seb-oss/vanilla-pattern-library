@@ -4,9 +4,9 @@
 /// @author Digital CX
 ////
 
-@import "../../utilities";
-@import "../../colors";
-@import "../../mixins";
+@import '../../utilities';
+@import '../../colors';
+@import '../../mixins';
 
 $vanilla-breadcrumbs-item-margin: vanilla-px-to-em(8) !default;
 $vanilla-breadcrumbs-item-margin-mobile: vanilla-px-to-em(16) !default;
@@ -19,14 +19,16 @@ $vanilla-breadcrumbs-chevron-size: 0.8em !default;
   > * {
     @include vanilla-breadcrumbs__list();
   }
+
   > * > * {
     @include vanilla-breadcrumbs__item();
+
     &.-hidden {
       @include vanilla-breadcrumbs__item--hidden();
     }
   }
 
-  & > * > .-hidden + * {
+  > * > .-hidden + * {
     &::before {
       @include vanilla-breadcrumbs__ellipsis();
     }
@@ -53,20 +55,22 @@ $vanilla-breadcrumbs-chevron-size: 0.8em !default;
   white-space: nowrap;
 
   @include media-context($vanilla-breakpoints) {
-    @include media(">=tablet") {
+    @include media('>=tablet') {
       margin-right: $vanilla-breadcrumbs-item-margin;
-      &:not(:last-child):after {
-        margin-left: $vanilla-breadcrumbs-item-margin;
+
+      &:not(:last-child)::after {
         @include vanilla-breadcrumbs__forward-chevron();
+        margin-left: $vanilla-breadcrumbs-item-margin;
       }
     }
-    @include media("<tablet") {
+    @include media('<tablet') {
       &:not(:nth-last-child(2)) {
         display: none;
       }
-      &:nth-last-child(2):before {
-        margin-right: $vanilla-breadcrumbs-item-margin-mobile;
+
+      &:nth-last-child(2)::before {
         @include vanilla-breadcrumbs__back-chevron();
+        margin-right: $vanilla-breadcrumbs-item-margin-mobile;
       }
     }
   }
@@ -84,7 +88,7 @@ $vanilla-breadcrumbs-chevron-size: 0.8em !default;
 /// @access public
 @mixin vanilla-breadcrumbs__ellipsis() {
   @include vanilla-icon(
-    $_glyph: "\f141 \f054 ",
+    $_glyph: '\f141 \f054 ',
     $_space: auto,
     $_color: $vanilla-color-text
   );
@@ -96,22 +100,22 @@ $vanilla-breadcrumbs-chevron-size: 0.8em !default;
 ///
 /// @access public
 @mixin vanilla-breadcrumbs__forward-chevron() {
-  font-size: $vanilla-breadcrumbs-chevron-size;
   @include vanilla-icon(
-    $_glyph: "\f054",
+    $_glyph: '\f054',
     $_space: vanilla-px-to-em(16),
     $_color: $vanilla-color-text
   );
+  font-size: $vanilla-breadcrumbs-chevron-size;
 }
 
 ///  Breadcrumbs chevron icon
 ///
 /// @access public
 @mixin vanilla-breadcrumbs__back-chevron() {
-  font-size: $vanilla-breadcrumbs-chevron-size;
   @include vanilla-icon(
-    $_glyph: "\f053",
+    $_glyph: '\f053',
     $_space: vanilla-px-to-em(16),
     $_color: $vanilla-color-text
   );
+  font-size: $vanilla-breadcrumbs-chevron-size;
 }

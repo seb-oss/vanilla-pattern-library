@@ -4,66 +4,86 @@ componentid: component-dialogue
 variantid: single-button
 guid: component-dialogue-single-button
 ---
-  # Usage
-  There are three ways to use this component.
-  1. Import the classes and use them as is
-  2. Import the modal-dialog mixin and apply it to your own selector
-  3. Import the modal-dialog-mixins and use them in your own structure
 
-  These will be explained in the examples section, below the component preview.
+# Usage
+
+There are three ways to use this component.
+
+1. Import the classes and use them as is
+2. Import the modal-dialog mixin and apply it to your own selector
+3. Import the modal-dialog-mixins and use them in your own structure
+
+These will be explained in the examples section, below the component preview.
+
 ### Accessibility
 
 When using this dialog, please take a few minutes to read up on accessibility recomendations for dialogs. Here's an article on that topic: [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_dialog_role)
 
 ### Component preview
+
 :::componentpreview
+
 ## Base state
+
 ```html
 <div class="sdv-modal-dialog -active">
-    <div class="sdv-modal-dialog__container" role="dialog" aria-labelledby="sdv-modal-dialog1-title" aria-describedby="sdv-dialog1-body">
-        <h2 class="sdv-modal-dialog__heading" id="sdv-dialog1-title">Attention</h2>
-        <div class="sdv-modal-dialog__body" id="sdv-dialog1-body">
-            <p>Are you sure you want to delete your account: #accountID#?</p>
-            <p><strong>Please note that this action can not be undone.</strong>
-        </div>
-        <div class="sdv-modal-dialog__actions">
-            <button class="sdv-button sdv-button-secondary">Cancel</button>
-            <button class="sdv-button">Yes, delete it</button>
-        </div>
+  <div
+    class="sdv-modal-dialog__container"
+    role="dialog"
+    aria-labelledby="sdv-modal-dialog1-title"
+    aria-describedby="sdv-dialog1-body"
+  >
+    <h2 class="sdv-modal-dialog__heading" id="sdv-dialog1-title">Attention</h2>
+    <div class="sdv-modal-dialog__body" id="sdv-dialog1-body">
+      <p>Are you sure you want to delete your account: #accountID#?</p>
+      <p><strong>Please note that this action can not be undone.</strong></p>
     </div>
-     <div class="sdv-modal-backdrop"></div>
+
+    <div class="sdv-modal-dialog__actions">
+      <button class="sdv-button sdv-button-secondary">Cancel</button>
+      <button class="sdv-button">Yes, delete it</button>
+    </div>
+  </div>
+  <div class="sdv-modal-backdrop"></div>
 </div>
 ```
 
 ## Interactive (using :target pseudo class)
-```html
+
+````html
 <div class="sdv-modal-dialog" id="my-dialog">
-    <div class="sdv-modal-dialog__container" role="dialog" aria-labelledby="sdv-modal-dialog1-title" aria-describedby="sdv-dialog1-body">
-        <h2 class="sdv-modal-dialog__heading" id="sdv-dialog1-title">Your personal details were successfully updated</h2>
-        <p class="sdv-modal-dialog__body" id="sdv-dialog1-body">You can change your details at any time in the user account section.</p>
-        <div class="sdv-modal-dialog__actions">
-            <a href="#nothing" class="sdv-button">Close</a><!-- The empty href is for demo purposes -->
-        </div>
+  <div
+    class="sdv-modal-dialog__container"
+    role="dialog"
+    aria-labelledby="sdv-modal-dialog1-title"
+    aria-describedby="sdv-dialog1-body"
+  >
+    <h2 class="sdv-modal-dialog__heading" id="sdv-dialog1-title">
+      Your personal details were successfully updated
+    </h2>
+    <p class="sdv-modal-dialog__body" id="sdv-dialog1-body">
+      You can change your details at any time in the user account section.
+    </p>
+    <div class="sdv-modal-dialog__actions">
+      <a href="#nothing" class="sdv-button">Close</a
+      ><!-- The empty href is for demo purposes -->
     </div>
-     <div class="sdv-modal-backdrop"></div>
+  </div>
+  <div class="sdv-modal-backdrop"></div>
 </div>
 
 <a href="#my-dialog">Open dialog</a>
 
-:::
+::: ### Examples 1 - Import classes: ```scss @import
+"~@sebgroup/vanilla/src/components/modals/modal-dialog";
+````
 
-### Examples
-
-1 - Import classes:
-
-```scss
-@import "~@sebgroup/vanilla/src/components/modals/modal-dialog";
-```
 Use them in your template:
+
 ```html
 <div class="sdv-modal-dialog">
-    <div class="sdv-modal-dialog__container">...</div>
-    <div class="sdv-modal-backdrop"></div>
+  <div class="sdv-modal-dialog__container">...</div>
+  <div class="sdv-modal-backdrop"></div>
 </div>
 ```
 
@@ -71,10 +91,11 @@ To activate the modal, add the -active modifier class:
 
 ```html
 <div class="sdv-modal-dialog -active">
-    <div class="sdv-modal-dialog__container">...</div>
-    <div class="sdv-modal-backdrop"></div>
+  <div class="sdv-modal-dialog__container">...</div>
+  <div class="sdv-modal-backdrop"></div>
 </div>
 ```
+
 Please note - the backdrop element has to be a child of the modal, like above (since it depends on its parent's -active class)
 
 ---
@@ -82,7 +103,7 @@ Please note - the backdrop element has to be a child of the modal, like above (s
 2 - Use the modal-dialog mixin:
 
 ```scss
-@import "~@sebgroup/vanilla/src/components/modals/modal-mixins";
+@import '~@sebgroup/vanilla/src/components/modals/modal-mixins';
 
 .my-dialog-class {
   @include vanilla-modal-dialog();
@@ -97,8 +118,8 @@ Please note - the backdrop element has to be a child of the modal, like above (s
 ```
 
 To activate the modal, add the `-active` modifier. You can also reassign the modifier with your own name:
-```scss
 
+```scss
 $vanilla-modal-active-state-class: my-active-class;
 ```
 
@@ -108,14 +129,19 @@ $vanilla-modal-active-state-class: my-active-class;
   <div class="my-backdrop-class"></div>
 </div>
 ```
+
 By default the modals will be activated by the [:target pseudo class](https://developer.mozilla.org/en-US/docs/Web/CSS/:target).
 If you would like to disable this behaviour, call the mixin with false as parameter:
+
 ```scss
 @include vanilla-modal-dialog($use-target-pseudo-class-for-active-state: false);
-@include vanilla-modal-backdrop($use-target-pseudo-class-for-active-state: false);
+@include vanilla-modal-backdrop(
+  $use-target-pseudo-class-for-active-state: false
+);
 ```
 
 ---
+
 3 - Use the dialog mixins directly in your own structure:
 
 ```scss

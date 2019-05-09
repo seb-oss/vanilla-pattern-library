@@ -1,4 +1,4 @@
-@import "common";
+@import 'common';
 
 ///
 /// @access public
@@ -17,7 +17,7 @@
   z-index: 1;
   transition: transform 0.3s ease-in-out;
   @include media-context($vanilla-breakpoints) {
-    @include media("<=tablet") {
+    @include media('<=tablet') {
       width: 100%;
     }
   }
@@ -41,12 +41,6 @@
 /// @access public
 @mixin vanilla-modal-slideout__container--active() {
   transform: translate3d(0, 0, 0);
-}
-
-///
-/// @access public
-@mixin vanilla-modal-dialog__container--active() {
-  opacity: 1;
 }
 
 ///
@@ -91,18 +85,22 @@
   &__container {
     @include vanilla-modal-slideout__container();
   }
+
   &--right {
     #{$__module}__container {
       @include vanilla-modal-slideout__container--right();
     }
   }
+
   &--left {
     #{$__module}__container {
       @include vanilla-modal-slideout__container--left();
     }
   }
+
   &.#{$vanilla-modal-active-state-class} {
     @include vanilla-modal--active();
+
     #{$__module}__container {
       @include vanilla-modal-slideout__container--active();
     }
@@ -110,6 +108,7 @@
   @if ($use-target-pseudo-class-for-active-state == true) {
     &:target {
       @include vanilla-modal--active();
+
       #{$__module}__container {
         @include vanilla-modal-slideout__container--active();
       }
@@ -119,12 +118,15 @@
   &__header {
     @include vanilla-modal-slideout__header();
   }
+
   &__heading {
     @include vanilla-modal-slideout__heading();
   }
+
   &__close {
     @include vanilla-modal-slideout__close();
   }
+
   &__content {
     @include vanilla-modal-slideout__content();
   }

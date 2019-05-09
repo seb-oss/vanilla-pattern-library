@@ -4,8 +4,8 @@
 /// @author Digital CX
 ////
 
-@import "../../utilities";
-@import "../../mixins";
+@import '../../utilities';
+@import '../../mixins';
 
 $vanilla-table-fixed-col-width: 150px !default;
 
@@ -38,7 +38,6 @@ $vanilla-table-fixed-col-width: 150px !default;
   &--fixed-l-col {
     @include vanilla-table--fixed-l-col();
   }
-
 }
 
 /// Table main styles
@@ -49,7 +48,8 @@ $vanilla-table-fixed-col-width: 150px !default;
   font-family: $vanilla-font-seb-sans-serif;
   border-spacing: 0;
 
-  th, td {
+  th,
+  td {
     text-align: left;
     border-bottom: 1px solid $vanilla-color-grey8;
   }
@@ -57,10 +57,13 @@ $vanilla-table-fixed-col-width: 150px !default;
   thead {
     color: $vanilla-color-grey6;
     font-size: vanilla-px-to-em(12);
+
     tr {
       min-height: vanilla-px-to-em(32);
     }
-    th, td {
+
+    th,
+    td {
       border-bottom: 1px solid $vanilla-color-grey6;
       font-weight: bold;
     }
@@ -68,10 +71,12 @@ $vanilla-table-fixed-col-width: 150px !default;
 
   tbody {
     font-size: vanilla-px-to-em(16);
+
     tr {
       height: vanilla-px-to-em(40);
       border-bottom: 1px solid $vanilla-color-grey5;
     }
+
     tr:hover td,
     tr:hover th {
       background-color: $vanilla-color-grey9;
@@ -81,9 +86,11 @@ $vanilla-table-fixed-col-width: 150px !default;
   tfoot {
     font-weight: 500;
     font-size: vanilla-px-to-em(16);
+
     tr {
       height: vanilla-px-to-em(40);
     }
+
     td {
       border-top: 1px solid $vanilla-color-grey6;
       border-bottom-width: 0;
@@ -118,20 +125,24 @@ $vanilla-table-fixed-col-width: 150px !default;
 @mixin vanilla-table__sortable-col() {
   cursor: pointer;
   margin-left: vanilla-px-to-em(8);
-  &:after {
-    @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
+
+  &::after {
+    @include vanilla-icon($_glyph: '\F078', $_color: inherit, $_space: 1rem);
     opacity: 0;
     transition: 0.3s;
   }
-  &:hover:after {
+
+  &:hover::after {
     opacity: 1;
   }
-  &--asc:after {
-    @include vanilla-icon($_glyph: "\F078", $_color: inherit, $_space: 1rem);
+
+  &--asc::after {
+    @include vanilla-icon($_glyph: '\F078', $_color: inherit, $_space: 1rem);
     opacity: 1;
   }
-  &--desc:after {
-    @include vanilla-icon($_glyph: "\F077", $_color: inherit, $_space: 1rem);
+
+  &--desc::after {
+    @include vanilla-icon($_glyph: '\F077', $_color: inherit, $_space: 1rem);
     opacity: 1;
   }
 }
@@ -145,7 +156,8 @@ $vanilla-table-fixed-col-width: 150px !default;
   position: relative;
   max-width: 100%;
 
-  td, th {
+  td,
+  th {
     width: auto !important;
     min-width: $vanilla-table-fixed-col-width;
   }
@@ -163,6 +175,7 @@ $vanilla-table-fixed-col-width: 150px !default;
     z-index: 1;
     position: sticky;
     background-color: $vanilla-color-white;
+
     &:first-child {
       z-index: 2;
     }

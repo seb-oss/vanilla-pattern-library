@@ -4,11 +4,11 @@
 /// @author Digital CX
 ////
 
-@import "../../variables";
-@import "../../functions";
-@import "../../utilities";
-@import "../../icons";
-@import "../../mixins";
+@import '../../variables';
+@import '../../functions';
+@import '../../utilities';
+@import '../../icons';
+@import '../../mixins';
 
 /// The left and right padding in buttons
 $vanilla-button-padding: vanilla-px-to-em(16) !default;
@@ -55,17 +55,20 @@ $_ghost-button_disabled-opacity: 0.5;
     border-color: $_button_color-bg-hover;
     text-decoration: none;
   }
+
   &:focus {
+    @include vanilla-focus-outline();
     background-color: $_button_color-bg-focus;
     border-color: $_button_color-bg-focus;
     text-decoration: none;
-    @include vanilla-focus-outline();
   }
+
   &:active {
     background-color: $_button_color-bg-pressed;
     border-color: $_button_color-bg-pressed;
     text-decoration: none;
   }
+
   &:visited,
   &:link {
     color: $vanilla-color-white;
@@ -81,23 +84,21 @@ $_ghost-button_disabled-opacity: 0.5;
   .sdv-icon-left {
     margin-left: vanilla-px-to-em(-4);
   }
+
   .sdv-icon-right {
     margin-right: vanilla-px-to-em(-4);
   }
-
 }
-
 
 /// Mixes in button styles -- small modifier
 ///
 /// @access public
 @mixin vanilla-button--small {
-  line-height: vanilla-px-to-rem(30);;
+  line-height: vanilla-px-to-rem(30);
   min-height: vanilla-px-to-rem(32);
   max-height: vanilla-px-to-rem(32);
   font-size: vanilla-px-to-rem(14);
 }
-
 
 /// Add secondary button styles
 ///
@@ -105,23 +106,25 @@ $_ghost-button_disabled-opacity: 0.5;
 @mixin vanilla-button-secondary {
   background-color: transparent;
   border-color: $vanilla-color-darkblue1;
+
   &,
   &:visited,
   &:link {
     color: $_button_color-bg-normal;
   }
+
   &:focus,
   &:hover,
   &:active {
     color: $vanilla-color-white;
   }
+
   &[disabled] {
     background-color: $_button_disabled-color-light;
     border-color: $_button_disabled-color-dark;
     color: $_button_disabled-color-dark;
   }
 }
-
 
 /// Alternative button styles
 ///
@@ -129,6 +132,7 @@ $_ghost-button_disabled-opacity: 0.5;
 @mixin vanilla-button-alternative {
   background-color: transparent;
   border-color: transparent;
+
   &,
   &:visited,
   &:link {
@@ -140,6 +144,7 @@ $_ghost-button_disabled-opacity: 0.5;
   &:active {
     color: $vanilla-color-white;
   }
+
   &[disabled] {
     background-color: $_button_disabled-color-light;
     border-color: $_button_disabled-color-dark;
@@ -147,13 +152,13 @@ $_ghost-button_disabled-opacity: 0.5;
   }
 }
 
-
 /// Link button styles
 ///
 /// @access public
 @mixin vanilla-button-link {
   background-color: transparent;
   border-color: transparent;
+
   &,
   &:visited,
   &:link {
@@ -168,9 +173,10 @@ $_ghost-button_disabled-opacity: 0.5;
     color: $vanilla-color-darkblue1;
     text-decoration: underline;
   }
+
   &[disabled] {
-    background-color:  transparent;
-    border-color:  transparent;
+    background-color: transparent;
+    border-color: transparent;
     color: $_button_disabled-color-dark;
   }
 }
@@ -190,13 +196,13 @@ $_ghost-button_disabled-opacity: 0.5;
     background-color: $vanilla-color-white;
     border-color: $vanilla-color-white;
   }
+
   &[disabled] {
     background-color: transparent;
     border-color: rgba($vanilla-color-white, $_ghost-button_disabled-opacity);
-    color:  rgba($vanilla-color-white, $_ghost-button_disabled-opacity);
+    color: rgba($vanilla-color-white, $_ghost-button_disabled-opacity);
   }
 }
-
 
 /// Ghost button styles (dark)
 ///
@@ -213,10 +219,11 @@ $_ghost-button_disabled-opacity: 0.5;
     background-color: $vanilla-color-grey2;
     border-color: $vanilla-color-grey2;
   }
+
   &[disabled] {
     background-color: transparent;
     border-color: rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
-    color:  rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
+    color: rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
   }
 }
 
@@ -233,7 +240,7 @@ $_ghost-button_disabled-opacity: 0.5;
 /// @access public
 /// @param $_glyph - Which icon to use
 @mixin vanilla-button-icon($_glyph) {
-  &:before {
+  &::before {
     @include vanilla-icon($_glyph);
   }
 }

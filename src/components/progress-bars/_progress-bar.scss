@@ -1,6 +1,6 @@
-@import "progress-bar-mixins";
+@import 'progress-bar-mixins';
 
-@include _vanilla-exports("vanilla-progress-bar") {
+@include _vanilla-exports('vanilla-progress-bar') {
   .sdv-progress-bar {
     @include vanilla-progress-bar();
   }
