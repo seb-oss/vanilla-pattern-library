@@ -74,8 +74,12 @@ When using this dialog, please take a few minutes to read up on accessibility re
 
 <a href="#my-dialog">Open dialog</a>
 
-::: ### Examples 1 - Import classes: ```scss @import
-"~@sebgroup/vanilla/src/components/modals/modal-dialog";
+:::
+
+### Examples 1 - Import classes:
+
+```scss
+@import "~@sebgroup/vanilla/src/components/modals/modal-dialog";
 ````
 
 Use them in your template:
