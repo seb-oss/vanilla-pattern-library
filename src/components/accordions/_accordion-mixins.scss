@@ -63,6 +63,7 @@ $vanilla-accordion-left-margin: 2.5rem;
 @mixin vanilla-accordion__header() {
   font-weight: 500;
   font-size: vanilla-px-to-rem(20px);
+  padding: vanilla-px-to-em(2) 0;
   padding-right: 0.75em;
   display: flex;
   border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
