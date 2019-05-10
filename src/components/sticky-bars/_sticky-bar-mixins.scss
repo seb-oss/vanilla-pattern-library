@@ -4,14 +4,39 @@
 /// @author Digital CX
 ////
 
-@import "../../utilities";
-@import "../../mixins";
+@import '../../utilities';
+@import '../../mixins';
 
+///
+/// @access public
 @mixin vanilla-sticky-bar() {
-  background-color: $vanilla-color-white;
-  box-shadow: 0px 2px 5px rgba(0,0,0, .25);
+  display: flex;
+  position: fixed;
   width: 100%;
-  position: sticky;
-  top: 0;
   left: 0;
+  padding: 1rem;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: $vanilla-color-white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  > * {
+    width: 100%;
+
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-sticky-bar--bottom() {
+  bottom: 0;
+}
+
+///
+/// @access public
+@mixin vanilla-sticky-bar--top() {
+  top: 0;
 }
