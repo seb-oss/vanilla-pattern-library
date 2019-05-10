@@ -52,7 +52,7 @@ Or you can call each mixin individually:
 ```
 
 
-Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-pattern-library/blob/master/src/components/inputs/_input-mixins.scss) for a full example of how to use the mixins. (see vanilla-stepper)
+Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-pattern-library/blob/master/src/components/inputs/_stepper-mixins.scss) for a full example of how to use the mixins. (see vanilla-stepper)
 
 :::componentpreview
 ## Base state
