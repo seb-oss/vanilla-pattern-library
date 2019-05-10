@@ -50,6 +50,12 @@ $_ghost-button_disabled-opacity: 0.5;
 
   cursor: pointer;
 
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+
   &:hover {
     background-color: $_button_color-bg-hover;
     border-color: $_button_color-bg-hover;
