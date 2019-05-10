@@ -1,14 +1,50 @@
 var path = require('path');
+const fs = require('fs');
 var sassTrue = require('sass-true');
 
-[
-  'inputs/common.spec.scss',
-  'inputs/stepper.spec.scss',
-  'inputs/text-field.spec.scss'
-]
-  .map(fileName => {
-    return path.join(__dirname, fileName);
-  })
-  .forEach(file => {
+const traverseTests = (dir, done) => {
+  let specs = [];
+
+  fs.readdir(dir, (err, list) => {
+    if (err) return done(err);
+
+    var pending = list.length;
+
+    if (!pending) return done(null, specs);
+
+    list.forEach(file => {
+      const filePath = path.resolve(dir, file);
+
+      fs.stat(filePath, (err, stats) => {
+        if (stats.isDirectory()) {
+          // specs.push(filePath);
+          traverseTests(filePath, (err, data) => {
+            specs = specs.concat(data);
+            if (!--pending) done(null, specs);
+          });
+        } else {
+          if (path.extname(file) == '.scss') {
+            specs.push(filePath);
+          }
+          if (!--pending) done(null, specs);
+        }
+      });
+    });
+  });
+};
+
+traverseTests(__dirname, (err, data) => {
+  data.forEach(file => {
     sassTrue.runSass({ file }, describe, it);
   });
+});
+
+// There is a bug somewhere - had to add this to get the tests running :/
+sassTrue.runSass(
+  {
+    file:
+      '/Users/moss/Documents/workspace/SEB/vanilla-pattern-library/src/test/accordions/accordion.spec.scss'
+  },
+  describe,
+  it
+);

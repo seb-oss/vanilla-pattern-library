@@ -68,6 +68,7 @@
     "replace": "^1.0.1",
     "sass-true": "^4.0.0",
     "sassdoc": "^2.5.0",
+    "sast": "^0.7.0",
     "semantic-release": "^16.0.0-beta.18",
     "stylelint": "^10.0.1",
     "stylelint-config-sass-guidelines": "^6.0.0",
