@@ -68,4 +68,38 @@
       }
     }
   }
+
+  @include it('Outputs properties for field label') {
+    @include assert {
+      @include output {
+        @include vanilla-field-label();
+      }
+
+      @include expect {
+        display: block;
+        line-height: 1;
+        margin-top: $vanilla-base-size;
+        margin-bottom: vanilla-px-to-em(8);
+
+        font-size: vanilla-px-to-em(16px);
+        font-weight: 500;
+
+        &[disabled] {
+          color: $vanilla-color-component-disabled-dark;
+        }
+      }
+    }
+  }
+
+  @include it('Outputs properties for field label small') {
+    @include assert {
+      @include output {
+        @include vanilla-field-label--small();
+      }
+
+      @include expect {
+        font-size: vanilla-px-to-em(14px);
+      }
+    }
+  }
 }

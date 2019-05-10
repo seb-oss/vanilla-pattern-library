@@ -58,3 +58,27 @@
   max-height: vanilla-px-to-rem(32);
   font-size: vanilla-px-to-rem(14);
 }
+
+/// Style for labels
+///
+/// @access public
+@mixin vanilla-field-label() {
+  display: block;
+  line-height: 1;
+  margin-top: $vanilla-base-size;
+  margin-bottom: vanilla-px-to-em(8);
+
+  font-size: vanilla-px-to-em(16px);
+  font-weight: 500;
+
+  &[disabled] {
+    color: $vanilla-color-component-disabled-dark;
+  }
+}
+
+/// Style for labels -- small modifier
+///
+/// @access public
+@mixin vanilla-field-label--small() {
+  font-size: vanilla-px-to-em(14px);
+}

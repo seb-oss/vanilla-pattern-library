@@ -1,0 +1,65 @@
+@import 'common';
+
+/// Style for basic text field
+///
+/// @access public
+@mixin vanilla-text-field() {
+  @include vanilla-field-base();
+
+  background-color: $vanilla-color-white;
+  padding: 0 1em;
+}
+
+/// Style for basic text field -- small modifier
+///
+/// @access public
+@mixin vanilla-text-field--small() {
+  @include vanilla-field-base--small();
+}
+
+/// Style for textarea
+///
+/// @access public
+@mixin vanilla-text-field-textarea() {
+  background-color: $vanilla-color-white;
+  padding: 0.5em 1em;
+}
+
+/// Style that can be added to erroneous text fields
+///
+/// @access public
+@mixin vanilla-text-field--error() {
+  $_border-bottom: vanilla-px-to-em(2) solid $vanilla-color-red;
+
+  border-bottom: $_border-bottom;
+
+  &:focus,
+  &:active,
+  &:hover {
+    border-bottom: $_border-bottom;
+  }
+}
+
+/// Meant to be shown below an input filed
+///
+/// @access public
+@mixin vanilla-text-field-notice() {
+  display: block;
+  line-height: 1;
+  font-size: vanilla-px-to-em(14);
+  margin-top: vanilla-px-to-em(8);
+}
+
+/// Style that can be added to erroneous text field notice
+///
+/// @access public
+@mixin vanilla-text-field-notice--error() {
+  color: $vanilla-color-red;
+}
+
+/// Style for basic text field labels
+///
+/// @access public
+@mixin vanilla-text-field-label() {
+  @include vanilla-field-label();
+}
