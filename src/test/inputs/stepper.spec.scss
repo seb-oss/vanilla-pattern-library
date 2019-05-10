@@ -1,5 +1,5 @@
 @import 'true';
-@import '../components/inputs/stepper-mixins';
+@import '../../components/inputs/stepper-mixins';
 
 @include describe('Input Stepper') {
   @include it('Outputs stepper base properties') {

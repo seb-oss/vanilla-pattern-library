@@ -1,7 +1,7 @@
 var path = require('path');
 var sassTrue = require('sass-true');
 
-['stepper.spec.scss']
+['inputs/common.spec.scss', 'inputs/stepper.spec.scss']
   .map(fileName => {
     return path.join(__dirname, fileName);
   })

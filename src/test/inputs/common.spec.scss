@@ -1,0 +1,71 @@
+@import 'true';
+@import '../../components/inputs/common';
+
+@include describe('Input Common (shared input mixins)') {
+  @include it('Outputs Vanilla field base properties') {
+    @include assert {
+      @include output {
+        @include vanilla-field-base();
+      }
+
+      @include expect {
+        // Config
+        $_height: vanilla-px-to-em(44px);
+        $_border-color-normal: $vanilla-color-grey7;
+
+        border: (1 / 16) * 1em solid $_border-color-normal;
+        border-radius: $vanilla-component-border-radius;
+        outline: none;
+        box-sizing: border-box;
+
+        min-height: $_height;
+        line-height: 1.5;
+        font-size: vanilla-px-to-em(16px);
+        font-family: $vanilla-font-seb-sans-serif;
+
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+
+        &:hover {
+          border-color: $vanilla-color-component-hover;
+        }
+
+        &:focus {
+          @include vanilla-focus-outline();
+          border-color: $vanilla-color-component-selected;
+        }
+
+        &:active {
+          border-color: $_border-color-normal;
+        }
+
+        &[disabled] {
+          background-color: $vanilla-color-component-disabled-light;
+          border-color: $_border-color-normal;
+
+          &::placeholder {
+            color: $vanilla-color-component-disabled-dark;
+          }
+        }
+      }
+    }
+  }
+
+  @include it('Outputs field base small properties') {
+    @include assert {
+      @include output {
+        @include vanilla-field-base--small();
+      }
+
+      @include expect {
+        line-height: vanilla-px-to-rem(32);
+        min-height: vanilla-px-to-rem(32);
+        max-height: vanilla-px-to-rem(32);
+        font-size: vanilla-px-to-rem(14);
+      }
+    }
+  }
+}
