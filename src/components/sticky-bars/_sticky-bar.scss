@@ -1,0 +1,15 @@
+@import 'sticky-bar-mixins';
+
+@include _vanilla-exports('vanilla-sticky-bar') {
+  .sdv-sticky-bar {
+    @include vanilla-sticky-bar();
+  }
+
+  .sdv-sticky-bar--bottom {
+    @include vanilla-sticky-bar--bottom();
+  }
+
+  .sdv-sticky-bar--top {
+    @include vanilla-sticky-bar--top();
+  }
+}

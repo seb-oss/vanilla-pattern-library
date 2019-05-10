@@ -50,6 +50,12 @@ $_ghost-button_disabled-opacity: 0.5;
 
   cursor: pointer;
 
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      width: 100%;
+    }
+  }
+
   &:hover {
     background-color: $_button_color-bg-hover;
     border-color: $_button_color-bg-hover;
@@ -233,6 +239,50 @@ $_ghost-button_disabled-opacity: 0.5;
 /// @deprecated
 @mixin vanilla-button-ghost {
   @include vanilla-button-ghost-light();
+}
+
+/// Delete button styles
+///
+/// @access public
+@mixin vanilla-button-delete {
+  color: $vanilla-color-darkred1;
+  background-color: transparent;
+  border-color: transparent;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $vanilla-color-white;
+    background-color: $vanilla-color-red;
+    border-color: $vanilla-color-red;
+  }
+
+  &[disabled] {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
+  }
+}
+
+/// Delete button styles
+///
+/// @access public
+@mixin vanilla-button-delete-confirm {
+  color: $vanilla-color-white;
+  background-color: $vanilla-color-darkred1;
+  border-color: $vanilla-color-darkred1;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $vanilla-color-red;
+    border-color: $vanilla-color-red;
+  }
+
+  &[disabled] {
+    background-color: $_button_disabled-color-dark;
+    border-color: $_button_disabled-color-dark;
+  }
 }
 
 /// Mixes in button icon
