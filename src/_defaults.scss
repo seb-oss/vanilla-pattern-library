@@ -19,12 +19,12 @@
   // Headings
   $_heading_map: (
     '.vanilla-h-display': 'display',
-    'h1, .vanilla-h1': 'h1',
-    'h2, .vanilla-h2': 'h2',
-    'h3, .vanilla-h3': 'h3',
-    'h4, .vanilla-h4': 'h4',
-    'h5, .vanilla-h5': 'h5',
-    'h6, .vanilla-h6': 'h6'
+    'h1, .sdv-h1, .vanilla-h1': 'h1',
+    'h2, .sdv-h2, .vanilla-h2': 'h2',
+    'h3, .sdv-h3, .vanilla-h3': 'h3',
+    'h4, .sdv-h4, .vanilla-h4': 'h4',
+    'h5, .sdv-h5, .vanilla-h5': 'h5',
+    'h6, .sdv-h6, .vanilla-h6': 'h6'
   );
 
   body {
