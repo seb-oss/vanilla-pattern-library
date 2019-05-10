@@ -91,6 +91,30 @@
 							"private": false
 						},
 						{
+							"filename": "delete-confirm.md",
+							"filepath": "components/buttons/delete-confirm.md",
+							"shortpath": "components/buttons/delete-confirm",
+							"longpath": "src/components/buttons/delete-confirm.md",
+							"type": "file",
+							"title": "Delete button",
+							"guid": "component-button-delete-confirm",
+							"variantid": "delete-confirm",
+							"componentid": "component-button",
+							"private": false
+						},
+						{
+							"filename": "delete.md",
+							"filepath": "components/buttons/delete.md",
+							"shortpath": "components/buttons/delete",
+							"longpath": "src/components/buttons/delete.md",
+							"type": "file",
+							"title": "Delete button",
+							"guid": "component-button-delete",
+							"variantid": "delete",
+							"componentid": "component-button",
+							"private": false
+						},
+						{
 							"filename": "ghost-dark.md",
 							"filepath": "components/buttons/ghost-dark.md",
 							"shortpath": "components/buttons/ghost-dark",
@@ -151,7 +175,7 @@
 							"private": false
 						}
 					],
-					"filecount": 6,
+					"filecount": 8,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -398,6 +422,40 @@
 					"type": "directory"
 				},
 				{
+					"title": "Sticky-bars",
+					"shortpath": "sticky-bars",
+					"longpath": "src/components/sticky-bars",
+					"items": [
+						{
+							"filename": "sticky-bar-button.md",
+							"filepath": "components/sticky-bars/sticky-bar-button.md",
+							"shortpath": "components/sticky-bars/sticky-bar-button",
+							"longpath": "src/components/sticky-bars/sticky-bar-button.md",
+							"type": "file",
+							"title": "Sticky button bar",
+							"guid": "component-stickybuttonbar-default",
+							"variantid": "default",
+							"componentid": "component-stickybuttonbar",
+							"private": false
+						},
+						{
+							"filename": "sticky-bar-summary.md",
+							"filepath": "components/sticky-bars/sticky-bar-summary.md",
+							"shortpath": "components/sticky-bars/sticky-bar-summary",
+							"longpath": "src/components/sticky-bars/sticky-bar-summary.md",
+							"type": "file",
+							"title": "Sticky summary bar",
+							"guid": "component-stickysummarybar-default",
+							"variantid": "default",
+							"componentid": "component-stickysummarybar",
+							"private": false
+						}
+					],
+					"filecount": 2,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Tables",
 					"shortpath": "tables",
 					"longpath": "src/components/tables",
@@ -499,7 +557,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 12,
+			"directorycount": 13,
 			"type": "directory"
 		},
 		{
