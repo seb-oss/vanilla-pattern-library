@@ -17,7 +17,6 @@ const traverseTests = (dir, done) => {
 
       fs.stat(filePath, (err, stats) => {
         if (stats.isDirectory()) {
-          // specs.push(filePath);
           traverseTests(filePath, (err, data) => {
             specs = specs.concat(data);
             if (!--pending) done(null, specs);
@@ -42,8 +41,7 @@ traverseTests(__dirname, (err, data) => {
 // There is a bug somewhere - had to add this to get the tests running :/
 sassTrue.runSass(
   {
-    file:
-      '/Users/moss/Documents/workspace/SEB/vanilla-pattern-library/src/test/accordions/accordion.spec.scss'
+    file: `${__dirname}/accordions/accordion.spec.scss`
   },
   describe,
   it
