@@ -47,6 +47,8 @@ $vanilla-modal-active-state-class: -active !default;
   transition-property: background-color, visibility;
   visibility: hidden;
   background-color: transparent;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
 
