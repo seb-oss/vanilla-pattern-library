@@ -4,10 +4,12 @@
 /// @author Digital CX
 ////
 
+@import '../../../node_modules/include-media/dist/include-media';
+@import '../../colors';
 @import '../../utilities';
 @import '../../variables';
 @import '../../functions';
-@import 'node_modules/include-media/dist/include-media';
+@import '../../mixins';
 
 $vanilla-accordion-icon-size: 0.9em;
 $vanilla-accordion-left-margin: 2.5rem;
