@@ -5,6 +5,8 @@
 ////
 
 @import 'variables';
+@import 'colors';
+@import 'node_modules/include-media/dist/include-media';
 
 $seb-font-path: $vanilla-font-basepath;
 @import '~@sebgroup/fonts/scss/seb-fonts';
