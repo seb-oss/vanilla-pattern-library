@@ -1,0 +1,34 @@
+@import 'true';
+@import '../../components/sticky-bars/_sticky-bar-mixins.scss';
+@include describe('sticky-bars _sticky-bar-mixins.scss') {
+  @include it('Should compile vanilla-sticky-bar') {
+    @include assert {
+      @include output {
+        @include vanilla-sticky-bar();
+      }
+      @include expect {
+        @include vanilla-sticky-bar();
+      }
+    }
+  }
+  @include it('Should compile vanilla-sticky-bar--bottom') {
+    @include assert {
+      @include output {
+        @include vanilla-sticky-bar--bottom();
+      }
+      @include expect {
+        @include vanilla-sticky-bar--bottom();
+      }
+    }
+  }
+  @include it('Should compile vanilla-sticky-bar--top') {
+    @include assert {
+      @include output {
+        @include vanilla-sticky-bar--top();
+      }
+      @include expect {
+        @include vanilla-sticky-bar--top();
+      }
+    }
+  }
+}
