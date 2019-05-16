@@ -1,0 +1,24 @@
+@import 'true';
+@import '../../components/dialogs/_dialog-mixins.scss';
+@include describe('dialogs _dialog-mixins.scss') {
+  @include it('Should compile vanilla-dialog') {
+    @include assert {
+      @include output {
+        @include vanilla-dialog();
+      }
+      @include expect {
+        @include vanilla-dialog();
+      }
+    }
+  }
+  @include it('Should compile vanilla-dialog-backdrop') {
+    @include assert {
+      @include output {
+        @include vanilla-dialog-backdrop();
+      }
+      @include expect {
+        @include vanilla-dialog-backdrop();
+      }
+    }
+  }
+}

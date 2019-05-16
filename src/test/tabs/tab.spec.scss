@@ -1,0 +1,84 @@
+@import 'true';
+@import '../../components/tabs/_tab-mixins.scss';
+@include describe('tabs _tab-mixins.scss') {
+  @include it('Should compile vanilla-tabs__tablist') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs__tablist();
+      }
+      @include expect {
+        @include vanilla-tabs__tablist();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tabs__tab') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs__tab();
+      }
+      @include expect {
+        @include vanilla-tabs__tab();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tabs__tab--active') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs__tab--active();
+      }
+      @include expect {
+        @include vanilla-tabs__tab--active();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tabs__panel') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs__panel();
+      }
+      @include expect {
+        @include vanilla-tabs__panel();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tabs__panel--active') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs__panel--active();
+      }
+      @include expect {
+        @include vanilla-tabs__panel--active();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tabs__foldout-button') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs__foldout-button();
+      }
+      @include expect {
+        @include vanilla-tabs__foldout-button();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tabs__foldout') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs__foldout();
+      }
+      @include expect {
+        @include vanilla-tabs__foldout();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tabs') {
+    @include assert {
+      @include output {
+        @include vanilla-tabs();
+      }
+      @include expect {
+        @include vanilla-tabs();
+      }
+    }
+  }
+}

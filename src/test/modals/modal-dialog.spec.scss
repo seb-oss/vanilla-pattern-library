@@ -1,0 +1,74 @@
+@import 'true';
+@import '../../components/modals/_modal-dialog-mixins.scss';
+@include describe('modals _modal-dialog-mixins.scss') {
+  @include it('Should compile vanilla-modal-dialog-base') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-dialog-base();
+      }
+      @include expect {
+        @include vanilla-modal-dialog-base();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-dialog__heading') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-dialog__heading();
+      }
+      @include expect {
+        @include vanilla-modal-dialog__heading();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-dialog__container') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-dialog__container();
+      }
+      @include expect {
+        @include vanilla-modal-dialog__container();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-dialog__container--active') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-dialog__container--active();
+      }
+      @include expect {
+        @include vanilla-modal-dialog__container--active();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-dialog__content') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-dialog__content();
+      }
+      @include expect {
+        @include vanilla-modal-dialog__content();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-dialog__actions') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-dialog__actions();
+      }
+      @include expect {
+        @include vanilla-modal-dialog__actions();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-dialog') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-dialog();
+      }
+      @include expect {
+        @include vanilla-modal-dialog();
+      }
+    }
+  }
+}

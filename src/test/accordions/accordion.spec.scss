@@ -1,0 +1,74 @@
+@import 'true';
+@import '../../components/accordions/_accordion-mixins.scss';
+@include describe('accordions _accordion-mixins.scss') {
+  @include it('Should compile vanilla-accordion') {
+    @include assert {
+      @include output {
+        @include vanilla-accordion();
+      }
+      @include expect {
+        @include vanilla-accordion();
+      }
+    }
+  }
+  @include it('Should compile vanilla-accordion__header') {
+    @include assert {
+      @include output {
+        @include vanilla-accordion__header();
+      }
+      @include expect {
+        @include vanilla-accordion__header();
+      }
+    }
+  }
+  @include it('Should compile vanilla-accordion__content-section') {
+    @include assert {
+      @include output {
+        @include vanilla-accordion__content-section();
+      }
+      @include expect {
+        @include vanilla-accordion__content-section();
+      }
+    }
+  }
+  @include it('Should compile vanilla-accordion__headline') {
+    @include assert {
+      @include output {
+        @include vanilla-accordion__headline();
+      }
+      @include expect {
+        @include vanilla-accordion__headline();
+      }
+    }
+  }
+  @include it('Should compile vanilla-accordion__sub-headline') {
+    @include assert {
+      @include output {
+        @include vanilla-accordion__sub-headline();
+      }
+      @include expect {
+        @include vanilla-accordion__sub-headline();
+      }
+    }
+  }
+  @include it('Should compile vanilla-accordion__header--expanded') {
+    @include assert {
+      @include output {
+        @include vanilla-accordion__header--expanded();
+      }
+      @include expect {
+        @include vanilla-accordion__header--expanded();
+      }
+    }
+  }
+  @include it('Should compile vanilla-accordion__content-section--expanded') {
+    @include assert {
+      @include output {
+        @include vanilla-accordion__content-section--expanded();
+      }
+      @include expect {
+        @include vanilla-accordion__content-section--expanded();
+      }
+    }
+  }
+}

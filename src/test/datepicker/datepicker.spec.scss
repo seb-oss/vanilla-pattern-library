@@ -1,0 +1,64 @@
+@import 'true';
+@import '../../components/datepicker/_datepicker-mixins.scss';
+@include describe('datepicker _datepicker-mixins.scss') {
+  @include it('Should compile vanilla-datepicker__container') {
+    @include assert {
+      @include output {
+        @include vanilla-datepicker__container();
+      }
+      @include expect {
+        @include vanilla-datepicker__container();
+      }
+    }
+  }
+  @include it('Should compile vanilla-datepicker__controls') {
+    @include assert {
+      @include output {
+        @include vanilla-datepicker__controls();
+      }
+      @include expect {
+        @include vanilla-datepicker__controls();
+      }
+    }
+  }
+  @include it('Should compile vanilla-datepicker__calendar') {
+    @include assert {
+      @include output {
+        @include vanilla-datepicker__calendar();
+      }
+      @include expect {
+        @include vanilla-datepicker__calendar();
+      }
+    }
+  }
+  @include it('Should compile vanilla-datepicker__calendar--scrollable') {
+    @include assert {
+      @include output {
+        @include vanilla-datepicker__calendar--scrollable();
+      }
+      @include expect {
+        @include vanilla-datepicker__calendar--scrollable();
+      }
+    }
+  }
+  @include it('Should compile vanilla-datepicker__calendar-row') {
+    @include assert {
+      @include output {
+        @include vanilla-datepicker__calendar-row();
+      }
+      @include expect {
+        @include vanilla-datepicker__calendar-row();
+      }
+    }
+  }
+  @include it('Should compile vanilla-datepicker__calendar-header-row') {
+    @include assert {
+      @include output {
+        @include vanilla-datepicker__calendar-header-row();
+      }
+      @include expect {
+        @include vanilla-datepicker__calendar-header-row();
+      }
+    }
+  }
+}

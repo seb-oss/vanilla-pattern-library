@@ -1,0 +1,94 @@
+@import 'true';
+@import '../../components/tooltips/_tooltip-mixins.scss';
+@include describe('tooltips _tooltip-mixins.scss') {
+  @include it('Should compile vanilla-tooltip-box') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip-box();
+      }
+      @include expect {
+        @include vanilla-tooltip-box();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip-arrow') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip-arrow();
+      }
+      @include expect {
+        @include vanilla-tooltip-arrow();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip__main') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip__main();
+      }
+      @include expect {
+        @include vanilla-tooltip__main();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip();
+      }
+      @include expect {
+        @include vanilla-tooltip();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip--top') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip--top();
+      }
+      @include expect {
+        @include vanilla-tooltip--top();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip--bottom') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip--bottom();
+      }
+      @include expect {
+        @include vanilla-tooltip--bottom();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip--left') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip--left();
+      }
+      @include expect {
+        @include vanilla-tooltip--left();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip--right') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip--right();
+      }
+      @include expect {
+        @include vanilla-tooltip--right();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip-css-only') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip-css-only();
+      }
+      @include expect {
+        @include vanilla-tooltip-css-only();
+      }
+    }
+  }
+}

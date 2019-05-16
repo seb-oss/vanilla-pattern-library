@@ -4,12 +4,13 @@
 /// @author Digital CX
 ////
 
+@import 'node_modules/include-media/dist/include-media';
+
 @import '../../variables';
 @import '../../functions';
 @import '../../utilities';
 @import '../../icons';
 @import '../../colors';
-@import 'node_modules/include-media/dist/include-media';
 
 @mixin vanilla-datepicker__container {
   border-radius: $vanilla-component-border-radius;

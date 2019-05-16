@@ -1,102 +1,73 @@
 @import 'true';
-@import '../../components/inputs/text-field-mixins';
-
-@include describe('Input Text Fields') {
-  @include it('Outputs properties for vanilla text field') {
+@import '../../components/inputs/_text-field-mixins.scss';
+@include describe('inputs _text-field-mixins.scss') {
+  @include it('Should compile vanilla-text-field') {
     @include assert {
       @include output {
         @include vanilla-text-field();
       }
-
       @include expect {
-        @include vanilla-field-base();
-
-        background-color: $vanilla-color-white;
-        padding: 0 1em;
+        @include vanilla-text-field();
       }
     }
   }
-
-  @include it('Outputs properties for vanilla text field small') {
+  @include it('Should compile vanilla-text-field--small') {
     @include assert {
       @include output {
         @include vanilla-text-field--small();
       }
-
       @include expect {
-        @include vanilla-field-base--small();
+        @include vanilla-text-field--small();
       }
     }
   }
-
-  @include it('Outputs properties for vanilla text area') {
+  @include it('Should compile vanilla-text-field-textarea') {
     @include assert {
       @include output {
         @include vanilla-text-field-textarea();
       }
-
       @include expect {
-        background-color: $vanilla-color-white;
-        padding: 0.5em 1em;
+        @include vanilla-text-field-textarea();
       }
     }
   }
-
-  @include it('Outputs properties for text field error') {
+  @include it('Should compile vanilla-text-field--error') {
     @include assert {
       @include output {
         @include vanilla-text-field--error();
       }
-
       @include expect {
-        $_border-bottom: vanilla-px-to-em(2) solid $vanilla-color-red;
-
-        border-bottom: $_border-bottom;
-
-        &:focus,
-        &:active,
-        &:hover {
-          border-bottom: $_border-bottom;
-        }
+        @include vanilla-text-field--error();
       }
     }
   }
-
-  @include it('Outputs properties for text field notice') {
+  @include it('Should compile vanilla-text-field-notice') {
     @include assert {
       @include output {
         @include vanilla-text-field-notice();
       }
-
       @include expect {
-        display: block;
-        line-height: 1;
-        font-size: vanilla-px-to-em(14);
-        margin-top: vanilla-px-to-em(8);
+        @include vanilla-text-field-notice();
       }
     }
   }
-
-  @include it('Outputs properties for text field notice error') {
+  @include it('Should compile vanilla-text-field-notice--error') {
     @include assert {
       @include output {
         @include vanilla-text-field-notice--error();
       }
-
       @include expect {
-        color: $vanilla-color-red;
+        @include vanilla-text-field-notice--error();
       }
     }
   }
-
-  @include it('Outputs properties for text field label') {
+  @include it('Should compile vanilla-text-field-label') {
     @include assert {
       @include output {
         @include vanilla-text-field-label();
       }
-
       @include expect {
-        @include vanilla-field-label();
+        @include vanilla-text-field-label();
       }
     }
   }

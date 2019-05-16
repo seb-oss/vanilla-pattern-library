@@ -1,108 +1,43 @@
 @import 'true';
-@import '../../components/inputs/stepper-mixins';
-
-@include describe('Input Stepper') {
-  @include it('Outputs stepper base properties') {
+@import '../../components/inputs/_stepper-mixins.scss';
+@include describe('inputs _stepper-mixins.scss') {
+  @include it('Should compile vanilla-stepper-base') {
     @include assert {
       @include output {
         @include vanilla-stepper-base();
       }
-
       @include expect {
-        display: flex;
-        align-items: center;
-        border: 1px solid $vanilla-color-grey6;
-        border-radius: $vanilla-component-border-radius;
-
-        &:hover:not([disabled]) {
-          border-color: $vanilla-color-component-hover;
-        }
-
-        &:focus-within {
-          @include vanilla-focus-outline();
-          border-color: $vanilla-color-component-selected;
-        }
-
-        &[disabled] {
-          border-color: $vanilla-color-component-disabled-dark;
-          background: $vanilla-color-component-disabled-light;
-          color: $vanilla-color-component-disabled-dark;
-        }
+        @include vanilla-stepper-base();
       }
     }
   }
-
-  @include it('Ouputs properties for stepper value') {
+  @include it('Should compile vanilla-stepper__value') {
     @include assert {
       @include output {
         @include vanilla-stepper__value();
       }
-
       @include expect {
-        font-size: vanilla-px-to-rem(24px);
-        min-width: vanilla-px-to-rem(64);
-        margin: 0 0.2em;
-        flex-grow: 1;
-        text-align: center;
-        font-weight: 500;
+        @include vanilla-stepper__value();
       }
     }
   }
-}
-
-@include it('Outputs stepper button properties') {
-  @include assert {
-    @include output {
-      @include vanilla-stepper__button();
-    }
-
-    @include expect {
-      @include vanilla-button();
-      @include vanilla-button-alternative();
-
-      margin: 0; // Safari adds a margin around the button
-
-      &:disabled {
-        border: 0;
+  @include it('Should compile vanilla-stepper__button') {
+    @include assert {
+      @include output {
+        @include vanilla-stepper__button();
       }
-
-      &:first-of-type {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-
-      &:last-of-type {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-
-      &:focus {
-        box-shadow: none;
-      }
-
-      i {
-        font-size: vanilla-px-to-rem(24px);
-        vertical-align: sub;
+      @include expect {
+        @include vanilla-stepper__button();
       }
     }
   }
-
-  @include it('Outputs component properties') {
+  @include it('Should compile vanilla-stepper') {
     @include assert {
       @include output {
         @include vanilla-stepper();
       }
-
       @include expect {
-        @include vanilla-stepper-base();
-
-        &__value {
-          @include vanilla-stepper__value();
-        }
-
-        &__button {
-          @include vanilla-stepper__button();
-        }
+        @include vanilla-stepper();
       }
     }
   }

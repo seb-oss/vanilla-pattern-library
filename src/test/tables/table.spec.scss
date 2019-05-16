@@ -1,0 +1,74 @@
+@import 'true';
+@import '../../components/tables/_table-mixins.scss';
+@include describe('tables _table-mixins.scss') {
+  @include it('Should compile vanilla-table') {
+    @include assert {
+      @include output {
+        @include vanilla-table();
+      }
+      @include expect {
+        @include vanilla-table();
+      }
+    }
+  }
+  @include it('Should compile vanilla-table__main') {
+    @include assert {
+      @include output {
+        @include vanilla-table__main();
+      }
+      @include expect {
+        @include vanilla-table__main();
+      }
+    }
+  }
+  @include it('Should compile vanilla-table__numeric-col') {
+    @include assert {
+      @include output {
+        @include vanilla-table__numeric-col();
+      }
+      @include expect {
+        @include vanilla-table__numeric-col();
+      }
+    }
+  }
+  @include it('Should compile vanilla-table__negative-col') {
+    @include assert {
+      @include output {
+        @include vanilla-table__negative-col();
+      }
+      @include expect {
+        @include vanilla-table__negative-col();
+      }
+    }
+  }
+  @include it('Should compile vanilla-table__primary-col') {
+    @include assert {
+      @include output {
+        @include vanilla-table__primary-col();
+      }
+      @include expect {
+        @include vanilla-table__primary-col();
+      }
+    }
+  }
+  @include it('Should compile vanilla-table__sortable-col') {
+    @include assert {
+      @include output {
+        @include vanilla-table__sortable-col();
+      }
+      @include expect {
+        @include vanilla-table__sortable-col();
+      }
+    }
+  }
+  @include it('Should compile vanilla-table--fixed-l-col') {
+    @include assert {
+      @include output {
+        @include vanilla-table--fixed-l-col();
+      }
+      @include expect {
+        @include vanilla-table--fixed-l-col();
+      }
+    }
+  }
+}
