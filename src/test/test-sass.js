@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const sassTrue = require('sass-true');
 const _ = require('lodash/array');
+const tildeImporter = require('node-sass-tilde-importer');
 
 const traverseTestsSync = dir => {
   const list = fs.readdirSync(dir);
@@ -20,5 +21,12 @@ const traverseTestsSync = dir => {
 };
 
 traverseTestsSync(__dirname).forEach(file => {
-  sassTrue.runSass({ file }, describe, it);
+  sassTrue.runSass(
+    {
+      file,
+      importer: tildeImporter
+    },
+    describe,
+    it
+  );
 });
