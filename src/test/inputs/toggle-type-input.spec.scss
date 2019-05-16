@@ -1,0 +1,74 @@
+@import 'true';
+@import '../../components/inputs/_toggle-type-input-mixins.scss';
+@include describe('inputs _toggle-type-input-mixins.scss') {
+  @include it('Should compile vanilla-toggle-base__label') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-base__label();
+      }
+      @include expect {
+        @include vanilla-toggle-base__label();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-switch__label') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch__label();
+      }
+      @include expect {
+        @include vanilla-toggle-switch__label();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-base__label-before') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-base__label-before();
+      }
+      @include expect {
+        @include vanilla-toggle-base__label-before();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-radio__label-before') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-radio__label-before();
+      }
+      @include expect {
+        @include vanilla-toggle-radio__label-before();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-switch__label-before') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch__label-before();
+      }
+      @include expect {
+        @include vanilla-toggle-switch__label-before();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-checkbox__label-before') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-checkbox__label-before();
+      }
+      @include expect {
+        @include vanilla-toggle-checkbox__label-before();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-base') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-base('dummy arg');
+      }
+      @include expect {
+        @include vanilla-toggle-base('dummy arg');
+      }
+    }
+  }
+}

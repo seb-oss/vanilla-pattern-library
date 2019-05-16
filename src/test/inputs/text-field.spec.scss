@@ -1,0 +1,74 @@
+@import 'true';
+@import '../../components/inputs/_text-field-mixins.scss';
+@include describe('inputs _text-field-mixins.scss') {
+  @include it('Should compile vanilla-text-field') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field();
+      }
+      @include expect {
+        @include vanilla-text-field();
+      }
+    }
+  }
+  @include it('Should compile vanilla-text-field--small') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field--small();
+      }
+      @include expect {
+        @include vanilla-text-field--small();
+      }
+    }
+  }
+  @include it('Should compile vanilla-text-field-textarea') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field-textarea();
+      }
+      @include expect {
+        @include vanilla-text-field-textarea();
+      }
+    }
+  }
+  @include it('Should compile vanilla-text-field--error') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field--error();
+      }
+      @include expect {
+        @include vanilla-text-field--error();
+      }
+    }
+  }
+  @include it('Should compile vanilla-text-field-notice') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field-notice();
+      }
+      @include expect {
+        @include vanilla-text-field-notice();
+      }
+    }
+  }
+  @include it('Should compile vanilla-text-field-notice--error') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field-notice--error();
+      }
+      @include expect {
+        @include vanilla-text-field-notice--error();
+      }
+    }
+  }
+  @include it('Should compile vanilla-text-field-label') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field-label();
+      }
+      @include expect {
+        @include vanilla-text-field-label();
+      }
+    }
+  }
+}

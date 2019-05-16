@@ -1,0 +1,48 @@
+@import 'true';
+@import '../../components/inputs/common';
+
+@include describe('Input Common (shared input mixins)') {
+  @include it('Outputs Vanilla field base properties') {
+    @include assert {
+      @include output {
+        @include vanilla-field-base();
+      }
+      @include expect {
+        @include vanilla-field-base();
+      }
+    }
+  }
+
+  @include it('Outputs field base small properties') {
+    @include assert {
+      @include output {
+        @include vanilla-field-base--small();
+      }
+      @include expect {
+        @include vanilla-field-base--small();
+      }
+    }
+  }
+
+  @include it('Outputs properties for field label') {
+    @include assert {
+      @include output {
+        @include vanilla-field-label();
+      }
+      @include expect {
+        @include vanilla-field-label();
+      }
+    }
+  }
+
+  @include it('Outputs properties for field label small') {
+    @include assert {
+      @include output {
+        @include vanilla-field-label--small();
+      }
+      @include expect {
+        @include vanilla-field-label--small();
+      }
+    }
+  }
+}

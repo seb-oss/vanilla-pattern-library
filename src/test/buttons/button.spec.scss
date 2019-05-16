@@ -1,0 +1,94 @@
+@import 'true';
+@import '../../components/buttons/_button-mixins.scss';
+@include describe('buttons _button-mixins.scss') {
+  @include it('Should compile vanilla-button') {
+    @include assert {
+      @include output {
+        @include vanilla-button();
+      }
+      @include expect {
+        @include vanilla-button();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button--small') {
+    @include assert {
+      @include output {
+        @include vanilla-button--small();
+      }
+      @include expect {
+        @include vanilla-button--small();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-secondary') {
+    @include assert {
+      @include output {
+        @include vanilla-button-secondary();
+      }
+      @include expect {
+        @include vanilla-button-secondary();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-alternative') {
+    @include assert {
+      @include output {
+        @include vanilla-button-alternative();
+      }
+      @include expect {
+        @include vanilla-button-alternative();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-link') {
+    @include assert {
+      @include output {
+        @include vanilla-button-link();
+      }
+      @include expect {
+        @include vanilla-button-link();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-ghost-light') {
+    @include assert {
+      @include output {
+        @include vanilla-button-ghost-light();
+      }
+      @include expect {
+        @include vanilla-button-ghost-light();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-ghost-dark') {
+    @include assert {
+      @include output {
+        @include vanilla-button-ghost-dark();
+      }
+      @include expect {
+        @include vanilla-button-ghost-dark();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-ghost') {
+    @include assert {
+      @include output {
+        @include vanilla-button-ghost();
+      }
+      @include expect {
+        @include vanilla-button-ghost();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-icon') {
+    @include assert {
+      @include output {
+        @include vanilla-button-icon('dummy arg');
+      }
+      @include expect {
+        @include vanilla-button-icon('dummy arg');
+      }
+    }
+  }
+}

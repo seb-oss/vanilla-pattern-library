@@ -1,0 +1,74 @@
+@import 'true';
+@import '../../components/breadcrumbs/_breadcrumbs-mixins.scss';
+@include describe('breadcrumbs _breadcrumbs-mixins.scss') {
+  @include it('Should compile vanilla-breadcrumbs') {
+    @include assert {
+      @include output {
+        @include vanilla-breadcrumbs();
+      }
+      @include expect {
+        @include vanilla-breadcrumbs();
+      }
+    }
+  }
+  @include it('Should compile vanilla-breadcrumbs__list') {
+    @include assert {
+      @include output {
+        @include vanilla-breadcrumbs__list();
+      }
+      @include expect {
+        @include vanilla-breadcrumbs__list();
+      }
+    }
+  }
+  @include it('Should compile vanilla-breadcrumbs__item') {
+    @include assert {
+      @include output {
+        @include vanilla-breadcrumbs__item();
+      }
+      @include expect {
+        @include vanilla-breadcrumbs__item();
+      }
+    }
+  }
+  @include it('Should compile vanilla-breadcrumbs__item--hidden') {
+    @include assert {
+      @include output {
+        @include vanilla-breadcrumbs__item--hidden();
+      }
+      @include expect {
+        @include vanilla-breadcrumbs__item--hidden();
+      }
+    }
+  }
+  @include it('Should compile vanilla-breadcrumbs__ellipsis') {
+    @include assert {
+      @include output {
+        @include vanilla-breadcrumbs__ellipsis();
+      }
+      @include expect {
+        @include vanilla-breadcrumbs__ellipsis();
+      }
+    }
+  }
+  @include it('Should compile vanilla-breadcrumbs__forward-chevron') {
+    @include assert {
+      @include output {
+        @include vanilla-breadcrumbs__forward-chevron();
+      }
+      @include expect {
+        @include vanilla-breadcrumbs__forward-chevron();
+      }
+    }
+  }
+  @include it('Should compile vanilla-breadcrumbs__back-chevron') {
+    @include assert {
+      @include output {
+        @include vanilla-breadcrumbs__back-chevron();
+      }
+      @include expect {
+        @include vanilla-breadcrumbs__back-chevron();
+      }
+    }
+  }
+}

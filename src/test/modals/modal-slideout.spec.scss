@@ -1,0 +1,104 @@
+@import 'true';
+@import '../../components/modals/_modal-slideout-mixins.scss';
+@include describe('modals _modal-slideout-mixins.scss') {
+  @include it('Should compile vanilla-modal-slideout-base') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout-base();
+      }
+      @include expect {
+        @include vanilla-modal-slideout-base();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__container') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__container();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__container();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__container--right') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__container--right();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__container--right();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__container--left') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__container--left();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__container--left();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__container--active') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__container--active();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__container--active();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__header') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__header();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__header();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__heading') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__heading();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__heading();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__close') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__close();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__close();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout__content') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout__content();
+      }
+      @include expect {
+        @include vanilla-modal-slideout__content();
+      }
+    }
+  }
+  @include it('Should compile vanilla-modal-slideout') {
+    @include assert {
+      @include output {
+        @include vanilla-modal-slideout();
+      }
+      @include expect {
+        @include vanilla-modal-slideout();
+      }
+    }
+  }
+}
