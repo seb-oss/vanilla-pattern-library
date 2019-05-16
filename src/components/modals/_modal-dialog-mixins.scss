@@ -1,5 +1,6 @@
 @import 'common';
 @import '../../variables';
+@import '../../mixins';
 
 ///
 /// @access public
@@ -32,12 +33,10 @@
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 
-  @include media-context($vanilla-breakpoints) {
-    @include media('>=tablet') {
-      align-self: center;
-      min-width: 30rem;
-      width: auto;
-    }
+  @include vanilla-media('>=tablet') {
+    align-self: center;
+    min-width: 30rem;
+    width: auto;
   }
 }
 
@@ -61,6 +60,10 @@
 
   button + button {
     margin-left: 1rem;
+    @include vanilla-media('<tablet') {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
 

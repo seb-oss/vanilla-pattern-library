@@ -81,6 +81,26 @@
       }
     }
   }
+  @include it('Should compile vanilla-button-delete') {
+    @include assert {
+      @include output {
+        @include vanilla-button-delete();
+      }
+      @include expect {
+        @include vanilla-button-delete();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-delete-confirm') {
+    @include assert {
+      @include output {
+        @include vanilla-button-delete-confirm();
+      }
+      @include expect {
+        @include vanilla-button-delete-confirm();
+      }
+    }
+  }
   @include it('Should compile vanilla-button-icon') {
     @include assert {
       @include output {
