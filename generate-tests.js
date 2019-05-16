@@ -3,6 +3,7 @@ const path = require('path');
 const sast = require('sast');
 const prettier = require('prettier');
 
+const prettierConfig = JSON.parse(fs.readFileSync('.prettierrc', 'utf8'));
 const testDirPath = './src/test';
 
 const traverseDirectory = dir => {
@@ -75,7 +76,10 @@ const generateMixinTest = async (file, filePath) => {
 
     const fd = fs.openSync(`${specDir}/${specFileName}`, 'w');
 
-    fs.writeSync(fd, prettier.format(code, { parser: 'scss' }));
+    fs.writeSync(
+      fd,
+      prettier.format(code, { parser: 'scss', ...prettierConfig })
+    );
   } catch (error) {
     return console.error('Parse error', filePath, error);
   }
