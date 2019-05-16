@@ -1,0 +1,89 @@
+@import '../../mixins';
+@import '../../functions';
+@import '../../variables';
+@import '../buttons/button-mixins';
+
+/// Stepper base
+///
+/// @access public
+@mixin vanilla-stepper-base() {
+  display: flex;
+  align-items: center;
+  border: 1px solid $vanilla-color-grey6;
+  border-radius: $vanilla-component-border-radius;
+
+  &:hover:not([disabled]) {
+    border-color: $vanilla-color-component-hover;
+  }
+
+  &:focus-within {
+    @include vanilla-focus-outline();
+    border-color: $vanilla-color-component-selected;
+  }
+
+  &[disabled] {
+    border-color: $vanilla-color-component-disabled-dark;
+    background: $vanilla-color-component-disabled-light;
+    color: $vanilla-color-component-disabled-dark;
+  }
+}
+
+/// Stepper value
+///
+/// @access public
+@mixin vanilla-stepper__value() {
+  font-size: vanilla-px-to-rem(24px);
+  min-width: vanilla-px-to-rem(64);
+  margin: 0 0.2em;
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 500;
+}
+
+/// Stepper button
+///
+/// @access public
+@mixin vanilla-stepper__button() {
+  @include vanilla-button();
+  @include vanilla-button-alternative();
+
+  margin: 0; // Safari adds a margin around the button
+
+  &:disabled {
+    border: 0;
+  }
+
+  &:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &:last-of-type {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  i {
+    font-size: vanilla-px-to-rem(24px);
+    vertical-align: sub;
+  }
+}
+
+/// Stepper component
+///
+/// @access public
+@mixin vanilla-stepper() {
+  @include vanilla-stepper-base();
+
+  &__value {
+    @include vanilla-stepper__value();
+  }
+
+  &__button {
+    @include vanilla-stepper__button();
+  }
+}

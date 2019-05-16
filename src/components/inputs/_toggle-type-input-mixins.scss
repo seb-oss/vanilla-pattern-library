@@ -1,0 +1,147 @@
+@import '../../variables';
+@import '../../mixins';
+
+///
+/// @access public
+@mixin vanilla-toggle-base__label() {
+  display: inline-block;
+  border-radius: $vanilla-component-border-radius;
+  position: relative;
+  min-height: 2em;
+  padding: 0.5em 0.75em 0.5em 2.5em;
+
+  &:hover::before {
+    border-color: $vanilla-color-component-selected;
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-switch__label() {
+  @include vanilla-toggle-base__label();
+  padding: 0.5em 0.75em 0.5em 4em;
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-base__label-before() {
+  display: block;
+  content: '';
+  margin: 0 0.5em vanilla-px-to-em(-2px) 0;
+  position: absolute;
+  visibility: visible;
+  outline: none;
+  font-size: 1em;
+  border: vanilla-px-to-em(1px) solid $vanilla-color-component-disabled-darker;
+  transition: 250ms;
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-radio__label-before() {
+  @include vanilla-toggle-base__label-before();
+  background-color: $vanilla-color-white;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  top: 0.5em + 0.25em;
+  left: 0.75em;
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-switch__label-before() {
+  @include vanilla-toggle-base__label-before();
+  width: vanilla-px-to-em(40px);
+  height: vanilla-px-to-em(20px);
+  border-radius: vanilla-px-to-em(20px);
+  top: vanilla-px-to-em(10px);
+  left: 0.75em;
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-checkbox__label-before() {
+  @include vanilla-toggle-base__label-before();
+  background-color: $vanilla-color-white;
+  width: 1em;
+  height: 1em;
+  top: 0.5em + 0.25em;
+  left: 0.75em;
+}
+
+/// Shared styles for radio buttons, checkboxes and toggle switches
+///
+/// @access public
+/// @param $_type radio, checkbox or switch
+@mixin vanilla-toggle-base($_type) {
+  display: inline-block;
+  border-color: transparent;
+  height: auto;
+
+  input {
+    appearance: none;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+  }
+
+  &:hover {
+    border-color: transparent;
+  }
+
+  label {
+    @if ($_type == 'switch') {
+      @include vanilla-toggle-switch__label();
+    } @else {
+      @include vanilla-toggle-base__label();
+    }
+
+    &::before {
+      @if ($_type == 'radio') {
+        @include vanilla-toggle-radio__label-before();
+      }
+      @if ($_type == 'switch') {
+        @include vanilla-toggle-switch__label-before();
+      }
+      @if ($_type == 'checkbox') {
+        @include vanilla-toggle-checkbox__label-before();
+      }
+    }
+  }
+
+  input:focus + label {
+    box-shadow: 0 0 0 vanilla-px-to-em(1px) $vanilla-color-component-selected;
+  }
+
+  input:focus + label::before {
+    @include vanilla-focus-outline();
+    border-color: $vanilla-color-component-selected;
+  }
+
+  [disabled] {
+    background-color: transparent;
+
+    &:checked + label::after {
+      //border-color: $vanilla-color-component-disabled-dark;
+      @if ($_type == 'radio') {
+        background-color: $vanilla-color-component-disabled-dark !important;
+      }
+    }
+
+    &:checked + label::before {
+      @if ($_type == 'checkbox' or $_type == 'switch') {
+        background-color: $vanilla-color-component-disabled-dark !important;
+        border-color: $vanilla-color-component-disabled-dark;
+      }
+    }
+
+    + label::before {
+      border-color: $vanilla-color-component-disabled-dark;
+    }
+
+    + label {
+      color: $vanilla-color-component-disabled-dark;
+    }
+  }
+}

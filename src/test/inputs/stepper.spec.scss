@@ -1,0 +1,44 @@
+@import 'true';
+@import '../../components/inputs/_stepper-mixins.scss';
+@include describe('inputs _stepper-mixins.scss') {
+  @include it('Should compile vanilla-stepper-base') {
+    @include assert {
+      @include output {
+        @include vanilla-stepper-base();
+      }
+      @include expect {
+        @include vanilla-stepper-base();
+      }
+    }
+  }
+  @include it('Should compile vanilla-stepper__value') {
+    @include assert {
+      @include output {
+        @include vanilla-stepper__value();
+      }
+      @include expect {
+        @include vanilla-stepper__value();
+      }
+    }
+  }
+  @include it('Should compile vanilla-stepper__button') {
+    @include assert {
+      @include output {
+        @include vanilla-stepper__button();
+      }
+      @include expect {
+        @include vanilla-stepper__button();
+      }
+    }
+  }
+  @include it('Should compile vanilla-stepper') {
+    @include assert {
+      @include output {
+        @include vanilla-stepper();
+      }
+      @include expect {
+        @include vanilla-stepper();
+      }
+    }
+  }
+}
