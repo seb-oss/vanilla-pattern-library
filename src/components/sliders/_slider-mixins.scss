@@ -1,0 +1,132 @@
+////
+/// Mixins for sliders
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import '../../variables';
+@import '../../utilities';
+@import '../inputs/common';
+
+$vanilla-slider-track-width: 100% !default;
+$vanilla-slider-track-height: 0.25em !default;
+$vanilla-slider-thumb-w: vanilla-px-to-em(56) !default;
+$vanilla-slider-thumb-height: vanilla-px-to-em(32) !default;
+$_vanilla-slider-track-color: $vanilla-color-grey7;
+$_vanilla-slider-thumb-color: $vanilla-color-component-normal;
+
+///
+/// @access public
+@mixin vanilla-slider-label {
+  @include vanilla-field-label();
+  display: flex;
+  justify-content: space-between;
+
+  label,
+  &__label {
+    padding-top: 0.8em;
+  }
+
+  input {
+    max-width: 50%;
+  }
+}
+
+@mixin vanilla-slider__container() {
+  margin: 0;
+  padding: 0;
+  width: $vanilla-slider-track-width;
+  height: $vanilla-slider-thumb-height;
+  background: transparent;
+  font-size: 1em;
+}
+
+///
+/// @access public
+@mixin vanilla-slider-track($fill: 0) {
+  box-sizing: border-box;
+  border: 0;
+  width: $vanilla-slider-track-width;
+  height: $vanilla-slider-track-height;
+  background: $_vanilla-slider-track-color;
+  position: relative;
+
+  // @if $fill == 1 {
+  //   .js & {
+  //     background: linear-gradient($filll-c, $filll-c)
+  //       0 /
+  //       var(--sx)
+  //       100%
+  //       no-repeat
+  //       $track-c;
+  //   }
+  // }
+}
+
+///
+/// @access public
+@mixin vanilla-slider-fill() {
+  height: $vanilla-slider-track-height;
+  background: $_vanilla-slider-thumb-color;
+}
+
+///
+/// @access public
+@mixin vanilla-slider-thumb() {
+  box-sizing: border-box;
+  border: 0;
+  width: $vanilla-slider-thumb-w;
+  height: $vanilla-slider-thumb-height;
+  border-radius: $vanilla-component-border-radius;
+  background: $_vanilla-slider-thumb-color;
+  position: absolute;
+  top: 0.5 * ($vanilla-slider-track-height - $vanilla-slider-thumb-height);
+}
+
+///
+/// @access public
+@mixin vanilla-range-input {
+  @include vanilla-slider__container();
+
+  &,
+  &::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include vanilla-slider-track(1);
+  }
+
+  &::-moz-range-track {
+    @include vanilla-slider-track(1);
+  }
+
+  &::-ms-track {
+    @include vanilla-slider-track(1);
+  }
+
+  &::-moz-range-progress {
+    @include vanilla-slider-fill;
+  }
+
+  &::-ms-fill-lower {
+    @include vanilla-slider-fill;
+  }
+
+  &::-webkit-slider-thumb {
+    @include vanilla-slider-thumb;
+  }
+
+  &::-moz-range-thumb {
+    @include vanilla-slider-thumb;
+  }
+
+  &::-ms-thumb {
+    @include vanilla-slider-thumb;
+    margin-top: 0;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+}

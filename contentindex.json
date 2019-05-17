@@ -422,6 +422,28 @@
 					"type": "directory"
 				},
 				{
+					"title": "Sliders",
+					"shortpath": "sliders",
+					"longpath": "src/components/sliders",
+					"items": [
+						{
+							"filename": "slider.md",
+							"filepath": "components/sliders/slider.md",
+							"shortpath": "components/sliders/slider",
+							"longpath": "src/components/sliders/slider.md",
+							"type": "file",
+							"title": "Slider",
+							"guid": "component-slider-default",
+							"variantid": "default",
+							"componentid": "component-slider",
+							"private": false
+						}
+					],
+					"filecount": 1,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Sticky-bars",
 					"shortpath": "sticky-bars",
 					"longpath": "src/components/sticky-bars",
@@ -557,7 +579,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 13,
+			"directorycount": 14,
 			"type": "directory"
 		},
 		{
