@@ -1,4 +1,4 @@
 {
 	"version": "4.3.1",
-	"davanmonetVersion": "1.4.7"
+	"davanmonetVersion": "^1.4.9"
 }
