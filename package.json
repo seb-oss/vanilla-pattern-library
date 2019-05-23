@@ -10,7 +10,7 @@
     "build-pl": "node node_modules/davanmonet/dvm-build/build-patternlibrary.js",
     "build": "npm run build-dvm && npm run build-pl",
     "test": "mocha src/test/test-sass.js",
-    "lint": "stylelint 'src/**/*.scss'",
+    "lint": "stylelint src/**/*.scss",
     "sassdoc": "node node_modules/sassdoc/bin/sassdoc src",
     "commit": "git-cz",
     "travis-deploy-once": "travis-deploy-once --pro",
