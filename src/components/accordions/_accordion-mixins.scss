@@ -4,13 +4,13 @@
 /// @author Digital CX
 ////
 
+@import '~include-media/dist/include-media';
+
 @import '../../colors';
 @import '../../utilities';
 @import '../../variables';
 @import '../../functions';
 @import '../../mixins';
-
-@import '~include-media/dist/include-media';
 
 $vanilla-accordion-icon-size: 0.9em;
 $vanilla-accordion-left-margin: 2.5rem;
@@ -74,11 +74,15 @@ $vanilla-accordion-left-margin: 2.5rem;
   // Icon
   &::before {
     @include vanilla-icon('\F078', $_space: $vanilla-accordion-left-margin);
-    @include vanilla-icon-rotate(0, $transform-origin: '50% 48%');
+    @include vanilla-icon-rotate(0);
     flex-shrink: 0;
-    line-height: $vanilla-accordion-left-margin;
+    line-height: 0;
     transition: 0.3s;
     font-size: $vanilla-accordion-icon-size;
+
+    height: auto;
+    align-self: flex-start;
+    margin-top: $vanilla-accordion-left-margin / 2;
   }
 
   &:hover {
@@ -126,13 +130,16 @@ $vanilla-accordion-left-margin: 2.5rem;
 @mixin vanilla-accordion__header--expanded() {
   // Change icon rotation
   &::before {
-    @include vanilla-icon-rotate(-180, $transform-origin: '50% 48%');
+    @include vanilla-icon-rotate(-180);
     font-style: normal;
     font-weight: normal;
     text-decoration: inherit;
     transition: 0.3s;
     margin-top: vanilla-px-to-em(1px);
     margin-bottom: vanilla-px-to-em(-1px);
+    height: auto;
+    align-self: flex-start;
+    margin-top: $vanilla-accordion-left-margin / 2;
   }
 }
 
