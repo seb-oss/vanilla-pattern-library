@@ -1,5 +1,4 @@
-@import '../buttons/button-mixins';
-@import 'input_base';
+@import 'dropdown-mixins';
 
 @include _vanilla-exports('vanilla-fld-dropdown') {
   .sdv-field-dropdown {
