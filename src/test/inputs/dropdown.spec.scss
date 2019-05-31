@@ -1,0 +1,44 @@
+@import 'true';
+@import '../../components/inputs/_dropdown-mixins.scss';
+@include describe('inputs _dropdown-mixins.scss') {
+  @include it('Should compile vanilla-field-dropdown-button') {
+    @include assert {
+      @include output {
+        @include vanilla-field-dropdown-button();
+      }
+      @include expect {
+        @include vanilla-field-dropdown-button();
+      }
+    }
+  }
+  @include it('Should compile vanilla-field-dropdown-options') {
+    @include assert {
+      @include output {
+        @include vanilla-field-dropdown-options();
+      }
+      @include expect {
+        @include vanilla-field-dropdown-options();
+      }
+    }
+  }
+  @include it('Should compile vanilla-field-dropdown-button--small') {
+    @include assert {
+      @include output {
+        @include vanilla-field-dropdown-button--small();
+      }
+      @include expect {
+        @include vanilla-field-dropdown-button--small();
+      }
+    }
+  }
+  @include it('Should compile vanilla-field-dropdown-native') {
+    @include assert {
+      @include output {
+        @include vanilla-field-dropdown-native();
+      }
+      @include expect {
+        @include vanilla-field-dropdown-native();
+      }
+    }
+  }
+}

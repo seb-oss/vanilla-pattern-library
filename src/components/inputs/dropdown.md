@@ -84,4 +84,15 @@ In addition to the classes shown in the example below, this component can be use
 </div>
 ```
 
+## Native select dropdown
+
+```html
+<select class="sdv-field-dropdown-native">
+  <option>Dropdown value 1</option>
+  <option>Dropdown value 2</option>
+  <option>Dropdown value 3</option>
+  <option>Dropdown value 4</option>
+</select>
+```
+
 :::

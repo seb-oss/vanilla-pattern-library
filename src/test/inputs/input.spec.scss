@@ -21,36 +21,6 @@
       }
     }
   }
-  @include it('Should compile vanilla-field-dropdown-button') {
-    @include assert {
-      @include output {
-        @include vanilla-field-dropdown-button();
-      }
-      @include expect {
-        @include vanilla-field-dropdown-button();
-      }
-    }
-  }
-  @include it('Should compile vanilla-field-dropdown-options') {
-    @include assert {
-      @include output {
-        @include vanilla-field-dropdown-options();
-      }
-      @include expect {
-        @include vanilla-field-dropdown-options();
-      }
-    }
-  }
-  @include it('Should compile vanilla-field-dropdown-button--small') {
-    @include assert {
-      @include output {
-        @include vanilla-field-dropdown-button--small();
-      }
-      @include expect {
-        @include vanilla-field-dropdown-button--small();
-      }
-    }
-  }
   @include it('Should compile vanilla-field-toggle-selector') {
     @include assert {
       @include output {
