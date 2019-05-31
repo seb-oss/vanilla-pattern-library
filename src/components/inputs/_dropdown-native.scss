@@ -1,0 +1,7 @@
+@import 'dropdown-mixins';
+
+@include _vanilla-exports('vanilla-fld-dropdown-native') {
+  .sdv-field-dropdown-native {
+    @include vanilla-field-dropdown-native();
+  }
+}
