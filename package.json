@@ -68,7 +68,7 @@
     "prettier": "^1.17.0",
     "pretty-quick": "^1.10.0",
     "replace": "^1.0.1",
-    "sass-true": "^4.0.0",
+    "sass-true": "^5.0.0",
     "sassdoc": "^2.5.0",
     "sast": "^0.8.1",
     "semantic-release": "^16.0.0-beta.18",
