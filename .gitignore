@@ -138,4 +138,10 @@ dist
 
 # Sassdoc output (generate with npm run sassdoc)
 sassdoc
+
 /.npmrc
+
+# Secrets
+.gitsecret/keys/random_seed
+!*.secret
+applitools.key.js
