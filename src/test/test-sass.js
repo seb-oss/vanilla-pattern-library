@@ -26,7 +26,9 @@ traverseTestsSync(__dirname).forEach(file => {
       file,
       importer: tildeImporter
     },
-    describe,
-    it
+    {
+      describe,
+      it
+    }
   );
 });
