@@ -3,8 +3,7 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![Build Status](https://travis-ci.com/sebgroup/vanilla-pattern-library.svg?branch=dev)](https://travis-ci.com/sebgroup/vanilla-pattern-library)
-[![Next Version](https://img.shields.io/npm/v/@sebgroup/vanilla/next.svg)](https://www.npmjs.com/package/@sebgroup/vanilla)
-[![Stable Version](https://img.shields.io/npm/v/@sebgroup/vanilla/latest.svg)](https://www.npmjs.com/package/@sebgroup/vanilla)
+[![Stable Version](https://img.shields.io/npm/v/@sebgroup/vanilla/latest.svg)](https://www.npmjs.com/package/@sebgroup/vanilla) [![Greenkeeper badge](https://badges.greenkeeper.io/sebgroup/vanilla-pattern-library.svg)](https://greenkeeper.io/)
 
 Vanilla contains basic HTML-only versions of SEB's web components.
 

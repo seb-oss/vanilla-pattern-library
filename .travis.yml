@@ -1,24 +1,25 @@
 dist: trusty
 sudo: false
 language: node_js
-node_js: node
+node_js: lts/*
 
 install:
-- npm run add-fa-config
-- npm ci
+  - npm run add-fa-config
+  - npm ci
 
 cache:
   directories:
-  - $HOME/.npm
+    - $HOME/.npm
 
 script:
-- npm run build
+  - npm run test
+  - npm run build
 
 after_success:
-- npm run travis-deploy-once "npm run semantic-release"
+  - npm run travis-deploy-once "npm run semantic-release"
 
 before_deploy:
-- npm run build-demo-site
+  - npm run build-demo-site
 
 deploy:
   - provider: pages
@@ -31,4 +32,4 @@ deploy:
 
 branches:
   except:
-  - /^v\d+\.\d+\.\d+$/
+    - /^v\d+\.\d+\.\d+$/

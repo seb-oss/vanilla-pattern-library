@@ -4,6 +4,8 @@
 /// @author Digital CX
 ////
 
+@import 'variables';
+
 /// Adds an icon to the element
 ///
 /// @access public
@@ -20,7 +22,7 @@
   $_space: 3rem
 ) {
   $_icon-space: $_space;
-  font-family: "Font Awesome 5 Pro";
+  font-family: 'Font Awesome 5 Pro';
   content: $_glyph;
   color: $_color;
   height: $_icon-space;
@@ -49,15 +51,29 @@
 /// @param $rotation rotation in degrees
 /// @require vanilla-icon
 @mixin vanilla-icon-rotate($rotation, $speed: 250ms, $transform-origin: null) {
-  transform: rotate(#{$rotation + "deg"});
+  transform: rotate(#{$rotation + 'deg'});
   transition: transform $speed;
-  transform-origin: $transform-origin;
+  @if $transform-origin {
+    transform-origin: #{$transform-origin};
+  }
 }
 
 /// Add focus outline to element
 ///
 /// @access public
 @mixin vanilla-focus-outline() {
-  box-shadow: 0px 0px 0px 3px rgba($vanilla-color-component-selected, 0.2);
+  box-shadow: 0 0 0 3px rgba($vanilla-color-component-selected, 0.2);
   transition: box-shadow 250ms;
+}
+
+/// Create a media query block with the vanilla breakpoints' context
+///
+/// @access public
+/// @param {String[]} $_media-expression
+@mixin vanilla-media($_media-expression) {
+  @include media-context($vanilla-breakpoints) {
+    @include media($_media-expression) {
+      @content;
+    }
+  }
 }

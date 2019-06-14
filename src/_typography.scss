@@ -4,18 +4,12 @@
 /// @author Digital CX
 ////
 
-@import "variables";
-
+@import 'variables';
+@import 'colors';
+@import 'node_modules/include-media/dist/include-media';
 
 $seb-font-path: $vanilla-font-basepath;
-@import "~@sebgroup/fonts/scss/seb-fonts";
-
-// @include _vanilla-exports("seb-font-family-placeholder-class") {
-//   %vanilla-font-family {
-//     font-family: $vanilla-font-seb-sans-serif;
-//     // * { font-family: inherit; }
-//   }
-// }
+@import '~@sebgroup/fonts/scss/seb-fonts';
 
 /// Body element defaults. Sets font-family and font size for all viewports
 /// @access public
@@ -25,29 +19,35 @@ $seb-font-path: $vanilla-font-basepath;
   color: $vanilla-color-text;
   line-height: 1.5;
   @include media-context($vanilla-breakpoints) {
-    @include media(">mobile") {
-      font-size: map-get(map-get($vanilla-font-settings-body, "mobile"), "size");
-      font-weight: map-get(
-        map-get($vanilla-font-settings-body, "mobile"),
-        "weight"
+    @include media('>mobile') {
+      font-size: map-get(
+        map-get($vanilla-font-settings-body, 'mobile'),
+        'size'
       );
-      //line-height: map-get(map-get($vanilla-font-settings-body, 'mobile'), 'size') + vanilla-px-to-rem(4);
+      font-weight: map-get(
+        map-get($vanilla-font-settings-body, 'mobile'),
+        'weight'
+      );
     }
-    @include media(">tablet") {
-      font-size: map-get(map-get($vanilla-font-settings-body, "tablet"), "size");
-      font-weight: map-get(
-        map-get($vanilla-font-settings-body, "tablet"),
-        "weight"
+    @include media('>tablet') {
+      font-size: map-get(
+        map-get($vanilla-font-settings-body, 'tablet'),
+        'size'
       );
-      //line-height: map-get(map-get($vanilla-font-settings-body, 'tablet'), 'size') + vanilla-px-to-rem(4);
+      font-weight: map-get(
+        map-get($vanilla-font-settings-body, 'tablet'),
+        'weight'
+      );
     }
-    @include media(">desktop") {
-      font-size: map-get(map-get($vanilla-font-settings-body, "desktop"), "size");
-      font-weight: map-get(
-        map-get($vanilla-font-settings-body, "desktop"),
-        "weight"
+    @include media('>desktop') {
+      font-size: map-get(
+        map-get($vanilla-font-settings-body, 'desktop'),
+        'size'
       );
-      //line-height: map-get(map-get($vanilla-font-settings-body, 'desktop'), 'size') + vanilla-px-to-rem(4);
+      font-weight: map-get(
+        map-get($vanilla-font-settings-body, 'desktop'),
+        'weight'
+      );
     }
   }
 }
@@ -57,35 +57,35 @@ $seb-font-path: $vanilla-font-basepath;
 /// @param {String} $level - Heading level. h1 - h6 and ´display´
 @mixin vanilla-typography-heading($level) {
   $headings: (
-    "display": $vanilla-font-settings-h-display,
-    "h1": $vanilla-font-settings-h1,
-    "h2": $vanilla-font-settings-h2,
-    "h3": $vanilla-font-settings-h3,
-    "h4": $vanilla-font-settings-h4,
-    "h5": $vanilla-font-settings-h5,
-    "h6": $vanilla-font-settings-h6
+    'display': $vanilla-font-settings-h-display,
+    'h1': $vanilla-font-settings-h1,
+    'h2': $vanilla-font-settings-h2,
+    'h3': $vanilla-font-settings-h3,
+    'h4': $vanilla-font-settings-h4,
+    'h5': $vanilla-font-settings-h5,
+    'h6': $vanilla-font-settings-h6
   );
 
-  margin: 0 0 vanilla-px-to-rem(8);
-
   $use_heading: map-get($headings, $level);
+
+  margin: 0 0 vanilla-px-to-rem(8);
   @include media-context($vanilla-breakpoints) {
-    @include media(">mobile") {
-      font-size: map-get(map-get($use_heading, "mobile"), "size");
-      font-weight: map-get(map-get($use_heading, "mobile"), "weight");
-      line-height: map-get(map-get($use_heading, "mobile"), "size") +
+    @include media('>mobile') {
+      font-size: map-get(map-get($use_heading, 'mobile'), 'size');
+      font-weight: map-get(map-get($use_heading, 'mobile'), 'weight');
+      line-height: map-get(map-get($use_heading, 'mobile'), 'size') +
         vanilla-px-to-rem(8);
     }
-    @include media(">tablet") {
-      font-size: map-get(map-get($use_heading, "tablet"), "size");
-      font-weight: map-get(map-get($use_heading, "tablet"), "weight");
-      line-height: map-get(map-get($use_heading, "tablet"), "size") +
+    @include media('>tablet') {
+      font-size: map-get(map-get($use_heading, 'tablet'), 'size');
+      font-weight: map-get(map-get($use_heading, 'tablet'), 'weight');
+      line-height: map-get(map-get($use_heading, 'tablet'), 'size') +
         vanilla-px-to-rem(8);
     }
-    @include media(">desktop") {
-      font-size: map-get(map-get($use_heading, "desktop"), "size");
-      font-weight: map-get(map-get($use_heading, "desktop"), "weight");
-      line-height: map-get(map-get($use_heading, "desktop"), "size") +
+    @include media('>desktop') {
+      font-size: map-get(map-get($use_heading, 'desktop'), 'size');
+      font-weight: map-get(map-get($use_heading, 'desktop'), 'weight');
+      line-height: map-get(map-get($use_heading, 'desktop'), 'size') +
         vanilla-px-to-rem(8);
     }
   }
@@ -95,34 +95,34 @@ $seb-font-path: $vanilla-font-basepath;
 /// @access public
 @mixin vanilla-typography-small-text() {
   @include media-context($vanilla-breakpoints) {
-    @include media(">mobile") {
+    @include media('>mobile') {
       font-size: map-get(
-        map-get($vanilla-font-settings-body-small, "mobile"),
-        "size"
+        map-get($vanilla-font-settings-body-small, 'mobile'),
+        'size'
       );
       font-weight: map-get(
-        map-get($vanilla-font-settings-body-small, "mobile"),
-        "weight"
+        map-get($vanilla-font-settings-body-small, 'mobile'),
+        'weight'
       );
     }
-    @include media(">tablet") {
+    @include media('>tablet') {
       font-size: map-get(
-        map-get($vanilla-font-settings-body-small, "tablet"),
-        "size"
+        map-get($vanilla-font-settings-body-small, 'tablet'),
+        'size'
       );
       font-weight: map-get(
-        map-get($vanilla-font-settings-body-small, "tablet"),
-        "weight"
+        map-get($vanilla-font-settings-body-small, 'tablet'),
+        'weight'
       );
     }
-    @include media(">desktop") {
+    @include media('>desktop') {
       font-size: map-get(
-        map-get($vanilla-font-settings-body-small, "desktop"),
-        "size"
+        map-get($vanilla-font-settings-body-small, 'desktop'),
+        'size'
       );
       font-weight: map-get(
-        map-get($vanilla-font-settings-body-small, "desktop"),
-        "weight"
+        map-get($vanilla-font-settings-body-small, 'desktop'),
+        'weight'
       );
     }
   }

@@ -1,0 +1,11 @@
+@import 'button-primary';
+
+@include _vanilla-exports('vanilla-button-delete') {
+  .sdv-button-delete {
+    @include vanilla-button-delete();
+  }
+
+  .sdv-button-delete-confirm {
+    @include vanilla-button-delete-confirm();
+  }
+}

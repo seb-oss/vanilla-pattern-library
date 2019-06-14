@@ -1,13 +1,11 @@
 @import 'button-mixins';
 
 @include _vanilla-exports('vanilla-button-primary') {
-    .sdv-button
-    {
-        @include vanilla-button();
-    }
+  .sdv-button {
+    @include vanilla-button();
+  }
 
-    .sdv-button--small
-    {
-        @include vanilla-button--small();
-    }
+  .sdv-button--small {
+    @include vanilla-button--small();
+  }
 }

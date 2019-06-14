@@ -1,0 +1,34 @@
+@import 'true';
+@import '../../components/inputs/_input-mixins.scss';
+@include describe('inputs _input-mixins.scss') {
+  @include it('Should compile vanilla-field-toggle-wrap') {
+    @include assert {
+      @include output {
+        @include vanilla-field-toggle-wrap();
+      }
+      @include expect {
+        @include vanilla-field-toggle-wrap();
+      }
+    }
+  }
+  @include it('Should compile vanilla-field-radio-wrap') {
+    @include assert {
+      @include output {
+        @include vanilla-field-radio-wrap();
+      }
+      @include expect {
+        @include vanilla-field-radio-wrap();
+      }
+    }
+  }
+  @include it('Should compile vanilla-field-toggle-selector') {
+    @include assert {
+      @include output {
+        @include vanilla-field-toggle-selector();
+      }
+      @include expect {
+        @include vanilla-field-toggle-selector();
+      }
+    }
+  }
+}

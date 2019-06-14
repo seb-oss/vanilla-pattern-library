@@ -1,6 +1,6 @@
-@import "breadcrumbs-mixins";
+@import 'breadcrumbs-mixins';
 
-@include _vanilla-exports("vanilla-breadcrumbs") {
+@include _vanilla-exports('vanilla-breadcrumbs') {
   .sdv-breadcrumbs {
     @include vanilla-breadcrumbs();
   }

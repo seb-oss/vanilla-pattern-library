@@ -4,10 +4,13 @@
 /// @author Digital CX
 ////
 
-@import "../../variables";
-@import "../../functions";
-@import "../../utilities";
-@import "../../icons";
+@import '../../variables';
+@import '../../functions';
+@import '../../utilities';
+@import '../../icons';
+@import '../../colors';
+
+@import '~include-media/dist/include-media';
 
 @mixin vanilla-datepicker__container {
   border-radius: $vanilla-component-border-radius;
@@ -17,8 +20,8 @@
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
-        min-width: 100%;
-        border-width: 0px;
+      min-width: 100%;
+      border-width: 0;
     }
   }
 }
@@ -58,7 +61,7 @@
 
     &:disabled {
       border-radius: 0;
-      border: 0px solid transparent;
+      border: 0 solid transparent;
     }
   }
 }

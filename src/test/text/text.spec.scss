@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../components/text/_text-mixins.scss';
+@include describe('text _text-mixins.scss') {
+  @include it('Should compile vanilla-preamble') {
+    @include assert {
+      @include output {
+        @include vanilla-preamble();
+      }
+      @include expect {
+        @include vanilla-preamble();
+      }
+    }
+  }
+}

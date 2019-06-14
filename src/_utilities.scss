@@ -16,10 +16,13 @@ $vanilla-imported-modules: () !default;
 /// @require $imported-modules
 @mixin _vanilla-exports($_name, $_warn: false) {
   @if (index($vanilla-imported-modules, $_name) == null) {
-    $vanilla-imported-modules: append($vanilla-imported-modules, $_name) !global;
+    $vanilla-imported-modules: append(
+      $vanilla-imported-modules,
+      $_name
+    ) !global;
     @content;
   } @else if $_warn == true {
-    @warn "Module `#{$name}` has already been imported.";
+    @warn 'Module `#{$name}` has already been imported.';
   }
 }
 
@@ -27,6 +30,7 @@ $vanilla-imported-modules: () !default;
   .sdv-align-left {
     text-align: left;
   }
+
   .sdv-align-right {
     text-align: right;
   }

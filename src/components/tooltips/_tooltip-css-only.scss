@@ -1,0 +1,7 @@
+@import 'tooltip-mixins';
+
+@include _vanilla-exports('vanilla-tooltip-css-only') {
+  .sdv-tooltip-css {
+    @include vanilla-tooltip-css-only();
+  }
+}

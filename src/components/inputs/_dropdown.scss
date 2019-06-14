@@ -1,13 +1,14 @@
-@import "../buttons/button-mixins";
-@import "input_base";
+@import 'dropdown-mixins';
 
-@include _vanilla-exports("vanilla-fld-dropdown") {
+@include _vanilla-exports('vanilla-fld-dropdown') {
   .sdv-field-dropdown {
     position: relative;
   }
+
   .sdv-field-dropdown__label {
     @include vanilla-field-dropdown-button();
   }
+
   .sdv-field-dropdown__options {
     @include vanilla-field-dropdown-options();
   }

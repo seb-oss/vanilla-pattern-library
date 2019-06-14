@@ -4,99 +4,51 @@
 /// @author Digital CX
 ////
 
-@import "../../utilities";
-@import "../../variables";
-@import "../../functions";
-@import "node_modules/include-media/dist/include-media";
+@import '~include-media/dist/include-media';
+
+@import '../../colors';
+@import '../../utilities';
+@import '../../variables';
+@import '../../functions';
+@import '../../mixins';
+
+$vanilla-accordion-icon-size: 0.9em;
+$vanilla-accordion-left-margin: 2.5rem;
 
 /// Mixes in accordion styles
 ///
 /// @access public
 @mixin vanilla-accordion() {
-  $_indicator-width: vanilla-px-to-em(3px);
   margin: 0;
+  border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
 
   &__header {
-    font-weight: 500;
-    font-size: vanilla-px-to-em(20px);
-    //order-left: $_indicator-width solid $vanilla-color-white;
-    //margin-left: -#{$_indicator-width};
-    //border-top: vanilla-px-to-em(1px) solid $vanilla-color-white;
-    padding-right: 0.75em;
-    display: flex;
+    @include vanilla-accordion__header();
 
-    &:first-of-type {
-      border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
+    + * {
+      @include vanilla-accordion__content-section();
     }
 
-    // Icon
-    &:before {
-      @include vanilla-icon("\F078", $_space: 3rem);
-      //@include vanilla-icon-rotate(0, 500ms, 50% 45%);
-      flex-shrink: 0;
-      line-height: 2em;
-    }
+    > * {
+      @include vanilla-accordion__headline();
 
-    //Hover
-    &:hover {
-      background-color: $vanilla-color-grey9;   
-    }
-
-    // Expandable section
-    & + * {
-      height: 0;
-      overflow: hidden;
-      //border-top: vanilla-px-to-em(1px) solid $vanilla-color-white;
-      border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
-      margin: 0 0 0 0;
-      padding: 0 1em 0 3em;
-    }
-
-    // Headline
-    & > * {
-      display: inline;
-      flex-grow: 1;
-      margin:  0 0 0 -3em;
-      padding: 0.3em 0 0.3em 3em;
-      position: relative;
-      z-index: 999;
-      cursor: pointer;
-
-      // Sub-headline
-      & > * {
-        display: block;
-        font-size: 0.65em;
-        font-weight: normal;
-        font-style: normal;
+      > * {
+        @include vanilla-accordion__sub-headline();
       }
     }
 
     &--expanded,
     input:checked + & {
-      //border-color: $vanilla-color-green;
-      //background-color: $vanilla-color-grey9;
-      //border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8; 
-      //border-bottom: vanilla-px-to-em(1px) solid $vanilla-color-grey8;  
+      @include vanilla-accordion__header--expanded();
 
-
-      // Change icon rotation
-      &:before {
-        //@include vanilla-icon-rotate(180, 500ms, 50% 45%);
-        transform: rotate(180deg);
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        margin-top: vanilla-px-to-em(-5px);
-      }
-
-      & + * {
-        height: auto;
-        //background-color: $vanilla-color-grey9;
+      + * {
+        @include vanilla-accordion__content-section--expanded();
       }
     }
 
     input:focus + & {
       @include vanilla-focus-outline();
+      background-color: $vanilla-color-grey9;
     }
   }
 
@@ -106,4 +58,95 @@
     z-index: -1;
     left: -999rem;
   }
+}
+
+/// Accordion header
+///
+/// @access public
+@mixin vanilla-accordion__header() {
+  font-weight: 500;
+  font-size: vanilla-px-to-rem(20px);
+  padding: vanilla-px-to-em(2) 0;
+  padding-right: 0.75em;
+  display: flex;
+  border-top: vanilla-px-to-em(1px) solid $vanilla-color-grey8;
+
+  // Icon
+  &::before {
+    @include vanilla-icon('\F078', $_space: $vanilla-accordion-left-margin);
+    @include vanilla-icon-rotate(0);
+    flex-shrink: 0;
+    line-height: 0;
+    transition: 0.3s;
+    font-size: $vanilla-accordion-icon-size;
+
+    height: auto;
+    align-self: flex-start;
+    margin-top: $vanilla-accordion-left-margin / 2;
+  }
+
+  &:hover {
+    background-color: $vanilla-color-grey9;
+  }
+}
+
+/// Accordion content section
+///
+/// @access public
+@mixin vanilla-accordion__content-section() {
+  height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 1em 0 $vanilla-accordion-left-margin;
+  transition: 0.3s;
+}
+
+/// Accordion headline
+///
+/// @access public
+@mixin vanilla-accordion__headline() {
+  display: inline;
+  flex-grow: 1;
+  margin: 0 0 0 -#{$vanilla-accordion-left-margin};
+  padding: 0.3em 0 0.3em $vanilla-accordion-left-margin;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+}
+
+/// Accordion sub headline
+///
+/// @access public
+@mixin vanilla-accordion__sub-headline() {
+  display: block;
+  font-size: 0.65em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/// Accordion header, expanded state
+///
+/// @access public
+@mixin vanilla-accordion__header--expanded() {
+  // Change icon rotation
+  &::before {
+    @include vanilla-icon-rotate(-180);
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    transition: 0.3s;
+    margin-top: vanilla-px-to-em(1px);
+    margin-bottom: vanilla-px-to-em(-1px);
+    height: auto;
+    align-self: flex-start;
+    margin-top: $vanilla-accordion-left-margin / 2;
+  }
+}
+
+/// Accordion content section, expanded state
+///
+/// @access public
+@mixin vanilla-accordion__content-section--expanded() {
+  height: auto;
+  transition: 0.3s;
 }

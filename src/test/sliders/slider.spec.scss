@@ -1,0 +1,64 @@
+@import 'true';
+@import '../../components/sliders/_slider-mixins.scss';
+@include describe('sliders _slider-mixins.scss') {
+  @include it('Should compile vanilla-slider-label') {
+    @include assert {
+      @include output {
+        @include vanilla-slider-label();
+      }
+      @include expect {
+        @include vanilla-slider-label();
+      }
+    }
+  }
+  @include it('Should compile vanilla-slider__container') {
+    @include assert {
+      @include output {
+        @include vanilla-slider__container();
+      }
+      @include expect {
+        @include vanilla-slider__container();
+      }
+    }
+  }
+  @include it('Should compile vanilla-slider-track') {
+    @include assert {
+      @include output {
+        @include vanilla-slider-track();
+      }
+      @include expect {
+        @include vanilla-slider-track();
+      }
+    }
+  }
+  @include it('Should compile vanilla-slider-fill') {
+    @include assert {
+      @include output {
+        @include vanilla-slider-fill();
+      }
+      @include expect {
+        @include vanilla-slider-fill();
+      }
+    }
+  }
+  @include it('Should compile vanilla-slider-thumb') {
+    @include assert {
+      @include output {
+        @include vanilla-slider-thumb();
+      }
+      @include expect {
+        @include vanilla-slider-thumb();
+      }
+    }
+  }
+  @include it('Should compile vanilla-range-input') {
+    @include assert {
+      @include output {
+        @include vanilla-range-input();
+      }
+      @include expect {
+        @include vanilla-range-input();
+      }
+    }
+  }
+}

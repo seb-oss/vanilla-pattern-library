@@ -6,7 +6,7 @@
 
 @import './datepicker-mixins';
 
-@include _vanilla-exports("vanilla-datepicker") {
+@include _vanilla-exports('vanilla-datepicker') {
   .sdv-datepicker {
     @include vanilla-datepicker__container();
 
