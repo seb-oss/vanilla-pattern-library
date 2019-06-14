@@ -1,8 +1,8 @@
 ---
-title: Simple form
-componentid: component-example-simple-form
+title: Example form 1
+componentid: component-example-form-1
 variantid: default
-guid: component-simple-form-default
+guid: component-example-form-1-default
 ---
 # About this example
 This is an example implementation of the form seen on [the forms page on Design Library](http://designlibrary.sebgroup.com/layout-templates/forms/#examples)
@@ -54,7 +54,7 @@ This example uses a simple CSS-grid layout for demo purposes.
             <label for="sdv-cb1" class="sdv-field-label">I've read and understood <a href="#">SEB's integrity policy</a></label>
         </div>
         <div class="flex actions">
-            <div class="cell">
+            <div class="cell-300">
                 <button class="sdv-button sdv-button-alternative">Cancel</button>
             </div>
             <div class="cell align-right">
