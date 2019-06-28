@@ -44,6 +44,7 @@ Import classes:
 <button class="sdv-button sdv-button-delete sdv-button--small">
   Delete button
 </button>
+```
 :::
 
 In addition to the classes shown in the example, this component can be used via the following mixins:
@@ -54,6 +55,7 @@ In addition to the classes shown in the example, this component can be used via 
 .my-button-class {
   @include vanilla-button();
 }
+
 .my-button-class-delete {
   @include vanilla-button-delete();
 }
