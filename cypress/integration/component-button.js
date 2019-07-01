@@ -5,16 +5,6 @@ const applitoolsConfig = require('../../applitools.config').default;
 
 const component = {
   id: 'component-button'
-  // variants: [
-  //   { variant: 'primary', states: 4 },
-  //   { variant: 'alternative', states: 4 },
-  //   { variant: 'ghost-light', states: 4 },
-  //   { variant: 'link', states: 4 },
-  //   { variant: 'secondary', states: 4 },
-  //   { variant: 'delete-confirm', states: 4 },
-  //   { variant: 'delete', states: 4 },
-  //   { variant: 'ghost-dark', states: 4 }
-  // ]
 };
 
 describe(`${component.id} - primary`, function() {
@@ -23,15 +13,182 @@ describe(`${component.id} - primary`, function() {
   before(function() {
     cy.eyesOpen({
       ...applitoolsConfig,
-      batchName: documentationId,
-      browser: [
-        { deviceName: 'iPhone X', screenOrientation: 'portrait' },
-        { width: 1024, height: 768, name: 'chrome' },
-        { width: 1440, height: 768, name: 'chrome' },
-        { width: 1440, height: 768, name: 'firefox' },
-        { width: 1440, height: 768, name: 'edge' },
-        { width: 1440, height: 768, name: 'ie11' }
-      ]
+      batchName: component.id
+    });
+  });
+
+  after(function() {
+    cy.eyesClose();
+  });
+
+  it(`should render all states for ${documentationId}`, () => {
+    for (let state = 0; state < v.states; state++) {
+      cy.visit(
+        `${baseUrl}/${standalonePath}/${documentationId}/${state}/${suffix}`
+      );
+
+      cy.eyesCheckWindow(`${documentationId}, state: ${state}`);
+    }
+  });
+});
+
+describe(`${component.id} - alternative`, function() {
+  const v = { variant: 'alternative', states: 4 };
+  const documentationId = `${component.id}-${v.variant}`;
+  before(function() {
+    cy.eyesOpen({
+      ...applitoolsConfig,
+      batchName: component.id
+    });
+  });
+
+  after(function() {
+    cy.eyesClose();
+  });
+
+  it(`should render all states for ${documentationId}`, () => {
+    for (let state = 0; state < v.states; state++) {
+      cy.visit(
+        `${baseUrl}/${standalonePath}/${documentationId}/${state}/${suffix}`
+      );
+
+      cy.eyesCheckWindow(`${documentationId}, state: ${state}`);
+    }
+  });
+});
+
+describe(`${component.id} - ghost-light`, function() {
+  const v = { variant: 'ghost-light', states: 4 };
+  const documentationId = `${component.id}-${v.variant}`;
+  before(function() {
+    cy.eyesOpen({
+      ...applitoolsConfig,
+      batchName: component.id
+    });
+  });
+
+  after(function() {
+    cy.eyesClose();
+  });
+
+  it(`should render all states for ${documentationId}`, () => {
+    for (let state = 0; state < v.states; state++) {
+      cy.visit(
+        `${baseUrl}/${standalonePath}/${documentationId}/${state}/${suffix}`
+      );
+
+      cy.eyesCheckWindow(`${documentationId}, state: ${state}`);
+    }
+  });
+});
+
+describe(`${component.id} - ghost-dark`, function() {
+  const v = { variant: 'ghost-dark', states: 4 };
+  const documentationId = `${component.id}-${v.variant}`;
+  before(function() {
+    cy.eyesOpen({
+      ...applitoolsConfig,
+      batchName: component.id
+    });
+  });
+
+  after(function() {
+    cy.eyesClose();
+  });
+
+  it(`should render all states for ${documentationId}`, () => {
+    for (let state = 0; state < v.states; state++) {
+      cy.visit(
+        `${baseUrl}/${standalonePath}/${documentationId}/${state}/${suffix}`
+      );
+
+      cy.eyesCheckWindow(`${documentationId}, state: ${state}`);
+    }
+  });
+});
+
+describe(`${component.id} - link`, function() {
+  const v = { variant: 'link', states: 4 };
+  const documentationId = `${component.id}-${v.variant}`;
+  before(function() {
+    cy.eyesOpen({
+      ...applitoolsConfig,
+      batchName: component.id
+    });
+  });
+
+  after(function() {
+    cy.eyesClose();
+  });
+
+  it(`should render all states for ${documentationId}`, () => {
+    for (let state = 0; state < v.states; state++) {
+      cy.visit(
+        `${baseUrl}/${standalonePath}/${documentationId}/${state}/${suffix}`
+      );
+
+      cy.eyesCheckWindow(`${documentationId}, state: ${state}`);
+    }
+  });
+});
+
+describe(`${component.id} - secondary`, function() {
+  const v = { variant: 'secondary', states: 4 };
+  const documentationId = `${component.id}-${v.variant}`;
+  before(function() {
+    cy.eyesOpen({
+      ...applitoolsConfig,
+      batchName: component.id
+    });
+  });
+
+  after(function() {
+    cy.eyesClose();
+  });
+
+  it(`should render all states for ${documentationId}`, () => {
+    for (let state = 0; state < v.states; state++) {
+      cy.visit(
+        `${baseUrl}/${standalonePath}/${documentationId}/${state}/${suffix}`
+      );
+
+      cy.eyesCheckWindow(`${documentationId}, state: ${state}`);
+    }
+  });
+});
+
+describe(`${component.id} - delete`, function() {
+  const v = { variant: 'delete', states: 4 };
+  const documentationId = `${component.id}-${v.variant}`;
+  before(function() {
+    cy.eyesOpen({
+      ...applitoolsConfig,
+      batchName: component.id
+    });
+  });
+
+  after(function() {
+    cy.eyesClose();
+  });
+
+  it(`should render all states for ${documentationId}`, () => {
+    for (let state = 0; state < v.states; state++) {
+      cy.visit(
+        `${baseUrl}/${standalonePath}/${documentationId}/${state}/${suffix}`
+      );
+
+      cy.eyesCheckWindow(`${documentationId}, state: ${state}`);
+    }
+  });
+});
+
+describe(`${component.id} - delete-confirm`, function() {
+  const v = { variant: 'delete-confirm', states: 4 };
+  const documentationId = `${component.id}-${v.variant}`;
+  before(function() {
+    cy.eyesOpen({
+      ...applitoolsConfig,
+      batchName: component.id
     });
   });
 
