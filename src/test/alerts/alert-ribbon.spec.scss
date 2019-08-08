@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../components/alerts/_alert-ribbon-mixins.scss';
+@include describe('alerts _alert-ribbon-mixins.scss') {
+  @include it('Should compile vanilla-alert-ribbon') {
+    @include assert {
+      @include output {
+        @include vanilla-alert-ribbon();
+      }
+      @include expect {
+        @include vanilla-alert-ribbon();
+      }
+    }
+  }
+}
