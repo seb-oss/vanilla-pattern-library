@@ -52,6 +52,28 @@
 					"type": "directory"
 				},
 				{
+					"title": "Alerts",
+					"shortpath": "alerts",
+					"longpath": "src/components/alerts",
+					"items": [
+						{
+							"filename": "alert-ribbon.md",
+							"filepath": "components/alerts/alert-ribbon.md",
+							"shortpath": "components/alerts/alert-ribbon",
+							"longpath": "src/components/alerts/alert-ribbon.md",
+							"type": "file",
+							"title": "Alert ribbon",
+							"guid": "component-alertribbon",
+							"variantid": "default",
+							"componentid": "component-alertribbon",
+							"private": false
+						}
+					],
+					"filecount": 1,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Breadcrumbs",
 					"shortpath": "breadcrumbs",
 					"longpath": "src/components/breadcrumbs",
@@ -579,7 +601,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 14,
+			"directorycount": 15,
 			"type": "directory"
 		},
 		{

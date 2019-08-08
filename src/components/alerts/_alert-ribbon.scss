@@ -1,0 +1,17 @@
+@import 'alert-ribbon-mixins';
+
+.sdv-alert-ribbon {
+  @include vanilla-alert-ribbon();
+
+  &--whisper {
+    @include vanilla-alert--whisper();
+  }
+
+  &--talk {
+    @include vanilla-alert--talk();
+  }
+
+  &--shout {
+    @include vanilla-alert--shout();
+  }
+}
