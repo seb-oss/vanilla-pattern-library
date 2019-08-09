@@ -1,6 +1,46 @@
 @import 'true';
 @import '../../components/alerts/_alert-ribbon-mixins.scss';
 @include describe('alerts _alert-ribbon-mixins.scss') {
+  @include it('Should compile vanilla-alert-ribbon-base') {
+    @include assert {
+      @include output {
+        @include vanilla-alert-ribbon-base();
+      }
+      @include expect {
+        @include vanilla-alert-ribbon-base();
+      }
+    }
+  }
+  @include it('Should compile vanilla-alert-ribbon__paragraph') {
+    @include assert {
+      @include output {
+        @include vanilla-alert-ribbon__paragraph();
+      }
+      @include expect {
+        @include vanilla-alert-ribbon__paragraph();
+      }
+    }
+  }
+  @include it('Should compile vanilla-alert-ribbon__button') {
+    @include assert {
+      @include output {
+        @include vanilla-alert-ribbon__button();
+      }
+      @include expect {
+        @include vanilla-alert-ribbon__button();
+      }
+    }
+  }
+  @include it('Should compile vanilla-alert-ribbon__icon') {
+    @include assert {
+      @include output {
+        @include vanilla-alert-ribbon__icon();
+      }
+      @include expect {
+        @include vanilla-alert-ribbon__icon();
+      }
+    }
+  }
   @include it('Should compile vanilla-alert-ribbon') {
     @include assert {
       @include output {
