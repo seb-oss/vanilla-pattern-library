@@ -3,7 +3,7 @@
 
 ///
 /// @access public
-@mixin vanilla-alert-ribbon__base() {
+@mixin vanilla-alert-ribbon-base() {
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -59,7 +59,7 @@
 ///
 /// @access public
 @mixin vanilla-alert-ribbon() {
-  @include vanilla-alert-ribbon__base();
+  @include vanilla-alert-ribbon-base();
 
   p {
     @include vanilla-alert-ribbon__paragraph();
