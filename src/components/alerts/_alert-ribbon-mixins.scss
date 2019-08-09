@@ -3,7 +3,7 @@
 
 ///
 /// @access public
-@mixin vanilla-alert-ribbon() {
+@mixin vanilla-alert-ribbon-base() {
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -11,37 +11,77 @@
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
       flex-wrap: wrap;
+    }
+  }
+}
 
-      p {
-        margin-top: 0.5em;
-        margin-right: 0;
-      }
+///
+/// @access public
+@mixin vanilla-alert-ribbon__paragraph() {
+  margin-bottom: 0;
+  margin-right: 1em;
 
-      &__button {
-        flex-basis: 100%;
-        margin-left: 0;
-        margin-top: 1em;
-      }
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      margin-top: 0.5em;
+      margin-right: 0;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon__button() {
+  @include vanilla-button();
+  margin-left: auto;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      flex-basis: 100%;
+      margin-left: 0;
+      margin-top: 1em;
     }
   }
 
+  @include media-context($vanilla-breakpoints) {
+    @include media('>=tablet') {
+      @include vanilla-button--small();
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon__icon() {
+  font-size: 1.4em;
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon() {
+  @include vanilla-alert-ribbon-base();
+
   p {
-    margin-bottom: 0;
-    margin-right: 1em;
+    @include vanilla-alert-ribbon__paragraph();
   }
 
   &__button {
-    @include vanilla-button();
-    margin-left: auto;
-
-    @include media-context($vanilla-breakpoints) {
-      @include media('>=tablet') {
-        @include vanilla-button--small();
-      }
-    }
+    @include vanilla-alert-ribbon__button();
   }
 
   .fal {
-    font-size: 1.4em;
+    @include vanilla-alert-ribbon__icon();
+  }
+
+  &--whisper {
+    @include vanilla-alert--whisper();
+  }
+
+  &--talk {
+    @include vanilla-alert--talk();
+  }
+
+  &--shout {
+    @include vanilla-alert--shout();
   }
 }
