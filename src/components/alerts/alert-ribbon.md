@@ -74,7 +74,9 @@ These will be explained in the examples section, below the component preview.
 ```
 :::
 
-### Examples 1 - Import classes:
+### Examples
+
+1 - Import classes:
 
 ```scss
 @import "~@sebgroup/vanilla/src/components/alerts/alert-ribbon";
@@ -114,7 +116,7 @@ The `<i>` and the `<button>` elements are optional. (the icon is never used on w
 3 - Use the alert mixins directly in your own structure:
 
 ```scss
-@import "~@sebgroup/vanilla/src/components/alerts/alert-ribbon";
+@import "~@sebgroup/vanilla/src/components/alerts/alert-ribbon-mixins";
 
 .my-alert {
     @include vanilla-alert-ribbon-base();
