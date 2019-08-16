@@ -37,3 +37,11 @@ Font Awesome icons are not included and imported by default. instead you have to
 The package you should install for icons is @fortawesome/fontawesome-pro
 
 Components that use icons will look bad if you don't have any icons included in your build.
+
+### Tests
+There are both units test of the sass code as well as end-to-end test included in this project
+
+#### Unit tests
+Unit tests are run with mocha through sass true. The tests are generated automatically for all mixins with a script. So, when you have added a new component run `node generate-tests.js` to add unit tests for the new component. These tests only test that each mixin return what is expected but this is enough to discover most of the errors that the linter won't catch.
+
+#### End to end tests
