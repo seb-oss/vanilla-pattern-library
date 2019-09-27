@@ -7,7 +7,11 @@
 @import 'functions';
 @import 'colors';
 
-$vanilla-rem-base: 16px;
+/// rem base used for px-to-rem calculations and vice versa
+$vanilla-rem-base: 16px !default;
+
+/// Default base size
+$vanilla-base-size: vanilla-px-to-rem(16) !default;
 
 // Path settings
 /// Font Awesome includepath
@@ -163,12 +167,6 @@ $vanilla-font-settings-body-small: (
     weight: 400
   )
 ) !default;
-
-/// rem base used for px-to-rem calculations and vice versa
-$vanilla-rem-base: 16px !default;
-
-/// Default base size
-$vanilla-base-size: 1rem !default;
 
 /// Default component border radius (buttons, input fields, etc)
 $vanilla-component-border-radius: (4 / 16) * 1em !default;

@@ -13,7 +13,7 @@
 @import '../../mixins';
 
 $vanilla-accordion-icon-size: 0.9em;
-$vanilla-accordion-left-margin: 2.5rem;
+$vanilla-accordion-left-margin: vanilla-px-to-rem(40);
 
 /// Mixes in accordion styles
 ///

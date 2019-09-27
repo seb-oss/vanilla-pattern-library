@@ -14,7 +14,7 @@
   position: fixed;
   width: 100%;
   left: 0;
-  padding: 1rem;
+  padding: vanilla-px-to-rem(16);
   align-items: center;
   box-sizing: border-box;
   background-color: $vanilla-color-white;
@@ -24,7 +24,7 @@
     width: 100%;
 
     &:last-child {
-      margin-left: 1rem;
+      margin-left: vanilla-px-to-rem(16);
     }
   }
 }

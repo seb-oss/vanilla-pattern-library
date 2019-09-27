@@ -75,7 +75,7 @@
 /// @access public
 /// @param px A px value
 /// @param base The base size in pixels used in the calculation
-@function vanilla-px-to-em($px, $base: $vanilla-rem-base) {
+@function vanilla-px-to-em($px, $base: 16px) {
   $value: 1em * (vanilla-parse-int($px) / vanilla-parse-int($base));
   @return $value;
 }

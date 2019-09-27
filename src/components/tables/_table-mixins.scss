@@ -129,7 +129,11 @@ $vanilla-table-fixed-col-width: 150px !default;
   margin-left: vanilla-px-to-em(8);
 
   &::after {
-    @include vanilla-icon($_glyph: '\F078', $_color: inherit, $_space: 1rem);
+    @include vanilla-icon(
+      $_glyph: '\F078',
+      $_color: inherit,
+      $_space: vanilla-px-to-rem(16)
+    );
     opacity: 0;
     transition: 0.3s;
   }
@@ -139,12 +143,20 @@ $vanilla-table-fixed-col-width: 150px !default;
   }
 
   &--asc::after {
-    @include vanilla-icon($_glyph: '\F078', $_color: inherit, $_space: 1rem);
+    @include vanilla-icon(
+      $_glyph: '\F078',
+      $_color: inherit,
+      $_space: vanilla-px-to-rem(16)
+    );
     opacity: 1;
   }
 
   &--desc::after {
-    @include vanilla-icon($_glyph: '\F077', $_color: inherit, $_space: 1rem);
+    @include vanilla-icon(
+      $_glyph: '\F077',
+      $_color: inherit,
+      $_space: vanilla-px-to-rem(16)
+    );
     opacity: 1;
   }
 }
