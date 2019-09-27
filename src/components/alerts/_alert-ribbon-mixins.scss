@@ -5,7 +5,7 @@
 /// @access public
 @mixin vanilla-alert-ribbon-base() {
   width: 100%;
-  padding: 1rem;
+  padding: vanilla-px-to-rem(16);
   display: flex;
 
   @include media-context($vanilla-breakpoints) {

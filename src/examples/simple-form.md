@@ -51,7 +51,7 @@ This example uses a simple CSS-grid layout for demo purposes.
         </div>
         <div class="sdv-field-checkbox-wrap">
             <input type="checkbox" aria-label="Field label" id="sdv-cb1">
-            <label for="sdv-cb1" class="sdv-field-label">I've read and understood <a href="#">SEB's integrity policy</a></label>
+            <label for="sdv-cb1">I've read and understood <a href="#">SEB's integrity policy</a></label>
         </div>
         <div class="flex actions">
             <div class="cell">

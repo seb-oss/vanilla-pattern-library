@@ -14,7 +14,7 @@
   @include vanilla-field-base();
 
   line-height: vanilla-px-to-em(44 - 2);
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 vanilla-px-to-rem(16);
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -36,7 +36,7 @@
 
   display: none;
   margin-top: vanilla-px-to-em(4px);
-  box-shadow: 0 0 1rem 0 rgba($vanilla-color-black, 0.2);
+  box-shadow: 0 0 vanilla-px-to-rem(16) 0 rgba($vanilla-color-black, 0.2);
   white-space: nowrap;
   position: absolute;
   z-index: 1;
@@ -47,7 +47,7 @@
   label,
   &__label {
     display: block;
-    padding: 0 1rem;
+    padding: 0 vanilla-px-to-rem(16);
     cursor: pointer;
     line-height: vanilla-px-to-em(44px);
 
@@ -106,7 +106,8 @@
   padding-right: 2.5em;
   appearance: none;
   background: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%2341B0EE' d='M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z'/%3E%3C/svg%3E")
-    no-repeat right 0.75rem center/16px 16px;
+    no-repeat right vanilla-px-to-rem(12) center/vanilla-px-to-rem(16)
+    vanilla-px-to-rem(16);
 
   &::-ms-expand {
     display: none;
