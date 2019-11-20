@@ -1,0 +1,44 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+
+@import '../../variables';
+@import '../buttons/button-mixins';
+
+/////////////////////////////////////////
+/// Alert common features
+/////////////////////////////////////////
+
+///
+/// @access private
+@mixin vanilla-alert--whisper() {
+  background-color: $vanilla-color-purple;
+  color: $vanilla-color-white;
+
+  button {
+    @include vanilla-button-ghost-light();
+  }
+}
+
+///
+/// @access private
+@mixin vanilla-alert--talk() {
+  background-color: $vanilla-color-yellow;
+  color: $vanilla-color-text;
+
+  button {
+    @include vanilla-button-ghost-dark();
+  }
+}
+
+///
+/// @access private
+@mixin vanilla-alert--shout() {
+  background-color: $vanilla-color-red;
+  color: $vanilla-color-white;
+
+  button {
+    @include vanilla-button-ghost-light();
+  }
+}

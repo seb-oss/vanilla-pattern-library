@@ -1,0 +1,91 @@
+@import 'common';
+@import '~include-media/dist/include-media';
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon-base() {
+  width: 100%;
+  padding: vanilla-px-to-rem(16);
+  display: flex;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon__paragraph() {
+  margin-bottom: 0;
+  margin-right: 1em;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      flex-basis: 0;
+      flex-grow: 1;
+      margin-right: 0;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon__button() {
+  @include vanilla-button();
+  margin-left: auto;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      flex-basis: 100%;
+      margin-left: 0;
+      margin-top: 1em;
+    }
+  }
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('>=tablet') {
+      @include vanilla-button--small();
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon__icon() {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon() {
+  @include vanilla-alert-ribbon-base();
+
+  p {
+    @include vanilla-alert-ribbon__paragraph();
+  }
+
+  &__button {
+    @include vanilla-alert-ribbon__button();
+  }
+
+  .fal,
+  .far,
+  .fas {
+    @include vanilla-alert-ribbon__icon();
+  }
+
+  &--whisper {
+    @include vanilla-alert--whisper();
+  }
+
+  &--talk {
+    @include vanilla-alert--talk();
+  }
+
+  &--shout {
+    @include vanilla-alert--shout();
+  }
+}

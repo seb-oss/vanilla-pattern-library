@@ -9,7 +9,6 @@
 @import '../../variables';
 
 $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
-
 /// Styles for the tooltip box
 ///
 /// @access public
@@ -19,7 +18,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
   font-size: vanilla-px-to-em(14);
   font-weight: 400;
   line-height: 1.5;
-  padding: 0.5rem;
+  padding: vanilla-px-to-rem(8);
   pointer-events: none;
 }
 
@@ -29,7 +28,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 @mixin vanilla-tooltip-arrow {
   width: 0;
   height: 0;
-  border: 0.5rem solid $vanilla-color-text;
+  border: vanilla-px-to-em(8) solid $vanilla-color-text;
 }
 
 /// Styles for default tooltip class
@@ -74,7 +73,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 /// @access public
 @mixin vanilla-tooltip--top() {
   &::after {
-    bottom: -1rem;
+    bottom: vanilla-px-to-rem(-16);
     left: 50%;
     transform: translateX(-50%);
     border-color: $vanilla-color-text transparent transparent;
@@ -86,7 +85,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 /// @access public
 @mixin vanilla-tooltip--bottom() {
   &::after {
-    top: -1rem;
+    top: vanilla-px-to-rem(-16);
     left: 50%;
     transform: translateX(-50%);
     border-color: transparent transparent $vanilla-color-text;
@@ -98,7 +97,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 /// @access public
 @mixin vanilla-tooltip--left() {
   &::after {
-    left: -1rem;
+    left: vanilla-px-to-rem(-16);
     top: 50%;
     transform: translateY(-50%);
     border-color: transparent $vanilla-color-text transparent transparent;
@@ -110,7 +109,7 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 /// @access public
 @mixin vanilla-tooltip--right() {
   &::after {
-    right: -1rem;
+    right: vanilla-px-to-rem(-16);
     top: 50%;
     transform: translateY(-50%);
     border-color: transparent transparent transparent $vanilla-color-text;
@@ -123,31 +122,34 @@ $vanilla-tooltip-css-only--width: vanilla-px-to-em(200px) !default;
 @mixin vanilla-tooltip-css-only {
   cursor: help;
   border-bottom: dashed 1px $vanilla-color-text;
-  display: inline-block;
-  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  //position: relative;
 
   &::before {
     @include vanilla-tooltip-box();
     content: attr(data-sdv-tooltip);
-    position: absolute;
-    transform: translateX(-50%);
+    position: fixed;
+    transform: translateY(-100%);
     text-align: center;
-    left: 50%;
-    bottom: 2rem;
     opacity: 0;
     visibility: hidden;
     width: $vanilla-tooltip-css-only--width;
+    background: linear-gradient(
+      to top,
+      transparent vanilla-px-to-em(20),
+      $vanilla-color-text vanilla-px-to-em(20)
+    );
+    padding-bottom: vanilla-px-to-em(28);
   }
 
   &::after {
     @include vanilla-tooltip-arrow();
     content: '';
-    position: absolute;
-    bottom: 1rem;
+    position: fixed;
     visibility: hidden;
     opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(vanilla-px-to-em(-18));
     border-color: $vanilla-color-text transparent transparent;
   }
 

@@ -125,6 +125,12 @@
     color: $vanilla-color-text;
     text-align: center;
 
+    // Should apply to only IE10+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      min-height: auto;
+      padding: vanilla-rem-to-px($_padding_y) + 5px $_padding_x;
+    }
+
     &.sdv-align-left {
       text-align: left;
       justify-content: left;
@@ -142,6 +148,10 @@
     color: $vanilla-color-component-selected;
     border-width: 2px;
     padding: calc(#{$_padding_y} - 1px) calc(#{$_padding_x} - 1px);
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      padding: calc(#{$_padding_y} + 4px) calc(#{$_padding_x} - 1px);
+    }
   }
 
   label:hover,
@@ -179,6 +189,15 @@
         font-size: vanilla-px-to-em($_iconSize);
       }
     }
+
+    // Should apply to only IE10+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      &.sdv-icon::before {
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 2px;
+      }
+    }
   }
 
   input:checked + label,
@@ -189,7 +208,7 @@
       &::before {
         width: 24 - 1 + $_iconSize + 24 - 1;
         left: 0;
-        font-size: vanilla-px-to-em($_iconSize);
+        //font-size: vanilla-px-to-em($_iconSize);
       }
     }
   }

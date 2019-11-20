@@ -1,0 +1,5 @@
+@import 'alert-ribbon-mixins';
+
+.sdv-alert-ribbon {
+  @include vanilla-alert-ribbon();
+}

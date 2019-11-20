@@ -25,6 +25,7 @@ In addition to the classes shown in the example below, this component can be use
 .my-button-class {
   @include vanilla-button();
 }
+
 .my-button-class-alternative {
   @include vanilla-button-alternative();
 }
@@ -62,5 +63,5 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-alternat
 <button class="sdv-button sdv-button-alternative sdv-button--small">
   Alternative button
 </button>
-:::
 ```
+:::
