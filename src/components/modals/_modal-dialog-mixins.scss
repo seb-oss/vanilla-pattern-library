@@ -14,10 +14,10 @@
 ///
 /// @access public
 @mixin vanilla-modal-dialog__heading() {
-  padding: 0 1rem 0.7rem;
-  margin: 0.5rem 0;
+  padding: 0 vanilla-px-to-rem(16) vanilla-px-to-rem(11);
+  margin: vanilla-px-to-rem(8) 0;
   font-size: vanilla-px-to-rem(24px);
-  border-bottom: 1px solid vanilla-color-gray(18);
+  border-bottom: 1px solid $vanilla-color-grey7;
 }
 
 ///
@@ -35,7 +35,7 @@
 
   @include vanilla-media('>=tablet') {
     align-self: center;
-    min-width: 30rem;
+    min-width: vanilla-px-to-rem(480);
     width: auto;
   }
 }
@@ -49,20 +49,20 @@
 ///
 /// @access public
 @mixin vanilla-modal-dialog__content() {
-  margin: 1rem 1rem 2rem;
+  margin: vanilla-px-to-rem(16) vanilla-px-to-rem(16) vanilla-px-to-rem(32);
 }
 
 ///
 /// @access public
 @mixin vanilla-modal-dialog__actions() {
-  margin: 1rem;
+  margin: vanilla-px-to-rem(16);
   text-align: right;
 
   button + button {
-    margin-left: 1rem;
+    margin-left: vanilla-px-to-rem(16);
     @include vanilla-media('<tablet') {
       margin-left: 0;
-      margin-top: 1rem;
+      margin-top: vanilla-px-to-rem(16);
     }
   }
 }

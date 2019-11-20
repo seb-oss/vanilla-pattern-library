@@ -99,7 +99,7 @@
       color: transparent !important;
 
       &::after {
-        font-size: 1rem;
+        font-size: vanilla-px-to-rem(16);
         color: $vanilla-color-link;
       }
 

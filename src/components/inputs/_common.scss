@@ -65,7 +65,7 @@
 @mixin vanilla-field-label() {
   display: block;
   line-height: 1;
-  margin-top: $vanilla-base-size;
+  margin-top: vanilla-px-to-rem(16);
   margin-bottom: vanilla-px-to-em(8);
 
   font-size: vanilla-px-to-em(16px);
