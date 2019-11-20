@@ -23,7 +23,8 @@
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
-      margin-top: 0.5em;
+      flex-basis: 0;
+      flex-grow: 1;
       margin-right: 0;
     }
   }
@@ -53,7 +54,8 @@
 ///
 /// @access public
 @mixin vanilla-alert-ribbon__icon() {
-  font-size: 1.4em;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
 ///
@@ -69,7 +71,9 @@
     @include vanilla-alert-ribbon__button();
   }
 
-  .fal {
+  .fal,
+  .far,
+  .fas {
     @include vanilla-alert-ribbon__icon();
   }
 

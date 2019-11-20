@@ -49,7 +49,7 @@ These will be explained in the examples section, below the component preview.
 
 ```html
 <div class="sdv-alert-ribbon sdv-alert-ribbon--talk" role="alert">
-    <i class="fal fa-exclamation-triangle sdv-icon-left"></i>
+    <i class="fas fa-info-square sdv-icon-left"></i>
     <p>Eftersom vi inte har kontaktuppgifter till dig kan vi inte meddela dig när ordern är behandlad. Uppdatera gärna dina kontaktuppgifter.</p>
     <button class="sdv-alert-ribbon__button">Uppdatera</button>
 </div>
