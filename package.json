@@ -52,7 +52,7 @@
     "include-media": "^1.4.9"
   },
   "devDependencies": {
-    "@applitools/eyes-cypress": "^3.6.14",
+    "@applitools/eyes-cypress": "^3.9.4",
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
     "@fortawesome/fontawesome-pro": "^5.7.2",
