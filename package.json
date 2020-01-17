@@ -61,7 +61,7 @@
     "cypress": "^3.3.2",
     "davanmonet": "^1.4.9",
     "eslint-plugin-babel": "^5.3.0",
-    "husky": "^3.0.0",
+    "husky": "^4.0.2",
     "lodash": "^4.17.11",
     "mocha": "^6.1.4",
     "node-sass-tilde-importer": "^1.0.2",
