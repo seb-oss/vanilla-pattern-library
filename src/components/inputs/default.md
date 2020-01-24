@@ -19,7 +19,7 @@ In addition to the classes shown in the example below, this component can be use
 @import '~@sebgroup/vanilla/src/components/inputs/input-mixins';
 
 .my-field-class {
-  @include vanilla-field-base();
+  @include vanilla-text-field();
 }
 
 .my-field-label-class {

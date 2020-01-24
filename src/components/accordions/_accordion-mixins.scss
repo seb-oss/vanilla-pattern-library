@@ -110,7 +110,6 @@ $vanilla-accordion-left-margin: vanilla-px-to-rem(40);
   margin: 0 0 0 -#{$vanilla-accordion-left-margin};
   padding: 0.3em 0 0.3em $vanilla-accordion-left-margin;
   position: relative;
-  z-index: 999;
   cursor: pointer;
 }
 
