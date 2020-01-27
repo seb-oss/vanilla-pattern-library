@@ -96,13 +96,7 @@ compilation:
     level: 2
 
   # Settings for PostCSS
-  postcss:
-    map: true
-    processors:
-      - name: autoprefixer
-        options:
-          browsers:
-            - last 2 versions
+  postcss: true
 
 #-------------------------------------------------------------------------------
 # Asset settings
