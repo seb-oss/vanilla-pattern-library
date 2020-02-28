@@ -112,7 +112,7 @@ $_ghost-button_disabled-opacity: 0.5;
 ///
 /// @access public
 @mixin vanilla-button-secondary {
-  background-color: transparent;
+  background-color: $vanilla-color-white;
   border-color: $vanilla-color-darkblue1;
 
   &,
