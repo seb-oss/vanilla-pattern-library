@@ -59,7 +59,7 @@
     "babel-eslint": "^10.0.1",
     "cypress": "^4.0.2",
     "cz-conventional-changelog": "^2.1.0",
-    "davanmonet": "^2.0.0",
+    "davanmonet": "^3.0.0",
     "eslint-plugin-babel": "^5.3.0",
     "husky": "^4.0.2",
     "lodash": "^4.17.11",
