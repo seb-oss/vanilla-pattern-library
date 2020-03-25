@@ -36,135 +36,162 @@ $vanilla-breakpoints: (
 $vanilla-font-settings-h-display: (
   desktop: (
     size: vanilla-px-to-rem(96),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(96 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(64),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(64 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(48),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(48 + 8)
   )
 ) !default;
 // / Headline H1 font sizes
 $vanilla-font-settings-h1: (
   desktop: (
     size: vanilla-px-to-rem(48),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(48 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(40),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(40 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(32),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(32 + 8)
   )
 ) !default;
 // / Headline H2 font sizes
 $vanilla-font-settings-h2: (
   desktop: (
     size: vanilla-px-to-rem(32),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(32 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(24),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(24 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(24),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(24 + 8)
   )
 ) !default;
 // / Headline H3 font sizes
 $vanilla-font-settings-h3: (
   desktop: (
     size: vanilla-px-to-rem(24),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(24 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(20),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(22 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(20),
-    weight: 600
+    weight: 600,
+    lineHeight: vanilla-px-to-rem(20 + 8)
   )
 ) !default;
 // / Headline H4 font sizes
 $vanilla-font-settings-h4: (
   desktop: (
     size: vanilla-px-to-rem(20),
-    weight: 500
+    weight: 500,
+    lineHeight: vanilla-px-to-rem(20 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(20),
-    weight: 500
+    weight: 500,
+    lineHeight: vanilla-px-to-rem(20 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(20),
-    weight: 500
+    weight: 500,
+    lineHeight: vanilla-px-to-rem(20 + 8)
   )
 ) !default;
 // / Headline H5 font sizes
 $vanilla-font-settings-h5: (
   desktop: (
     size: vanilla-px-to-rem(16),
-    weight: 500
+    weight: 500,
+    lineHeight: vanilla-px-to-rem(16 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(16),
-    weight: 500
+    weight: 500,
+    lineHeight: vanilla-px-to-rem(16 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(16),
-    weight: 500
+    weight: 500,
+    lineHeight: vanilla-px-to-rem(16 + 8)
   )
 ) !default;
 // / Headline H6 font sizes
 $vanilla-font-settings-h6: (
   desktop: (
     size: vanilla-px-to-rem(14),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(14 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(14),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(14 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(14),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(14 + 8)
   )
 ) !default;
 // / Body Regular (Base) font size
 $vanilla-font-settings-body: (
   desktop: (
     size: vanilla-px-to-rem(16),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(16 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(16),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(16 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(16),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(16 + 8)
   )
 ) !default;
 // / Body Small font size
 $vanilla-font-settings-body-small: (
   desktop: (
     size: vanilla-px-to-rem(14),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(14 + 8)
   ),
   tablet: (
     size: vanilla-px-to-rem(14),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(14 + 8)
   ),
   mobile: (
     size: vanilla-px-to-rem(14),
-    weight: 400
+    weight: 400,
+    lineHeight: vanilla-px-to-rem(14 + 8)
   )
 ) !default;
 
