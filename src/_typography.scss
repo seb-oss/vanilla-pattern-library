@@ -73,20 +73,17 @@ $seb-font-path: $vanilla-font-basepath;
     @include media('>mobile') {
       font-size: map-get(map-get($use_heading, 'mobile'), 'size');
       font-weight: map-get(map-get($use_heading, 'mobile'), 'weight');
-      line-height: map-get(map-get($use_heading, 'mobile'), 'size') +
-        vanilla-px-to-rem(8);
+      line-height: map-get(map-get($use_heading, 'mobile'), 'lineHeight');
     }
     @include media('>tablet') {
       font-size: map-get(map-get($use_heading, 'tablet'), 'size');
       font-weight: map-get(map-get($use_heading, 'tablet'), 'weight');
-      line-height: map-get(map-get($use_heading, 'tablet'), 'size') +
-        vanilla-px-to-rem(8);
+      line-height: map-get(map-get($use_heading, 'tablet'), 'lineHeight');
     }
     @include media('>desktop') {
       font-size: map-get(map-get($use_heading, 'desktop'), 'size');
       font-weight: map-get(map-get($use_heading, 'desktop'), 'weight');
-      line-height: map-get(map-get($use_heading, 'desktop'), 'size') +
-        vanilla-px-to-rem(8);
+      line-height: map-get(map-get($use_heading, 'desktop'), 'lineHeight');
     }
   }
 }
