@@ -7,7 +7,7 @@
 @import 'variables';
 
 $vanilla-font-awesome-inc-path: 'https://designlibrary.sebgroup.com/static/Fonts/fontawesome';
-@import url('#{$vanilla-font-awesome-inc-path}/css/light.min.css');
+@import url('#{$vanilla-font-awesome-inc-path}/css/all.min.css');
 @import url('#{$vanilla-font-awesome-inc-path}/css/fontawesome.css');
 
 // Examples
