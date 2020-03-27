@@ -47,13 +47,13 @@
     "node": ">=6"
   },
   "dependencies": {},
-  "version": "5.9.0",
+  "version": "5.13.0",
   "name": "@fortawesome/fontawesome-pro",
   "main": "js/fontawesome.js",
   "style": "css/fontawesome.css",
   "license": "UNLICENSED"
 
-,"_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-pro/-/fontawesome-pro-5.9.0.tgz"
-,"_integrity": "sha512-vb7MJ0S+4FWZajv+iWKikG3QzX0oIAI+tYtlMBVwAyUmddESL/w5/2LCzbc81Vs4esGz0gr+bIem6BeMkIg+Mw=="
-,"_from": "@fortawesome/fontawesome-pro@5.9.0"
+,"_resolved": "https://registry.npmjs.org/@fortawesome/fontawesome-pro/-/5.13.0/fontawesome-pro-5.13.0.tgz"
+,"_integrity": "sha512-97Su0vmIuCdxrklVbjTzY1i16nvyKaqFmFBgrTsgeCVmyIWXNydiS62jhKlkwH9sMb8Tw4wYQ+J1EKbRILowxw=="
+,"_from": "@fortawesome/fontawesome-pro@5.13.0"
 }
