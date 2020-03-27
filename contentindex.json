@@ -405,6 +405,18 @@
 							"private": false
 						},
 						{
+							"filename": "modal-foldout.md",
+							"filepath": "components/modals/modal-foldout.md",
+							"shortpath": "components/modals/modal-foldout",
+							"longpath": "src/components/modals/modal-foldout.md",
+							"type": "file",
+							"title": "Fold-out",
+							"guid": "component-foldout-default",
+							"variantid": "default",
+							"componentid": "component-foldout",
+							"private": false
+						},
+						{
 							"filename": "modal-slideout.md",
 							"filepath": "components/modals/modal-slideout.md",
 							"shortpath": "components/modals/modal-slideout",
@@ -417,7 +429,7 @@
 							"private": false
 						}
 					],
-					"filecount": 2,
+					"filecount": 3,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -437,9 +449,21 @@
 							"variantid": "default",
 							"componentid": "component-progressbar",
 							"private": false
+						},
+						{
+							"filename": "progress-indicator.md",
+							"filepath": "components/progress-bars/progress-indicator.md",
+							"shortpath": "components/progress-bars/progress-indicator",
+							"longpath": "src/components/progress-bars/progress-indicator.md",
+							"type": "file",
+							"title": "Progress indicator",
+							"guid": "component-progressindicator-default",
+							"variantid": "default",
+							"componentid": "component-progressindicator",
+							"private": false
 						}
 					],
-					"filecount": 1,
+					"filecount": 2,
 					"directorycount": 0,
 					"type": "directory"
 				},

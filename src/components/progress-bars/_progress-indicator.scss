@@ -1,0 +1,7 @@
+@import 'progress-indicator-mixins';
+
+@include _vanilla-exports('vanilla-progress-indicator') {
+  .sdv-progress-indicator {
+    @include vanilla-progress-indicator();
+  }
+}
