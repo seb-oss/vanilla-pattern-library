@@ -1,0 +1,29 @@
+////
+/// Mixins for creating progress indicators
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import '../../utilities';
+@import '../../colors';
+@import '../../variables';
+
+@mixin vanilla-progress-indicator() {
+  display: flex;
+  width: 100%;
+
+  &__step {
+    flex-grow: 1;
+    height: vanilla-px-to-rem(8);
+    margin-right: vanilla-px-to-rem(2);
+    background-color: $vanilla-color-grey8;
+
+    &.-done {
+      background-color: $vanilla-color-darkgreen1;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
