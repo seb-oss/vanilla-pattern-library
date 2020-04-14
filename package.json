@@ -76,7 +76,7 @@
     "semantic-release": "^17.0.4",
     "stylelint": "^13.2.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
-    "stylelint-scss": "^3.16.0",
+    "stylelint-scss": "^3.17.0",
     "travis-deploy-once": "^5.0.11"
   },
   "repository": {
