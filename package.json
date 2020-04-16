@@ -51,15 +51,17 @@
     "@sebgroup/fonts": "^1.0.0",
     "include-media": "^1.4.9"
   },
+  "optionalDependencies": {
+    "@fortawesome/fontawesome": "^1.1.8"
+  },
   "devDependencies": {
     "@applitools/eyes-cypress": "^3.9.20",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@fortawesome/fontawesome-pro": "^5.13.0",
     "babel-eslint": "^10.1.0",
     "cypress": "^4.2.0",
     "cz-conventional-changelog": "^3.1.0",
-    "davanmonet": "^3.1.1",
+    "davanmonet": "^3.2.1",
     "eslint-plugin-babel": "^5.3.0",
     "husky": "^4.2.3",
     "lodash": "^4.17.15",
