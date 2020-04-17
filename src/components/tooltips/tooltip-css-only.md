@@ -51,7 +51,7 @@ In a SCSS build, the width can be configured by setting the variable `$vanilla-t
       tabindex="0"
       class="sdv-tooltip-css"
       data-sdv-tooltip="This here is an info icon"
-      ><i class="fal fa-info-circle"></i
+      ><i class="far fa-info-circle"></i
     ></span>
   </p>
 </div>

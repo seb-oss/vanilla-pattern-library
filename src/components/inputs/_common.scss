@@ -8,7 +8,7 @@
 @mixin vanilla-field-base() {
   // Config
   $_height: vanilla-px-to-em(44px);
-  $_border-color-normal: $vanilla-color-grey7;
+  $_border-color-normal: $vanilla-color-component-border;
   //
 
   border: (1 / 16) * 1em solid $_border-color-normal;

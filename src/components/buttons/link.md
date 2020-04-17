@@ -44,7 +44,7 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-link</i>
 
 ```html
 <button class="sdv-button sdv-button-link">
-  <i class="fal fa-lock sdv-icon-left"></i>Link Button
+  <i class="far fa-lock sdv-icon-left"></i>Link Button
 </button>
 ```
 

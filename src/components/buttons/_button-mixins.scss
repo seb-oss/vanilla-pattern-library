@@ -41,6 +41,7 @@ $_ghost-button_disabled-opacity: 0.5;
   font-family: inherit;
   font-weight: 500;
   font-size: 1em;
+  text-align: center;
   color: $vanilla-color-white;
   white-space: nowrap;
 
@@ -112,7 +113,7 @@ $_ghost-button_disabled-opacity: 0.5;
 ///
 /// @access public
 @mixin vanilla-button-secondary {
-  background-color: $vanilla-color-white;
+  background-color: transparent;
   border-color: $vanilla-color-darkblue1;
 
   &,
@@ -164,29 +165,7 @@ $_ghost-button_disabled-opacity: 0.5;
 ///
 /// @access public
 @mixin vanilla-button-link {
-  background-color: transparent;
-  border-color: transparent;
-
-  &,
-  &:visited,
-  &:link {
-    color: $_button_color-bg-normal;
-  }
-
-  &:focus,
-  &:hover,
-  &:active {
-    background-color: transparent;
-    border-color: transparent;
-    color: $vanilla-color-darkblue1;
-    text-decoration: underline;
-  }
-
-  &[disabled] {
-    background-color: transparent;
-    border-color: transparent;
-    color: $_button_disabled-color-dark;
-  }
+  @include vanilla-button-alternative;
 }
 
 /// Ghost button styles

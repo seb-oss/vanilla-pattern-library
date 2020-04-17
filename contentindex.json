@@ -101,18 +101,6 @@
 					"longpath": "src/components/buttons",
 					"items": [
 						{
-							"filename": "alternative.md",
-							"filepath": "components/buttons/alternative.md",
-							"shortpath": "components/buttons/alternative",
-							"longpath": "src/components/buttons/alternative.md",
-							"type": "file",
-							"title": "Alternative button",
-							"guid": "component-button-alternative",
-							"variantid": "alternative",
-							"componentid": "component-button",
-							"private": false
-						},
-						{
 							"filename": "delete-confirm.md",
 							"filepath": "components/buttons/delete-confirm.md",
 							"shortpath": "components/buttons/delete-confirm",
@@ -197,7 +185,7 @@
 							"private": false
 						}
 					],
-					"filecount": 8,
+					"filecount": 7,
 					"directorycount": 0,
 					"type": "directory"
 				},
