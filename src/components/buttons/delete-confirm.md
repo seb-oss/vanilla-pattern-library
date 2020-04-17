@@ -27,7 +27,7 @@ Import classes:
 ## With icon
 ```html
 <button class="sdv-button sdv-button-delete-confirm">
-  <i class="fal fa-trash-alt sdv-icon-left"></i>Delete button
+  <i class="far fa-trash-alt sdv-icon-left"></i>Delete button
 </button>
 ```
 
