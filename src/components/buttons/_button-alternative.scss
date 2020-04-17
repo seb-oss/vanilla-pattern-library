@@ -1,7 +1,0 @@
-@import 'button-primary';
-
-@include _vanilla-exports('vanilla-button-alternative') {
-  .sdv-button-alternative {
-    @include vanilla-button-alternative();
-  }
-}

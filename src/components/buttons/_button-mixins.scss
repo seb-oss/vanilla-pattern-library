@@ -164,29 +164,7 @@ $_ghost-button_disabled-opacity: 0.5;
 ///
 /// @access public
 @mixin vanilla-button-link {
-  background-color: transparent;
-  border-color: transparent;
-
-  &,
-  &:visited,
-  &:link {
-    color: $_button_color-bg-normal;
-  }
-
-  &:focus,
-  &:hover,
-  &:active {
-    background-color: transparent;
-    border-color: transparent;
-    color: $vanilla-color-darkblue1;
-    text-decoration: underline;
-  }
-
-  &[disabled] {
-    background-color: transparent;
-    border-color: transparent;
-    color: $_button_disabled-color-dark;
-  }
+  @include vanilla-button-alternative;
 }
 
 /// Ghost button styles
