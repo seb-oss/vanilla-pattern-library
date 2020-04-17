@@ -48,7 +48,7 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
 ```html
 <div class="pl-yellow-bg">
   <button class="sdv-button sdv-button-ghost-dark">
-    <i class="fal fa-lock sdv-icon-left"></i>Primary button
+    <i class="far fa-lock sdv-icon-left"></i>Primary button
   </button>
 </div>
 ```

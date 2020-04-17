@@ -21,7 +21,7 @@ Import classes:
 <div class="sdv-datepicker">
   <div class="sdv-datepicker__controls">
     <button class="sdv-button sdv-button-alternative sdv-button--small">
-      <i class="fal fa-chevron-left"></i>
+      <i class="far fa-chevron-left"></i>
     </button>
     <div class="sdv-field-dropdown sdv-field--small">
       <div class="sdv-field-dropdown__label" tabindex="0">April</div>
@@ -36,7 +36,7 @@ Import classes:
       </div>
     </div>
     <button class="sdv-button sdv-button-alternative sdv-button--small">
-      <i class="fal fa-chevron-right"></i>
+      <i class="far fa-chevron-right"></i>
     </button>
   </div>
   <div class="sdv-datepicker__calendar-row sdv-small">
