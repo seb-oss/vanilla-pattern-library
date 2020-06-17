@@ -1,0 +1,23 @@
+////
+/// Classes for the drag and drop component
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import './drag-drop-mixins';
+
+@include _vanilla-exports('vanilla-drag-drop') {
+  .sdv-drag-drop {
+    @include vanilla-drag-drop();
+
+    label,
+    &__label {
+      @include vanilla-drag-drop__label();
+    }
+
+    input,
+    &__input {
+      @include vanilla-drag-drop__input();
+    }
+  }
+}

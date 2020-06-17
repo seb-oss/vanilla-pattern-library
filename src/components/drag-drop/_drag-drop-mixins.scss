@@ -1,0 +1,55 @@
+////
+/// Mixins for creating drag and drop
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import '../../variables';
+@import '../../functions';
+@import '../../utilities';
+@import '../../icons';
+@import '../../colors';
+
+@import '~include-media/dist/include-media';
+
+@mixin vanilla-drag-drop {
+  width: 100%;
+
+  input:focus + label,
+  &__input:focus + label,
+  input:focus + &__label,
+  &__input:focus + &__input {
+    border-color: $vanilla-color-darkblue1;
+  }
+}
+
+@mixin vanilla-drag-drop__label {
+  display: block;
+  border: 2px dashed $vanilla-color-grey600;
+  font-weight: 500;
+  padding: vanilla-px-to-em(36);
+  text-align: center;
+
+  em {
+    font-style: normal;
+    color: $vanilla-color-darkblue1;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  * {
+    pointer-events: none;
+  }
+}
+
+@mixin vanilla-drag-drop__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}

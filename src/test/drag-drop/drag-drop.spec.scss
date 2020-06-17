@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../components/drag-drop/_drag-drop-mixins.scss';
+@include describe('drag-drop _drag-drop-mixins.scss') {
+  @include it('Should compile vanilla-drag-drop__container') {
+    @include assert {
+      @include output {
+        @include vanilla-drag-drop__container();
+      }
+      @include expect {
+        @include vanilla-drag-drop__container();
+      }
+    }
+  }
+}
