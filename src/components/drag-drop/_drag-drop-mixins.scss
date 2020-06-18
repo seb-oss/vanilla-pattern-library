@@ -15,11 +15,25 @@
 @mixin vanilla-drag-drop {
   width: 100%;
 
-  input:focus + label,
-  &__input:focus + label,
-  input:focus + &__label,
-  &__input:focus + &__input {
-    border-color: $vanilla-color-darkblue1;
+  table,
+  .sdv-table {
+    margin-top: vanilla-px-to-em(36);
+
+    caption {
+      text-align: left;
+      text-align: start;
+      font-weight: bold;
+      margin-bottom: vanilla-px-to-em(12);
+    }
+
+    td,
+    th {
+      white-space: nowrap;
+
+      &:first-child {
+        width: 0.1%;
+      }
+    }
   }
 }
 
@@ -27,7 +41,7 @@
   display: block;
   border: 2px dashed $vanilla-color-grey600;
   font-weight: 500;
-  padding: vanilla-px-to-em(36);
+  padding: vanilla-px-to-em(36) vanilla-px-to-em(24);
   text-align: center;
 
   em {
@@ -40,8 +54,25 @@
     }
   }
 
-  * {
-    pointer-events: none;
+  progress,
+  .sdv-progress-bar {
+    display: block;
+    margin: 0 auto;
+    max-width: vanilla-px-to-em(320);
+  }
+}
+
+@mixin vanilla-drag-drop__label--above {
+  border-color: $vanilla-color-darkblue1;
+
+  i {
+    color: $vanilla-color-darkblue1;
+  }
+}
+
+@mixin vanilla-drag-drop__label--done {
+  i {
+    color: $vanilla-color-green;
   }
 }
 
