@@ -15,13 +15,13 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
 ///
 /// @access public
 @mixin vanilla-progress-bar() {
-  appearance: none;
+  appearance: none; // Clear <progress> style
   height: vanilla-px-to-rem(5);
   width: 100%;
   position: relative;
   overflow: hidden;
-  color: $vanilla-color-green;
-  border-width: 0;
+  color: $vanilla-color-green; // IE fallback for ::-ms-fill
+  border-width: 0; // Firefox adds border
   background-color: $vanilla-color-grey8;
 
   &::before {
@@ -51,7 +51,7 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
 
   // Track
   &::-webkit-progress-bar {
-    background-color: $vanilla-color-grey200;
+    background-color: $vanilla-color-grey200; // Chrome does not respect parent background
   }
 
   @keyframes #{$vanilla-progressbar-keyframes} {
