@@ -11,4 +11,14 @@
       }
     }
   }
+  @include it('Should compile vanilla-progress-bar--determinate') {
+    @include assert {
+      @include output {
+        @include vanilla-progress-bar--determinate();
+      }
+      @include expect {
+        @include vanilla-progress-bar--determinate();
+      }
+    }
+  }
 }
