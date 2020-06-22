@@ -270,6 +270,40 @@
 					"type": "directory"
 				},
 				{
+					"title": "Drag-drop",
+					"shortpath": "drag-drop",
+					"longpath": "src/components/drag-drop",
+					"items": [
+						{
+							"filename": "drag-drop-list.md",
+							"filepath": "components/drag-drop/drag-drop-list.md",
+							"shortpath": "components/drag-drop/drag-drop-list",
+							"longpath": "src/components/drag-drop/drag-drop-list.md",
+							"type": "file",
+							"title": "Drag and drop (file list)",
+							"guid": "component-drag-drop-list",
+							"variantid": "list",
+							"componentid": "component-drag-drop",
+							"private": false
+						},
+						{
+							"filename": "drag-drop.md",
+							"filepath": "components/drag-drop/drag-drop.md",
+							"shortpath": "components/drag-drop/drag-drop",
+							"longpath": "src/components/drag-drop/drag-drop.md",
+							"type": "file",
+							"title": "Drag and drop",
+							"guid": "component-drag-drop-normal",
+							"variantid": "normal",
+							"componentid": "component-drag-drop",
+							"private": false
+						}
+					],
+					"filecount": 2,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Inputs",
 					"shortpath": "inputs",
 					"longpath": "src/components/inputs",
@@ -427,6 +461,18 @@
 					"longpath": "src/components/progress-bars",
 					"items": [
 						{
+							"filename": "progress-bar-determinate.md",
+							"filepath": "components/progress-bars/progress-bar-determinate.md",
+							"shortpath": "components/progress-bars/progress-bar-determinate",
+							"longpath": "src/components/progress-bars/progress-bar-determinate.md",
+							"type": "file",
+							"title": "Progress bar (determinate)",
+							"guid": "component-progressbar-determinate",
+							"variantid": "default",
+							"componentid": "component-progressbar",
+							"private": false
+						},
+						{
 							"filename": "progress-bar.md",
 							"filepath": "components/progress-bars/progress-bar.md",
 							"shortpath": "components/progress-bars/progress-bar",
@@ -451,7 +497,7 @@
 							"private": false
 						}
 					],
-					"filecount": 2,
+					"filecount": 3,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -613,7 +659,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 15,
+			"directorycount": 16,
 			"type": "directory"
 		},
 		{

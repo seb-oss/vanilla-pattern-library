@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../components/progress-bars/_progress-indicator-mixins.scss';
+@include describe('progress-bars _progress-indicator-mixins.scss') {
+  @include it('Should compile vanilla-progress-indicator') {
+    @include assert {
+      @include output {
+        @include vanilla-progress-indicator();
+      }
+      @include expect {
+        @include vanilla-progress-indicator();
+      }
+    }
+  }
+}

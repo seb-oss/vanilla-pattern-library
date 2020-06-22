@@ -11,6 +11,8 @@ Import classes:
 @import "~@sebgroup/vanilla/src/components/progress-bars/progress-bar";
 ```
 
+`<div>` must be used as firefox does not support animation or pseudo elements on the `<progress>` tags.
+
 :::componentpreview
 ## Base state
 ```html
