@@ -57,8 +57,8 @@ $vanilla-table-fixed-col-width: 150px !default;
   }
 
   thead {
-    color: $vanilla-color-grey6;
-    font-size: vanilla-px-to-em(12);
+    color: $vanilla-color-grey800;
+    font-size: vanilla-px-to-em(16);
 
     tr {
       min-height: vanilla-px-to-em(32);
@@ -67,7 +67,7 @@ $vanilla-table-fixed-col-width: 150px !default;
     th,
     td {
       border-bottom: 1px solid $vanilla-color-grey6;
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 
