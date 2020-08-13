@@ -3,5 +3,9 @@
 @include _vanilla-exports('vanilla-progress-bar') {
   .sdv-progress-bar {
     @include vanilla-progress-bar();
+
+    &[value] {
+      @include vanilla-progress-bar--determinate();
+    }
   }
 }

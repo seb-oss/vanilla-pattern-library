@@ -1,0 +1,86 @@
+////
+/// Mixins for creating drag and drop
+/// @group Component mixins
+/// @author Digital CX
+////
+
+@import '../../variables';
+@import '../../functions';
+@import '../../utilities';
+@import '../../icons';
+@import '../../colors';
+
+@import '~include-media/dist/include-media';
+
+@mixin vanilla-drag-drop {
+  width: 100%;
+
+  table,
+  .sdv-table {
+    margin-top: vanilla-px-to-em(36);
+
+    caption {
+      text-align: left;
+      text-align: start;
+      font-weight: bold;
+      margin-bottom: vanilla-px-to-em(12);
+    }
+
+    td,
+    th {
+      white-space: nowrap;
+
+      &:first-child {
+        width: 0.1%;
+      }
+    }
+  }
+}
+
+@mixin vanilla-drag-drop__label {
+  display: block;
+  border: 2px dashed $vanilla-color-grey600;
+  font-weight: 500;
+  padding: vanilla-px-to-em(36) vanilla-px-to-em(24);
+  text-align: center;
+
+  em {
+    font-style: normal;
+    color: $vanilla-color-darkblue1;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  progress,
+  .sdv-progress-bar {
+    display: block;
+    margin: 0 auto;
+    max-width: vanilla-px-to-em(320);
+  }
+}
+
+@mixin vanilla-drag-drop__label--above {
+  border-color: $vanilla-color-darkblue1;
+
+  i {
+    color: $vanilla-color-darkblue1;
+  }
+}
+
+@mixin vanilla-drag-drop__label--done {
+  i {
+    color: $vanilla-color-green;
+  }
+}
+
+@mixin vanilla-drag-drop__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
