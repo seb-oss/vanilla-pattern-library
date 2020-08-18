@@ -1,0 +1,5 @@
+@import 'badge-mixins';
+
+.sdv-badge {
+  @include vanilla-badge();
+}
