@@ -79,3 +79,23 @@
   $value: 1em * (vanilla-parse-int($px) / vanilla-parse-int($base));
   @return $value;
 }
+
+/// String replacer
+///
+/// @access public
+/// @param string Initial string
+/// @param search Substring to replace
+/// @param replace ('') New value
+/// @return Updated string
+@function vanilla-str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      vanilla-str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+  @return $string;
+}
