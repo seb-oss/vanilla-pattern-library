@@ -1,0 +1,42 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+
+@import '../../variables';
+
+///
+/// @access public
+@mixin vanilla-badge-base() {
+  font-size: vanilla-px-to-em(14);
+  font-weight: 500;
+  line-height: vanilla-px-to-rem(24, 16px);
+  width: auto;
+  display: inline-block;
+  right: inherit;
+  padding: 0 vanilla-px-to-rem(8);
+}
+
+///
+/// @access public
+@mixin vanilla-badge() {
+  @include vanilla-badge-base();
+
+  &--info {
+    background-color: $vanilla-color-grey200;
+  }
+
+  &--success {
+    color: $vanilla-color-white;
+    background-color: $vanilla-color-darkgreen2;
+  }
+
+  &--warning {
+    background-color: $vanilla-color-yellow;
+  }
+
+  &--error {
+    color: $vanilla-color-white;
+    background-color: $vanilla-color-darkred1;
+  }
+}

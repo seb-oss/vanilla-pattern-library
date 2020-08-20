@@ -74,6 +74,28 @@
 					"type": "directory"
 				},
 				{
+					"title": "Badge",
+					"shortpath": "badge",
+					"longpath": "src/components/badge",
+					"items": [
+						{
+							"filename": "badge.md",
+							"filepath": "components/badge/badge.md",
+							"shortpath": "components/badge/badge",
+							"longpath": "src/components/badge/badge.md",
+							"type": "file",
+							"title": "Badge",
+							"guid": "component-badge-default",
+							"variantid": "default",
+							"componentid": "component-badge",
+							"private": false
+						}
+					],
+					"filecount": 1,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Breadcrumbs",
 					"shortpath": "breadcrumbs",
 					"longpath": "src/components/breadcrumbs",
@@ -659,7 +681,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 16,
+			"directorycount": 17,
 			"type": "directory"
 		},
 		{
