@@ -1,0 +1,49 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+@import '~include-media/dist/include-media';
+
+@import '../../variables';
+@import '../../colors';
+
+///
+/// @access public
+@mixin vanilla-segmented-control() {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
+  button {
+    @include media-context($vanilla-breakpoints) {
+      @include media('<tablet') {
+        overflow: hidden;
+      }
+    }
+  }
+
+  > button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-clip: padding-box;
+  }
+
+  button ~ button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+
+    &:last-of-type {
+      border-top-right-radius: $vanilla-component-border-radius;
+      border-bottom-right-radius: $vanilla-component-border-radius;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-segmented-control--active() {
+  background-color: $vanilla-color-component-selected;
+  border-color: $vanilla-color-component-selected;
+  color: $vanilla-color-white;
+}
