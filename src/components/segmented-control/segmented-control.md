@@ -10,29 +10,42 @@ Import classes:
 ```scss
 @import "~@sebgroup/vanilla/src/components/segmented-control/segmented-control";
 ```
-
-Framework needed! This mixin only contains the styles for the segmented control. Actual behaviour needs to be implemented using a JS framework.
+Supports using radio buttons, checkboxes, divs/spans and/or buttons. Can also be used as a wrapper to group buttons.
+When not using any of the input elements, active state is applied using aria-selected attribute.
 
 :::componentpreview
 
-## Three button segment
-
+## Three segments using radio buttons
 ```html
-
   <div class="sdv-segmented-control">
-    <button class="sdv-button sdv-button-secondary">Mobile Bank ID</button>
-    <button class="sdv-button sdv-button-secondary">Digipass</button>
-    <button class="sdv-button sdv-button-secondary">Bank ID on file</button>
+    <input type="radio" id="sdv-control-1" name="sdv-control">
+    <label for="sdv-control-1" class="sdv-button sdv-button-secondary">Mobile Bank ID</label>
+    <input type="radio" id="sdv-control-2" name="sdv-control">
+    <label for="sdv-control-2" class="sdv-button sdv-button-secondary">Digipass</label>
+    <input type="radio" id="sdv-control-3" name="sdv-control">
+    <label for="sdv-control-3" class="sdv-button sdv-button-secondary">Bank ID on file</label>
   </div>
-
 ```
 
-## Two button segment
+## Three segments using checkboxes
 ```html
-<div class="sdv-segmented-control">
-  <button class="sdv-button sdv-button-secondary">Mobile Bank ID</button>
-  <button class="sdv-button sdv-button-secondary">Bank ID on file</button>
-</div>
+  <div class="sdv-segmented-control">
+    <input type="checkbox" id="sdv-control-1" name="sdv-control">
+    <label for="sdv-control-1" class="sdv-button sdv-button-secondary">Mobile Bank ID</label>
+    <input type="checkbox" id="sdv-control-2" name="sdv-control">
+    <label for="sdv-control-2" class="sdv-button sdv-button-secondary">Digipass</label>
+    <input type="checkbox" id="sdv-control-3" name="sdv-control">
+    <label for="sdv-control-3" class="sdv-button sdv-button-secondary">Bank ID on file</label>
+  </div>
+```
+
+## Three segments using div and aria-select
+```html
+  <div class="sdv-segmented-control">
+    <div class="sdv-button sdv-button-secondary">Mobile Bank ID</div>
+    <div class="sdv-button sdv-button-secondary">Digipass</div>
+    <div aria-selected="true" class="sdv-button sdv-button-secondary">Bank ID on file</div>
+  </div>
 ```
 
 ## Five button segment
@@ -46,22 +59,11 @@ Framework needed! This mixin only contains the styles for the segmented control.
 </div>
 ```
 
-## Small segment
+## Small two button segment
 ```html
 <div class="sdv-segmented-control">
-  <button class="sdv-button sdv-button--small sdv-button-secondary">Mobile Bank ID</button>
-  <button class="sdv-button sdv-button--small sdv-button-secondary">Digipass</button>
-  <button class="sdv-button sdv-button--small sdv-button-secondary">Bank ID on file</button>
-</div>
-```
-
-## Selected active segment
-
-```html
-<div class="sdv-segmented-control">
-  <button class="sdv-button sdv-button-secondary">Mobile Bank ID</button>
-  <button class="sdv-button sdv-button-secondary sdv-segmented-control--active">Digipass</button>
-  <button class="sdv-button sdv-button-secondary">Bank ID on file</button>
+  <button class="sdv-button sdv-button--small sdv-button-secondary">Graph</button>
+  <button class="sdv-button sdv-button--small sdv-button-secondary">Diagram</button>
 </div>
 ```
 

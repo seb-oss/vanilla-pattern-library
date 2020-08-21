@@ -14,6 +14,23 @@
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
 
+  input[type='checkbox'],
+  input[type='radio'] {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  > *[aria-selected='true'],
+  input[type='checkbox']:checked + label,
+  input[type='radio']:checked + label {
+    background-color: $vanilla-color-component-selected;
+    border-color: $vanilla-color-component-selected;
+    color: $vanilla-color-white;
+  }
+
+  div,
+  span,
+  label,
   button {
     @include media-context($vanilla-breakpoints) {
       @include media('<tablet') {
@@ -22,12 +39,17 @@
     }
   }
 
+  > div,
+  > span,
+  > label,
   > button {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-clip: padding-box;
   }
 
+  div ~ div,
+  span ~ span,
+  label ~ label,
   button ~ button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -38,12 +60,4 @@
       border-bottom-right-radius: $vanilla-component-border-radius;
     }
   }
-}
-
-///
-/// @access public
-@mixin vanilla-segmented-control--active() {
-  background-color: $vanilla-color-component-selected;
-  border-color: $vanilla-color-component-selected;
-  color: $vanilla-color-white;
 }

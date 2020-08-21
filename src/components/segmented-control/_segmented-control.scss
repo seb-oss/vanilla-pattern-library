@@ -2,8 +2,4 @@
 
 .sdv-segmented-control {
   @include vanilla-segmented-control();
-
-  &--active {
-    @include vanilla-segmented-control--active();
-  }
 }
