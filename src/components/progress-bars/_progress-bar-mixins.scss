@@ -15,10 +15,13 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
 ///
 /// @access public
 @mixin vanilla-progress-bar() {
+  appearance: none; // Clear <progress> style
   height: vanilla-px-to-rem(5);
   width: 100%;
   position: relative;
   overflow: hidden;
+  color: $vanilla-color-green; // IE fallback for ::-ms-fill
+  border-width: 0; // Firefox adds border
   background-color: $vanilla-color-grey8;
 
   &::before {
@@ -30,6 +33,25 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
     height: vanilla-px-to-rem(5);
     background-color: $vanilla-color-green;
     animation: #{$vanilla-progressbar-keyframes} 2s linear infinite;
+  }
+
+  // Progress (follow https://bugzilla.mozilla.org/show_bug.cgi?id=662351 for changes)
+  &::-webkit-progress-value {
+    background-color: transparent;
+  }
+
+  &::-moz-progress-bar {
+    background-color: transparent;
+  }
+
+  &::-ms-fill {
+    background-color: transparent;
+    border-width: 0;
+  }
+
+  // Track
+  &::-webkit-progress-bar {
+    background-color: $vanilla-color-grey200; // Chrome does not respect parent background
   }
 
   @keyframes #{$vanilla-progressbar-keyframes} {
@@ -57,5 +79,25 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
     to {
       left: 100%;
     }
+  }
+}
+
+/// @access public
+@mixin vanilla-progress-bar--determinate() {
+  &::before {
+    content: none;
+  }
+
+  // Progress
+  &::-webkit-progress-value {
+    background-color: $vanilla-color-green;
+  }
+
+  &::-moz-progress-bar {
+    background-color: $vanilla-color-green;
+  }
+
+  &::-ms-fill {
+    background-color: $vanilla-color-green;
   }
 }

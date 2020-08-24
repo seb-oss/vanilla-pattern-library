@@ -52,7 +52,7 @@ $vanilla-accordion-left-margin: vanilla-px-to-rem(40);
     }
   }
 
-  input {
+  > input {
     opacity: 0;
     position: absolute;
     z-index: -1;
