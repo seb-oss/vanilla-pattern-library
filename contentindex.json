@@ -524,6 +524,28 @@
 					"type": "directory"
 				},
 				{
+					"title": "Segmented-control",
+					"shortpath": "segmented-control",
+					"longpath": "src/components/segmented-control",
+					"items": [
+						{
+							"filename": "segmented-control.md",
+							"filepath": "components/segmented-control/segmented-control.md",
+							"shortpath": "components/segmented-control/segmented-control",
+							"longpath": "src/components/segmented-control/segmented-control.md",
+							"type": "file",
+							"title": "Segmented control",
+							"guid": "component-segmented-control-default",
+							"variantid": "default",
+							"componentid": "component-segmented-control",
+							"private": false
+						}
+					],
+					"filecount": 1,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Sliders",
 					"shortpath": "sliders",
 					"longpath": "src/components/sliders",
@@ -681,7 +703,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 17,
+			"directorycount": 18,
 			"type": "directory"
 		},
 		{

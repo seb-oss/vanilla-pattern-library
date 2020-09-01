@@ -1,0 +1,5 @@
+@import 'segmented-control-mixins';
+
+.sdv-segmented-control {
+  @include vanilla-segmented-control();
+}
