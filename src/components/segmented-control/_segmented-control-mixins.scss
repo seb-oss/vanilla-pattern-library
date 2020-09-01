@@ -1,0 +1,63 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+@import '~include-media/dist/include-media';
+
+@import '../../variables';
+@import '../../colors';
+
+///
+/// @access public
+@mixin vanilla-segmented-control() {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  > *[aria-selected='true'],
+  input[type='checkbox']:checked + label,
+  input[type='radio']:checked + label {
+    background-color: $vanilla-color-component-selected;
+    border-color: $vanilla-color-component-selected;
+    color: $vanilla-color-white;
+  }
+
+  div,
+  span,
+  label,
+  button {
+    @include media-context($vanilla-breakpoints) {
+      @include media('<tablet') {
+        overflow: hidden;
+      }
+    }
+  }
+
+  > div,
+  > span,
+  > label,
+  > button {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  div ~ div,
+  span ~ span,
+  label ~ label,
+  button ~ button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+
+    &:last-of-type {
+      border-top-right-radius: $vanilla-component-border-radius;
+      border-bottom-right-radius: $vanilla-component-border-radius;
+    }
+  }
+}
