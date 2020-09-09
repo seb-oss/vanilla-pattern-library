@@ -44,14 +44,16 @@
   &:hover {
     border-color: $vanilla-color-component-border;
     color: $vanilla-color-component-normal;
+    background-color: transparent;
   }
 
   &:focus {
-    box-shadow: 0 -0.4px 3px -1px rgba($vanilla-color-component-hover, 1);
+    @include vanilla-focus-outline();
     color: $vanilla-color-link;
     border-color: rgba($vanilla-color-component-hover, 0.5);
     border-bottom-color: $vanilla-color-component-border;
     outline: none;
+    background-color: transparent;
   }
 
   &:disabled {
