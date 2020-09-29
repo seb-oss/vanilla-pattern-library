@@ -42,15 +42,18 @@
   }
 
   &:hover {
-    background-color: $vanilla-color-component-hover;
-    color: $vanilla-color-white;
+    border-color: $vanilla-color-component-border;
+    color: $vanilla-color-component-normal;
+    background-color: transparent;
   }
 
   &:focus {
-    background-color: $vanilla-color-component-selected;
-    color: $vanilla-color-white;
-    border-bottom: 1px solid $vanilla-color-component-border;
+    @include vanilla-focus-outline();
+    color: $vanilla-color-link;
+    border-color: rgba($vanilla-color-component-hover, 0.5);
+    border-bottom-color: $vanilla-color-component-border;
     outline: none;
+    background-color: transparent;
   }
 
   &:disabled {
@@ -102,17 +105,12 @@
         font-size: vanilla-px-to-rem(16);
         color: $vanilla-color-link;
       }
-
-      &:hover::after {
-        color: $vanilla-color-white;
-      }
     }
   }
 
   &::after {
     @include vanilla-icon($_glyph: '\F078', $_space: vanilla-px-to-em(40px));
     height: auto;
-    color: inherit;
   }
 }
 
