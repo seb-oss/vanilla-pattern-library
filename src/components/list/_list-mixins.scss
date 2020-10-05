@@ -21,32 +21,32 @@ $vanilla_list_space: 1rem;
 
     label,
     &__label {
-      @include vanilla-list-label();
+      @include vanilla-list__label();
     }
   }
 
   label,
   &__label {
-    @include vanilla-list-label();
+    @include vanilla-list__label();
   }
 
   li,
   &__item {
-    @include vanilla-list-item();
+    @include vanilla-list__item();
 
     dt,
     &-label {
-      @include vanilla-list-item-label();
+      @include vanilla-list__item-label();
     }
 
     dd,
     &-value {
-      @include vanilla-list-item-value();
+      @include vanilla-list__item-value();
     }
   }
 }
 
-@mixin vanilla-list-label() {
+@mixin vanilla-list__label() {
   background-color: $vanilla-color-grey100;
   display: block;
   padding-left: $vanilla_list_space;
@@ -54,7 +54,7 @@ $vanilla_list_space: 1rem;
   line-height: 2rem;
 }
 
-@mixin vanilla-list-item() {
+@mixin vanilla-list__item() {
   min-height: vanilla-px-to-em(40);
   border-bottom: 1px solid $vanilla-color-grey200;
   display: flex;
@@ -68,11 +68,11 @@ $vanilla_list_space: 1rem;
   }
 }
 
-@mixin vanilla-list-item-label() {
+@mixin vanilla-list__item-label() {
   padding-left: $vanilla_list_space;
 }
 
-@mixin vanilla-list-item-value() {
+@mixin vanilla-list__item-value() {
   justify-content: flex-end;
   font-weight: 500;
   text-align: right;
