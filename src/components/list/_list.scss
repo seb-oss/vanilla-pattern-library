@@ -1,0 +1,11 @@
+@import './list-mixins';
+
+@include _vanilla-exports('vanilla-list') {
+  .sdv-list {
+    @include vanilla-list();
+  }
+
+  .sdv-list--small {
+    @include vanilla-list--small();
+  }
+}
