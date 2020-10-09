@@ -432,6 +432,28 @@
 					"type": "directory"
 				},
 				{
+					"title": "List",
+					"shortpath": "list",
+					"longpath": "src/components/list",
+					"items": [
+						{
+							"filename": "list.md",
+							"filepath": "components/list/list.md",
+							"shortpath": "components/list/list",
+							"longpath": "src/components/list/list.md",
+							"type": "file",
+							"title": "List",
+							"guid": "component-list-default",
+							"variantid": "default",
+							"componentid": "component-list",
+							"private": false
+						}
+					],
+					"filecount": 1,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
 					"title": "Modals",
 					"shortpath": "modals",
 					"longpath": "src/components/modals",
@@ -703,7 +725,7 @@
 				}
 			],
 			"filecount": 0,
-			"directorycount": 18,
+			"directorycount": 19,
 			"type": "directory"
 		},
 		{

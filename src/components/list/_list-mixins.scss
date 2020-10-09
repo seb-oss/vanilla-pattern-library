@@ -1,0 +1,111 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+@import '~include-media/dist/include-media';
+
+@import '../../variables';
+@import '../../colors';
+
+$vanilla_list_space: 1rem;
+
+///
+/// @access public
+@mixin vanilla-list() {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  &__wrapper {
+    width: 100%;
+
+    label,
+    &__label {
+      @include vanilla-list__label();
+    }
+  }
+
+  label,
+  &__label {
+    @include vanilla-list__label();
+  }
+
+  li,
+  &__item {
+    @include vanilla-list__item();
+
+    dt,
+    &-label {
+      @include vanilla-list__item-label();
+    }
+
+    dd,
+    &-value {
+      @include vanilla-list__item-value();
+    }
+  }
+}
+
+@mixin vanilla-list__label() {
+  background-color: $vanilla-color-grey100;
+  display: block;
+  padding-left: $vanilla_list_space;
+  font-size: 14px;
+  line-height: 2rem;
+}
+
+@mixin vanilla-list__item() {
+  min-height: vanilla-px-to-em(40);
+  border-bottom: 1px solid $vanilla-color-grey200;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  > * {
+    margin: 0;
+  }
+}
+
+@mixin vanilla-list__item-label() {
+  padding-left: $vanilla_list_space;
+}
+
+@mixin vanilla-list__item-value() {
+  justify-content: flex-end;
+  font-weight: 500;
+  text-align: right;
+  padding-right: $vanilla_list_space;
+
+  &--left {
+    text-align: left;
+    padding-left: $vanilla_list_space;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-list--small() {
+  li,
+  &__item {
+    display: block;
+
+    dt,
+    &-label {
+      line-height: 1rem;
+      padding-bottom: 0.5rem;
+      font-size: 14px;
+    }
+
+    dd,
+    &-value {
+      line-height: 1rem;
+      text-align: left;
+      padding-left: $vanilla_list_space;
+      padding-right: 0;
+    }
+  }
+}
