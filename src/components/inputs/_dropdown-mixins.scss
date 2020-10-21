@@ -51,6 +51,12 @@
     padding: 0 vanilla-px-to-rem(16);
     cursor: pointer;
     line-height: vanilla-px-to-em(44px);
+    background-color: transparent;
+    border-width: 0;
+    width: 100%;
+    text-align: left;
+    font-family: $vanilla-font-seb-sans-serif;
+    font-size: 1rem;
 
     &:hover {
       background-color: $vanilla-color-component-normal;
@@ -70,15 +76,18 @@
 
   input:checked + label,
   input:checked + &__label,
-  &__label--selected {
+  &__label--selected,
+  .-selected {
     background-color: $vanilla-color-component-selected;
     color: #fff;
   }
 
   input:focus + label,
   input:focus + &__label,
+  :focus,
   &__label--focus {
     @include vanilla-focus-outline();
+    outline: 0;
   }
 
   &--expanded,
