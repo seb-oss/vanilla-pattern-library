@@ -95,4 +95,18 @@ In addition to the classes shown in the example below, this component can be use
 </select>
 ```
 
+## Using button instead of label and input
+
+```html
+<div class="sdv-field-dropdown">
+  <div class="sdv-field-dropdown__label" tabindex="0">Chosen value</div>
+  <div class="sdv-field-dropdown__options -expanded">
+    <button>Dropdown value 1</button>
+    <button class="-selected">Short one</button>
+    <button>Dropdown value 3</button>
+    <button>Dropdown value 4</button>
+  </div>
+</div>
+```
+
 :::
