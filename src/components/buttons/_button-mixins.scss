@@ -176,6 +176,10 @@ $_ghost-button_disabled-opacity: 0.5;
   color: $vanilla-color-white;
   background-color: transparent;
 
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-white, 0.9);
+  }
+
   &:focus,
   &:hover,
   &:active {
@@ -198,6 +202,10 @@ $_ghost-button_disabled-opacity: 0.5;
   border-color: $vanilla-color-grey2;
   color: $vanilla-color-grey2;
   background-color: transparent;
+
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-grey700);
+  }
 
   &:focus,
   &:hover,
@@ -230,6 +238,10 @@ $_ghost-button_disabled-opacity: 0.5;
   background-color: transparent;
   border-color: transparent;
 
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-red);
+  }
+
   &:focus,
   &:hover,
   &:active {
@@ -252,6 +264,10 @@ $_ghost-button_disabled-opacity: 0.5;
   color: $vanilla-color-white;
   background-color: $vanilla-color-darkred1;
   border-color: $vanilla-color-darkred1;
+
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-red);
+  }
 
   &:focus,
   &:hover,
