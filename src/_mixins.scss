@@ -61,8 +61,8 @@
 /// Add focus outline to element
 ///
 /// @access public
-@mixin vanilla-focus-outline() {
-  box-shadow: 0 0 0 3px rgba($vanilla-color-component-selected, 0.2);
+@mixin vanilla-focus-outline($shadow-color: $vanilla-color-blue, $opacity: 1) {
+  box-shadow: 0 0 4px 1px rgba($shadow-color, $opacity);
   transition: box-shadow 250ms;
 }
 
