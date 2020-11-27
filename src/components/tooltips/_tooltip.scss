@@ -3,5 +3,21 @@
 @include _vanilla-exports('vanilla-tooltip') {
   .sdv-tooltip {
     @include vanilla-tooltip();
+
+    &__arrow-top {
+      @include vanilla-tooltip--top();
+    }
+
+    &__arrow-bottom {
+      @include vanilla-tooltip--bottom();
+    }
+
+    &__arrow-left {
+      @include vanilla-tooltip--left();
+    }
+
+    &__arrow-right {
+      @include vanilla-tooltip--right();
+    }
   }
 }

@@ -28,93 +28,81 @@ $vanilla-tooltip-bg-color: $vanilla-color-grey1;
 ///
 /// @access public
 @mixin vanilla-tooltip-arrow {
+  position: absolute;
   width: 0;
   height: 0;
-  border: vanilla-px-to-rem(8) solid $vanilla-tooltip-bg-color;
-}
-
-/// Styles for default tooltip class
-///
-/// @access public
-@mixin vanilla-tooltip__main() {
-  @include vanilla-tooltip-box();
-  position: relative;
-
-  &::after {
-    @include vanilla-tooltip-arrow();
-    content: '';
-    position: absolute;
-  }
-}
-
-/// Styles for default tooltip class
-///
-/// @access public
-@mixin vanilla-tooltip() {
-  @include vanilla-tooltip__main();
-
-  &--top {
-    @include vanilla-tooltip--top();
-  }
-
-  &--bottom {
-    @include vanilla-tooltip--bottom();
-  }
-
-  &--left {
-    @include vanilla-tooltip--left();
-  }
-
-  &--right {
-    @include vanilla-tooltip--right();
-  }
+  border: vanilla-px-to-rem(8) solid transparent;
 }
 
 /// Tooltip top modifier
 ///
 /// @access public
 @mixin vanilla-tooltip--top() {
-  &::after {
-    bottom: vanilla-px-to-rem(-16);
-    left: 50%;
-    transform: translateX(-50%);
-    border-color: $vanilla-tooltip-bg-color transparent transparent;
-  }
+  @include vanilla-tooltip-arrow();
+  bottom: vanilla-px-to-rem(-16);
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: $vanilla-tooltip-bg-color transparent transparent;
 }
 
 /// Tooltip bottom modifier
 ///
 /// @access public
 @mixin vanilla-tooltip--bottom() {
-  &::after {
-    top: vanilla-px-to-rem(-16);
-    left: 50%;
-    transform: translateX(-50%);
-    border-color: transparent transparent $vanilla-tooltip-bg-color;
-  }
+  @include vanilla-tooltip-arrow();
+  top: vanilla-px-to-rem(-16);
+  left: 50%;
+  transform: translateX(-50%);
+  border-color: transparent transparent $vanilla-tooltip-bg-color;
 }
 
 /// Tooltip left modifier
 ///
 /// @access public
 @mixin vanilla-tooltip--left() {
-  &::after {
-    left: vanilla-px-to-rem(-16);
-    top: 50%;
-    transform: translateY(-50%);
-    border-color: transparent $vanilla-tooltip-bg-color transparent transparent;
-  }
+  @include vanilla-tooltip-arrow();
+  right: vanilla-px-to-rem(-16);
+  top: 50%;
+  transform: translateY(-50%);
+  border-color: transparent transparent transparent $vanilla-tooltip-bg-color;
 }
 
 /// Tooltip right modifier
 ///
 /// @access public
 @mixin vanilla-tooltip--right() {
-  &::after {
-    right: vanilla-px-to-rem(-16);
-    top: 50%;
-    transform: translateY(-50%);
-    border-color: transparent transparent transparent $vanilla-tooltip-bg-color;
+  @include vanilla-tooltip-arrow();
+  left: vanilla-px-to-rem(-16);
+  top: 50%;
+  transform: translateY(-50%);
+  border-color: transparent $vanilla-tooltip-bg-color transparent transparent;
+}
+
+/// Styles for default tooltip class
+///
+/// @access public
+@mixin vanilla-tooltip() {
+  @include vanilla-tooltip-box();
+  position: relative;
+
+  &--top::after {
+    @include vanilla-tooltip--top();
+    content: '';
+  }
+
+  &--bottom::after {
+    @include vanilla-tooltip--bottom();
+    content: '';
+  }
+
+  &--left::after {
+    @include vanilla-tooltip--left();
+    content: '';
+  }
+
+  &--right::after {
+    @include vanilla-tooltip--right();
+    content: '';
   }
 }
 
