@@ -15,7 +15,7 @@ Import classes:
 
 Framework needed! This contains only the styles for a tooltip. Behaviour and positioning needs to be implemented in a JS framework. To manipulate arrow positioning and styling of through Javascript, use the adjustable version under "Show details".
 
-If you only need a simple tooltip positioned above the text/icon, take a look at the CSS-only variant of the tooltip. It is more limited, but does not require any Javascript to work.
+If you only need a simple tooltip positioned above the text/icon, take a look at the CSS-only variant of the tooltip. It is more limited, but does not require any Javascript to work. 
 
 :::componentpreview
 
