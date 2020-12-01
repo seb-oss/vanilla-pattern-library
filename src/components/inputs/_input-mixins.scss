@@ -26,43 +26,47 @@
   @include vanilla-field-base();
   @include vanilla-toggle-base($_type);
 
-  input:checked + label::before {
-    background-color: $vanilla-color-component-selected;
-    border-color: $vanilla-color-component-selected;
-  }
-
   @if ($_type == 'switch') {
-    input:not(:checked) + label::before {
-      background-color: $vanilla-color-component-disabled-dark;
-      border-color: $vanilla-color-component-disabled-dark;
+    input:checked:not(:disabled) + label::before {
+      background-color: $vanilla-color-darkgreen1;
     }
 
-    input + label::after {
-      display: block;
-      content: '';
-      position: absolute;
-      top: vanilla-px-to-em(11px);
-      left: vanilla-px-to-em(13px);
-      background-color: $vanilla-color-white;
-      width: vanilla-px-to-em(18px);
-      height: vanilla-px-to-em(18px);
-      border-radius: 50%;
-      transition: 250ms;
-      border: vanilla-px-to-em(3px) solid $vanilla-color-white;
+    input:checked:focus + label::before {
+      background-color: $vanilla-color-darkgreen2;
     }
 
     input:checked + label::after {
-      left: vanilla-px-to-em(33px);
+      @include vanilla-toggle-switch__checked-label-after();
     }
 
-    &:hover input:not(:disabled) + label::after {
-      background-color: $vanilla-color-component-hover;
+    input:not(:checked):focus + label::before {
+      background-color: $_toggle-switch-color-bg-hover;
     }
 
-    input:not(:disabled):focus + label::after {
-      background-color: $vanilla-color-component-selected;
+    &:hover input:not(:disabled):not(:checked) {
+      + label::before {
+        background-color: $_toggle-switch-color-bg-hover;
+      }
+
+      + label::after {
+        left: $_toggle-base-padding-horizontal +
+          $_toggle-switch-after-padding-hover;
+      }
+    }
+
+    &:hover input:not(:disabled):checked + label::before {
+      background-color: $vanilla-color-darkgreen2;
+    }
+
+    &:hover input:not(:disabled):checked + label::after {
+      @include vanilla-toggle-switch__hover-checked-label-after();
     }
   } @else {
+    input:checked + label::before {
+      background-color: $vanilla-color-component-selected;
+      border-color: $vanilla-color-component-selected;
+    }
+
     input:checked + label::after {
       display: block;
       content: '';
