@@ -71,4 +71,12 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
 </button>
 ```
 
+## Large version
+
+```html
+<button class="sdv-button sdv-button-ghost-light sdv-button--large">
+  Ghost button
+</button>
+```
+
 :::
