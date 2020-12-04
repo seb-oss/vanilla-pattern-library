@@ -30,6 +30,14 @@
     @include vanilla-text-field-notice--error();
   }
 
+  .sdv-field-wrap {
+    @include vanilla-text-field-wrap();
+
+    .sdv-field__after {
+      @include vanilla-text-field__after();
+    }
+  }
+
   textarea.sdv-field {
     @include vanilla-text-field-textarea();
   }
