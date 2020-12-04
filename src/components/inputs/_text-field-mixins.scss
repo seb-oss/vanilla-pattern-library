@@ -63,3 +63,11 @@
 @mixin vanilla-text-field-label() {
   @include vanilla-field-label();
 }
+
+/// Style that can be added to erroneous field groups
+///
+/// @access public
+@mixin vanilla-field-group--error() {
+  border: 1px solid $vanilla-color-red;
+  border-radius: $vanilla-component-border-radius;
+}
