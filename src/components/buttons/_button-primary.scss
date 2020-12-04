@@ -8,4 +8,8 @@
   .sdv-button--small {
     @include vanilla-button--small();
   }
+
+  .sdv-button--large {
+    @include vanilla-button--large();
+  }
 }

@@ -45,6 +45,14 @@ Import classes:
   Delete button
 </button>
 ```
+
+## Large version
+
+```html
+<button class="sdv-button sdv-button-delete sdv-button--large">
+  Delete button
+</button>
+```
 :::
 
 In addition to the classes shown in the example, this component can be used via the following mixins:

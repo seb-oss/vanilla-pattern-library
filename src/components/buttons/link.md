@@ -62,4 +62,10 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-link</i>
 </button>
 ```
 
+## Large version
+
+```html
+<button class="sdv-button sdv-button-link sdv-button--large">Link Button</button>
+```
+
 :::

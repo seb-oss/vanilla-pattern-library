@@ -57,4 +57,10 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-secondar
 <button class="sdv-button sdv-button--small">Primary button</button>
 ```
 
+## Large version
+
+```html
+<button class="sdv-button sdv-button--large">Primary button</button>
+```
+
 :::
