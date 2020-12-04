@@ -14,6 +14,7 @@
 
 /// The left and right padding in buttons
 $vanilla-button-padding: vanilla-px-to-em(16) !default;
+$vanilla-button-padding--large: vanilla-px-to-em(24) !default;
 
 // Config
 $_height: vanilla-px-to-em(44 - 2);
@@ -107,6 +108,17 @@ $_ghost-button_disabled-opacity: 0.5;
   min-height: vanilla-px-to-rem(32);
   max-height: vanilla-px-to-rem(32);
   font-size: vanilla-px-to-rem(14);
+}
+
+/// Mixes in button styles -- large modifier
+///
+/// @access public
+@mixin vanilla-button--large {
+  line-height: 1.5;
+  min-height: vanilla-px-to-rem(64);
+  max-height: vanilla-px-to-rem(64);
+  font-size: vanilla-px-to-rem(20);
+  padding: 0 $vanilla-button-padding--large;
 }
 
 /// Add secondary button styles

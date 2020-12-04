@@ -63,3 +63,40 @@
 @mixin vanilla-text-field-label() {
   @include vanilla-field-label();
 }
+
+/// Style for input wrap. This is meant to be applied to elements that
+/// contain both an input and other content.
+///
+/// @access public
+@mixin vanilla-text-field-wrap() {
+  position: relative;
+  height: vanilla-px-to-em(44px);
+}
+
+/// Style for icons and text appended to the right in the input-field
+///
+/// @access public
+@mixin vanilla-text-field__after() {
+  $_width: 2.5rem;
+
+  width: $_width;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  // supported in ie9+
+  &:not(:empty) + .sdv-field {
+    padding-right: $_width;
+  }
+}
+
+/// Style that can be added to erroneous field groups
+///
+/// @access public
+@mixin vanilla-field-group--error() {
+  border: 1px solid $vanilla-color-red;
+  border-radius: $vanilla-component-border-radius;
+}

@@ -1,6 +1,22 @@
 @import '../../variables';
 @import '../../mixins';
 
+$_toggle-base-spacing: 0.5em;
+$_toggle-base-padding-vertical: 0.5em;
+$_toggle-base-padding-horizontal: 0.75em;
+
+$_toggle-switch-before-height: 1.5em;
+$_toggle-switch-before-width: 2.75em;
+$_toggle-switch-after-width: 1.25em;
+$_toggle-switch-after-padding: 0.125em;
+$_toggle-switch-after-padding-hover: 0.375em;
+$_toggle-switch-color-bg-normal: #b3b3b3;
+$_toggle-switch-color-bg-hover: #999;
+
+$_toggle-switch-before-height-mobile: 2em;
+$_toggle-switch-before-width-mobile: 3.5em;
+$_toggle-switch-after-width-mobile: 1.75em;
+
 ///
 /// @access public
 @mixin vanilla-toggle-base__label() {
@@ -8,7 +24,8 @@
   border-radius: $vanilla-component-border-radius;
   position: relative;
   min-height: 2em;
-  padding: 0.5em 0.75em 0.5em 2.5em;
+  padding: $_toggle-base-padding-vertical $_toggle-base-padding-horizontal
+    $_toggle-base-padding-vertical 2.5em;
 
   &:hover::before {
     border-color: $vanilla-color-component-selected;
@@ -19,7 +36,24 @@
 /// @access public
 @mixin vanilla-toggle-switch__label() {
   @include vanilla-toggle-base__label();
-  padding: 0.5em 0.75em 0.5em 4em;
+  line-height: 1.25;
+  padding-left: $_toggle-base-padding-horizontal + $_toggle-switch-before-width +
+    $_toggle-base-spacing;
+  min-height: $_toggle-switch-before-height + $_toggle-base-padding-vertical * 2;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      line-height: 1.75;
+      padding-left: $_toggle-base-padding-horizontal +
+        $_toggle-switch-before-width-mobile + $_toggle-base-spacing;
+      min-height: $_toggle-switch-before-height-mobile +
+        $_toggle-base-padding-vertical * 2;
+    }
+  }
+
+  &:hover::before {
+    border-color: transparent;
+  }
 }
 
 ///
@@ -52,11 +86,20 @@
 /// @access public
 @mixin vanilla-toggle-switch__label-before() {
   @include vanilla-toggle-base__label-before();
-  width: vanilla-px-to-em(40px);
-  height: vanilla-px-to-em(20px);
-  border-radius: vanilla-px-to-em(20px);
-  top: vanilla-px-to-em(10px);
-  left: 0.75em;
+  width: $_toggle-switch-before-width;
+  height: $_toggle-switch-before-height;
+  border-radius: 1em;
+  border-color: transparent;
+  background-color: $_toggle-switch-color-bg-normal;
+  top: $_toggle-base-padding-vertical;
+  left: $_toggle-base-padding-horizontal;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      width: $_toggle-switch-before-width-mobile;
+      height: $_toggle-switch-before-height-mobile;
+    }
+  }
 }
 
 ///
@@ -70,6 +113,61 @@
   left: 0.75em;
 }
 
+///
+/// @access public
+@mixin vanilla-toggle-switch__label-after() {
+  display: block;
+  content: '';
+  position: absolute;
+  top: $_toggle-base-padding-vertical + $_toggle-switch-after-padding;
+  left: $_toggle-base-padding-horizontal + $_toggle-switch-after-padding;
+  background-color: $vanilla-color-white;
+  width: $_toggle-switch-after-width;
+  height: $_toggle-switch-after-width;
+  border-radius: 50%;
+  transition: left 150ms ease-in-out;
+  border: vanilla-px-to-em(3px) solid $vanilla-color-white;
+  box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.15),
+    0 0.0625em 0.125em 0 rgba(0, 0, 0, 0.15), 0 0.0625em 0 0 rgba(0, 0, 0, 0.06);
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      width: $_toggle-switch-after-width-mobile;
+      height: $_toggle-switch-after-width-mobile;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-switch__checked-label-after() {
+  left: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
+    $_toggle-switch-after-width - $_toggle-switch-after-padding;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      left: $_toggle-base-padding-horizontal +
+        $_toggle-switch-before-width-mobile - $_toggle-switch-after-width-mobile -
+        $_toggle-switch-after-padding;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-switch__hover-checked-label-after() {
+  left: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
+    $_toggle-switch-after-width - $_toggle-switch-after-padding-hover;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      left: $_toggle-base-padding-horizontal +
+        $_toggle-switch-before-width-mobile - $_toggle-switch-after-width-mobile -
+        $_toggle-switch-after-padding-hover;
+    }
+  }
+}
+
 /// Shared styles for radio buttons, checkboxes and toggle switches
 ///
 /// @access public
@@ -78,6 +176,7 @@
   display: inline-block;
   border-color: transparent;
   height: auto;
+  user-select: none;
 
   input {
     appearance: none;
@@ -108,10 +207,12 @@
         @include vanilla-toggle-checkbox__label-before();
       }
     }
-  }
 
-  input:focus + label {
-    box-shadow: 0 0 0 vanilla-px-to-em(1px) $vanilla-color-component-selected;
+    &::after {
+      @if ($_type == 'switch') {
+        @include vanilla-toggle-switch__label-after();
+      }
+    }
   }
 
   input:focus + label::before {
@@ -130,7 +231,7 @@
     }
 
     &:checked + label::before {
-      @if ($_type == 'checkbox' or $_type == 'switch') {
+      @if ($_type == 'checkbox') {
         background-color: $vanilla-color-component-disabled-dark !important;
         border-color: $vanilla-color-component-disabled-dark;
       }
