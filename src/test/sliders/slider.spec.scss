@@ -51,6 +51,16 @@
       }
     }
   }
+  @include it('Should compile vanilla-slider-thumb-focus') {
+    @include assert {
+      @include output {
+        @include vanilla-slider-thumb-focus();
+      }
+      @include expect {
+        @include vanilla-slider-thumb-focus();
+      }
+    }
+  }
   @include it('Should compile vanilla-range-input') {
     @include assert {
       @include output {

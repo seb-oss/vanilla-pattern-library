@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../components/segmented-control/_segmented-control-mixins.scss';
+@include describe('segmented-control _segmented-control-mixins.scss') {
+  @include it('Should compile vanilla-segmented-control') {
+    @include assert {
+      @include output {
+        @include vanilla-segmented-control();
+      }
+      @include expect {
+        @include vanilla-segmented-control();
+      }
+    }
+  }
+}

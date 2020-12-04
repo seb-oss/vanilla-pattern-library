@@ -1,0 +1,24 @@
+@import 'true';
+@import '../../components/badge/_badge-mixins.scss';
+@include describe('badge _badge-mixins.scss') {
+  @include it('Should compile vanilla-badge-base') {
+    @include assert {
+      @include output {
+        @include vanilla-badge-base();
+      }
+      @include expect {
+        @include vanilla-badge-base();
+      }
+    }
+  }
+  @include it('Should compile vanilla-badge') {
+    @include assert {
+      @include output {
+        @include vanilla-badge();
+      }
+      @include expect {
+        @include vanilla-badge();
+      }
+    }
+  }
+}
