@@ -41,4 +41,8 @@
   textarea.sdv-field {
     @include vanilla-text-field-textarea();
   }
+
+  .sdv-field-group--error {
+    @include vanilla-field-group--error();
+  }
 }

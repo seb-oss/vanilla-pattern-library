@@ -215,10 +215,6 @@ $_toggle-switch-after-width-mobile: 1.75em;
     }
   }
 
-  input:focus + label {
-    box-shadow: 0 0 0 vanilla-px-to-em(1px) $vanilla-color-component-selected;
-  }
-
   input:focus + label::before {
     @include vanilla-focus-outline();
     border-color: $vanilla-color-component-selected;

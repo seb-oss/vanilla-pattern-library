@@ -92,3 +92,11 @@
     padding-right: $_width;
   }
 }
+
+/// Style that can be added to erroneous field groups
+///
+/// @access public
+@mixin vanilla-field-group--error() {
+  border: 1px solid $vanilla-color-red;
+  border-radius: $vanilla-component-border-radius;
+}
