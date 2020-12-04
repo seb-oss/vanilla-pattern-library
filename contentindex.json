@@ -128,7 +128,7 @@
 							"shortpath": "components/buttons/delete-confirm",
 							"longpath": "src/components/buttons/delete-confirm.md",
 							"type": "file",
-							"title": "Delete button",
+							"title": "Delete Confirm button",
 							"guid": "component-button-delete-confirm",
 							"variantid": "delete-confirm",
 							"componentid": "component-button",

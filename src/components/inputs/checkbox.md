@@ -47,4 +47,21 @@ In addition to the classes shown in the example below, this component can be use
     </div>
 </div>
 ```
+
+## Error state
+```html
+<div>
+  <div class="sdv-field-group sdv-field-group--error">
+      <div class="sdv-field-checkbox-wrap">
+          <input type="checkbox" aria-label="Field label" id="sdv-cb1">
+          <label for="sdv-cb1">Field label</label>
+      </div>
+      <div class="sdv-field-checkbox-wrap">
+          <input type="checkbox" aria-label="Field label" id="sdv-cb2">
+         <label for="sdv-cb2">Field label</label>
+      </div>
+  </div>
+  <div class="sdv-field-notice sdv-field-notice--error">Error text</div>
+</div>
+```
 :::

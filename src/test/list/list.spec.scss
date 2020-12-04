@@ -1,0 +1,64 @@
+@import 'true';
+@import '../../components/list/_list-mixins.scss';
+@include describe('list _list-mixins.scss') {
+  @include it('Should compile vanilla-list') {
+    @include assert {
+      @include output {
+        @include vanilla-list();
+      }
+      @include expect {
+        @include vanilla-list();
+      }
+    }
+  }
+  @include it('Should compile vanilla-list__label') {
+    @include assert {
+      @include output {
+        @include vanilla-list__label();
+      }
+      @include expect {
+        @include vanilla-list__label();
+      }
+    }
+  }
+  @include it('Should compile vanilla-list__item') {
+    @include assert {
+      @include output {
+        @include vanilla-list__item();
+      }
+      @include expect {
+        @include vanilla-list__item();
+      }
+    }
+  }
+  @include it('Should compile vanilla-list__item-label') {
+    @include assert {
+      @include output {
+        @include vanilla-list__item-label();
+      }
+      @include expect {
+        @include vanilla-list__item-label();
+      }
+    }
+  }
+  @include it('Should compile vanilla-list__item-value') {
+    @include assert {
+      @include output {
+        @include vanilla-list__item-value();
+      }
+      @include expect {
+        @include vanilla-list__item-value();
+      }
+    }
+  }
+  @include it('Should compile vanilla-list--small') {
+    @include assert {
+      @include output {
+        @include vanilla-list--small();
+      }
+      @include expect {
+        @include vanilla-list--small();
+      }
+    }
+  }
+}

@@ -62,7 +62,8 @@
 ///
 /// @access public
 @mixin vanilla-focus-outline($shadow-color: $vanilla-color-blue, $opacity: 1) {
-  box-shadow: 0 0 4px 1px rgba($shadow-color, $opacity);
+  box-shadow: 0 0 vanilla-px-to-em(4px) vanilla-px-to-em(1px)
+    rgba($shadow-color, $opacity);
   transition: box-shadow 250ms;
 }
 

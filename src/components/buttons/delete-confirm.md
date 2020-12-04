@@ -1,5 +1,5 @@
 ---
-title: Delete button
+title: Delete Confirm button
 componentid: component-button
 variantid: delete-confirm
 guid: component-button-delete-confirm
@@ -42,6 +42,14 @@ Import classes:
 
 ```html
 <button class="sdv-button sdv-button-delete sdv-button--small">
+  Delete button
+</button>
+```
+
+## Large version
+
+```html
+<button class="sdv-button sdv-button-delete sdv-button--large">
   Delete button
 </button>
 ```

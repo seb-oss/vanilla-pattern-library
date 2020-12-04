@@ -74,6 +74,23 @@ In addition to the classes shown in the example below, this component can be use
 </div>
 ```
 
+## With text or icon appended
+
+```html
+<div>
+  <label for="input-field" class="sdv-field-label">Field label</label>
+  <div class="sdv-field-wrap">
+    <span class="sdv-field__after">SEK</span>
+    <input
+      id="input-field"
+      class="sdv-field"
+      aria-label="Field label"
+      placeholder="Input field"
+    />
+  </div>
+</div>
+```
+
 ## Small version
 
 ```html
