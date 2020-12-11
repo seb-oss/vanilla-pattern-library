@@ -226,6 +226,48 @@ Import classes:
 </table>
 ```
 
+## Input table
+```html
+<table class="sdv-table">
+    <thead>
+        <tr>
+            <th class="pw-table__primary-col">Employee</td>
+            <th>New salary</td>
+            <th>Valid from</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>100912</td>
+            <td>
+                <div class="sdv-field-wrap--small">
+                    <input class="sdv-field sdv-field--small" />
+                </div>
+            </td>
+            <td>
+                <div class="sdv-field-wrap--small">
+                    <input class="sdv-field sdv-field--small" placeholder="yyyymm" style="width: 6rem;"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>108501</td>
+            <td>
+                <div class="sdv-field-wrap--small">
+                    <input class="sdv-field sdv-field--small" />
+                </div>
+            </td>
+            <td>
+                <div class="sdv-field-wrap--small">
+                    <input class="sdv-field sdv-field--error sdv-field--small" placeholder="yyyymm" style="width: 6rem;"/>
+                    <div class="sdv-field-notice sdv-field-notice--error">Error text</div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+```
+
 ## Simple table
 ```html
 <table class="sdv-table">

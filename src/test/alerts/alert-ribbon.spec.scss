@@ -41,6 +41,16 @@
       }
     }
   }
+  @include it('Should compile vanilla-alert-ribbon__link') {
+    @include assert {
+      @include output {
+        @include vanilla-alert-ribbon__link();
+      }
+      @include expect {
+        @include vanilla-alert-ribbon__link();
+      }
+    }
+  }
   @include it('Should compile vanilla-alert-ribbon') {
     @include assert {
       @include output {
