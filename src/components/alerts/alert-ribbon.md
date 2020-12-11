@@ -113,13 +113,13 @@ The `<i>` and the `<button>` elements are optional.
         @include vanilla-alert-ribbon__paragraph();
     }
 
-    .my-whisper-style-class {
+    .my-information-style-class {
         @include vanilla-alert--information();
     }
 
-    .my-talk-style-class {
-    ...
-}
+    .my-success-style-class {
+        ...
+    }
 ```
 
 Please refer to the source code on [Github](https://github.com/sebgroup/vanilla-pattern-library/blob/master/src/components/alerts/_alert-ribbon-mixins.scss) for a full example of how to use the mixins. (see vanilla-alert-ribbon)
