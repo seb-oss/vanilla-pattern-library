@@ -17,6 +17,15 @@
   @include vanilla-field-base--small();
 }
 
+/// Style for basic text field -- small modifier
+///
+/// @access public
+@mixin vanilla-text-field-wrap--small() {
+  box-sizing: border-box;
+  min-height: vanilla-px-to-em(48px);
+  padding: 0.5em 0;
+}
+
 /// Style for textarea
 ///
 /// @access public

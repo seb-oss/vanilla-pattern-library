@@ -95,9 +95,6 @@ In addition to the classes shown in the example below, this component can be use
 
 ```html
 <div>
-  <label for="input-field" class="sdv-field-label sdv-field-label--small"
-    >Field label</label
-  >
   <input
     id="input-field"
     class="sdv-field sdv-field--small"

@@ -10,6 +10,10 @@
     @include vanilla-text-field--small();
   }
 
+  .sdv-field-wrap--small {
+    @include vanilla-text-field-wrap--small();
+  }
+
   .sdv-field--error {
     @include vanilla-text-field--error();
   }
