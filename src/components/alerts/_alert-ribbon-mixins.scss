@@ -20,11 +20,12 @@
 @mixin vanilla-alert-ribbon__paragraph() {
   margin-bottom: 0;
   margin-right: 1em;
+  line-height: 1.25;
+  flex-grow: 1;
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
       flex-basis: 0;
-      flex-grow: 1;
       margin-right: 0;
     }
   }
@@ -35,6 +36,7 @@
 @mixin vanilla-alert-ribbon__button() {
   @include vanilla-button();
   margin-left: auto;
+  align-self: flex-end;
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
@@ -47,6 +49,7 @@
   @include media-context($vanilla-breakpoints) {
     @include media('>=tablet') {
       @include vanilla-button--small();
+      margin-left: 4rem;
     }
   }
 }
@@ -55,7 +58,20 @@
 /// @access public
 @mixin vanilla-alert-ribbon__icon() {
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.25;
+  margin-right: 1em;
+}
+
+///
+/// @access public
+@mixin vanilla-alert-ribbon__link() {
+  &,
+  &:hover,
+  &:visited {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
+  }
 }
 
 ///
@@ -71,21 +87,32 @@
     @include vanilla-alert-ribbon__button();
   }
 
+  a {
+    @include vanilla-alert-ribbon__link();
+  }
+
   .fal,
   .far,
   .fas {
     @include vanilla-alert-ribbon__icon();
   }
 
-  &--whisper {
-    @include vanilla-alert--whisper();
+  &--whisper,
+  &--information {
+    @include vanilla-alert--information();
   }
 
-  &--talk {
-    @include vanilla-alert--talk();
+  &--success {
+    @include vanilla-alert--success();
   }
 
-  &--shout {
-    @include vanilla-alert--shout();
+  &--talk,
+  &--warning {
+    @include vanilla-alert--warning();
+  }
+
+  &--shout,
+  &--critical {
+    @include vanilla-alert--critical();
   }
 }
