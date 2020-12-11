@@ -12,8 +12,26 @@
 
 ///
 /// @access private
+@mixin vanilla-alert--information() {
+  background-color: $vanilla-color-grey8;
+  color: $vanilla-color-text;
+
+  button {
+    @include vanilla-button-ghost-dark();
+  }
+}
+
+///
+/// @access private
 @mixin vanilla-alert--whisper() {
-  background-color: $vanilla-color-purple;
+  @warn 'vanilla-alert--whisper is deprecated. Use vanilla-alert--information instead.';
+  @include vanilla-alert--information();
+}
+
+///
+/// @access private
+@mixin vanilla-alert--success() {
+  background-color: $vanilla-color-darkgreen2;
   color: $vanilla-color-white;
 
   button {
@@ -23,7 +41,7 @@
 
 ///
 /// @access private
-@mixin vanilla-alert--talk() {
+@mixin vanilla-alert--warning() {
   background-color: $vanilla-color-yellow;
   color: $vanilla-color-text;
 
@@ -34,11 +52,25 @@
 
 ///
 /// @access private
-@mixin vanilla-alert--shout() {
-  background-color: $vanilla-color-red;
+@mixin vanilla-alert--talk() {
+  @warn 'vanilla-alert--talk is deprecated. Use vanilla-alert--warning instead.';
+  @include vanilla-alert--warning();
+}
+
+///
+/// @access private
+@mixin vanilla-alert--critical() {
+  background-color: $vanilla-color-darkred1;
   color: $vanilla-color-white;
 
   button {
     @include vanilla-button-ghost-light();
   }
+}
+
+///
+/// @access private
+@mixin vanilla-alert--shout() {
+  @warn 'vanilla-alert--shout is deprecated. Use vanilla-alert--critical instead.';
+  @include vanilla-alert--critical();
 }
