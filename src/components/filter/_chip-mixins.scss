@@ -1,0 +1,59 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+
+@import '../../variables';
+@import '../../mixins';
+@import './filter-mixins';
+
+///
+/// @access public
+@mixin vanilla-chip-base() {
+  @include vanilla-filter-base();
+  min-height: vanilla-px-to-em(32);
+  padding: 0 0.5em;
+  background-color: $vanilla-color-grey8;
+}
+
+///
+/// @access public
+@mixin vanilla-chip-close() {
+  @include vanilla-icon($_glyph: '\f00d', $_color: $vanilla-color-text);
+  display: inline;
+  position: relative;
+  top: vanilla-px-to-em(1);
+  margin-left: 0.5em;
+}
+
+///
+/// @access public
+@mixin vanilla-chip-close--hover() {
+  color: $vanilla-color-darkred1;
+}
+
+///
+/// @access public
+@mixin vanilla-chip--focus() {
+  @include vanilla-focus-outline();
+  outline: none;
+  border-color: $vanilla-color-component-selected;
+}
+
+///
+/// @access public
+@mixin vanilla-chip() {
+  @include vanilla-chip-base();
+
+  &::after {
+    @include vanilla-chip-close();
+  }
+
+  &:hover::after {
+    @include vanilla-chip-close--hover();
+  }
+
+  &:focus {
+    @include vanilla-chip--focus();
+  }
+}
