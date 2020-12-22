@@ -294,6 +294,31 @@ $_ghost-button_disabled-opacity: 0.5;
   }
 }
 
+/// Sell button styles
+///
+/// @access public
+@mixin vanilla-button-sell {
+  color: $vanilla-color-white;
+  background-color: $vanilla-color-button-sell;
+  border-color: $vanilla-color-button-sell;
+
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-red);
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $vanilla-color-button-sell-dark;
+    border-color: $vanilla-color-button-sell-dark;
+  }
+
+  &[disabled] {
+    background-color: $_button_disabled-color-dark;
+    border-color: $_button_disabled-color-dark;
+  }
+}
+
 /// Mixes in button icon
 ///
 /// @access public
