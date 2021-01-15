@@ -4,7 +4,6 @@
 ////
 
 @import '../../variables';
-@import '../buttons/button-mixins';
 
 /////////////////////////////////////////
 /// Alert common features
@@ -13,12 +12,8 @@
 ///
 /// @access private
 @mixin vanilla-alert--information() {
-  background-color: $vanilla-color-grey8;
+  background-color: $vanilla-color-information;
   color: $vanilla-color-text;
-
-  button {
-    @include vanilla-button-ghost-dark();
-  }
 }
 
 ///
@@ -31,23 +26,15 @@
 ///
 /// @access private
 @mixin vanilla-alert--success() {
-  background-color: $vanilla-color-darkgreen2;
+  background-color: $vanilla-color-success;
   color: $vanilla-color-white;
-
-  button {
-    @include vanilla-button-ghost-light();
-  }
 }
 
 ///
 /// @access private
 @mixin vanilla-alert--warning() {
-  background-color: $vanilla-color-yellow;
+  background-color: $vanilla-color-warning;
   color: $vanilla-color-text;
-
-  button {
-    @include vanilla-button-ghost-dark();
-  }
 }
 
 ///
@@ -60,12 +47,8 @@
 ///
 /// @access private
 @mixin vanilla-alert--critical() {
-  background-color: $vanilla-color-darkred1;
+  background-color: $vanilla-color-critical;
   color: $vanilla-color-white;
-
-  button {
-    @include vanilla-button-ghost-light();
-  }
 }
 
 ///
@@ -73,4 +56,71 @@
 @mixin vanilla-alert--shout() {
   @warn 'vanilla-alert--shout is deprecated. Use vanilla-alert--critical instead.';
   @include vanilla-alert--critical();
+}
+
+///
+/// @access private
+@mixin vanilla-alert--states() {
+  &--information {
+    @include vanilla-alert--information();
+  }
+
+  &--success {
+    @include vanilla-alert--success();
+  }
+
+  &--warning {
+    @include vanilla-alert--warning();
+  }
+
+  &--critical {
+    @include vanilla-alert--critical();
+  }
+}
+
+///
+/// @access private
+@mixin vanilla-alert__close() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.25rem;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+
+  &::after {
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f00d';
+    font-weight: 300;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+///
+/// @access private
+@mixin vanilla-alert__link() {
+  &,
+  &:hover,
+  &:visited {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
+  }
 }

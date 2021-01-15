@@ -14,13 +14,13 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
 /// Mixes in progress bar styles
 ///
 /// @access public
-@mixin vanilla-progress-bar() {
+@mixin vanilla-progress-bar($color: $vanilla-color-green) {
   appearance: none; // Clear <progress> style
   height: vanilla-px-to-rem(5);
   width: 100%;
   position: relative;
   overflow: hidden;
-  color: $vanilla-color-green; // IE fallback for ::-ms-fill
+  color: $color; // IE fallback for ::-ms-fill
   border-width: 0; // Firefox adds border
   background-color: $vanilla-color-grey8;
 
@@ -31,7 +31,7 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
     left: -200px;
     width: 200px;
     height: vanilla-px-to-rem(5);
-    background-color: $vanilla-color-green;
+    background-color: $color;
     animation: #{$vanilla-progressbar-keyframes} 2s linear infinite;
   }
 
@@ -83,21 +83,21 @@ $vanilla-progressbar-keyframes: 'sdv-progressbar-loading' !default;
 }
 
 /// @access public
-@mixin vanilla-progress-bar--determinate() {
+@mixin vanilla-progress-bar--determinate($color: $vanilla-color-green) {
   &::before {
     content: none;
   }
 
   // Progress
   &::-webkit-progress-value {
-    background-color: $vanilla-color-green;
+    background-color: $color;
   }
 
   &::-moz-progress-bar {
-    background-color: $vanilla-color-green;
+    background-color: $color;
   }
 
   &::-ms-fill {
-    background-color: $vanilla-color-green;
+    background-color: $color;
   }
 }

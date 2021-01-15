@@ -5,6 +5,8 @@
 ////
 
 @import './datepicker-mixins';
+@import '../buttons/button';
+@import '../inputs/dropdown';
 
 @include _vanilla-exports('vanilla-datepicker') {
   .sdv-datepicker {

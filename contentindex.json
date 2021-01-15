@@ -67,9 +67,21 @@
 							"variantid": "default",
 							"componentid": "component-alertribbon",
 							"private": false
+						},
+						{
+							"filename": "toast.md",
+							"filepath": "components/alerts/toast.md",
+							"shortpath": "components/alerts/toast",
+							"longpath": "src/components/alerts/toast.md",
+							"type": "file",
+							"title": "Toast",
+							"guid": "component-toast",
+							"variantid": "default",
+							"componentid": "component-toast",
+							"private": false
 						}
 					],
-					"filecount": 1,
+					"filecount": 2,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -205,9 +217,21 @@
 							"variantid": "secondary",
 							"componentid": "component-button",
 							"private": false
+						},
+						{
+							"filename": "sell.md",
+							"filepath": "components/buttons/sell.md",
+							"shortpath": "components/buttons/sell",
+							"longpath": "src/components/buttons/sell.md",
+							"type": "file",
+							"title": "Sell button",
+							"guid": "component-button-sell",
+							"variantid": "sell",
+							"componentid": "component-button",
+							"private": false
 						}
 					],
-					"filecount": 7,
+					"filecount": 8,
 					"directorycount": 0,
 					"type": "directory"
 				},
@@ -318,6 +342,40 @@
 							"guid": "component-drag-drop-normal",
 							"variantid": "normal",
 							"componentid": "component-drag-drop",
+							"private": false
+						}
+					],
+					"filecount": 2,
+					"directorycount": 0,
+					"type": "directory"
+				},
+				{
+					"title": "Filter",
+					"shortpath": "filter",
+					"longpath": "src/components/filter",
+					"items": [
+						{
+							"filename": "chip.md",
+							"filepath": "components/filter/chip.md",
+							"shortpath": "components/filter/chip",
+							"longpath": "src/components/filter/chip.md",
+							"type": "file",
+							"title": "Chip",
+							"guid": "component-chip-default",
+							"variantid": "default",
+							"componentid": "component-chip",
+							"private": false
+						},
+						{
+							"filename": "filter-tag.md",
+							"filepath": "components/filter/filter-tag.md",
+							"shortpath": "components/filter/filter-tag",
+							"longpath": "src/components/filter/filter-tag.md",
+							"type": "file",
+							"title": "Filter-tag",
+							"guid": "component-filter-tag-default",
+							"variantid": "default",
+							"componentid": "component-filter-tag",
 							"private": false
 						}
 					],
@@ -695,6 +753,18 @@
 					"longpath": "src/components/tooltips",
 					"items": [
 						{
+							"filename": "contextual-help.md",
+							"filepath": "components/tooltips/contextual-help.md",
+							"shortpath": "components/tooltips/contextual-help",
+							"longpath": "src/components/tooltips/contextual-help.md",
+							"type": "file",
+							"title": "Contextual Help Button",
+							"guid": "component-contextual-help-default",
+							"variantid": "default",
+							"componentid": "component-contextual-help",
+							"private": false
+						},
+						{
 							"filename": "tooltip-css-only.md",
 							"filepath": "components/tooltips/tooltip-css-only.md",
 							"shortpath": "components/tooltips/tooltip-css-only",
@@ -719,13 +789,13 @@
 							"private": false
 						}
 					],
-					"filecount": 2,
+					"filecount": 3,
 					"directorycount": 0,
 					"type": "directory"
 				}
 			],
 			"filecount": 0,
-			"directorycount": 19,
+			"directorycount": 20,
 			"type": "directory"
 		},
 		{

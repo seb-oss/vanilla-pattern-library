@@ -1,0 +1,44 @@
+@import 'true';
+@import '../../components/alerts/_toast-mixins.scss';
+@include describe('alerts _toast-mixins.scss') {
+  @include it('Should compile vanilla-toast-base') {
+    @include assert {
+      @include output {
+        @include vanilla-toast-base();
+      }
+      @include expect {
+        @include vanilla-toast-base();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toast__body') {
+    @include assert {
+      @include output {
+        @include vanilla-toast__body();
+      }
+      @include expect {
+        @include vanilla-toast__body();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toast--timeline') {
+    @include assert {
+      @include output {
+        @include vanilla-toast--timeline();
+      }
+      @include expect {
+        @include vanilla-toast--timeline();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toast') {
+    @include assert {
+      @include output {
+        @include vanilla-toast();
+      }
+      @include expect {
+        @include vanilla-toast();
+      }
+    }
+  }
+}

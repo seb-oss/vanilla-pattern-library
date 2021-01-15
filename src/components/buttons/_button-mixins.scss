@@ -43,7 +43,6 @@ $_ghost-button_disabled-opacity: 0.5;
   font-weight: 500;
   font-size: 1em;
   text-align: center;
-  color: $vanilla-color-white;
   white-space: nowrap;
 
   appearance: none;
@@ -79,6 +78,7 @@ $_ghost-button_disabled-opacity: 0.5;
     text-decoration: none;
   }
 
+  &,
   &:visited,
   &:link {
     color: $vanilla-color-white;
@@ -215,6 +215,12 @@ $_ghost-button_disabled-opacity: 0.5;
   color: $vanilla-color-grey2;
   background-color: transparent;
 
+  &,
+  &:visited,
+  &:link {
+    color: $vanilla-color-grey2;
+  }
+
   &:focus {
     @include vanilla-focus-outline($vanilla-color-grey700);
   }
@@ -249,6 +255,12 @@ $_ghost-button_disabled-opacity: 0.5;
   color: $vanilla-color-darkred1;
   background-color: transparent;
   border-color: transparent;
+
+  &,
+  &:visited,
+  &:link {
+    color: $vanilla-color-darkred1;
+  }
 
   &:focus {
     @include vanilla-focus-outline($vanilla-color-red);
@@ -286,6 +298,31 @@ $_ghost-button_disabled-opacity: 0.5;
   &:active {
     background-color: $vanilla-color-red;
     border-color: $vanilla-color-red;
+  }
+
+  &[disabled] {
+    background-color: $_button_disabled-color-dark;
+    border-color: $_button_disabled-color-dark;
+  }
+}
+
+/// Sell button styles
+///
+/// @access public
+@mixin vanilla-button-sell {
+  color: $vanilla-color-white;
+  background-color: $vanilla-color-button-sell;
+  border-color: $vanilla-color-button-sell;
+
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-red);
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $vanilla-color-button-sell-dark;
+    border-color: $vanilla-color-button-sell-dark;
   }
 
   &[disabled] {
