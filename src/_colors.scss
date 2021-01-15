@@ -72,6 +72,12 @@ $vanilla-color-component-disabled-dark: $vanilla-color-grey400 !default;
 $vanilla-color-component-disabled-light: $vanilla-color-grey100 !default;
 $vanilla-color-text: $vanilla-color-text;
 
+// States
+$vanilla-color-information: $vanilla-color-grey8 !default;
+$vanilla-color-success: $vanilla-color-darkgreen2 !default;
+$vanilla-color-warning: $vanilla-color-yellow !default;
+$vanilla-color-critical: $vanilla-color-darkred1 !default;
+
 /// Returns a shade of a color
 ///
 /// @access public
