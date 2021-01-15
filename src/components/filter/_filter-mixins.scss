@@ -1,0 +1,37 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+///
+
+@import '../../variables';
+@import '../../mixins';
+
+$_filter-spacing: 0.5em;
+
+///
+/// @access public
+@mixin vanilla-filter-group() {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -$_filter-spacing;
+  margin-right: -$_filter-spacing;
+
+  > * {
+    margin-bottom: $_filter-spacing;
+    margin-right: $_filter-spacing;
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-filter-base() {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  display: inline-block;
+  border: vanilla-px-to-em(1) solid transparent;
+  border-radius: $vanilla-component-border-radius;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
