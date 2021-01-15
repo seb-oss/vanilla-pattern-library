@@ -1,0 +1,54 @@
+@import 'true';
+@import '../../components/filter/_chip-mixins.scss';
+@include describe('filter _chip-mixins.scss') {
+  @include it('Should compile vanilla-chip-base') {
+    @include assert {
+      @include output {
+        @include vanilla-chip-base();
+      }
+      @include expect {
+        @include vanilla-chip-base();
+      }
+    }
+  }
+  @include it('Should compile vanilla-chip-close') {
+    @include assert {
+      @include output {
+        @include vanilla-chip-close();
+      }
+      @include expect {
+        @include vanilla-chip-close();
+      }
+    }
+  }
+  @include it('Should compile vanilla-chip-close--hover') {
+    @include assert {
+      @include output {
+        @include vanilla-chip-close--hover();
+      }
+      @include expect {
+        @include vanilla-chip-close--hover();
+      }
+    }
+  }
+  @include it('Should compile vanilla-chip--focus') {
+    @include assert {
+      @include output {
+        @include vanilla-chip--focus();
+      }
+      @include expect {
+        @include vanilla-chip--focus();
+      }
+    }
+  }
+  @include it('Should compile vanilla-chip') {
+    @include assert {
+      @include output {
+        @include vanilla-chip();
+      }
+      @include expect {
+        @include vanilla-chip();
+      }
+    }
+  }
+}

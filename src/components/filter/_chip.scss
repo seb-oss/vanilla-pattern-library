@@ -1,0 +1,10 @@
+@import 'chip-mixins';
+@import 'filter-mixins';
+
+.sdv-chip {
+  @include vanilla-chip();
+}
+
+.sdv-chip-group {
+  @include vanilla-filter-group();
+}

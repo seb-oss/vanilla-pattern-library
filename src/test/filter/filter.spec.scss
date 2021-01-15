@@ -1,0 +1,24 @@
+@import 'true';
+@import '../../components/filter/_filter-mixins.scss';
+@include describe('filter _filter-mixins.scss') {
+  @include it('Should compile vanilla-filter-group') {
+    @include assert {
+      @include output {
+        @include vanilla-filter-group();
+      }
+      @include expect {
+        @include vanilla-filter-group();
+      }
+    }
+  }
+  @include it('Should compile vanilla-filter-base') {
+    @include assert {
+      @include output {
+        @include vanilla-filter-base();
+      }
+      @include expect {
+        @include vanilla-filter-base();
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ guid: component-alertribbon
 ---
 
 # Usage
-The alert ribbon component has three different severity levels: whisper, talk and shout. Talk and shout messages should be displayed with the exclamation triangle icon on its left.
+The alert ribbon component has four different states: information, success, warning and critical.
 
 There are three ways to use this component.
 
@@ -23,7 +23,7 @@ These will be explained in the examples section, below the component preview.
 ## Information
 
 ```html
-<div class="sdv-alert-ribbon" role="alert">
+<div class="sdv-alert-ribbon sdv-alert-ribbon--information" role="alert">
     <i class="fas fa-info-square sdv-icon-left"></i>
     <p><strong>Information!</strong> Visste du att du kan lämna in din deklaration via din internetbank?</p>
     <button class="sdv-alert-ribbon__button">Visa hur</button>

@@ -1,0 +1,14 @@
+@import 'true';
+@import '../../components/tooltips/_contextual-help-mixins.scss';
+@include describe('tooltips _contextual-help-mixins.scss') {
+  @include it('Should compile vanilla-contextual-help') {
+    @include assert {
+      @include output {
+        @include vanilla-contextual-help();
+      }
+      @include expect {
+        @include vanilla-contextual-help();
+      }
+    }
+  }
+}

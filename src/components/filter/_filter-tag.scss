@@ -1,0 +1,10 @@
+@import 'filter-tag-mixins';
+@import 'filter-mixins';
+
+.sdv-filter-tag {
+  @include vanilla-filter-tag();
+}
+
+.sdv-filter-tag-group {
+  @include vanilla-filter-group();
+}

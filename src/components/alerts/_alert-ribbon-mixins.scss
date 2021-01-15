@@ -1,5 +1,6 @@
 @import 'common';
 @import '~include-media/dist/include-media';
+@import '../buttons/button-mixins';
 
 ///
 /// @access public
@@ -64,18 +65,6 @@
 
 ///
 /// @access public
-@mixin vanilla-alert-ribbon__link() {
-  &,
-  &:hover,
-  &:visited {
-    color: inherit;
-    text-decoration: underline;
-    font-weight: bold;
-  }
-}
-
-///
-/// @access public
 @mixin vanilla-alert-ribbon() {
   @include vanilla-alert-ribbon-base();
 
@@ -88,7 +77,7 @@
   }
 
   a {
-    @include vanilla-alert-ribbon__link();
+    @include vanilla-alert__link();
   }
 
   .fal,
@@ -100,19 +89,35 @@
   &--whisper,
   &--information {
     @include vanilla-alert--information();
+
+    button {
+      @include vanilla-button-ghost-dark();
+    }
   }
 
   &--success {
     @include vanilla-alert--success();
+
+    button {
+      @include vanilla-button-ghost-light();
+    }
   }
 
   &--talk,
   &--warning {
     @include vanilla-alert--warning();
+
+    button {
+      @include vanilla-button-ghost-dark();
+    }
   }
 
   &--shout,
   &--critical {
     @include vanilla-alert--critical();
+
+    button {
+      @include vanilla-button-ghost-light();
+    }
   }
 }

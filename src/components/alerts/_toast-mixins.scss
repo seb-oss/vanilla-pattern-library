@@ -1,0 +1,61 @@
+@import 'common';
+@import '~include-media/dist/include-media';
+
+///
+/// @access public
+@mixin vanilla-toast-base() {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  width: 22rem;
+  max-width: 22rem;
+  min-height: 3rem;
+  padding: 1rem;
+  box-shadow: 0 vanilla-px-to-em(2px) vanilla-px-to-em(6px) rgba(0, 0, 0, 0.15);
+}
+
+///
+/// @access public
+@mixin vanilla-toast__body() {
+  margin-bottom: 0;
+  padding-left: 1rem;
+  padding-right: 3rem;
+  line-height: 1.5;
+}
+
+///
+/// @access public
+@mixin vanilla-toast--timeline() {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-toast() {
+  @include vanilla-toast-base();
+  @include vanilla-alert--states();
+
+  &--timeline {
+    @include vanilla-toast--timeline();
+  }
+
+  &__body {
+    @include vanilla-toast__body();
+  }
+
+  &__close {
+    @include vanilla-alert__close();
+  }
+
+  a {
+    @include vanilla-alert__link();
+  }
+}

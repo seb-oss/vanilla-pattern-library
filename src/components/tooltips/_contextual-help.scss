@@ -1,0 +1,7 @@
+@import 'contextual-help-mixins';
+
+@include _vanilla-exports('vanilla-contextual-help') {
+  .sdv-contextual-help {
+    @include vanilla-contextual-help();
+  }
+}
