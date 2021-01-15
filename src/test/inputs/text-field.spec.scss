@@ -21,6 +21,16 @@
       }
     }
   }
+  @include it('Should compile vanilla-text-field-wrap--small') {
+    @include assert {
+      @include output {
+        @include vanilla-text-field-wrap--small();
+      }
+      @include expect {
+        @include vanilla-text-field-wrap--small();
+      }
+    }
+  }
   @include it('Should compile vanilla-text-field-textarea') {
     @include assert {
       @include output {
