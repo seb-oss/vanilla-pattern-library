@@ -1,0 +1,7 @@
+@import 'button-primary';
+
+@include _vanilla-exports('vanilla-button-sell') {
+  .sdv-button-sell {
+    @include vanilla-button-sell();
+  }
+}

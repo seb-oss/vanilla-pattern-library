@@ -111,6 +111,16 @@
       }
     }
   }
+  @include it('Should compile vanilla-button-sell') {
+    @include assert {
+      @include output {
+        @include vanilla-button-sell();
+      }
+      @include expect {
+        @include vanilla-button-sell();
+      }
+    }
+  }
   @include it('Should compile vanilla-button-icon') {
     @include assert {
       @include output {
