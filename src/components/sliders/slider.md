@@ -13,7 +13,7 @@ Import classes:
 
 This will output the classes used in the example below, and is meant to be used with the native range input element. It should work OK in most browsers, but there are a few minor inconsistencies due to the different way this is implemented in the browsers.
 
-Much of the CSS for this component is borrowed from [this article](https://css-tricks.com/sliding-nightmare-understanding-range-input/) on CSS-tricks. Go read it if you want to learn more about the range input. 
+Much of the CSS for this component is borrowed from [this article](https://css-tricks.com/sliding-nightmare-understanding-range-input/) on CSS-tricks. Go read it if you want to learn more about the range input.
 
 You can also make a custom slider by using mixins. More on that below the example.
 
@@ -23,7 +23,7 @@ You can also make a custom slider by using mixins. More on that below the exampl
 <div style="width: 100%">
   <div class="sdv-slider-label">
     <label>Slider label text in one line</label>
-    <input id="input-field" class="sdv-field" aria-label="Field label" placeholder="Input field" />
+    <input id="input-field" class="sdv-field sdv-field--small" aria-label="Field label" placeholder="Input field" />
   </div>
   <input type="range" class="sdv-range-input">
   <div class="sdv-small">Info text can be quite long quite long quite long</div>

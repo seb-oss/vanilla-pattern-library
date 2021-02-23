@@ -21,26 +21,6 @@
       }
     }
   }
-  @include it('Should compile vanilla-tooltip__main') {
-    @include assert {
-      @include output {
-        @include vanilla-tooltip__main();
-      }
-      @include expect {
-        @include vanilla-tooltip__main();
-      }
-    }
-  }
-  @include it('Should compile vanilla-tooltip') {
-    @include assert {
-      @include output {
-        @include vanilla-tooltip();
-      }
-      @include expect {
-        @include vanilla-tooltip();
-      }
-    }
-  }
   @include it('Should compile vanilla-tooltip--top') {
     @include assert {
       @include output {
@@ -78,6 +58,16 @@
       }
       @include expect {
         @include vanilla-tooltip--right();
+      }
+    }
+  }
+  @include it('Should compile vanilla-tooltip') {
+    @include assert {
+      @include output {
+        @include vanilla-tooltip();
+      }
+      @include expect {
+        @include vanilla-tooltip();
       }
     }
   }

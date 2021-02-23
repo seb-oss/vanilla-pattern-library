@@ -9,9 +9,12 @@
 
 // All components
 @import 'components/alerts/alert-ribbon';
+@import 'components/alerts/toast';
 @import 'components/badge/badge';
 @import 'components/buttons/button';
 @import 'components/breadcrumbs/breadcrumbs';
+@import 'components/filter/chip';
+@import 'components/filter/filter-tag';
 @import 'components/inputs/input_base';
 @import 'components/inputs/dropdown';
 @import 'components/inputs/dropdown-native';
@@ -29,6 +32,7 @@
 @import 'components/text/preamble';
 @import 'components/modals/modal-slideout';
 @import 'components/modals/modal-dialog';
+@import 'components/tooltips/contextual-help';
 @import 'components/tooltips/tooltip-all';
 @import 'components/inputs/stepper';
 @import 'components/segmented-control/segmented-control';

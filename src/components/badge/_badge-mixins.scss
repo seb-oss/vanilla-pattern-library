@@ -23,20 +23,20 @@
   @include vanilla-badge-base();
 
   &--info {
-    background-color: $vanilla-color-grey200;
+    background-color: $vanilla-color-information;
   }
 
   &--success {
     color: $vanilla-color-white;
-    background-color: $vanilla-color-darkgreen2;
+    background-color: $vanilla-color-success;
   }
 
   &--warning {
-    background-color: $vanilla-color-yellow;
+    background-color: $vanilla-color-warning;
   }
 
   &--error {
     color: $vanilla-color-white;
-    background-color: $vanilla-color-darkred1;
+    background-color: $vanilla-color-critical;
   }
 }

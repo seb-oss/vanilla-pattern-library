@@ -47,4 +47,21 @@ In addition to the classes shown in the example below, this component can be use
     </div>
 </div>
 ```
+
+## Error state
+```html
+<div>
+  <div class="sdv-field-group sdv-field-group--error">
+      <div class="sdv-field-radio-wrap">
+          <input type="radio" name="radio1" aria-label="Field label" id="sdv-radio1-1">
+          <label for="sdv-radio1-1">Field label</label>
+      </div>
+      <div class="sdv-field-radio-wrap">
+          <input type="radio" name="radio1" aria-label="Field label" id="sdv-radio1-2">
+          <label for="sdv-radio1-2">Field label</label>
+      </div>
+  </div>
+  <div class="sdv-field-notice sdv-field-notice--error">Error text</div>
+</div>
+```
 :::

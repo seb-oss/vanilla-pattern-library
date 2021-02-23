@@ -1,5 +1,6 @@
 @import 'common';
 @import '~include-media/dist/include-media';
+@import '../buttons/button-mixins';
 
 ///
 /// @access public
@@ -20,11 +21,12 @@
 @mixin vanilla-alert-ribbon__paragraph() {
   margin-bottom: 0;
   margin-right: 1em;
+  line-height: 1.25;
+  flex-grow: 1;
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
       flex-basis: 0;
-      flex-grow: 1;
       margin-right: 0;
     }
   }
@@ -35,6 +37,7 @@
 @mixin vanilla-alert-ribbon__button() {
   @include vanilla-button();
   margin-left: auto;
+  align-self: flex-end;
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
@@ -47,6 +50,7 @@
   @include media-context($vanilla-breakpoints) {
     @include media('>=tablet') {
       @include vanilla-button--small();
+      margin-left: 4rem;
     }
   }
 }
@@ -55,7 +59,8 @@
 /// @access public
 @mixin vanilla-alert-ribbon__icon() {
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.25;
+  margin-right: 1em;
 }
 
 ///
@@ -71,21 +76,48 @@
     @include vanilla-alert-ribbon__button();
   }
 
+  a {
+    @include vanilla-alert__link();
+  }
+
   .fal,
   .far,
   .fas {
     @include vanilla-alert-ribbon__icon();
   }
 
-  &--whisper {
-    @include vanilla-alert--whisper();
+  &--whisper,
+  &--information {
+    @include vanilla-alert--information();
+
+    button {
+      @include vanilla-button-ghost-dark();
+    }
   }
 
-  &--talk {
-    @include vanilla-alert--talk();
+  &--success {
+    @include vanilla-alert--success();
+
+    button {
+      @include vanilla-button-ghost-light();
+    }
   }
 
-  &--shout {
-    @include vanilla-alert--shout();
+  &--talk,
+  &--warning {
+    @include vanilla-alert--warning();
+
+    button {
+      @include vanilla-button-ghost-dark();
+    }
+  }
+
+  &--shout,
+  &--critical {
+    @include vanilla-alert--critical();
+
+    button {
+      @include vanilla-button-ghost-light();
+    }
   }
 }

@@ -10,6 +10,10 @@
     @include vanilla-text-field--small();
   }
 
+  .sdv-field-wrap--small {
+    @include vanilla-text-field-wrap--small();
+  }
+
   .sdv-field--error {
     @include vanilla-text-field--error();
   }
@@ -30,7 +34,19 @@
     @include vanilla-text-field-notice--error();
   }
 
+  .sdv-field-wrap {
+    @include vanilla-text-field-wrap();
+
+    .sdv-field__after {
+      @include vanilla-text-field__after();
+    }
+  }
+
   textarea.sdv-field {
     @include vanilla-text-field-textarea();
+  }
+
+  .sdv-field-group--error {
+    @include vanilla-field-group--error();
   }
 }

@@ -1,0 +1,53 @@
+////
+/// @group Component mixins
+/// @author SEB Design Library
+////
+
+@import '../../variables';
+@import '../../mixins';
+@import './filter-mixins';
+
+///
+/// @access public
+@mixin vanilla-filter-tag-base() {
+  @include vanilla-filter-base();
+
+  // default height shall equal 32px, including border.
+  padding: vanilla-px-to-em(4-1) 0.5em;
+  border-color: $vanilla-color-grey6;
+}
+
+///
+/// @access public
+@mixin vanilla-filter-tag() {
+  input {
+    appearance: none;
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+  }
+
+  label {
+    @include vanilla-filter-tag-base();
+  }
+
+  &:hover label {
+    border-color: $vanilla-color-component-hover;
+  }
+
+  &:active label {
+    border-color: $vanilla-color-component-pressed;
+    color: $vanilla-color-component-pressed;
+  }
+
+  input:focus + label {
+    @include vanilla-focus-outline();
+    outline: none;
+    border-color: $vanilla-color-component-selected;
+  }
+
+  input:checked + label {
+    border-color: $vanilla-color-component-selected;
+    color: $vanilla-color-component-selected;
+  }
+}

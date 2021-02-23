@@ -14,6 +14,7 @@
 
 /// The left and right padding in buttons
 $vanilla-button-padding: vanilla-px-to-em(16) !default;
+$vanilla-button-padding--large: vanilla-px-to-em(24) !default;
 
 // Config
 $_height: vanilla-px-to-em(44 - 2);
@@ -42,7 +43,6 @@ $_ghost-button_disabled-opacity: 0.5;
   font-weight: 500;
   font-size: 1em;
   text-align: center;
-  color: $vanilla-color-white;
   white-space: nowrap;
 
   appearance: none;
@@ -78,6 +78,7 @@ $_ghost-button_disabled-opacity: 0.5;
     text-decoration: none;
   }
 
+  &,
   &:visited,
   &:link {
     color: $vanilla-color-white;
@@ -107,6 +108,17 @@ $_ghost-button_disabled-opacity: 0.5;
   min-height: vanilla-px-to-rem(32);
   max-height: vanilla-px-to-rem(32);
   font-size: vanilla-px-to-rem(14);
+}
+
+/// Mixes in button styles -- large modifier
+///
+/// @access public
+@mixin vanilla-button--large {
+  line-height: 1.5;
+  min-height: vanilla-px-to-rem(64);
+  max-height: vanilla-px-to-rem(64);
+  font-size: vanilla-px-to-rem(20);
+  padding: 0 $vanilla-button-padding--large;
 }
 
 /// Add secondary button styles
@@ -176,6 +188,10 @@ $_ghost-button_disabled-opacity: 0.5;
   color: $vanilla-color-white;
   background-color: transparent;
 
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-white, 0.9);
+  }
+
   &:focus,
   &:hover,
   &:active {
@@ -198,6 +214,16 @@ $_ghost-button_disabled-opacity: 0.5;
   border-color: $vanilla-color-grey2;
   color: $vanilla-color-grey2;
   background-color: transparent;
+
+  &,
+  &:visited,
+  &:link {
+    color: $vanilla-color-grey2;
+  }
+
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-grey700);
+  }
 
   &:focus,
   &:hover,
@@ -230,6 +256,16 @@ $_ghost-button_disabled-opacity: 0.5;
   background-color: transparent;
   border-color: transparent;
 
+  &,
+  &:visited,
+  &:link {
+    color: $vanilla-color-darkred1;
+  }
+
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-red);
+  }
+
   &:focus,
   &:hover,
   &:active {
@@ -253,11 +289,40 @@ $_ghost-button_disabled-opacity: 0.5;
   background-color: $vanilla-color-darkred1;
   border-color: $vanilla-color-darkred1;
 
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-red);
+  }
+
   &:focus,
   &:hover,
   &:active {
     background-color: $vanilla-color-red;
     border-color: $vanilla-color-red;
+  }
+
+  &[disabled] {
+    background-color: $_button_disabled-color-dark;
+    border-color: $_button_disabled-color-dark;
+  }
+}
+
+/// Sell button styles
+///
+/// @access public
+@mixin vanilla-button-sell {
+  color: $vanilla-color-white;
+  background-color: $vanilla-color-button-sell;
+  border-color: $vanilla-color-button-sell;
+
+  &:focus {
+    @include vanilla-focus-outline($vanilla-color-red);
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $vanilla-color-button-sell-dark;
+    border-color: $vanilla-color-button-sell-dark;
   }
 
   &[disabled] {

@@ -24,6 +24,9 @@ $vanilla-color-darkblue2: #007ac7;
 $vanilla-color-white: #fff;
 $vanilla-color-black: #000;
 
+$vanilla-color-bg-white: #fff;
+$vanilla-color-bg-grey: #eee;
+
 // Grayscales
 $vanilla-color-grey100: #f8f8f8;
 $vanilla-color-grey200: #e9e9e9;
@@ -68,6 +71,16 @@ $vanilla-color-component-disabled-darker: $vanilla-color-grey500 !default;
 $vanilla-color-component-disabled-dark: $vanilla-color-grey400 !default;
 $vanilla-color-component-disabled-light: $vanilla-color-grey100 !default;
 $vanilla-color-text: $vanilla-color-text;
+
+// States
+$vanilla-color-information: $vanilla-color-grey8 !default;
+$vanilla-color-success: $vanilla-color-darkgreen2 !default;
+$vanilla-color-warning: $vanilla-color-yellow !default;
+$vanilla-color-critical: $vanilla-color-darkred1 !default;
+
+// Button
+$vanilla-color-button-sell: #d83c3c;
+$vanilla-color-button-sell-dark: #c32727;
 
 /// Returns a shade of a color
 ///

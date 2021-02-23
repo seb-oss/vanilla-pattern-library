@@ -4,7 +4,6 @@
 ////
 
 @import '../../variables';
-@import '../buttons/button-mixins';
 
 /////////////////////////////////////////
 /// Alert common features
@@ -12,33 +11,116 @@
 
 ///
 /// @access private
-@mixin vanilla-alert--whisper() {
-  background-color: $vanilla-color-purple;
-  color: $vanilla-color-white;
+@mixin vanilla-alert--information() {
+  background-color: $vanilla-color-information;
+  color: $vanilla-color-text;
+}
 
-  button {
-    @include vanilla-button-ghost-light();
-  }
+///
+/// @access private
+@mixin vanilla-alert--whisper() {
+  @warn 'vanilla-alert--whisper is deprecated. Use vanilla-alert--information instead.';
+  @include vanilla-alert--information();
+}
+
+///
+/// @access private
+@mixin vanilla-alert--success() {
+  background-color: $vanilla-color-success;
+  color: $vanilla-color-white;
+}
+
+///
+/// @access private
+@mixin vanilla-alert--warning() {
+  background-color: $vanilla-color-warning;
+  color: $vanilla-color-text;
 }
 
 ///
 /// @access private
 @mixin vanilla-alert--talk() {
-  background-color: $vanilla-color-yellow;
-  color: $vanilla-color-text;
+  @warn 'vanilla-alert--talk is deprecated. Use vanilla-alert--warning instead.';
+  @include vanilla-alert--warning();
+}
 
-  button {
-    @include vanilla-button-ghost-dark();
-  }
+///
+/// @access private
+@mixin vanilla-alert--critical() {
+  background-color: $vanilla-color-critical;
+  color: $vanilla-color-white;
 }
 
 ///
 /// @access private
 @mixin vanilla-alert--shout() {
-  background-color: $vanilla-color-red;
-  color: $vanilla-color-white;
+  @warn 'vanilla-alert--shout is deprecated. Use vanilla-alert--critical instead.';
+  @include vanilla-alert--critical();
+}
 
-  button {
-    @include vanilla-button-ghost-light();
+///
+/// @access private
+@mixin vanilla-alert--states() {
+  &--information {
+    @include vanilla-alert--information();
+  }
+
+  &--success {
+    @include vanilla-alert--success();
+  }
+
+  &--warning {
+    @include vanilla-alert--warning();
+  }
+
+  &--critical {
+    @include vanilla-alert--critical();
+  }
+}
+
+///
+/// @access private
+@mixin vanilla-alert__close() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.25rem;
+  padding: 0;
+  background-color: transparent;
+  color: inherit;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+
+  &::after {
+    font-family: 'Font Awesome 5 Pro';
+    content: '\f00d';
+    font-weight: 300;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+///
+/// @access private
+@mixin vanilla-alert__link() {
+  &,
+  &:hover,
+  &:visited {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: bold;
   }
 }

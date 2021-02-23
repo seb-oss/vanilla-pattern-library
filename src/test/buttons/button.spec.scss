@@ -21,6 +21,16 @@
       }
     }
   }
+  @include it('Should compile vanilla-button--large') {
+    @include assert {
+      @include output {
+        @include vanilla-button--large();
+      }
+      @include expect {
+        @include vanilla-button--large();
+      }
+    }
+  }
   @include it('Should compile vanilla-button-secondary') {
     @include assert {
       @include output {
@@ -98,6 +108,16 @@
       }
       @include expect {
         @include vanilla-button-delete-confirm();
+      }
+    }
+  }
+  @include it('Should compile vanilla-button-sell') {
+    @include assert {
+      @include output {
+        @include vanilla-button-sell();
+      }
+      @include expect {
+        @include vanilla-button-sell();
       }
     }
   }

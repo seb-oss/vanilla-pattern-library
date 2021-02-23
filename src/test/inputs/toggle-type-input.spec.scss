@@ -61,6 +61,38 @@
       }
     }
   }
+  @include it('Should compile vanilla-toggle-switch__label-after') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch__label-after();
+      }
+      @include expect {
+        @include vanilla-toggle-switch__label-after();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-switch__checked-label-after') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch__checked-label-after();
+      }
+      @include expect {
+        @include vanilla-toggle-switch__checked-label-after();
+      }
+    }
+  }
+  @include it(
+    'Should compile vanilla-toggle-switch__hover-checked-label-after'
+  ) {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch__hover-checked-label-after();
+      }
+      @include expect {
+        @include vanilla-toggle-switch__hover-checked-label-after();
+      }
+    }
+  }
   @include it('Should compile vanilla-toggle-base') {
     @include assert {
       @include output {
