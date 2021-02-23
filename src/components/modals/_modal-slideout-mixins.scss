@@ -102,7 +102,7 @@
   &.#{$vanilla-modal-active-state-class} {
     @include vanilla-modal--active();
 
-    #{$__module}__container {
+    > #{$__module}__container {
       @include vanilla-modal-slideout__container--active();
     }
   }
@@ -110,7 +110,7 @@
     &:target {
       @include vanilla-modal--active();
 
-      #{$__module}__container {
+      > #{$__module}__container {
         @include vanilla-modal-slideout__container--active();
       }
     }
