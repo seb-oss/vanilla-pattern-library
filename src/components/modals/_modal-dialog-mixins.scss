@@ -82,7 +82,7 @@
   &.#{$vanilla-modal-active-state-class} {
     @include vanilla-modal--active();
 
-    #{$__module}__container {
+    > #{$__module}__container {
       @include vanilla-modal-dialog__container--active();
     }
   }
@@ -90,7 +90,7 @@
     &:target {
       @include vanilla-modal--active();
 
-      #{$__module}__container {
+      > #{$__module}__container {
         @include vanilla-modal-dialog__container--active();
       }
     }

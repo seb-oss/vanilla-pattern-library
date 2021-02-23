@@ -52,12 +52,12 @@ $vanilla-modal-active-state-class: -active !default;
   width: 100vw;
   height: 100vh;
 
-  .#{$vanilla-modal-active-state-class} & {
+  .#{$vanilla-modal-active-state-class} > & {
     background-color: $background-color;
     visibility: visible;
   }
   @if ($use-target-pseudo-class-for-active-state == true) {
-    :target & {
+    :target > & {
       background-color: $background-color;
       visibility: visible;
     }
