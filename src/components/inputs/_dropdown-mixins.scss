@@ -84,7 +84,7 @@
 
   input:focus + label,
   input:focus + &__label,
-  :focus,
+  &:focus,
   &__label--focus {
     @include vanilla-focus-outline();
     outline: 0;
