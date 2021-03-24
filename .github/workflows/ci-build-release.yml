@@ -29,7 +29,6 @@ jobs:
         run: npm run build-demo-site
 
       - name: Run semantic release and publish new version to npm
-        if: github.ref == 'ref/head/master'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
