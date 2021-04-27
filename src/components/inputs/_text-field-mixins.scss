@@ -38,7 +38,7 @@
 ///
 /// @access public
 @mixin vanilla-text-field--error() {
-  $_border-bottom: vanilla-px-to-em(2) solid $vanilla-color-red;
+  $_border-bottom: vanilla-px-to-em(2) solid $vanilla-color-darkred1;
 
   border-bottom: $_border-bottom;
 
@@ -63,7 +63,7 @@
 ///
 /// @access public
 @mixin vanilla-text-field-notice--error() {
-  color: $vanilla-color-red;
+  color: $vanilla-color-darkred1;
 }
 
 /// Style for basic text field labels
