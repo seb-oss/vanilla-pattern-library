@@ -21,6 +21,26 @@
       }
     }
   }
+  @include it('Should compile vanilla-toggle-switch--label-left__label') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch--label-left__label();
+      }
+      @include expect {
+        @include vanilla-toggle-switch--label-left__label();
+      }
+    }
+  }
+  @include it('Should compile vanilla-toggle-switch--label-left') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch--label-left();
+      }
+      @include expect {
+        @include vanilla-toggle-switch--label-left();
+      }
+    }
+  }
   @include it('Should compile vanilla-toggle-base__label-before') {
     @include assert {
       @include output {
@@ -51,6 +71,18 @@
       }
     }
   }
+  @include it(
+    'Should compile vanilla-toggle-switch--label-left__label-before'
+  ) {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch--label-left__label-before();
+      }
+      @include expect {
+        @include vanilla-toggle-switch--label-left__label-before();
+      }
+    }
+  }
   @include it('Should compile vanilla-toggle-checkbox__label-before') {
     @include assert {
       @include output {
@@ -71,6 +103,16 @@
       }
     }
   }
+  @include it('Should compile vanilla-toggle-switch--label-left__label-after') {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch--label-left__label-after();
+      }
+      @include expect {
+        @include vanilla-toggle-switch--label-left__label-after();
+      }
+    }
+  }
   @include it('Should compile vanilla-toggle-switch__checked-label-after') {
     @include assert {
       @include output {
@@ -78,6 +120,18 @@
       }
       @include expect {
         @include vanilla-toggle-switch__checked-label-after();
+      }
+    }
+  }
+  @include it(
+    'Should compile vanilla-toggle-switch--label-left__checked-label-after'
+  ) {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch--label-left__checked-label-after();
+      }
+      @include expect {
+        @include vanilla-toggle-switch--label-left__checked-label-after();
       }
     }
   }
@@ -90,6 +144,18 @@
       }
       @include expect {
         @include vanilla-toggle-switch__hover-checked-label-after();
+      }
+    }
+  }
+  @include it(
+    'Should compile vanilla-toggle-switch--label-left__hover-checked-label-after'
+  ) {
+    @include assert {
+      @include output {
+        @include vanilla-toggle-switch--label-left__hover-checked-label-after();
+      }
+      @include expect {
+        @include vanilla-toggle-switch--label-left__hover-checked-label-after();
       }
     }
   }

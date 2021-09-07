@@ -3,5 +3,9 @@
 @include _vanilla-exports('vanilla-fld-switch-wrap') {
   .sdv-field-switch-wrap {
     @include vanilla-field-toggle-wrap('switch');
+
+    &--label-left {
+      @include vanilla-toggle-switch--label-left();
+    }
   }
 }

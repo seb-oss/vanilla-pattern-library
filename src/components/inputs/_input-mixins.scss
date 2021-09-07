@@ -61,6 +61,7 @@
     &:hover input:not(:disabled):checked + label::after {
       @include vanilla-toggle-switch__hover-checked-label-after();
     }
+
   } @else {
     input:checked + label::before {
       background-color: $vanilla-color-component-selected;

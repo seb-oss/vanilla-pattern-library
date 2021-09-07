@@ -60,6 +60,58 @@ $_toggle-switch-after-width-mobile: 1.75em;
 
 ///
 /// @access public
+@mixin vanilla-toggle-switch--label-left__label() {
+  padding-right: $_toggle-base-padding-horizontal + $_toggle-switch-before-width +
+    $_toggle-base-spacing;
+  padding-left: $_toggle-base-padding-horizontal;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      padding-right: $_toggle-base-padding-horizontal +
+        $_toggle-switch-before-width-mobile + $_toggle-base-spacing;
+      padding-left: $_toggle-base-padding-horizontal;
+    }
+  }
+
+  &:hover::before {
+    border-color: transparent;
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-switch--label-left() {
+  label {
+    @include vanilla-toggle-switch--label-left__label();
+  }
+
+  label::before {
+    @include vanilla-toggle-switch--label-left__label-before();
+  }
+
+  label::after {
+    @include vanilla-toggle-switch--label-left__label-after();
+  }
+
+  input:checked + label::after {
+    @include vanilla-toggle-switch--label-left__checked-label-after();
+  }
+
+  &:hover input:not(:disabled):not(:checked) {
+    + label::after {
+      right: $_toggle-base-padding-horizontal +
+        $_toggle-switch-after-padding-hover;
+      left: auto;
+    }
+  }
+
+  &:hover input:not(:disabled):checked + label::after {
+    @include vanilla-toggle-switch--label-left__hover-checked-label-after();
+  }
+}
+
+///
+/// @access public
 @mixin vanilla-toggle-base__label-before() {
   display: block;
   content: '';
@@ -106,6 +158,13 @@ $_toggle-switch-after-width-mobile: 1.75em;
 
 ///
 /// @access public
+@mixin vanilla-toggle-switch--label-left__label-before() {
+  right: $_toggle-base-padding-horizontal - 0.5em;
+  left: auto;
+}
+
+///
+/// @access public
 @mixin vanilla-toggle-checkbox__label-before() {
   @include vanilla-toggle-base__label-before();
   background-color: $vanilla-color-white;
@@ -142,6 +201,13 @@ $_toggle-switch-after-width-mobile: 1.75em;
 
 ///
 /// @access public
+@mixin vanilla-toggle-switch--label-left__label-after() {
+  right: $_toggle-base-padding-horizontal + $_toggle-switch-after-padding;
+  left: auto;
+}
+
+///
+/// @access public
 @mixin vanilla-toggle-switch__checked-label-after() {
   left: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
     $_toggle-switch-after-width - $_toggle-switch-after-padding;
@@ -157,6 +223,23 @@ $_toggle-switch-after-width-mobile: 1.75em;
 
 ///
 /// @access public
+@mixin vanilla-toggle-switch--label-left__checked-label-after() {
+  right: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
+    $_toggle-switch-after-width - $_toggle-switch-after-padding;
+  left: auto;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      right: $_toggle-base-padding-horizontal +
+        $_toggle-switch-before-width-mobile - $_toggle-switch-after-width-mobile -
+        $_toggle-switch-after-padding;
+      left: auto;
+    }
+  }
+}
+
+///
+/// @access public
 @mixin vanilla-toggle-switch__hover-checked-label-after() {
   left: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
     $_toggle-switch-after-width - $_toggle-switch-after-padding-hover;
@@ -166,6 +249,23 @@ $_toggle-switch-after-width-mobile: 1.75em;
       left: $_toggle-base-padding-horizontal +
         $_toggle-switch-before-width-mobile - $_toggle-switch-after-width-mobile -
         $_toggle-switch-after-padding-hover;
+    }
+  }
+}
+
+///
+/// @access public
+@mixin vanilla-toggle-switch--label-left__hover-checked-label-after() {
+  right: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
+    $_toggle-switch-after-width - $_toggle-switch-after-padding-hover;
+  left: auto;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      right: $_toggle-base-padding-horizontal +
+        $_toggle-switch-before-width-mobile - $_toggle-switch-after-width-mobile -
+        $_toggle-switch-after-padding-hover;
+      left: auto;
     }
   }
 }

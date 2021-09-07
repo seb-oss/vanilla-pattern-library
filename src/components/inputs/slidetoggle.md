@@ -40,6 +40,21 @@ In addition to the classes shown in the example below, this component can be use
 </div>
 ```
 
+## Base state, label left
+
+```html
+<div>
+  <div class="sdv-field-switch-wrap sdv-field-switch-wrap--label-left">
+    <input type="checkbox" aria-label="Field label" id="sdv-cb1" />
+    <label for="sdv-cb1">Field label</label>
+  </div>
+  <div class="sdv-field-switch-wrap sdv-field-switch-wrap--label-left">
+    <input type="checkbox" aria-label="Field label" id="sdv-cb2" />
+    <label for="sdv-cb2">Field label</label>
+  </div>
+</div>
+```
+
 ## Disabled state
 
 ```html
