@@ -112,11 +112,11 @@ assets:
   #   dev_access: "/sassdoc"
   #   dest:
   #   - "dist/web/sassdoc"
-  - isdirectory: true
-    src: './node_modules/@fortawesome/fontawesome'
-    dev_access: '/vanilla-pattern-library/assets/fontawesome'
-    dest:
-      - 'dist/web/assets/fontawesome'
+#  - isdirectory: true
+#    src: './node_modules/@fortawesome/fontawesome'
+#    dev_access: '/vanilla-pattern-library/assets/fontawesome'
+#    dest:
+#      - 'dist/web/assets/fontawesome'
 
   - isdirectory: true
     src: './src'
