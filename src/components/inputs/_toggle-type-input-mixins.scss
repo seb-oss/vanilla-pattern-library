@@ -19,6 +19,8 @@ $_toggle-switch-before-height-mobile: 2em;
 $_toggle-switch-before-width-mobile: 3.5em;
 $_toggle-switch-after-width-mobile: 1.75em;
 
+$_toggle-switch-after-left-label-adjust: 1.25em;
+
 ///
 /// @access public
 @mixin vanilla-toggle-base__label() {
@@ -99,8 +101,8 @@ $_toggle-switch-after-width-mobile: 1.75em;
 
   &:hover input:not(:disabled):not(:checked) {
     + label::after {
-      right: $_toggle-base-padding-horizontal +
-        $_toggle-switch-after-padding-hover;
+      right: $_toggle-base-padding-horizontal -
+        $_toggle-switch-after-padding-hover / 2 + $_toggle-switch-after-left-label-adjust;
       left: auto;
     }
   }
@@ -186,7 +188,7 @@ $_toggle-switch-after-width-mobile: 1.75em;
   width: $_toggle-switch-after-width;
   height: $_toggle-switch-after-width;
   border-radius: 50%;
-  transition: left 150ms ease-in-out;
+  transition: left 150ms ease-in-out, right 150ms ease-in-out;
   border: vanilla-px-to-em(3px) solid $vanilla-color-white;
   box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.15),
     0 0.0625em 0.125em 0 rgba(0, 0, 0, 0.15), 0 0.0625em 0 0 rgba(0, 0, 0, 0.06);
@@ -202,8 +204,14 @@ $_toggle-switch-after-width-mobile: 1.75em;
 ///
 /// @access public
 @mixin vanilla-toggle-switch--label-left__label-after() {
-  right: $_toggle-base-padding-horizontal + $_toggle-switch-after-padding;
+  right: $_toggle-switch-after-width + $_toggle-base-padding-horizontal + $_toggle-switch-after-padding;
   left: auto;
+
+  @include media-context($vanilla-breakpoints) {
+    @include media('<tablet') {
+      right: $_toggle-switch-after-width-mobile + $_toggle-base-padding-horizontal - $_toggle-switch-after-padding;
+    }
+  }
 }
 
 ///
@@ -224,15 +232,12 @@ $_toggle-switch-after-width-mobile: 1.75em;
 ///
 /// @access public
 @mixin vanilla-toggle-switch--label-left__checked-label-after() {
-  right: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
-    $_toggle-switch-after-width - $_toggle-switch-after-padding;
+  right: $_toggle-base-padding-horizontal + $_toggle-switch-after-padding;
   left: auto;
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
-      right: $_toggle-base-padding-horizontal +
-        $_toggle-switch-before-width-mobile - $_toggle-switch-after-width-mobile -
-        $_toggle-switch-after-padding;
+      right: $_toggle-base-padding-horizontal + $_toggle-switch-after-padding;
       left: auto;
     }
   }
@@ -256,15 +261,12 @@ $_toggle-switch-after-width-mobile: 1.75em;
 ///
 /// @access public
 @mixin vanilla-toggle-switch--label-left__hover-checked-label-after() {
-  right: $_toggle-base-padding-horizontal + $_toggle-switch-before-width -
-    $_toggle-switch-after-width - $_toggle-switch-after-padding-hover;
+  right: $_toggle-base-padding-horizontal + $_toggle-switch-after-padding-hover;
   left: auto;
 
   @include media-context($vanilla-breakpoints) {
     @include media('<tablet') {
-      right: $_toggle-base-padding-horizontal +
-        $_toggle-switch-before-width-mobile - $_toggle-switch-after-width-mobile -
-        $_toggle-switch-after-padding-hover;
+      right: $_toggle-base-padding-horizontal + $_toggle-switch-after-padding-hover;
       left: auto;
     }
   }
