@@ -43,22 +43,22 @@
       background-color: $_toggle-switch-color-bg-hover;
     }
 
-    &:hover input:not(:disabled):not(:checked) {
-      + label::before {
+    input:not(:disabled):not(:checked) {
+      + label:hover::before {
         background-color: $_toggle-switch-color-bg-hover;
       }
 
-      + label::after {
+      + label:hover::after {
         left: $_toggle-base-padding-horizontal +
           $_toggle-switch-after-padding-hover;
       }
     }
 
-    &:hover input:not(:disabled):checked + label::before {
+    input:not(:disabled):checked + label:hover::before {
       background-color: $vanilla-color-darkgreen2;
     }
 
-    &:hover input:not(:disabled):checked + label::after {
+    input:not(:disabled):checked + label:hover::after {
       @include vanilla-toggle-switch__hover-checked-label-after();
     }
 
