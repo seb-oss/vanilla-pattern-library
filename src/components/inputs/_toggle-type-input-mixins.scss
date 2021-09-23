@@ -99,15 +99,19 @@ $_toggle-switch-after-left-label-adjust: 1.25em;
     @include vanilla-toggle-switch--label-left__checked-label-after();
   }
 
-  &:hover input:not(:disabled):not(:checked) {
-    + label::after {
-      right: $_toggle-base-padding-horizontal -
-        $_toggle-switch-after-padding-hover / 2 + $_toggle-switch-after-left-label-adjust;
-      left: auto;
+  input:not(:disabled):not(:checked) + label:hover::after {
+    right: $_toggle-base-padding-horizontal + $_toggle-switch-after-left-label-adjust;
+    left: auto;
+
+    @include media-context($vanilla-breakpoints) {
+      @include media('<tablet') {
+        right: $_toggle-base-padding-horizontal + $_toggle-switch-after-left-label-adjust + 0.2;
+      }
     }
   }
 
-  &:hover input:not(:disabled):checked + label::after {
+
+  input:not(:disabled):checked + label:hover::after {
     @include vanilla-toggle-switch--label-left__hover-checked-label-after();
   }
 }
