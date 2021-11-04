@@ -20,12 +20,12 @@ $vanilla-button-padding--large: vanilla-px-to-em(24) !default;
 $_height: vanilla-px-to-em(44 - 2);
 $_border-radius: $vanilla-component-border-radius;
 
-$_button_color-bg-normal: $vanilla-color-component-normal;
-$_button_color-bg-hover: $vanilla-color-component-hover;
-$_button_color-bg-pressed: $vanilla-color-component-pressed;
+$_button_color-bg-normal: $vanilla-color-darkblue2;
+$_button_color-bg-hover: $vanilla-color-darkblue1;
+$_button_color-bg-pressed: $vanilla-color-darkblue1;
 $_button_color-bg-focus: $vanilla-color-component-selected;
-$_button_disabled-color-dark: $vanilla-color-component-disabled-dark;
-$_button_disabled-color-light: $vanilla-color-component-disabled-light;
+$_button_disabled-color: $vanilla-color-component-disabled-darker;
+$_button_disabled-bg-color: $vanilla-color-grey200;
 $_ghost-button_disabled-opacity: 0.5;
 //
 
@@ -85,8 +85,9 @@ $_ghost-button_disabled-opacity: 0.5;
   }
 
   &[disabled] {
-    background-color: $_button_disabled-color-dark;
-    border-color: $_button_disabled-color-dark;
+    color: $_button_disabled-color;
+    background-color: $_button_disabled-bg-color;
+    border-color: $_button_disabled-bg-color;
     cursor: default;
   }
 
@@ -126,7 +127,7 @@ $_ghost-button_disabled-opacity: 0.5;
 /// @access public
 @mixin vanilla-button-secondary {
   background-color: transparent;
-  border-color: $vanilla-color-darkblue1;
+  border-color: $_button_color-bg-normal;
 
   &,
   &:visited,
@@ -134,16 +135,20 @@ $_ghost-button_disabled-opacity: 0.5;
     color: $_button_color-bg-normal;
   }
 
-  &:focus,
-  &:hover,
-  &:active {
+  &:focus {
+    background: transparent;
+  }
+
+  &:active,
+  &:hover {
     color: $vanilla-color-white;
+    background-color: $_button_color-bg-hover;
   }
 
   &[disabled] {
-    background-color: $_button_disabled-color-light;
-    border-color: $_button_disabled-color-dark;
-    color: $_button_disabled-color-dark;
+    color: $_button_disabled-color;
+    background-color: transparent;
+    border-color: $_button_disabled-color;
   }
 }
 
@@ -160,16 +165,21 @@ $_ghost-button_disabled-opacity: 0.5;
     color: $_button_color-bg-normal;
   }
 
-  &:focus,
-  &:hover,
-  &:active {
+  &:focus {
+    background: transparent;
+    border: transparent;
+  }
+
+  &:active,
+  &:hover {
+    background-color: $_button_color-bg-hover;
     color: $vanilla-color-white;
   }
 
   &[disabled] {
-    background-color: $_button_disabled-color-light;
-    border-color: $_button_disabled-color-dark;
-    color: $_button_disabled-color-dark;
+    color: $_button_disabled-color;
+    background-color: transparent;
+    border-color: transparent;
   }
 }
 
@@ -235,8 +245,8 @@ $_ghost-button_disabled-opacity: 0.5;
 
   &[disabled] {
     background-color: transparent;
-    border-color: rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
-    color: rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
+    border-color: $_button_disabled-color;
+    color: $_button_disabled-color;
   }
 }
 
@@ -277,7 +287,7 @@ $_ghost-button_disabled-opacity: 0.5;
   &[disabled] {
     background-color: transparent;
     border-color: transparent;
-    color: rgba($vanilla-color-grey2, $_ghost-button_disabled-opacity);
+    color: $_button_disabled-color;
   }
 }
 
@@ -301,8 +311,8 @@ $_ghost-button_disabled-opacity: 0.5;
   }
 
   &[disabled] {
-    background-color: $_button_disabled-color-dark;
-    border-color: $_button_disabled-color-dark;
+    background-color: $_button_disabled-bg-color;
+    border-color: $_button_disabled-bg-color;
   }
 }
 
@@ -326,8 +336,8 @@ $_ghost-button_disabled-opacity: 0.5;
   }
 
   &[disabled] {
-    background-color: $_button_disabled-color-dark;
-    border-color: $_button_disabled-color-dark;
+    background-color: $_button_disabled-bg-color;
+    border-color: $_button_disabled-bg-color;
   }
 }
 

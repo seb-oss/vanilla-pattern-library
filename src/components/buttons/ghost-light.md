@@ -38,7 +38,7 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
 ## Base state
 
 ```html
-<div class="pl-purple-bg">
+<div class="pl-dark-bg">
   <button class="sdv-button sdv-button-ghost-light">Ghost button</button>
 </div>
 ```
@@ -46,7 +46,7 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
 ## With icon
 
 ```html
-<div class="pl-purple-bg">
+<div class="pl-dark-bg">
   <button class="sdv-button sdv-button-ghost-light">
     <i class="far fa-lock sdv-icon-left"></i>Ghost button
   </button>
@@ -56,7 +56,7 @@ This will create <i>.my-button-class</i> as well as <i>.my-button-class-ghost</i
 ## Disabled state
 
 ```html
-<div class="pl-blue-bg">
+<div class="pl-dark-bg">
   <button class="sdv-button sdv-button-ghost-light" disabled>
     Ghost button
   </button>
