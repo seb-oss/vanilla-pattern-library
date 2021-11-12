@@ -23,6 +23,20 @@ $vanilla-font-awesome-inc-path: 'https://designlibrary.sebgroup.com/static/Fonts
   min-height: 400px;
 }
 
+.pl-grey-bg {
+  background-color: $vanilla-color-bg-grey;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.pl-dark-bg {
+  background-color: $vanilla-color-black;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
 .pl-purple-bg {
   background-color: $vanilla-color-purple;
   padding: 2rem;
