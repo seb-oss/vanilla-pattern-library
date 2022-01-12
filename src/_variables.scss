@@ -4,6 +4,8 @@
 /// @author Digital CX
 ////
 
+@use "sass:math";
+
 @import 'functions';
 @import 'colors';
 
@@ -196,7 +198,7 @@ $vanilla-font-settings-body-small: (
 ) !default;
 
 /// Default component border radius (buttons, input fields, etc)
-$vanilla-component-border-radius: (4 / 16) * 1em !default;
+$vanilla-component-border-radius: math.div(4, 16) * 1em !default;
 
 /// Responsive breakpoints
 $vanilla-breakpoints: (
