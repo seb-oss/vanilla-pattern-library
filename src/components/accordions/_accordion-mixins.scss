@@ -82,7 +82,7 @@ $vanilla-accordion-left-margin: vanilla-px-to-rem(40);
 
     height: auto;
     align-self: flex-start;
-    margin-top: $vanilla-accordion-left-margin / 2;
+    margin-top: $vanilla-accordion-left-margin * 0.5;
   }
 
   &:hover {
@@ -138,7 +138,7 @@ $vanilla-accordion-left-margin: vanilla-px-to-rem(40);
     margin-bottom: vanilla-px-to-em(-1px);
     height: auto;
     align-self: flex-start;
-    margin-top: $vanilla-accordion-left-margin / 2;
+    margin-top: $vanilla-accordion-left-margin * 0.5;
   }
 }
 

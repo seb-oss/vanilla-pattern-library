@@ -4,6 +4,8 @@
 /// @author Digital CX
 ////
 
+@use "sass:math";
+
 @import '../../variables';
 @import '../../utilities';
 @import '../../mixins';
@@ -76,10 +78,10 @@
       left: 1em + vanilla-px-to-em(1px);
       box-sizing: border-box;
       background-color: transparent;
-      width: (1 / 2.7) * 1em;
+      width: math.div(1, 2.7) * 1em;
       border: 0 solid $vanilla-color-white;
       border-width: 0 vanilla-px-to-em(2px) vanilla-px-to-em(2px) 0;
-      height: (1 / 1.5) * 1em;
+      height: math.div(1, 1.5) * 1em;
       transform: rotate(40deg);
       transform-origin: 50% 50%;
     }
