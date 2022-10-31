@@ -95,7 +95,7 @@
   outline: none;
 
   &::after {
-    font-family: 'Font Awesome 5 Pro';
+    font-family: $vanilla-font-awesome-font-family;
     content: '\f00d';
     font-weight: 300;
     height: 1.5em;

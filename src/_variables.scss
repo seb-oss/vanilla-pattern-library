@@ -18,6 +18,7 @@ $vanilla-base-size: vanilla-px-to-rem(16) !default;
 // Path settings
 /// Font Awesome includepath
 //$vanilla-font-awesome-inc-path: '/assets/fontawesome' !default;
+$vanilla-font-awesome-font-family: 'Font Awesome 5 Pro' !default;
 
 $vanilla-font-basepath: '/assets/fonts/' !default;
 $vanilla-font-fallback: Arial, sans-serif !default;

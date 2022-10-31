@@ -19,7 +19,7 @@ $vanilla_icon_margin: vanilla-px-to-em(12) !default;
   }
 
   .sdv-icon::before {
-    font-family: 'Font Awesome 5 Pro';
+    font-family: $vanilla-font-awesome-font-family;
     font-weight: 300;
   }
 }
