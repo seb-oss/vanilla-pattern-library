@@ -9,7 +9,7 @@
 /// Adds an icon to the element
 ///
 /// @access public
-/// @param {String} $_glyph - Icon glyph to use [Font Awesome 5]
+/// @param {String} $_glyph - Icon glyph to use [Font Awesome]
 /// @param $_rotation rotation in degrees
 /// @param $_color Color of the icon. Defaults to $vanilla-color-component-normal
 /// @param $_coord-position Should be a map with any combination of the keys 'top', 'right', 'bottom' or 'left'. If this is used, the element will become a block with absolute positioning
@@ -22,7 +22,7 @@
   $_space: 3rem
 ) {
   $_icon-space: $_space;
-  font-family: 'Font Awesome 5 Pro';
+  font-family: $vanilla-font-awesome-font-family;
   content: $_glyph;
   color: $_color;
   height: $_icon-space;

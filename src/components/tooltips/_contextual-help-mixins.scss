@@ -18,7 +18,7 @@
   cursor: help;
 
   &::after {
-    font-family: 'Font Awesome 5 Pro';
+    font-family: $vanilla-font-awesome-font-family;
     content: '\f2fd';
     font-size: 1em;
     font-weight: 300;
