@@ -9,7 +9,7 @@
 @import '../../colors';
 @import '../../mixins';
 
-@import 'include-media/dist/include-media';
+@import 'node_modules/include-media/dist/include-media';
 
 $vanilla-breadcrumbs-item-margin: vanilla-px-to-em(8) !default;
 $vanilla-breadcrumbs-item-margin-mobile: vanilla-px-to-em(16) !default;
