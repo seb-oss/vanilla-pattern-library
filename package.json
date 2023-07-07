@@ -74,7 +74,7 @@
     "sassdoc": "^2.7.1",
     "sast": "^0.8.1",
     "semantic-release": "^17.0.4",
-    "stylelint": "^13.2.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-scss": "^3.16.0",
     "travis-deploy-once": "^5.0.11"
